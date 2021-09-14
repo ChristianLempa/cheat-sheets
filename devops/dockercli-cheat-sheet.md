@@ -73,4 +73,4 @@ Backup docker data from inside container volumes and package it in a tarball arc
 
 ### Restore container from backup
 Restore the volume with a tarball archive.
-`docker run --rm --volumes-from dbstore2 -v $(pwd):/backup busybox bash -c "cd CONTAINERPATH && tar xvf /backup/backup.tar --strip 1"`
+`docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox bash -c "cd CONTAINERPATH && tar xvf /backup/backup.tar --strip 1"`
