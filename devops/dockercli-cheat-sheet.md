@@ -63,5 +63,14 @@ COMMAND | DESCRIPTION
 COMMAND | DESCRIPTION
 ---|---
 `docker volumes` | List all volumes
+`docker volume create VOLUME` | Create a volume
+`docker volume inspect VOLUME` | Show information (json formatted)
+`docker volume rm VOLUME` | Destroy a volume
 
+### Backup a container
+Backup docker data from inside container volumes and package it in a tarball archive.
+`docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox tar cvf /backup/backup.tar CONTAINERPATH`
 
+### Restore container from backup
+Restore the volume with a tarball archive.
+`docker run --rm --volumes-from dbstore2 -v $(pwd):/backup busybox bash -c "cd CONTAINERPATH && tar xvf /backup/backup.tar --strip 1"`
