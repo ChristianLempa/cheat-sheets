@@ -89,7 +89,7 @@ COMMAND | DESCRIPTION
 
 ### Backup a container
 Backup docker data from inside container volumes and package it in a tarball archive.
-`docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox tar cvf /backup/backup.tar CONTAINERPATH`
+`docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox tar cvfz /backup/backup.tar CONTAINERPATH`
 
 ### Restore container from backup
 Restore the volume with a tarball archive.
