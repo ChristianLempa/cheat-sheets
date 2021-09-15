@@ -9,7 +9,27 @@ COMMAND | DESCRIPTION
 `docker restart CONTAINER` | Graceful stop and restart a container
 `docker pause CONTAINER` | Suspend a container
 `docker unpause CONTAINER` | Resume a container
+`docker kill  CONTAINER` | Resume a container
 `docker rm CONTAINER` | Destroy a container
+## Container Bulk Management
+COMMAND | DESCRIPTION
+---|---
+`docker stop $(docker ps -q)` | To stop all the running containers
+`docker stop $(docker ps -a -q)` | To stop all the stopped and running containers
+`docker kill $(docker ps -q)` | To kill all the running containers
+`docker kill $(docker ps -a -q)` | To kill all the stopped and running containers
+`docker restart $(docker ps -a -q)` | To restart all the stopped and running containers
+`docker restart $(docker ps -a -q)` | To restart all the stopped and running containers
+`docker rm $(docker ps -a -q)` | To destroy all the stopped and running containers
+`docker rm $(docker ps -a -q)` | To destroy all the stopped and running containers
+`docker pause $(docker ps -a -q)` | To pause all the stopped and running containers
+`docker pause $(docker ps -a -q)` | To pause all the stopped and running containers
+`docker start $(docker ps -a -q)` | To start all the stopped and running containers
+`docker start $(docker ps -a -q)` | To start all the stopped and running containers
+`docker rm -vf $(docker ps -a -q)` | To delete all containers including its volumes use
+`docker rmi -f $(docker images -a -q)` | To delete all the images
+
+
 
 ### Parameters
 COMMAND | DESCRIPTION
