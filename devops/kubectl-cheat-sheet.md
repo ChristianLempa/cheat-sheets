@@ -1,11 +1,16 @@
-# tmp 
+# Kubernetes "kubectl" Cheat-Sheet
+## Config and Cluster Management
+COMMAND | DESCRIPTION
+---|---
+`kubectl cluster-info` | Display endpoint information about the master and services in the cluster
+`kubectl config view` |Get the configuration of the cluster
+## Resource Management
+COMMAND | DESCRIPTION
+---|---
+`kubectl get all --all-namespaces` | List all resources in the entire Cluster
 
-`kubectl run tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash` container for troubleshooting
 
-`kubectl run -it --rm --image=mysql:5.7 --restart=Never mysql-client -- mysql -u USERNAME -h HOSTNAME -p`
-container for mysql client
-
-## List of kubectl Short Names
+### List of kubectl Short Names
 Short Name | Long Name
 ---|---
 `csr`|`certificatesigningrequests`
@@ -30,3 +35,12 @@ Short Name | Long Name
 `quota`|`resourcequotas`
 `sa`|`serviceaccounts`
 `svc`|`services`
+## Logs and Troubleshooting
+### Logs
+
+### Executing Commands on Pods
+
+### Networking
+`kubectl run tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash` 
+### MySQL 
+`kubectl run -it --rm --image=mysql:5.7 --restart=Never mysql-client -- mysql -u USERNAME -h HOSTNAME -p`
