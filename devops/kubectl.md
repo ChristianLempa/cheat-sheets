@@ -1,4 +1,4 @@
-# Kubernetes "kubectl" Cheat-Sheet
+# Kubectl Cheat-Sheet
 ## Config and Cluster Management
 COMMAND | DESCRIPTION
 ---|---

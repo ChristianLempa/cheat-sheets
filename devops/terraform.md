@@ -1,4 +1,4 @@
-# Terraform CLI Cheat-Sheet
+# Terraform Cheat-Sheet
 ## Format and Validate
 COMMAND | DESCRIPTION
 ---|---

@@ -1,4 +1,4 @@
-# Docker CLI Cheat-Sheet
+# Docker Cheat-Sheet
 ## Container Management
 COMMAND | DESCRIPTION
 ---|---
