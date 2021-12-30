@@ -27,9 +27,6 @@ COMMAND | DESCRIPTION
 `docker start $(docker ps -a -q)` | To start all the stopped and running containers
 `docker rm -vf $(docker ps -a -q)` | To delete all containers including its volumes use
 `docker rmi -f $(docker images -a -q)` | To delete all the images
-
-
-
 ### Parameters
 COMMAND | DESCRIPTION
 ---|---
@@ -37,7 +34,6 @@ COMMAND | DESCRIPTION
 `docker run --name CONTAINER IMAGE` | Start a new container and set a name
 `docker run -p HOSTPORT:CONTAINERPORT IMAGE` | Start a new container with mapped ports
 `docker run -P IMAGE` | Start a new container and map all ports
-
 ## Inspect
 COMMAND | DESCRIPTION
 ---|---
@@ -48,7 +44,6 @@ COMMAND | DESCRIPTION
 `docker top CONTAINER` | List the processes running in a container
 `docker diff` | Show the differences with the image (modified files)
 `docker inspect` | Show information of a container (json formatted)
-
 ## Commands
 COMMAND | DESCRIPTION
 ---|---
@@ -59,7 +54,6 @@ COMMAND | DESCRIPTION
 `docker exec CONTAINER` | Run a command inside a container
 `docker exec -it CONTAINER /bin/bash` | Open an interactive shell inside a container
 `docker wait CONTAINER` | Wait until the container terminates and return the exit code
-
 ## Images
 COMMAND | DESCRIPTION
 ---|---
@@ -77,7 +71,6 @@ COMMAND | DESCRIPTION
 `docker logout` | Logout from a registry
 `docker save REPO:[TAG]` | Export an image/repo as a tarball
 `docker load` | Load images from a tarball
-
 ## Volumes
 COMMAND | DESCRIPTION
 ---|---
@@ -85,14 +78,14 @@ COMMAND | DESCRIPTION
 `docker volume create VOLUME` | Create a volume
 `docker volume inspect VOLUME` | Show information (json formatted)
 `docker volume rm VOLUME` | Destroy a volume
-
 ### Backup a container
 Backup docker data from inside container volumes and package it in a tarball archive.
 `docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox tar cvfz /backup/backup.tar CONTAINERPATH`
-
 ### Restore container from backup
 Restore the volume with a tarball archive.
 `docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox bash -c "cd CONTAINERPATH && tar xvf /backup/backup.tar --strip 1"`
+## Networks
+
 ## Troubleshooting
 ### Networking
 `docker run --name netshoot --rm -it nicolaka/netshoot /bin/bash`

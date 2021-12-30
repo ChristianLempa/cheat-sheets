@@ -1,4 +1,20 @@
-# Kubectl Cheat-Sheet
+# Kubernetes Cheat-Sheet
+## Networking
+Connect containers using Kubernetes internal DNS system:
+`<service-name>.<namespace>.svc.cluster.local`
+
+Troubleshoot Networking with a netshoot toolkit Container:
+`kubectl run tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash`
+
+## Containers
+Restart Deployments (Stops and Restarts all Pods):
+`kubectl scale deploy <deployment> --replicas=0`
+`kubectl scale deploy <deployment> --replicas=1`
+
+Executing Commands on Pods:
+`kubectl exec -it <PODNAME> -- <COMMAND>`
+`kubectl exec -it generic-pod -- /bin/bash` 
+
 ## Config and Cluster Management
 COMMAND | DESCRIPTION
 ---|---
@@ -8,7 +24,7 @@ COMMAND | DESCRIPTION
 COMMAND | DESCRIPTION
 ---|---
 `kubectl get all --all-namespaces` | List all resources in the entire Cluster
-
+`kubectl delete <RESOURCE> <RESOURCENAME> --grace-period=0 --force` | Try to force the deletion of the resource
 
 ### List of kubectl Short Names
 Short Name | Long Name
@@ -38,9 +54,6 @@ Short Name | Long Name
 ## Logs and Troubleshooting
 ### Logs
 
-### Executing Commands on Pods
 
-### Networking
-`kubectl run tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash` 
 ### MySQL 
 `kubectl run -it --rm --image=mysql:5.7 --restart=Never mysql-client -- mysql -u USERNAME -h HOSTNAME -p`

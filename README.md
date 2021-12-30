@@ -1,4 +1,4 @@
-# Cheat-Sheets for Tools and Technologies
+# Cheat-Sheets and Technical Documentation
 
 These are my Cheat-Sheets I use for various projects, tools and technologies. They are separated in sections like [DevOps Tools](https://github.com/xcad2k/cheat-sheets/tree/main/devops), [Infrastructure](https://github.com/xcad2k/cheat-sheets/tree/main/infrastructure), [Cybersecurity](https://github.com/xcad2k/cheat-sheets/tree/main/cybersecurity), and much more.
 
