@@ -11,14 +11,3 @@ Please beware that products can change over time. I do my best to keep up with t
 ### Contribution and Support
 
 If you’d like to contribute to this project, reach out to me on social media or [Discord](https://discord.gg/bz2SN7d), or create a pull request for the necessary changes.
-
-## Sections
-[Cybersecurity](https://github.com/xcad2k/cheat-sheets/tree/main/cybersecurity)
-
-[DevOps Tools](https://github.com/xcad2k/cheat-sheets/tree/main/devops)
-
-[Development](https://github.com/xcad2k/cheat-sheets/tree/main/devtools)
-
-[Infrastructure](https://github.com/xcad2k/cheat-sheets/tree/main/infrastructure)
-
-[Linux](https://github.com/xcad2k/cheat-sheets/tree/main/linux)
