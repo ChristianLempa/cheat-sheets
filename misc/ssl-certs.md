@@ -51,8 +51,8 @@ Assuming path to your generated CA certificate as `C:\ca.pem`,
 
 OR
 
-- In Command Prompt, use `certutil.exe` for this.
-- Run `certutil.exe -addstore root C:\ca.pem` for system-wide trust.
+1. In Command Prompt, use `certutil.exe` for this.
+2. Run `certutil.exe -addstore root C:\ca.pem` for system-wide trust.
 
 ### On Android
 
