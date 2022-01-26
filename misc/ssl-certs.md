@@ -36,15 +36,32 @@ COMMAND | CONVERSION
 
 ## Install CA Cert in trusted root CAs
 
-### on Linux
+### On Linux
 
 1. Move the `ca.pem` into `/usr/local/share/ca-certificates/ca.crt`.
 2. Update the Cert Store `update-ca-certificates`
 
-### on Windows
+### On Windows
 
-TODO: ...
+Assuming path to your generated CA certificate as `C:\ca.pem`, 
+
+1. Use the `Import-Certificate` Powershell Cmdlet for this.
+2. Run `Import-Certificate -FilePath "C:\ca.pem" -CertStoreLocation Cert:\LocalMachine\Root`.
+  - Set `-CertStoreLocation` to `Cert:\CurrentUser\Root` in case you want to trust certificates only for the logged in user.
+
+OR
+
+- In Command Prompt, use `certutil.exe` for this.
+- Run `certutil.exe -addstore root C:\ca.pem` for system-wide trust.
 
 ### On Android
 
-TODO: ...
+The process varies device-to-device. But generally follows as:
+1. Open Phone Settings
+2. Locate `Encryption and Credentials` section.
+  - Use the search box for it.
+  - Generally it is found under `Settings > Security > Encryption and Credentials`
+4. Choose `Install a certificate`
+5. Choose `CA Certificate`
+6. Locate the certificate file `ca.pem` on your SD Card/Internal Storage using the File Manager
+7. Select it and DONE!
