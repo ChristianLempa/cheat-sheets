@@ -31,6 +31,9 @@ COMMAND | DESCRIPTION
 `docker start $(docker ps -a -q)` | To start all the stopped and running containers
 `docker rm -vf $(docker ps -a -q)` | To delete all containers including its volumes use
 `docker rmi -f $(docker images -a -q)` | To delete all the images
+`docker system prune` | To delete all dangling and unused images, containers, cache and volumes
+`docker system prune -a` | To delete all used and unused images
+`docker system prune --volumes` | To delete all docker volumes
 ### Parameters
 COMMAND | DESCRIPTION
 ---|---
