@@ -5,15 +5,36 @@ X.509 is an ITU standard defining the format of public key certificates. X.509 a
 ## Self-Signed Certificates
 
 ### Generate CA
-1. Generate RSA `openssl genrsa -aes256 -out ca-key.pem 4096`
-2. Generate a public CA Cert `openssl req -new -x509 -days 365 -key ca-key.pem -sha256 -out ca.pem`
+1. Generate RSA
+```bash
+openssl genrsa -aes256 -out ca-key.pem 4096
+```
+2. Generate a public CA Cert
+```bash
+openssl req -new -x509 -days 365 -key ca-key.pem -sha256 -out ca.pem
+```
 
 ### Generate Certificate
-1. `openssl genrsa -out cert-key.pem 4096`
-2. `openssl req -subj "/CN=yourcn" -sha256 -new -key cert-key.pem -out cert.csr`
-3. `echo "subjectAltName=DNS:your-dns.record,IP:257.10.10.1" >> extfile.cnf`
-4. (optional) `echo extendedKeyUsage = serverAuth >> extfile.cnf`
-5.  `openssl x509 -req -days 365 -sha256 -in cert.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out cert.pem -extfile extfile.cnf`
+1. Create a RSA key
+```bash
+openssl genrsa -out cert-key.pem 4096
+```
+2. Create a Certificate Signing Request (CSR)
+```bash
+openssl req -subj "/CN=yourcn" -sha256 -new -key cert-key.pem -out cert.csr
+```
+3. Create a `extfile` with all the alternative names
+```bash
+echo "subjectAltName=DNS:your-dns.record,IP:257.10.10.1" >> extfile.cnf
+```
+```bash
+# optional
+echo extendedKeyUsage = serverAuth >> extfile.cnf
+```
+4. Create the certificate
+```bash
+openssl x509 -req -days 365 -sha256 -in cert.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out cert.pem -extfile extfile.cnf
+```
 
 ### Renew Cert
 1. `openssl req -subj "/CN=yourcn" -sha256 -new -key cert-key.pem -out cert.csr`
@@ -21,7 +42,7 @@ X.509 is an ITU standard defining the format of public key certificates. X.509 a
 
 ## Certificate Formats
 
-X.509 Certificates exist in Base64 Formats **PEM (.pem, .crt, .ca-bundle)**, **PKCS#7 (.p7b, p7s)** and Binary Formats **DER (.der, .cer)**, **PKCS#12 (.pfx, p12)**. 
+X.509 Certificates exist in Base64 Formats **PEM (.pem, .crt, .ca-bundle)**, **PKCS#7 (.p7b, p7s)** and Binary Formats **DER (.der, .cer)**, **PKCS#12 (.pfx, p12)**.
 
 ### Convert Certs
 
@@ -34,34 +55,50 @@ COMMAND | CONVERSION
 ## Verify Certificates
 `openssl verify -CAfile ca.pem -verbose cert.pem`
 
-## Install CA Cert in trusted root CAs
+## Install the CA Cert as a trusted root CA
 
-### On Linux
+### On Debian & Derivatives
+- Move the CA certificate (`ca.pem`) into `/usr/local/share/ca-certificates/ca.crt`.
+- Update the Cert Store with:
+```bash
+sudo update-ca-certificates
+```
 
-1. Move the `ca.pem` into `/usr/local/share/ca-certificates/ca.crt`.
-2. Update the Cert Store `update-ca-certificates`
+Refer the documentation [here](https://wiki.debian.org/Self-Signed_Certificate) and [here.](https://manpages.debian.org/buster/ca-certificates/update-ca-certificates.8.en.html)
+
+### On Fedora
+- Move the CA certificate (`ca.pem`) to `/etc/pki/ca-trust/source/anchors/ca.pem` or `/usr/share/pki/ca-trust-source/anchors/ca.pem`
+- Now run (with sudo if necessary):
+```bash
+update-ca-trust
+```
+
+Refer the documentation [here.](https://docs.fedoraproject.org/en-US/quick-docs/using-shared-system-certificates/)
 
 ### On Windows
 
-Assuming path to your generated CA certificate as `C:\ca.pem`, 
-
-1. Use the `Import-Certificate` Powershell Cmdlet for this.
-2. Run `Import-Certificate -FilePath "C:\ca.pem" -CertStoreLocation Cert:\LocalMachine\Root`.
-  - Set `-CertStoreLocation` to `Cert:\CurrentUser\Root` in case you want to trust certificates only for the logged in user.
+Assuming the path to your generated CA certificate as `C:\ca.pem`, run:
+```powershell
+Import-Certificate -FilePath "C:\ca.pem" -CertStoreLocation Cert:\LocalMachine\Root
+```
+- Set `-CertStoreLocation` to `Cert:\CurrentUser\Root` in case you want to trust certificates only for the logged in user.
 
 OR
 
-1. In Command Prompt, use `certutil.exe` for this.
-2. Run `certutil.exe -addstore root C:\ca.pem` for system-wide trust.
+In Command Prompt, run:
+```sh
+certutil.exe -addstore root C:\ca.pem
+```
+
+- `certutil.exe` is a built-in tool (classic `System32` one) and adds a system-wide trust anchor.
 
 ### On Android
 
-The process varies device-to-device. But generally follows as:
+The exact steps vary device-to-device, but here is a generalised guide:
 1. Open Phone Settings
-2. Locate `Encryption and Credentials` section.
-  - Use the search box for it.
-  - Generally it is found under `Settings > Security > Encryption and Credentials`
-4. Choose `Install a certificate`
-5. Choose `CA Certificate`
-6. Locate the certificate file `ca.pem` on your SD Card/Internal Storage using the File Manager
-7. Select it and DONE!
+2. Locate `Encryption and Credentials` section. It is generally found under `Settings > Security > Encryption and Credentials`
+3. Choose `Install a certificate`
+4. Choose `CA Certificate`
+5. Locate the certificate file `ca.pem` on your SD Card/Internal Storage using the file manager.
+6. Select to load it.
+7. Done!
