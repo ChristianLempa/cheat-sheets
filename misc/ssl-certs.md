@@ -11,7 +11,7 @@ openssl genrsa -aes256 -out ca-key.pem 4096
 ```
 2. Generate a public CA Cert
 ```bash
-openssl req -new -x509 -days 365 -key ca-key.pem -sha256 -out ca.pem
+openssl req -new -x509 -sha256 -days 365 -key ca-key.pem -out ca.pem
 ```
 
 ### Generate Certificate
@@ -21,7 +21,7 @@ openssl genrsa -out cert-key.pem 4096
 ```
 2. Create a Certificate Signing Request (CSR)
 ```bash
-openssl req -subj "/CN=yourcn" -sha256 -new -key cert-key.pem -out cert.csr
+openssl req -new -sha256 -subj "/CN=yourcn" -key cert-key.pem -out cert.csr
 ```
 3. Create a `extfile` with all the alternative names
 ```bash
@@ -33,12 +33,8 @@ echo extendedKeyUsage = serverAuth >> extfile.cnf
 ```
 4. Create the certificate
 ```bash
-openssl x509 -req -days 365 -sha256 -in cert.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out cert.pem -extfile extfile.cnf
+openssl x509 -req -sha256 -days 365 -in cert.csr -CA ca.pem -CAkey ca-key.pem -out cert.pem -extfile extfile.cnf
 ```
-
-### Renew Cert
-1. `openssl req -subj "/CN=yourcn" -sha256 -new -key cert-key.pem -out cert.csr`
-2. `openssl x509 -req -days 365 -sha256 -in cert.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out cert.pem < extfile.cnf`
 
 ## Certificate Formats
 
