@@ -70,6 +70,21 @@ update-ca-trust
 ```
 
 Refer the documentation [here.](https://docs.fedoraproject.org/en-US/quick-docs/using-shared-system-certificates/)
+### On Arch
+System-wide – Arch(p11-kit)
+(From arch wiki)
+- Run (As root)
+```bash
+trust anchor --store myCA.crt
+```
+- The certificate will be written to /etc/ca-certificates/trust-source/myCA.p11-kit and the "legacy" directories automatically updated.
+- If you get "no configured writable location" or a similar error, import the CA manually:
+- Copy the certificate to the /etc/ca-certificates/trust-source/anchors directory.
+- and then
+```bash 
+update-ca-trust
+```
+wiki page  [here](https://wiki.archlinux.org/title/User:Grawity/Adding_a_trusted_CA_certificate)
 
 ### On Windows
 
