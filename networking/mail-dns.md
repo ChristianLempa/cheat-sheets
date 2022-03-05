@@ -29,7 +29,7 @@ The reverse DNS record or also called PTR (Pointer Resource Record) is import
 
 ## (Optional but recommended) DNS Records
 
-### SFP Record
+### SPF Record
 The SPF (Sender Policy Framework) is a TXT record on your DNS server that specifies which hosts are allowed to send mails for a given domain. When a mail server receives a mail that seems to come from your domain it can check if it’s a valid message. Some mail servers reject mails if they can’t validate that the message comes from an authorized mail server.
 
 **Recommended Settings:**
