@@ -9,7 +9,7 @@ If `exposedByDefault` is disabled, Traefik won't automatically expose any contai
 
 **traefik.http.routers.router.entrypoints** 
 Specifies the Entrypoint for the Router. Setting this to `traefik.http.routers.router.entrypoints: websecure` will expose the Container on the `websecure` entrypoint.
-*When using websecure, you should enable `raefik.http.routers.router.tls` as well.
+*When using websecure, you should enable `traefik.http.routers.router.tls` as well.
 
 **traefik.http.routers.router.rule**
 Specify the Rules for the Router.
