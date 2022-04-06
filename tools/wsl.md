@@ -1,4 +1,27 @@
 # WSL Cheat-Sheet
+## Symbolic Links
+### Link .ssh folder
+```
+sudo ln -s /mnt/c/Users/lempa/.ssh ~/.ssh
+```
+
+### Link .kube folder
+```
+sudo ln -s /mnt/c/Users/lempa/.ssh ~/.ssh
+```
+
+## File Permissions
+**Example wsl.conf**
+```
+[automount]
+enabled = true
+options = "metadata,uid=1000,gid=1000,umask=077,fmask=11,case=off"
+mountFsTab = true
+
+[interop]
+enabled = false
+appendWindowsPath = false
+```
 
 ## Networking
 ### Port Forwarding
