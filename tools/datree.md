@@ -6,10 +6,14 @@ Datree can be used on the command line to run policies against Kubernetes manife
 **Windows** (PowerShell)
 ```powershell
 iwr -useb https://get.datree.io/windows_install.ps1 | iex
+
+setx PATH "$env:path;C:\Users\$env:UserName\AppData\Local\datree" -m
 ```
 
 **Linux** (Bash)
 ```bash
+sudo apt -y install unzip
+
 curl https://get.datree.io | /bin/bash
 ```
 

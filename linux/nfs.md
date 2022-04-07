@@ -1,6 +1,15 @@
 # NFS Cheat-Sheet
+## Install NFS
+Install NFS Client on Ubuntu
+```
+sudo apt -y update
+sudo apt -y install nfs-common
+```
 
-## Permissions
+## Client Configuration
+
+
+## Server Configuration
 ### Configuration
 *TEMP EXAMPLE*:
 `/srv/nfs 192.168.1.2(rw,sync,no_root_squash,subtree_check)`

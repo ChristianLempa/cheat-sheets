@@ -1,16 +1,18 @@
 # WSL Cheat-Sheet
 ## Symbolic Links
 ### Link .ssh folder
-```
+```bash
 sudo ln -s /mnt/c/Users/lempa/.ssh ~/.ssh
 ```
 
 ### Link .kube folder
-```
+```bash
 sudo ln -s /mnt/c/Users/lempa/.ssh ~/.ssh
 ```
 
 ## File Permissions
+Advanced settings configuration in WSL: [WSL Config Parameters](https://docs.microsoft.com/en-us/windows/wsl/wsl-config)
+
 **Example wsl.conf**
 ```
 [automount]
