@@ -36,9 +36,9 @@ echo extendedKeyUsage = serverAuth >> extfile.cnf
 openssl x509 -req -sha256 -days 365 -in cert.csr -CA ca.pem -CAkey ca-key.pem -out cert.pem -extfile extfile.cnf -CAcreateserial
 ```
 5. Create fullchain certificate
-6. ```bash
-7. cat cert.pem > fullchain.pem
-8. cat ca.pem >> fullchain.pem
+```bash
+cat cert.pem > fullchain.pem
+cat ca.pem >> fullchain.pem
 ```
 
 ## Certificate Formats
