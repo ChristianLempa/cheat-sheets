@@ -1,6 +1,6 @@
 # What is Cloud-Computing?
-## I dont really know 
+## I don't really know 
 lorem ipsuim
 ```cpp
-printf("Hello, Woro!");
+printf("Hello, World!");
 ```
