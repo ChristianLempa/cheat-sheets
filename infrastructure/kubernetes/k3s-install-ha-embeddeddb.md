@@ -3,7 +3,7 @@
 ```bash
 curl -sfL https://get.k3s.io | sh -s - server \
 --token=YOUR-SECRET \
---tls-san your-dns-name --tls-san your-lb-ip-address
+--tls-san your-dns-name --tls-san your-lb-ip-address \
 --cluster-init
 ```
 
@@ -14,7 +14,7 @@ To avoid certificate errors in such a configuration, you should install the serv
 ```bash
 curl -sfL https://get.k3s.io | sh -s - server \
 --token=YOUR-SECRET \
---tls-san your-dns-name --tls-san your-lb-ip-address
+--tls-san your-dns-name --tls-san your-lb-ip-address \
 --server https://IP-OF-THE-FIRST-SERVER:6443
 ```
 

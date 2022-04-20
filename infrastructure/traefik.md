@@ -1,8 +1,5 @@
 # Traefik Cheat-Sheet
-
-
-## Provider Specific Configuration
-### Docker
+## Docker
 
 **traefik.enable**
 If `exposedByDefault` is disabled, Traefik won't automatically expose any containers by default. Setting `traefik.enable: true`, will expose the Container.
@@ -20,3 +17,5 @@ Will enable TLS protocol on the router.
 
 **traefik.http.routers.router.tls.certresolver**
 Specifies the Certificate Resolver on the Router.
+
+## Kubernetes
