@@ -1,12 +1,56 @@
-# Kubernetes Cheat-Sheet
-## Networking
+# Kubectl Cheat-Sheet
+...
+
+---
+##  Install Kubectl
+### On Windows (PowerShell)
+Install Kubectl with **Chocolatey** ([[chocolatey]]):
+```
+choco install kubernetes-cli
+```
+
+### On Linux
+> [!INFO] Installing on WSL2
+> On WSL2 it's recommended to install Docker Desktop [[docker-desktop]], which automatically comes with kubectl.
+1. Download the latest release
+```bash
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"  
+```
+
+2. Install Kubectl
+```bash
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+```
+
+---
+##  Config Management
+
+...
+
+### Multiple Config Files
+
+...
+
+**On Windows (PowerShell**
+```powershell
+$env:KUBECONFIG = "$HOME/.kube/prod-k8s-clcreative-kubeconfig.yaml;$HOME/.kube/infra-home-kube-prod-1.yml;$HOME/.kube/infra-home-kube-demo-1.yml;$HOME/.kube/infra-cloud-kube-prod-1.yml"
+```
+
+**On Linux**
+```bash
+export KUBECONFIG=~/.kube/kube-config-1.yml:~/.kube/ube-config-2.yml
+```
+
+---
+##  Commands
+### Networking
 Connect containers using Kubernetes internal DNS system:
 `<service-name>.<namespace>.svc.cluster.local`
 
 Troubleshoot Networking with a netshoot toolkit Container:
 `kubectl run tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash`
 
-## Containers
+### Containers
 Restart Deployments (Stops and Restarts all Pods):
 `kubectl scale deploy <deployment> --replicas=0`
 `kubectl scale deploy <deployment> --replicas=1`
@@ -15,18 +59,19 @@ Executing Commands on Pods:
 `kubectl exec -it <PODNAME> -- <COMMAND>`
 `kubectl exec -it generic-pod -- /bin/bash` 
 
-## Config and Cluster Management
+### Config and Cluster Management
 COMMAND | DESCRIPTION
 ---|---
 `kubectl cluster-info` | Display endpoint information about the master and services in the cluster
 `kubectl config view` |Get the configuration of the cluster
-## Resource Management
+### Resource Management
 COMMAND | DESCRIPTION
 ---|---
 `kubectl get all --all-namespaces` | List all resources in the entire Cluster
 `kubectl delete <RESOURCE> <RESOURCENAME> --grace-period=0 --force` | Try to force the deletion of the resource
 
-### List of kubectl Short Names
+---
+## ﴱ List of Kubernetes Resources "Short Names"
 Short Name | Long Name
 ---|---
 `csr`|`certificatesigningrequests`
@@ -51,7 +96,9 @@ Short Name | Long Name
 `quota`|`resourcequotas`
 `sa`|`serviceaccounts`
 `svc`|`services`
-## Logs and Troubleshooting
+
+---
+## 陼 Logs and Troubleshooting
 ### Logs
 
 
