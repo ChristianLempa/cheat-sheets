@@ -72,6 +72,7 @@ COMMAND | DESCRIPTION
 
 ---
 ## ﴱ List of Kubernetes Resources "Short Names"
+
 Short Name | Long Name
 ---|---
 `csr`|`certificatesigningrequests`
@@ -99,8 +100,10 @@ Short Name | Long Name
 
 ---
 ## 陼 Logs and Troubleshooting
-### Logs
+...
 
+### Logs
+...
 
 ### MySQL 
 `kubectl run -it --rm --image=mysql:5.7 --restart=Never mysql-client -- mysql -u USERNAME -h HOSTNAME -p`
