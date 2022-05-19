@@ -25,6 +25,13 @@ sudo /opt/kasm/bin/start
 ## Custom Images
 ...
 
+Registry
+```
+https://index.docker.io/v1/
+```
+
+...
+
 ### Add Images in KASM
 > [!attention]
 > You need to pass in a "tag" in the Docker Image. Otherwise kasm won't pull and start the image correctly.
@@ -42,6 +49,9 @@ sudo /opt/kasm/bin/start
 
 ---
 ## Troubleshooting
+...
+
+### KASM Agent
 ...
 
 ### Database

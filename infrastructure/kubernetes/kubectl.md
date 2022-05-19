@@ -107,3 +107,20 @@ Short Name | Long Name
 
 ### MySQL 
 `kubectl run -it --rm --image=mysql:5.7 --restart=Never mysql-client -- mysql -u USERNAME -h HOSTNAME -p`
+
+---
+## Resources stuck in Terminating state
+...
+
+### Namespaces
+1. Save the namespace in a `YOUR-NAMESPACE.json` file.
+```
+kubectl get ns YOUR-NAMESPACE -o json > YOUR-NAMESPACE.json
+```
+
+2. Edit the `YOUR-NAMESPACE.json` and remove the section in `Finalizers`.
+
+3. Update the NAMESPACE.
+```
+kubectl replace --raw "/api/v1/namespaces/YOUR-NAMESPACE/finalize" -f .\YOUR-NAMESACE.json
+```
