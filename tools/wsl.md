@@ -1,4 +1,14 @@
 # WSL Cheat-Sheet
+## Backup and Restore WSL
+### Backup a WSL Distro
+```powershell
+wsl --export (distribution) (filename.tar)
+```
+### Restore a WSL Distro from Backup
+```powershell
+wsl --import (distribution) (install location) (file location and filename)
+```
+
 ## Symbolic Links
 ### Link .ssh folder
 ```bash
