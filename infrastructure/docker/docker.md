@@ -1,9 +1,33 @@
-# Docker Cheat-Sheet
-Docker is a set of platform as a service products that use OS-Level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries, and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
+# Docker
 
-The service has both free and premium tiers. The software that hosts the containers is called **Docker Engine**.
+**Docker** is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called _containers_. The service has both free and premium tiers. The software that hosts the containers is called **Docker Engine**.
 
-## Container Management
+Project Homepage: [Home - Docker](https://www.docker.com/)
+Documentation: [Docker Documentation | Docker Documentation](https://docs.docker.com/)
+
+---
+
+## Installation
+
+
+---
+
+## Build Images
+
+
+---
+
+## Docker CLI
+
+**Run Containers**
+COMMAND | DESCRIPTION
+---|---
+`docker run IMAGE` | Start a new container
+`docker run --name CONTAINER IMAGE` | Start a new container and set a name
+`docker run -p HOSTPORT:CONTAINERPORT IMAGE` | Start a new container with mapped ports
+`docker run -P IMAGE` | Start a new container and map all ports
+
+**Container Management:**
 COMMAND | DESCRIPTION
 ---|---
 `docker create IMAGE` | Create a new container
@@ -14,7 +38,8 @@ COMMAND | DESCRIPTION
 `docker pause CONTAINER` | Suspend a container
 `docker unpause CONTAINER` | Resume a container
 `docker rm CONTAINER` | Destroy a container
-## Container Bulk Management
+
+**Container Bulk Management**
 COMMAND | DESCRIPTION
 ---|---
 `docker stop $(docker ps -q)` | To stop all the running containers
@@ -34,14 +59,8 @@ COMMAND | DESCRIPTION
 `docker system prune` | To delete all dangling and unused images, containers, cache and volumes
 `docker system prune -a` | To delete all used and unused images
 `docker system prune --volumes` | To delete all docker volumes
-### Parameters
-COMMAND | DESCRIPTION
----|---
-`docker run IMAGE` | Start a new container
-`docker run --name CONTAINER IMAGE` | Start a new container and set a name
-`docker run -p HOSTPORT:CONTAINERPORT IMAGE` | Start a new container with mapped ports
-`docker run -P IMAGE` | Start a new container and map all ports
-## Inspect
+
+**Inspect Containers:**
 COMMAND | DESCRIPTION
 ---|---
 `docker ps` | List running containers
@@ -51,7 +70,8 @@ COMMAND | DESCRIPTION
 `docker top CONTAINER` | List the processes running in a container
 `docker diff` | Show the differences with the image (modified files)
 `docker inspect` | Show information of a container (json formatted)
-## Commands
+
+**Run Commands:**
 COMMAND | DESCRIPTION
 ---|---
 `docker attach CONTAINER` | Attach to a container
@@ -61,7 +81,8 @@ COMMAND | DESCRIPTION
 `docker exec CONTAINER` | Run a command inside a container
 `docker exec -it CONTAINER /bin/bash` | Open an interactive shell inside a container
 `docker wait CONTAINER` | Wait until the container terminates and return the exit code
-## Images
+
+**Images:**
 COMMAND | DESCRIPTION
 ---|---
 `docker images` | List all local images
@@ -78,13 +99,15 @@ COMMAND | DESCRIPTION
 `docker logout` | Logout from a registry
 `docker save REPO:[TAG]` | Export an image/repo as a tarball
 `docker load` | Load images from a tarball
-## Volumes
+
+**Volumes:**
 COMMAND | DESCRIPTION
 ---|---
 `docker volumes` | List all volumes
 `docker volume create VOLUME` | Create a volume
 `docker volume inspect VOLUME` | Show information (json formatted)
 `docker volume rm VOLUME` | Destroy a volume
+
 ### Backup a container
 Backup docker data from inside container volumes and package it in a tarball archive.
 `docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox tar cvfz /backup/backup.tar CONTAINERPATH`
