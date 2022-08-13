@@ -64,7 +64,7 @@ COMMAND | DESCRIPTION
 COMMAND | DESCRIPTION
 ---|---
 `docker ps` | List running containers
-`docker ps -a` | List all running containers
+`docker ps -a` | List all containers, including stopped
 `docker logs CONTAINER` | Show a container output
 `docker logs -f CONTAINER` | Follow a container output
 `docker top CONTAINER` | List the processes running in a container
