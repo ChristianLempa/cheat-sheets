@@ -79,7 +79,7 @@ COMMAND | DESCRIPTION
 `docker cp HOSTPATH CONTAINER:PATH` | Copy files into the container
 `docker export CONTAINER` | Export the content of the container (tar archive)
 `docker exec CONTAINER` | Run a command inside a container
-`docker exec -it CONTAINER /bin/bash` | Open an interactive shell inside a container
+`docker exec -it CONTAINER /bin/bash` | Open an interactive shell inside a container (there is no bash in some images, use /bin/sh)
 `docker wait CONTAINER` | Wait until the container terminates and return the exit code
 
 **Images:**
@@ -113,7 +113,7 @@ Backup docker data from inside container volumes and package it in a tarball arc
 `docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox tar cvfz /backup/backup.tar CONTAINERPATH`
 ### Restore container from backup
 Restore the volume with a tarball archive.
-`docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox bash -c "cd CONTAINERPATH && tar xvf /backup/backup.tar --strip 1"`
+`docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox sh -c "cd CONTAINERPATH && tar xvf /backup/backup.tar --strip 1"`
 ## Networks
 
 ## Troubleshooting
