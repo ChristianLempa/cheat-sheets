@@ -108,6 +108,9 @@ Short Name | Long Name
 ### MySQL 
 `kubectl run -it --rm --image=mysql:5.7 --restart=Never mysql-client -- mysql -u USERNAME -h HOSTNAME -p`
 
+### Networking
+`kubectl run -it --rm --image=nicolaka/netshoot netshoot -- /bin/bash`
+
 ---
 ## Resources stuck in Terminating state
 ...
