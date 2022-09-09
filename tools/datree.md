@@ -59,3 +59,42 @@ If you need to pass helm arguments to your template, you will need to add -- bef
 ```bash
 helm datree test [CHART_DIRECTORY] -- --values values.yaml --set name=prod
 ```
+
+## Webhooks
+
+### Installation
+
+Install with providing Datree token. The Datree token is optional, and can be entered during the installation procedure as well.
+
+```bash
+DATREE_TOKEN=[your-token] bash <(curl https://get.datree.io/admission-webhook)
+```
+
+### Ignore a namespace
+
+Add the label "admission.datree/validate=skip" to the configuration of the namespace you would like to ignore:
+
+```bash
+kubectl label namespaces default "admission.datree/validate=skip"
+```
+
+To delete the label and resume running the datree webhook on the namespace again:
+
+```bash
+kubectl label namespaces default "admission.datree/validate-"
+```
+
+### Uninstallation
+
+To uninstall the webhook, copy the following command and run it in your terminal:
+
+```bash
+bash <(curl https://get.datree.io/admission-webhook-uninstall)
+```
+
+To uninstall the helm release, copy the following command and run it in your terminal:
+
+```bash
+helm uninstall datree-webhook -n datree
+kubectl delete ns datree
+```
