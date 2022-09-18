@@ -21,3 +21,15 @@ Specifies the Certificate Resolver on the Router.
 
 ## Kubernetes
 
+
+### PathPrefix and StripPrefix
+
+
+```yml
+- "traefik.enable=true"
+- "traefik.http.routers.nginx-test.entrypoints=websecure"
+- "traefik.http.routers.nginx-test.tls=true"
+- "traefik.http.routers.nginx-test.rule=PathPrefix(`/nginx-test/`)"
+- "traefik.http.routers.nginx-test.middlewares=nginx-test"
+- "traefik.http.middlewares.nginx-test.stripprefix.prefixes=/nginx-test"
+```

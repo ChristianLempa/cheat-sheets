@@ -107,10 +107,13 @@ COMMAND | DESCRIPTION
 `docker volume create VOLUME` | Create a volume
 `docker volume inspect VOLUME` | Show information (json formatted)
 `docker volume rm VOLUME` | Destroy a volume
+`docker volume ls --filter="dangling=true"` | List all dangling volumes (not referenced by any container)
+`docker volume prune` | Delete all volumes (not referenced by any container)
 
 ### Backup a container
 Backup docker data from inside container volumes and package it in a tarball archive.
 `docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox tar cvfz /backup/backup.tar CONTAINERPATH`
+
 ### Restore container from backup
 Restore the volume with a tarball archive.
 `docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox sh -c "cd CONTAINERPATH && tar xvf /backup/backup.tar --strip 1"`
