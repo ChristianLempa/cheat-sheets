@@ -1,8 +1,10 @@
-# Kubectl Cheat-Sheet
-...
+# Kubectl
+Kubectl is a command line tool for communicating with a Kubernetes ([[kubernetes]]) cluster's control pane, using the Kubernetes API.
+
+Documentation: [Kubectl Reference](https://kubernetes.io/docs/reference/kubectl/)
 
 ---
-##  Install Kubectl
+## Installation
 ### On Windows (PowerShell)
 Install Kubectl with **Chocolatey** ([[chocolatey]]):
 ```
@@ -23,7 +25,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 
 ---
-##  Config Management
+## Config Management
 
 ...
 
@@ -42,7 +44,7 @@ export KUBECONFIG=~/.kube/kube-config-1.yml:~/.kube/ube-config-2.yml
 ```
 
 ---
-##  Commands
+## Commands
 ### Networking
 Connect containers using Kubernetes internal DNS system:
 `<service-name>.<namespace>.svc.cluster.local`
@@ -71,7 +73,7 @@ COMMAND | DESCRIPTION
 `kubectl delete <RESOURCE> <RESOURCENAME> --grace-period=0 --force` | Try to force the deletion of the resource
 
 ---
-## ﴱ List of Kubernetes Resources "Short Names"
+## List of Kubernetes Resources "Short Names"
 
 Short Name | Long Name
 ---|---

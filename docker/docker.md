@@ -1,25 +1,22 @@
 # Docker
-
 **Docker** is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called _containers_. The service has both free and premium tiers. The software that hosts the containers is called **Docker Engine**.
 
 Project Homepage: [Home - Docker](https://www.docker.com/)
 Documentation: [Docker Documentation | Docker Documentation](https://docs.docker.com/)
 
 ---
-
 ## Installation
 
 
 ---
-
 ## Build Images
 
 
 ---
-
 ## Docker CLI
 
 **Run Containers**
+
 COMMAND | DESCRIPTION
 ---|---
 `docker run IMAGE` | Start a new container
@@ -28,6 +25,7 @@ COMMAND | DESCRIPTION
 `docker run -P IMAGE` | Start a new container and map all ports
 
 **Container Management:**
+
 COMMAND | DESCRIPTION
 ---|---
 `docker create IMAGE` | Create a new container
@@ -40,6 +38,7 @@ COMMAND | DESCRIPTION
 `docker rm CONTAINER` | Destroy a container
 
 **Container Bulk Management**
+
 COMMAND | DESCRIPTION
 ---|---
 `docker stop $(docker ps -q)` | To stop all the running containers
@@ -61,6 +60,7 @@ COMMAND | DESCRIPTION
 `docker system prune --volumes` | To delete all docker volumes
 
 **Inspect Containers:**
+
 COMMAND | DESCRIPTION
 ---|---
 `docker ps` | List running containers
@@ -72,6 +72,7 @@ COMMAND | DESCRIPTION
 `docker inspect` | Show information of a container (json formatted)
 
 **Run Commands:**
+
 COMMAND | DESCRIPTION
 ---|---
 `docker attach CONTAINER` | Attach to a container
@@ -83,6 +84,7 @@ COMMAND | DESCRIPTION
 `docker wait CONTAINER` | Wait until the container terminates and return the exit code
 
 **Images:**
+
 COMMAND | DESCRIPTION
 ---|---
 `docker images` | List all local images
@@ -101,9 +103,10 @@ COMMAND | DESCRIPTION
 `docker load` | Load images from a tarball
 
 **Volumes:**
+
 COMMAND | DESCRIPTION
 ---|---
-`docker volume ls` | List all volumes
+`docker volume ls` | List all vol1umes
 `docker volume create VOLUME` | Create a volume
 `docker volume inspect VOLUME` | Show information (json formatted)
 `docker volume rm VOLUME` | Destroy a volume
@@ -122,3 +125,4 @@ Restore the volume with a tarball archive.
 ## Troubleshooting
 ### Networking
 `docker run --name netshoot --rm -it nicolaka/netshoot /bin/bash`
+
