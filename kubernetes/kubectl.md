@@ -5,6 +5,7 @@ Documentation: [Kubectl Reference](https://kubernetes.io/docs/reference/kubectl/
 
 ---
 ## Installation
+
 ### On Windows (PowerShell)
 Install Kubectl with **Chocolatey** ([[chocolatey]]):
 ```
@@ -24,14 +25,16 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 
+### On mac OS
+Install Kubectl with **Homebrew ([[homebrew]])**:
+```zsh
+brew install kubernetes-cli
+```
+
 ---
 ## Config Management
 
-...
-
 ### Multiple Config Files
-
-...
 
 **On Windows (PowerShell**
 ```powershell
@@ -45,7 +48,9 @@ export KUBECONFIG=~/.kube/kube-config-1.yml:~/.kube/ube-config-2.yml
 
 ---
 ## Commands
+
 ### Networking
+
 Connect containers using Kubernetes internal DNS system:
 `<service-name>.<namespace>.svc.cluster.local`
 
@@ -53,6 +58,7 @@ Troubleshoot Networking with a netshoot toolkit Container:
 `kubectl run tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash`
 
 ### Containers
+
 Restart Deployments (Stops and Restarts all Pods):
 `kubectl scale deploy <deployment> --replicas=0`
 `kubectl scale deploy <deployment> --replicas=1`
