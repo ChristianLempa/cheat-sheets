@@ -102,3 +102,14 @@ The outer pipes (|) are optional, and you don't need to make the raw Markdown li
 | col1 | col2 | col3 |
 | col1 | col2 | col3 |
 ```
+
+### Task list
+```markdown
+[x] Write the post
+[ ] Update the website
+[ ] Contact the user
+```
+
+## Reference
+
+Link: [markdown guide](https://www.markdownguide.org/cheat-sheet)
