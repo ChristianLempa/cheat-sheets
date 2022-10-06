@@ -24,3 +24,16 @@ networks:
     external: true
 ```
 
+## Volumes
+Volumes allow Docker containers to use persistent storage. In a compose file, you can create and map volumes like this:
+```yaml
+volumes:
+  my-volume:
+
+services:
+  app:
+    volumes:
+      - my-volume:/path-in-container
+```
+
+These volumes are stored in `/var/lib/docker/volumes`.
