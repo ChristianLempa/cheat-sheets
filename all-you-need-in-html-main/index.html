@@ -1,0 +1,431 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      .footer{
+  margin-top:15px;
+  height:auto;
+  /* margin-bottom: 15px; */
+   
+  padding :100px 15%;
+  /* display flex so that all the coloumns will be side by side  */
+  display: flex;
+  background: black;
+  color:#efefef;
+  text-align: center;
+  
+}
+.footer a{
+  display:block;
+  color: #efefef;
+  text-decoration: none;
+}
+.footer div h3{
+  margin-bottom:30px;
+  letter-spacing:1px;
+  font-weight:300;
+}
+
+.col-2{
+  flex-grow: 2;
+}
+.col-4{
+  flex-grow: 2;
+}
+footer form input{
+  width: 200px;
+  height:23px;
+  border-radius:4px;
+  text-align:center;
+  margin-top:20px;
+  margin-bottom:40px;
+  outline:none;
+  border:none;
+}
+footer form button{
+  
+  /* background:transparent; */
+  border:2px solid #fff;
+  border-radius:30px;
+  padding:10px 30px;
+  font-size:15px;
+  cursor:pointer;
+}
+ 
+
+
+
+      </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Welcome to my blog . Our Blog Focus on creating tutorials</p>
+    <h1>h1 heading largest</h1>
+         <h2>h2 web page</h2>
+         <h3>h3 web page</h3>
+         <h4>h4 web page</h4>
+         <h5>h5 web page</h5>
+         <h6>h6 heading smallest web page</h6>
+         <br>
+         <p>I am <b>paragraph</b> </p>
+         <b>bold tag</b>
+         <i>italic tag</i>
+         <strong>strong tag</strong>
+         <em>Emphasis tag</em>
+       
+        <h1>Links anchor tag a href =" "</h1>
+        <a href=https://www.google.com/>Google Link in a new tab</a>
+        <a target="_blank" href=https://www.google.com/>Google Link in the same tab</a>
+        <a href="mailto:nidhikumaridbg1@gmail.com">Email id of mine</a>
+        <a href="tel:84465688798">call us at 84465688798 </a>
+        <a href="#">Description of same - page links</a>
+        <h1>ordered list</h1>
+        <ol>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+        <ol type="A">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ol> 
+        <ol type="a">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+        <ol type="I">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+        <ol type="i">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+        <ol start="50">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+          </ol>
+          
+          <ol type="I" start="50">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+          </ol>
+        <h1>unordered list</h1>
+
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <ul type="square">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <ul type="circle">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <ul type="disc">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <ul type="none">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <h2>A Description List</h2>
+
+        <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+        </dl>
+        <!--A comment-->
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas dolore in deleniti nihil, animi sint et quidem ad ab consequuntur rem natus suscipit totam nisi est sunt recusandae modi nam.</p>
+        <img src="https://gillde.com/wp-content/uploads/2020/02/User-Interface-Design-Inspiration-24-18.png"height="600"width="600">
+    <br><br><br><hr><br>
+    <h2>HTML Forms</h2>
+
+    <form>
+      <label>First name:</label><br />
+      <input type="text" value="John" /><br />
+      <label>Last name:</label><br />
+      <input type="text" value="Doe" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <br /><br />
+    <h2>Radio Buttons</h2>
+
+    <p>Choose your favorite Web language:</p>
+
+    <form>
+      <input type="radio" value="HTML" />
+      <label>HTML</label><br />
+      <input type="radio" value="CSS" />
+      <label>CSS</label><br />
+      <input type="radio" value="JavaScript" />
+      <label>JavaScript</label>
+    </form>
+    <br /><br />
+    <h2>Radio Buttons used id and label for a particular id</h2>
+
+    <p>Choose your favorite Web language:</p>
+
+    <form>
+      <input type="radio" id="html" name="fav_language" value="HTML" />
+      <label for="html">HTML</label><br />
+      <input type="radio" id="css" name="fav_language" value="CSS" />
+      <label for="css">CSS</label><br />
+      <input
+        type="radio"
+        id="javascript"
+        name="fav_language"
+        value="JavaScript"
+      />
+      <label for="javascript">JavaScript</label>
+    </form>
+    <br /><br />
+
+    <h2>checkboxes</h2>
+    <form>
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+      <label for="vehicle1"> I have a bike</label><br />
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+      <label for="vehicle2"> I have a car</label><br />
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+      <label for="vehicle3"> I have a boat</label>
+      <br />
+      <h2>submit</h2>
+      <input type="submit" value="Submit" />
+    </form>
+    <br /><br />
+    <p>
+      For more visit<a href="https://www.w3schools.com/html/html_forms.asp"
+        >HTML FORMS</a
+      >
+      <br><hr><br><br><br>
+
+
+      <h4>Table 1 </h4>
+<br>
+<p>How to write code</p>
+&lt;table border="4"&gt;
+&lt;tr&gt;
+&lt;td&gt;row1,column1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+<br>
+<p>This table consists of only one row and only one col with border size 4 <br> tr is for table row and td is for table column</p>
+<br><br>
+<tr>
+<table border="4">
+    <td>row1,column1</td>
+</tr>
+</table>
+<br><br>
+<hr>
+<br>
+<h4>Table 2</h4>
+<br>
+<table border="4">
+    <tr>
+        <td>row1,col1</td>
+        <td>row1,col2</td>
+        <td>row1,col3</td>
+        <td>row1,col4</td>
+    </tr>
+    <tr>
+        <td>row2,col1</td>
+        <td>row2,col2</td>
+        <td>row2,col3</td>
+        <td>row2,col4</td>
+    </tr>
+    <tr>
+        <td>row3,col1</td>
+        <td>row3,col2</td>
+        <td>row3,col3</td>
+        <td>row3,col4</td>
+    </tr>
+</table>
+<br><br>
+<h4>Table 3</h4>
+<br>
+<p>we will add some cell padding - space  around data inside a cell and  cellspanning<br>
+ space between the cells. We are adding heading too.</p>
+<br>
+<p>How to write code</p>
+&lt;table border="4" cellpadding="5" cell spanning="5"&gt;
+<br><br>
+
+<table border="4" cellpadding="5"cell spanning="5">
+<tr><th colspan="4">Table 3</th></tr>
+    <tr>
+        <td>row1,col1</td>
+        <td>row1,col2</td>
+        <td>row1,col3</td>
+        <td>row1,col4</td>
+    </tr>
+    <tr>
+        <td>row2,col1</td>
+        <td>row2,col2</td>
+        <td>row2,col3</td>
+        <td>row2,col4</td>
+    </tr>
+    <tr>
+        <td>row3,col1</td>
+        <td>row3,col2</td>
+        <td>row3,col3</td>
+        <td>row3,col4</td>
+    </tr>
+</table>
+<br><br>
+<h4>Table 4</h4>
+<br>
+<p>Use of colspan and rowsapan.<br>
+ The colspan attribute in HTML specifies the number of columns a cell should span . <br>
+ The rowspan attribute in HTML specifies the number of columns a cell should span . </p>
+ <br><br>
+ <table border="4" cellpadding="5"cell spanning="5">
+    <tr><th colspan="4">Table 3</th></tr>
+        <tr>
+            <td>row1,col1</td>
+            <td>row1,col2</td>
+            <td>row1,col3</td>
+            <td>row1,col4</td>
+        </tr>
+        <tr>
+            <td>row2,col1</td>
+            <td>row2,col2</td>
+            <td>row2,col3</td>
+            <td>row2,col4</td>
+        </tr>
+        <tr>
+            <td colspan="4"><center>row3,col1</center></td>
+
+        </tr>
+    </table>
+    <br><br>
+    <h4>Table 5</h4>
+    <br>
+    <p>rowspan</p>
+    <br><br>
+    <table border="4" cellpadding="5"cell spanning="5">
+        <tr><th colspan="4">Table 3</th></tr>
+            <tr>
+                <td>row1,col1</td>
+                <td>row1,col2</td>
+                <td>row1,col3</td>
+                <td rowspan="0">row1,col4</td>
+            </tr>
+            <tr>
+                <td>row2,col1</td>
+                <td>row2,col2</td>
+                <td>row2,col3</td>
+                <!-- <td>row2,col4</td> -->
+            </tr>
+            <tr>
+                <td>row3,col1</td>
+                <td>row3,col2</td>
+                <td>row3,col3</td>
+                <!-- <td><center>row3,col4</center></td> -->
+            </tr>
+        </table>
+        <br><br>
+        <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif;">
+          12 steps to overcome depression 
+      </h1>
+      <hr>
+      <br>
+      <p>
+          In this web site we are going to discuss about various steps to get rid of depression
+      </p>
+      <p>
+          in total there will be 12 steps
+      </p>
+      <p>
+          There are times in life when <em> you feel like things will <del>never get better</del></em> and that<strong> your feelings of depression will never end</strong>. What can you do at those times when you <small><mark><i>feel hopeless, unmotivated, fatigued, or overwhelmed with life?</i></mark></small>
+
+If you begin to feel depressed, your first step should be to focus your time and energy on yourself. Taking care of yourself emotionally, creatively, physically, and spiritually, can help turn negative thoughts and feelings into more positive ones.
+      </p>
+      <a href="https://www.yourlifeyourvoice.org/pages/tip-12-steps-to-overcome-depression.aspx">You can follow this link to follow in detail</a>
+      <img src="https://i1.wp.com/www.peanutbutterrunner.com/wp-content/uploads/2016/11/Benefits-of-Meditation-Infographic.jpg?fit=2480%2C3508&ssl=1"alt="W3Schools.com" width="204" height="242">
+      <div> 
+      <h1 style="background-color:rgb(255, 0, 0);"> color</h1>
+      <h1 style="background-color:rgb(0, 0, 255);"> color</h1>
+      <h1 style="background-color:rgb(60, 179, 113);">color</h1>
+      <h1 style="background-color:rgb(238, 130, 238);">color</h1>
+      <h1 style="background-color:rgb(255, 165, 0);">color</h1>
+      <h1 style="background-color:rgb(106, 90, 205);">color</h1>
+      </div>
+      <br><hr><br><br>
+      <br><br>
+      <!-- div with class name footer -->
+      <div class="footer">
+        <div class="col-1">
+          <h3>Useful Links</h3>
+          <ul style="list-style-type:none;">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Directory</a></li>
+          <li><a href="#">Developer</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Cookie policy</a></li>
+          <li><a href="#">Ads info</a></li>
+          <li><a href="#">Status</a></li>
+          <li><a href="#">Careers</a></li>
+        
+          </ul>
+        
+        </div>
+        <div class="col-2">
+       
+          <h3>Buisness</h3>
+          <ul style="list-style-type:none;">
+          <li><a href="#">Brand Resources</a></li>
+          <li><a href="#">Advertising</a></li>
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Twitter for Business</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        </div>
+        <div class="col-3">
+          <h3>Newsletter</h3>
+          <form>
+          <input type="email" placeholder="Your Email Address"required>
+          <button type="submit">SUBSCRIBE NOW</button>
+        </form>
+        </div>
+        <div class="col-4">
+          <h3>Contact</h3>
+          <h>123,xy road, BSK3<br>Bangalore,Karnataka,India</h>
+           
+        </div>
+        <br><br>
+      </div>
+      <div class="copyright"><span>&copy; 2022 Twitter,Inc</span></div>
+          
+
+
+    </p>
+
+
+  </body>
+</html>
