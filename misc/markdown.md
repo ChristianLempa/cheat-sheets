@@ -102,3 +102,19 @@ The outer pipes (|) are optional, and you don't need to make the raw Markdown li
 | col1 | col2 | col3 |
 | col1 | col2 | col3 |
 ```
+
+### Task list
+
+To create a taksk lsit start line with square brackets with an empty space.
+Ex: [ <space> ] and add text for task.
+To check the task replace the space between the bracket with "x".
+
+```markdown
+[x] Write the post
+[ ] Update the website
+[ ] Contact the user
+```
+
+## Reference
+
+Link: [markdown guide](https://www.markdownguide.org/cheat-sheet)
