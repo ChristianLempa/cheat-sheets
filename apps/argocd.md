@@ -73,7 +73,7 @@ metadata:
   labels:  
     argocd.argoproj.io/secret-type: repository  
 stringData:  
-  url: https://github.com/xcad2k/private-repo 
+  url: https://github.com/<user>/<private-repo>
   password: <github-token> 
   username: not-used
 ```
