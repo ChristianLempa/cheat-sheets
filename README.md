@@ -1,28 +1,24 @@
-# Christian's "Cheat-Sheets"
+# Ronnie's "Cheat-Sheets"
 
 Hi, there! 👋
 
-I’m Christian, a 35 year-old tech enthusiast from Germany, and I love to inspire and educate people in IT.
+This repository **Cheat-Sheets** is my personal knowledge-base. Here you'll find code-snippets, technical documentation, and command reference for various tools, and technologies.
 
-This Repository **Cheat-Sheets** is my personal knowledge-base. Here you'll find code-snippets, technical documentation, and command reference for various tools, and technologies.
+The starting point for this repository was the **Cheat-Sheets** repository maintained by Christian Lempa at
+[https://github.com/xcad2k/cheat-sheets](https://github.com/xcad2k/cheat-sheets).
 
-> :warning: Be aware, products can change over time. I do my best to keep up with the latest changes and releases, but please understand that this won’t always be the case.
-
-I created them as free resources to be used in your specific use cases. If you're searching for detailed, in-depth tutorials on some tools or technologies, check out my YouTube Channel: [The Digital Life](https://www.youtube.com/channel/UCZNhwA1B5YqiY1nLzmM0ZRg).
-
-## Contribution
-
-If you’d like to contribute to this project, reach out to me on social media or [Discord](https://discord.gg/bz2SN7d), or create a pull request for the necessary changes.
+Christian has created detailed, in-depth tutorials on some tools or technologies on his YouTube Channel: [The Digital Life](https://www.youtube.com/channel/UCZNhwA1B5YqiY1nLzmM0ZRg).
 
 ## Other Resources
 
-- [Videos](https://github.com/xcad2k/videos) - Documentation and project files for all my video tutorials on YouTube
-- [Dotfiles](https://github.com/xcad2k/dotfiles) - My personal configuration files on Linux and Windows
-- [Boilerplates](https://github.com/xcad2k/boilerplates) - Templates for various projects like Docker, K8S, Ansible, etc
-- [Cheat-Sheets](https://github.com/xcad2k/cheat-sheets) - Command Reference for various tools and technologies
+- [Asciiville](https://github.com/doctorfree/Asciiville) - Ascii Art, text based utilities, tools, games, fun
+- [MusicPlayerPlus](https://github.com/doctorfree/MusicPlayerPlus) - Services, tools, clients for self hosting and managing a music library
+- [dotfiles-ubuntu](https://github.com/doctorfree/dotfiles-ubuntu) - My personal configuration files for Linux
+- [dotfiles-macos](https://github.com/doctorfree/dotfiles-macos) - My personal configuration files for Mac OS
 
 ## Support me
 
-[Becoming a Patreon](https://www.patreon.com/christianlempa) will support my mission to create free, high-quality content for tech enthusiasts and IT professionals.
+Sponsor my projects at
+[https://github.com/sponsors/doctorfree](https://github.com/sponsors/doctorfree)
 
 ***Help me to create something that matters to people!***
