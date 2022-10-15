@@ -2,7 +2,7 @@
 
 Hi, there! 👋
 
-This repository **Cheat-Sheets** is my personal knowledge-base. Here you'll find code-snippets, technical documentation, and command reference for various tools, and technologies.
+The **Cheat-Sheets** repository is my personal knowledge-base. Here you'll find code-snippets, technical documentation, and command reference for various tools, and technologies.
 
 The starting point for this repository was the **Cheat-Sheets** repository maintained by Christian Lempa at
 [https://github.com/xcad2k/cheat-sheets](https://github.com/xcad2k/cheat-sheets).
