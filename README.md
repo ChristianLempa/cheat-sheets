@@ -12,7 +12,10 @@ Christian has created detailed, in-depth tutorials on some tools or technologies
 ## Other Resources
 
 - [Asciiville](https://github.com/doctorfree/Asciiville) - Ascii Art, text based utilities, tools, games, fun
+- [DriveCommandLine](https://github.com/doctorfree/DriveCommandLine) - Initialize, configure, monitor, and manage Google Drives from the command line
+- [MirrorCommand](https://github.com/doctorfree/MirrorCommand) - Initialize, configure, monitor, and manage a MagicMirror from the command line
 - [MusicPlayerPlus](https://github.com/doctorfree/MusicPlayerPlus) - Services, tools, clients for self hosting and managing a music library
+- [RoonCommandLine](https://github.com/doctorfree/RoonCommandLine) - Command line control of the Roon audio system over a local network
 - [dotfiles-ubuntu](https://github.com/doctorfree/dotfiles-ubuntu) - My personal configuration files for Linux
 - [dotfiles-macos](https://github.com/doctorfree/dotfiles-macos) - My personal configuration files for Mac OS
 
