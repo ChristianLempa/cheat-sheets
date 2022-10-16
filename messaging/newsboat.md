@@ -9,7 +9,10 @@ FAQ: https://newsboat.org/releases/2.29/docs/faq.html
 Documentation: https://newsboat.org/releases/2.29/docs/newsboat.html
 
 ## Feed format
+
+```
 <url> [<tag1> <tag2> ...]
+```
 
 ## Example configuration
 
