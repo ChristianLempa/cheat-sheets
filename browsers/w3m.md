@@ -2,7 +2,7 @@
 
 *w3m* is a free software/open source text-based web browser and terminal pager. It has support for tables, frames, SSL connections, color, and inline images on suitable terminals. Generally, it renders pages in a form as true to their original layout as possible.
 
-The name "w3m" stands for "WWW wo miru (WWW\u3092\u898b\u308b)", which is Japanese for "to see the WWW" where W3 is a numeronym of WWW.
+The name "w3m" stands for "WWW wo miru (WWW &#3092; &#898b; &#308b;)", which is Japanese for "to see the WWW" where W3 is a numeronym of WWW.
 
 The most notable feature is full keyboard navigability on everything. For instance, searching using google can be done through the terminal. Links can be navigated using the arrow keys. Even gmail is navigable in the same manner.
 
