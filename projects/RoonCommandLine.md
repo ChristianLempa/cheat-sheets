@@ -508,14 +508,14 @@ Roon_UI.png:                 800 x 557
 
 <p float="left">
 List tracks containing "Satin" by Artists containing "Moody"<br/>
-  <img src="screenshots/Roon_List_Artist_Tracks.png" style="width:800px;height:350px;">
+  <img src="https://github.com/doctorfree/RoonCommandLine/blob/master/screenshots/Roon_List_Artist_Tracks.png?raw=true"/>
 Play first track containing "Satin" by Artists containing "Moody"<br/>
-  <img src="screenshots/Roon_Play_Artist_Track.png" style="width:800px;height:350px;">
+  <img src="https://github.com/doctorfree/RoonCommandLine/blob/master/screenshots/Roon_Play_Artist_Track.png?raw=true"/>
 </p>
 <p float="left">
 Interactive menus when invoked with no arguments<br/>
-  <img src="screenshots/Roon_UI.png" style="width:800px;height:600px;">
-  <img src="screenshots/Roon_Set_Zone.png" style="width:800px;height:600px;">
+  <img src="https://github.com/doctorfree/RoonCommandLine/blob/master/screenshots/Roon_UI.png?raw=true"/>
+  <img src="https://github.com/doctorfree/RoonCommandLine/blob/master/screenshots/Roon_Set_Zone.png?raw=true"/>
 </p>
 
 ## Troubleshooting

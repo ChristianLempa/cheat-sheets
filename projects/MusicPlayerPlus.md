@@ -2114,8 +2114,8 @@ https://wiki.archlinux.org/title/Music_Player_Daemon/Tips_and_tricks#Control_MPD
 ## Screenshots
 
 <p float="left">
-  <img src="screenshots/mpplus-tilix.png" style="width:800px;height:600px;">
-  <img src="screenshots/mpplus-lyrics.png" style="width:800px;height:600px;">
+  <img src="https://github.com/doctorfree/MusicPlayerPlus/blob/master/screenshots/mpplus-tilix.png?raw=true"/>
+  <img src="https://github.com/doctorfree/MusicPlayerPlus/blob/master/screenshots/mpplus-lyrics.png?raw=true"/>
 </p>
 
 ## Videos

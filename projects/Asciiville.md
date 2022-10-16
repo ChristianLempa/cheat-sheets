@@ -1711,7 +1711,7 @@ although they support many additional characters.
 
 <p float="left">
 ASCII Code Chart<br/>
-  <img src="art/pics/USASCII_code_chart.png" style="width:1024px;height:737px;">
+<img src="https://github.com/doctorfree/Asciiville/blob/main/art/pics/USASCII_code_chart.png?raw=true"/>
 </p>
 
 ASCII was developed from telegraph code. Its first commercial use was as a
@@ -1741,7 +1741,7 @@ the millenia, concrete poetry to typewriter art to ASCII and ANSI art.
 
 <p float="left">
 Typewriter art by Flora F.F. Stacey from 1898<br/>
-  <img src="art/pics/typewriter-art.jpg" style="width:600px;height:800px;">
+  <img src="https://github.com/doctorfree/Asciiville/blob/main/art/pics/typewriter-art.jpg?raw=true"/>
 </p>
 
 ## Videos
@@ -1765,28 +1765,28 @@ Asciiville Waterfalls Slideshow Video:
 
 <p float="left">
 Waterfall as Ascii Art generated and rendered with Asciiville<br/>
-  <img src="screenshots/Asciiville-Waterfall.png" style="width:1280px;height:720px;">
+  <img src="https://github.com/doctorfree/Asciiville/blob/main/screenshots/Asciiville-Waterfall.png?raw=true"/>
 </p>
 
 <p float="left">
 Asciiville Main Menu<br/>
-  <img src="screenshots/Asciiville-Welcome.png" style="width:800px;height:600px;">
-  <img src="screenshots/Asciiville-MainMenu.png" style="width:800px;height:600px;">
+  <img src="https://github.com/doctorfree/Asciiville/blob/main/screenshots/Asciiville-Welcome.png?raw=true"/>
+  <img src="https://github.com/doctorfree/Asciiville/blob/main/screenshots/Asciiville-MainMenu.png?raw=true"/>
 </p>
 
 <p float="left">
 Asciiville Sub-Menus: Ascii Art, Asciimatics Animations, MusicPlayerPlus, and RoonCommandLine<br/>
-  <img src="screenshots/Asciiville-Art.png" style="width:800px;height:600px;">
-  <img src="screenshots/Asciiville-Animation.png" style="width:800px;height:600px;">
-  <img src="screenshots/Asciiville-Music.png" style="width:800px;height:600px;">
-  <img src="screenshots/Asciiville-Roon.png" style="width:800px;height:600px;">
+  <img src="https://github.com/doctorfree/Asciiville/blob/main/screenshots/Asciiville-Art.png?raw=true"/>
+  <img src="https://github.com/doctorfree/Asciiville/blob/main/screenshots/Asciiville-Animation.png?raw=true"/>
+  <img src="https://github.com/doctorfree/Asciiville/blob/main/screenshots/Asciiville-Music.png?raw=true"/>
+  <img src="https://github.com/doctorfree/Asciiville/blob/main/screenshots/Asciiville-Roon.png?raw=true"/>
 </p>
 
 <p float="left">
 Ascii System Monitor, Maps, and Weather<br/>
-  <img src="screenshots/Btop.png" style="width:800px;height:600px;">
-  <img src="screenshots/Mapscii-Ukraine.png" style="width:800px;height:600px;">
-  <img src="screenshots/Weather.png" style="width:800px;height:600px;">
+  <img src="https://github.com/doctorfree/Asciiville/blob/main/screenshots/Btop.png?raw=true"/>
+  <img src="https://github.com/doctorfree/Asciiville/blob/main/screenshots/Mapscii-Ukraine.png?raw=true"/>
+  <img src="https://github.com/doctorfree/Asciiville/blob/main/screenshots/Weather.png?raw=true"/>
 </p>
 
 ## Contributing

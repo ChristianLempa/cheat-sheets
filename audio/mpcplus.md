@@ -295,10 +295,8 @@ script in the mpcplus source directory:
 
 ## Screenshots
 
-<p float="left">
-  <img src="screenshots/mpplus-tilix.png" style="width:800px;height:600px;">
-  <img src="screenshots/mpplus-lyrics.png" style="width:800px;height:600px;">
-</p>
+<img src="https://github.com/doctorfree/mpcplus/blob/master/screenshots/mpplus-tilix.png?raw=true"/>
+<img src="https://github.com/doctorfree/mpcplus/blob/master/screenshots/mpplus-lyrics.png?raw=true"/>
 
 ## Videos
 
