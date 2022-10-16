@@ -36,9 +36,6 @@ macOS (using Homebrew|`brew install tmux`
 macOS (using MacPorts)|`port install tmux`
 openSUSE|`zypper install tmux`
 
-Some thirdparty binary packages are available: [AppImage](Installing#appimage-package) and
-[RPMs](Installing#red-hat-enterprise-linux--centos-rpms).
-
 ### AppImage package
 
 Instructions and scripts on building an AppImage package for tmux are available
