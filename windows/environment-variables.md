@@ -1,6 +1,6 @@
 # Environment Variables in Windows
 ## How to use them in PowerShell
-Environment Varaibles can be used in PowerShell ([[powershell]]) with the prefix `$env:`.
+Environment Variables can be used in [[powershell|PowerShell]] with the prefix `$env:`.
 
 **Example***:
 *Variable:*  `%APPDATA%`

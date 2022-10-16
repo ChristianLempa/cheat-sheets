@@ -1,0 +1,1 @@
+<%tp.date.now("HH:mm")%>

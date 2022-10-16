@@ -1,6 +1,6 @@
 # Install K3S in High Availability Mode
 ## Install Database
-Install MariaDB ([[mariadb]]).
+Install [MariaDB](mariadb).
 ## Install Servers
 ```bash
 curl -sfL https://get.k3s.io | sh -s - server \
