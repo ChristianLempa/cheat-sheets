@@ -1589,3 +1589,130 @@ download-path ~/Downloads/
 max-downloads 2
 scrolloff 50
 ```
+
+## Urls
+
+Example newsboat `urls` file:
+
+```
+# To add URLs that have restricted access via username/password,
+# simply provide the username/password in the following way:
+#
+# http://username:password@hostname.domain.tld/feed.rss
+#
+# All unread articles in all feeds
+#
+"query:Unread Articles:unread = \"yes\""
+#
+#-------------------------
+#-------NEWSFEEDS---------
+#-------------------------
+http://rss.cnn.com/rss/cnn_topstories.rss "~NEWS: CNN"
+http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml "~NEWS: BBC"
+http://www.vox.com/rss/index.xml "~NEWS: VOX"
+https://newsboat.org/news.atom "~NEWS: Newsboat"
+#-------------------------
+#-------YOUTUBE-----------
+#-------------------------
+https://www.youtube.com/feeds/videos.xml?channel_id=UC1aQCduPHWSXX5UgfHCyVCA "~YOUTUBE: Doctorfree"
+#-------------------------
+#-------REDDIT------------
+#-------------------------
+https://www.reddit.com/r/ascii.rss "~REDDIT: r/ascii"
+https://www.reddit.com/r/asciiart.rss "~REDDIT: r/asciiart"
+https://www.reddit.com/r/commandline.rss "~REDDIT: r/commandline"
+https://www.reddit.com/r/linux.rss "~REDDIT: r/linux"
+https://www.reddit.com/r/magicmirror.rss "~REDDIT: r/magicmirror"
+https://www.reddit.com/r/opensource.rss "~REDDIT: r/opensource"
+#-------------------------
+#-------TWITTER-----------
+#-------------------------
+https://nitter.net/search/rss?f=tweets&q=ronrecord "~TWITTER: ronrecord"
+#-------------------------
+#-------GIT_REPOS---------
+#-------------------------
+https://github.com/doctorfree.atom "~GITHUB: Doctorfree"
+#-------------------------
+#-------BLOGS-------------
+#-------------------------
+https://blog.ronrecord.com/index.php/feed/ "~BLOG: Doctorwhen
+https://github.blog/feed/ "~BLOG: Github"
+https://github.blog/category/open-source/feed/ "~BLOG: Github Open Source"
+#-------------------------
+#-------FUN---------------
+#-------------------------
+http://xkcd.com/atom.xml "~FUN: xkcd"
+http://www.dumbingofage.com/feed/ "~FUN: Dumbing of Age"
+http://feeds.feedburner.com/oatmealfeed "~FUN: Oatmeal"
+http://www.smbc-comics.com/rss.php "~FUN: Saturday Morning Breakfast Cereal"
+```
+
+## Keys
+
+Example newsboat `keys` file:
+
+```
+####  bind-key
+#
+# Bind key <key> to <operation>. This means that whenever <key> is pressed,
+# then <operation> is executed (if applicable in the current dialog). A list of
+# available operations can be found below. Optionally, you can specify a
+# dialog. If you specify one, the key binding will only be added to the
+# specified dialog. Available dialogs are `all` (default if none is specified),
+# `feedlist`, `filebrowser`, `help`, `articlelist`, `article`, `tagselection`,
+# `filterselection`, `urlview`, `podbeuter`, and `dirbrowser`.
+#
+# Syntax: <key> <operation> [<dialog>]
+#
+# Default value: n/a
+#
+# bind-key ^R reload-all
+bind-key j down feedlist
+bind-key k up feedlist
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key j down article
+bind-key k up article
+bind-key l open
+bind-key h quit
+bind-key ^D pagedown
+bind-key ^U pageup
+bind-key b toggle-source-view
+bind-key U toggle-show-read-feeds
+bind-key u show-urls
+bind-key g home
+bind-key G end
+bind-key b open-in-browser-and-mark-read
+bind-key B open-in-browser
+bind-key i sort
+bind-key I rev-sort
+bind-key SPACE toggle-article-read
+bind-key a mark-all-above-as-read
+
+####  unbind-key
+#
+# Unbind key <key>. This means that no operation is called when <key> is
+# pressed. If you provide "-a" as <key>, all currently bound keys will become
+# unbound. Optionally, you can specify a dialog (for a list of available
+# dialogs, see `bind-key` above). If you specify one, the key binding will only
+# be unbound for the specified dialog.
+#
+# Syntax: <key> [<dialog>]
+#
+# Default value: n/a
+#
+# unbind-key R
+# unbind-key ENTER
+unbind-key j
+unbind-key k
+unbind-key J
+unbind-key K
+unbind-key ^D
+unbind-key ^U
+unbind-key o
+unbind-key g
+unbind-key G
+unbind-key C feedlist
+```
