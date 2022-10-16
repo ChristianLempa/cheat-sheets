@@ -1,6 +1,6 @@
 # W3M
 
-`w3m` is a free software/open source text-based web browser and terminal pager. It has support for tables, frames, SSL connections, color, and inline images on suitable terminals. Generally, it renders pages in a form as true to their original layout as possible.
+*w3m* is a free software/open source text-based web browser and terminal pager. It has support for tables, frames, SSL connections, color, and inline images on suitable terminals. Generally, it renders pages in a form as true to their original layout as possible.
 
 The name "w3m" stands for "WWW wo miru (WWW\u3092\u898b\u308b)", which is Japanese for "to see the WWW" where W3 is a numeronym of WWW.
 
@@ -18,7 +18,7 @@ Website: http://w3m.sourceforge.net
 
 ## Introduction
 
-`w3m` is a pager with WWW capability. It IS a pager, but it can be
+*w3m* is a pager with WWW capability. It IS a pager, but it can be
 used as a text-mode WWW browser.
 
 The features of w3m are as follows:
