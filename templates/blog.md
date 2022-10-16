@@ -43,7 +43,7 @@
 
 
 
-Inspiration \u26c5
+Inspiration &#x26c5;
 
 - [ ] Read articles and watch videos that inspire me
 
@@ -53,7 +53,7 @@ Inspiration \u26c5
 
 
 
-Draft \u270f\ufe0f
+Draft &#x270f;&#xfe0f;
 
 - [ ] Expand those bullet points into sentences/text
 

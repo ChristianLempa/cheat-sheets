@@ -29,7 +29,7 @@ Tags:
 
 
 
-# \u2618\ufe0f How the Book Changed Me
+# &#x2618;&#xfe0f; How the Book Changed Me
 
 
 
@@ -37,7 +37,7 @@ How my life / behaviour / thoughts / ideas have changed as a result of reading t
 
 
 
-# \u270d\ufe0f My Top 3 Quotes
+# &#x270d;&#xfe0f; My Top 3 Quotes
 
 
 

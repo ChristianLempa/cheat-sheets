@@ -26,4 +26,4 @@ Class:
 
 ### Summary
 
-Highlight ==what\u2019s important!==
+Highlight ==what&#x2019;s important!==
