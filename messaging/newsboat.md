@@ -8,6 +8,8 @@ FAQ: https://newsboat.org/releases/2.29/docs/faq.html
 
 Documentation: https://newsboat.org/releases/2.29/docs/newsboat.html
 
+## Contents
+
 - [Feed format](#feed-format)
 - [Example configuration](#example-configuration)
 - [Urls](#urls)
