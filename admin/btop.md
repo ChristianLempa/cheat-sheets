@@ -51,13 +51,13 @@ tags:
 
 ## News
 
-##### 28 August 2022
+### 28 August 2022
 
 [![btop4win](https://github.com/aristocratos/btop4win/raw/master/Img/logo.png)](https://github.com/aristocratos/btop4win)
 
 First release of btop4win available at https://github.com/aristocratos/btop4win
 
-##### 16 January 2022
+### 16 January 2022
 
 Release v1.2.0 with FreeBSD support. No release binaries for FreeBSD provided as of yet.
 
@@ -65,7 +65,7 @@ Again a big thanks to [@joske](https://github.com/joske) for his porting efforts
 
 Since compatibility with Linux, macOS and FreeBSD are done, the focus going forward will be on new features like GPU monitoring.
 
-##### 13 November 2021
+### 13 November 2021
 
 Release v1.1.0 with macOS support. Binaries in [continuous-build-macos](https://github.com/aristocratos/btop/actions/workflows/continuous-build-macos.yml) are only x86 for now.
 macOS binaries + installer are included for both x86 and ARM64 (Apple Silicon) in the releases.
@@ -75,7 +75,7 @@ Big thank you to [@joske](https://github.com/joske) who wrote the vast majority 
 <details>
 <summary>More...</summary>
 
-##### 30 October 2021
+### 30 October 2021
 
 Work on the OSX [macOS] and FreeBSD branches, both initiated and mostly worked on by [@joske](https://github.com/joske), will likely be completed in the coming weeks.
 The OSX [macOS] branch has some memory leaks that needs to be sorted out and both have some issues with the processes cpu usage calculation and other smaller issues that needs fixing.
@@ -104,12 +104,12 @@ gmake
 Note that GNU make (`gmake`) is recommended but not required for macOS/OSX but it is required on FreeBSD.
 
 
-##### 6 October 2021
+### 6 October 2021
 
 macOS development have been started by [@joske](https://github.com/joske), big thanks :)
 See branch [OSX](https://github.com/aristocratos/btop/tree/OSX) for current progress.
 
-##### 18 September 2021
+### 18 September 2021
 
 The Linux version of btop++ is complete. Released as version 1.0.0
 
@@ -128,7 +128,7 @@ The development plan right now:
 
 Windows support is not in the plans as of now, but if anyone else wants to take it on, I will try to help.
 
-##### 5 May 2021
+### 5 May 2021
 
 This project is gonna take some time until it has complete feature parity with bpytop, since all system information gathering will have to be written from scratch without any external libraries.
 And will need some help in the form of code contributions to get complete support for BSD and macOS/OSX.
@@ -217,27 +217,27 @@ Also needs a UTF8 locale and a font that covers:
 
 ## Screenshots
 
-#### Main UI showing details for a selected process
+### Main UI showing details for a selected process
 
 ![Screenshot 1](assets/normal.png)
 
-#### Main UI in TTY mode
+### Main UI in TTY mode
 
 ![Screenshot 2](assets/tty.png)
 
-#### Main UI with custom options
+### Main UI with custom options
 
 ![Screenshot 3](assets/alt.png)
 
-#### Main-menu
+### Main-menu
 
 ![Screenshot 3](assets/main-menu.png)
 
-#### Options-menu
+### Options-menu
 
 ![Screenshot 4](assets/options-menu.png)
 
-#### Help-menu
+### Help-menu
 
 ![Screenshot 5](assets/help-menu.png)
 
@@ -610,7 +610,7 @@ Also needs a UTF8 locale and a font that covers:
 All options changeable from within UI.
 Config and log files stored in `$XDG_CONFIG_HOME/btop` or `$HOME/.config/btop` folder
 
-#### btop.conf: (auto generated if not found)
+### btop.conf: (auto generated if not found)
 
 ```bash
 #? Config file for btop v. 1.2.2
@@ -815,7 +815,7 @@ selected_battery = "Auto"
 log_level = "DEBUG"
 ```
 
-#### Command line options
+### Command line options
 
 ```text
 usage: btop [-h] [-v] [-/+t] [-p <id>] [--utf-force] [--debug]
