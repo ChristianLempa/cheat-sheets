@@ -11,9 +11,7 @@ categories:
 
 A quick reference for regular expressions (regex), including symbols, ranges, grouping, assertions and some sample patterns to get you started.
 
-## Getting Started
-
-### Introduction
+## Introduction
 
 This is a quick cheat sheet to getting started with regular expressions.
 
@@ -26,7 +24,7 @@ This is a quick cheat sheet to getting started with regular expressions.
 - [Regex in Emacs](/emacs#search) _(quickref.me)_
 - [Online regex tester](https://regex101.com/) _(regex101.com)_
 
-### Character Classes
+## Character Classes
 
 | Pattern       | Description                                   |
 |---------------|-----------------------------------------------|
@@ -39,25 +37,22 @@ This is a quick cheat sheet to getting started with regular expressions.
 | `[a-zA-Z0-9]` | A character in the range: <br>a-z, A-Z or 0-9 |
 
 
-### Quantifiers
+## Quantifiers
 
 | Pattern | Description       |
 |---------|-------------------|
 | `a?`    | Zero or one of a  |
 | `a*`    | Zero or more of a |
 | `a+`    | One or more of a  |
-
 |`[0-9]+`  |  One or more of 0-9|
-
 |`a{3}`    |  Exactly 3 of a|
 |`a{3,}`    |  3 or more of a|
 |`a{3,6}`    |  Between 3 and 6 of a|
-
 |`a*`    |  Greedy quantifier|
 |`a*?`    |  Lazy quantifier|
 |`a*+`    |  Possessive quantifier|
 
-### Common Metacharacters
+## Common Metacharacters
 
 - \^
 - \{
@@ -76,7 +71,7 @@ This is a quick cheat sheet to getting started with regular expressions.
 
 Escape these special characters with `\`
 
-### Meta Sequences
+## Meta Sequences
 
 | Pattern      | Description                                                 |
 |--------------|-------------------------------------------------------------|
@@ -121,7 +116,7 @@ Escape these special characters with `\`
 | `[\b]`       | Backspace character                                         |
 | `\`          | Makes any character literal                                 |
 
-### Anchors
+## Anchors
 
 | Pattern | Description            |
 |---------|------------------------|
@@ -134,7 +129,7 @@ Escape these special characters with `\`
 | `\b`    | A word boundary        |
 | `\B`    | Non-word boundary      |
 
-### Substitution
+## Substitution
 
 | Pattern    | Description                     |
 |------------|---------------------------------|
@@ -152,46 +147,45 @@ Escape these special characters with `\`
 | `\L`       | Lowercase Transformation        |
 | `\E`       | Terminate any Transformation    |
 
-### Group Constructs
+## Group Constructs
 
 | Pattern   | Description                       |
 |-----------|-----------------------------------|
 | `(...)`   | Capture everything enclosed       |
-| `(a|b)`   | Match either a or b               |
+| <code>(a&#124;b)</code>   | Match either a or b               |
 | `(?:...)` | Match everything enclosed         |
 | `(?>...)` | Atomic group (non-capturing)      |
-| `(?|...)` | Duplicate subpattern group number |
+| <code>(?&#124;...)</code> | Duplicate subpattern group number |
 | `(?#...)` | Comment                           |
-
 |`(?'name'...)`    |  Named Capturing Group|
 |`(?<name>...)`    |  Named Capturing Group|
 |`(?P<name>...)`    |  Named Capturing Group|
-
 |`(?imsxXU)`    |  Inline modifiers|
 |`(?(DEFINE)...)`    |  Pre-define patterns before using them|
 
-### Assertions
+## Assertions
 
-| -                   | -                               |
-|---------------------|---------------------------------|
-| `(?(1)yes|no)`      | Conditional statement           |
-| `(?(R)yes|no)`      | Conditional statement           |
-| `(?(R#)yes|no)`     | Recursive Conditional statement |
-| `(?(R&name)yes|no)` | Conditional statement           |
-| `(?(?=...)yes|no)`  | Lookahead conditional           |
-| `(?(?<=...)yes|no)` | Lookbehind conditional          |
+| Pattern                             | Description                     |
+|-------------------------------------|---------------------------------|
+| <code>(?(1)yes&#124;no)</code>      | Conditional statement           |
+| <code>(?(R)yes&#124;no)</code>      | Conditional statement           |
+| <code>(?(R#)yes&#124;no)</code>     | Recursive Conditional statement |
+| <code>(?(R&name)yes&#124;no)</code> | Conditional statement           |
+| <code>(?(?=...)yes&#124;no)</code>  | Lookahead conditional           |
+| <code>(?(?<=...)yes&#124;no)</code> | Lookbehind conditional          |
 
-### Lookarounds
+## Lookarounds
 
-| -          | -                   |
+| Pattern    | Description         |
 |------------|---------------------|
 | `(?=...)`  | Positive Lookahead  |
 | `(?!...)`  | Negative Lookahead  |
 | `(?<=...)` | Positive Lookbehind |
 | `(?<!...)` | Negative Lookbehind |
+
 Lookaround lets you match a group before (lookbehind) or after (lookahead) your main pattern without including it in the result.
 
-### Flags/Modifiers
+## Flags/Modifiers
 
 | Pattern | Description           |
 |---------|-----------------------|
@@ -206,9 +200,9 @@ Lookaround lets you match a group before (lookbehind) or after (lookahead) your 
 | `A`     | Anchor                |
 | `J`     | Duplicate group names |
 
-### Recurse
+## Recurse
 
-| -           | -                                 |
+| Pattern     | Description                       |
 |-------------|-----------------------------------|
 | `(?R)`      | Recurse entire pattern            |
 | `(?1)`      | Recurse first subpattern          |
@@ -217,7 +211,7 @@ Lookaround lets you match a group before (lookbehind) or after (lookahead) your 
 | `(?P=name)` | Match subpattern `name`           |
 | `(?P>name)` | Recurse subpattern `name`         |
 
-### POSIX Character Classes
+## POSIX Character Classes
 
 | Character Class | Same as                 | Meaning                        |
 |-----------------|-------------------------|--------------------------------|
@@ -230,7 +224,7 @@ Lookaround lets you match a group before (lookbehind) or after (lookahead) your 
 | `[[:graph:]]`   | `[[:alnum:][:punct:]]`  | Visible characters (not space) |
 | `[[:lower:]]`   | `[a-z]`                 | Lowercase letters              |
 | `[[:print:]]`   | `[ -~] == [ [:graph:]]` | Visible characters             |
-| `[[:punct:]]`   | `[!"#$%&’()*+,-./:;<=>?@[]^_\`{\|}~]`            | Visible punctuation characters |
+| `[[:punct:]]`   | <code>[!"#$%&’()*+,-./:;<=>?@[]^_`{\|}~]</code>          | Visible punctuation characters |
 | `[[:space:]]`   | `[\t\n\v\f\r ]`         | Whitespace                     |
 | `[[:upper:]]`  | `[A-Z]`                  | Uppercase letters              |
 | `[[:word:]]`   | `[0-9A-Za-z_]`           | Word characters                |
@@ -238,9 +232,9 @@ Lookaround lets you match a group before (lookbehind) or after (lookahead) your 
 | `[[:<:]]`      | `[\b(?=\w)]`             | Start of word                  |
 | `[[:>:]]`      | `[\b(?<=\w)]`            | End of word                    |
 
-### Control verb 
+## Control verb 
 
-| -                      | -                     |
+| Pattern                | Description           |
 |------------------------|-----------------------|
 | `(*ACCEPT)`            | Control verb          |
 | `(*FAIL)`              | Control verb          |
@@ -267,12 +261,7 @@ Lookaround lets you match a group before (lookbehind) or after (lookahead) your 
 | `(*NO_AUTO_POSSESS)`   | Regex engine modifier |
 | `(*NO_START_OPT)`      | Regex engine modifier |
 
-
-
-
-
-Regex examples
---------------
+## Regex examples
 
 ### Characters
 | Pattern        | Matches                                                    |
@@ -289,11 +278,11 @@ Use `\` to search for these special characters: <br> `[ \ ^ $ . | ? * + ( ) { }`
 
 ### Alternatives
 
-| Pattern        | Matches                                    |
-|----------------|--------------------------------------------|
-| `cat|dog     ` | Match <yel>cat</yel> or <yel>dog</yel>     |
-| `id|identity ` | Match <yel>id</yel> or <yel>id</yel>entity |
-| `identity|id ` | Match <yel>id</yel> or <yel>identity</yel> |
+| Pattern                       | Matches                                    |
+|-------------------------------|--------------------------------------------|
+| <code>cat&#124;dog</code>     | Match <yel>cat</yel> or <yel>dog</yel>     |
+| <code>id&#124;identity</code> | Match <yel>id</yel> or <yel>id</yel>entity |
+| <code>identity&#124;id</code> | Match <yel>id</yel> or <yel>identity</yel> |
 
 Order longer to shorter when alternatives overlap
 
@@ -372,13 +361,11 @@ In `[ ]` always escape `. \ ]` and sometimes `^ - .`
 ### Groups
 | Pattern          | Meaning                                     |
 |------------------|---------------------------------------------|
-| `(in\|out)put  ` | Match <yel>input</yel> or <yel>output</yel> |
+| <code>(in&#124;out)put</code> | Match <yel>input</yel> or <yel>output</yel> |
 | `\d{5}(-\d{4})?` | US zip code _("+ 4" optional)_              |
 Parser tries EACH alternative if match fails after group.
 <br>
 Can lead to catastrophic backtracking.
-
-
 
 
 ### Back references
@@ -436,10 +423,7 @@ M(?(?=.*?\bher\b)s|r)\.
 requires lookaround for IF condition
 
 
-RegEx in Python
----------------
-
-### Getting started
+## RegEx in Python
 
 Import the regular expressions module
 

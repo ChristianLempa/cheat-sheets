@@ -11,10 +11,7 @@ categories:
 
 Grep is a command-line utility for searching plain-text data sets for lines that match a regular expression. Its name comes from the ed command `g/re/p` (globally search for a regular expression and print matching lines), which has the same effect. Grep was originally developed for the Unix operating system but later available for all Unix-like systems like **[Linux](linux)**, and some others such as OS-9.
 
-
-## Getting started
-
-### Usage
+## Usage
 
 Search standard output (i.e. a stream of text)
 
@@ -36,7 +33,7 @@ grep 'mellon' myfile.txt
 
 Wildcards are accepted in filename.
 
-### Option examples
+## Example options
 
 | Option | Example                               | Operation                                            |
 |--------|---------------------------------------|------------------------------------------------------|
