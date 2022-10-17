@@ -28,7 +28,8 @@ command interpreter is `CMD.EXE` or `COMMAND.COM`, single quotes will not
 protect the redirection arrows `(<, >)` nor do they protect pipes `(|)`.
 These are special symbols which require "double quotes" to protect them
 from interpretation as operating system directives. If the command
-interpreter is bash, ksh, zsh or another Unix shell, then single and double
+interpreter is [bash](../shells/bash), [ksh](../shells/ksh), [zsh](../shells/zsh)
+or another Unix shell, then single and double
 quotes will follow the standard Unix usage.
 
 Users of MS-DOS or Microsoft Windows must remember that the percent
