@@ -1,4 +1,5 @@
 .obsidian
+.index
 tmp/*
 
 # vim files
