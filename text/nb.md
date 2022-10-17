@@ -1368,9 +1368,8 @@ Example content:
 
 Use [`nb show --print --no-color`](#show) to print without syntax highlighting.
 
-When [Pandoc](https://pandoc.org/) is available,
-use the [`-r`](#show) / [`--render`](#show) option to
-render the note to HTML and open it in your terminal browser:
+When [[pandoc|Pandoc]] is available, use the [`-r`](#show) / [`--render`](#show)
+option to render the note to HTML and open it in your terminal browser:
 
 ```bash
 nb show example.md --render

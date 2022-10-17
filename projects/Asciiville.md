@@ -271,14 +271,14 @@ several commands may also be installed as dependencies. These include:
 * **khard** : contact management for the console
 * **mplayer** : media player
 * **neofetch** : system info
-* **neomutt** : sophisticated text-based EMail and NNTP client
-* **newsboat** : text-based RSS feed reader
-* **pandoc** : convert and manipulate multiple document formats
+* **[[neomutt]]** : sophisticated text-based EMail and NNTP client
+* **[[newsboat]]** : text-based RSS feed reader
+* **[[pandoc]]** : convert and manipulate multiple document formats
 * **ranger** : text-based file management
 * **speedtest-cli** : text-based command line network speed test
-* **tmux** : embed commands and terminal sessions in a terminal multiplexer
+* **[[tmux]]** : embed commands and terminal sessions in a terminal multiplexer
 * **urlscan** : scan for urls in a message
-* **w3m** : text-based web browser
+* **[[w3m]]** : text-based web browser
 
 The Kitty terminal emulator is installed during `ascinit`. Several other
 terminal emulators art optionally installed during `ascinit` unless
