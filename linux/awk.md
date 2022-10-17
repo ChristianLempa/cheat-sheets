@@ -303,6 +303,7 @@ Either one will work.
  # remove duplicate, nonconsecutive lines
  awk '!a[$0]++'                     # most concise script
  awk '!($0 in a){a[$0];print}'      # most efficient script
+```
 
 ## References
 
