@@ -1,3 +1,10 @@
+---
+tags:
+  - projects
+  - commandline
+  - google
+---
+
 > **"The cosmic operating system uses a command line interface. It runs on
 > something like a teletype, with lots of noise and heat; punched-out bits
 > flutter down into its hopper like drifting stars. The demiurge sits at his

@@ -326,7 +326,7 @@ run the command `mpplus -D`.
 
 For details on album cover art download, manual art download, and
 converting WAV format media files to MP3 format see the
-[MusicPlayerPlus Beets README](beets/README.md).
+[[beets|MusicPlayerPlus Beets README]].
 
 #### Analyze and extract additional metadata with Essentia
 

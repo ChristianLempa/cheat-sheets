@@ -1,3 +1,10 @@
+---
+tags:
+  - projects
+  - ascii
+  - commandline
+---
+
 ## Asciiville
 
 Asciiville is where you go for ASCII Art, animations, and utilities.

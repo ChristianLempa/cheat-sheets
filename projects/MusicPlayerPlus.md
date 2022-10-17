@@ -1,3 +1,10 @@
+---
+tags:
+  - projects
+  - music
+  - commandline
+---
+
 ## MusicPlayerPlus
 
 MusicPlayerPlus is a character-based console and terminal window music player
