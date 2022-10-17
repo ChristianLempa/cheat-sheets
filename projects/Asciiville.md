@@ -2,7 +2,38 @@
 tags:
   - projects
   - ascii
+  - asciimatics
   - commandline
+  - shell
+  - bash
+  - cli
+  - command-line
+  - aewan
+  - jp2a
+  - art
+  - btop
+  - cbftp
+  - figlet
+  - games
+  - nethack
+  - ninvaders
+  - tetris
+  - console
+  - cool-retro-term
+  - got
+  - irssi
+  - jrnl
+  - khard
+  - kitty
+  - mapscii
+  - mutt
+  - neomutt
+  - newsboat
+  - tuir
+  - w3m
+  - rainbowstream
+  - tmux
+  - ranger
 ---
 
 ## Asciiville

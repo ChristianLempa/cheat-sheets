@@ -12,6 +12,14 @@ Repository: https://github.com/bitwarden
 
 Website: https://bitwarden.com/
 
+## Cheat Sheet
+
+A PDF format cheat sheet is freely available:
+
+![[assets/bitwarden-shortcuts.pdf|Bitwarden Cheat Sheet]]
+
+A text conversion of this cheat sheet follows.
+
 ## Keyboard shortcuts
 
 1. [Browser extension shortcuts](#browser-extension-shortcuts)

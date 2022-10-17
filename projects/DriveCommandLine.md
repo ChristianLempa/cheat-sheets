@@ -1,8 +1,19 @@
 ---
 tags:
+  - bash
+  - cloud
+  - gdrive
+  - go
+  - linux
   - projects
   - commandline
+  - command-line
   - google
+  - sync
+  - shell
+  - cli
+  - productivity
+  - archiving
 ---
 
 > **"The cosmic operating system uses a command line interface. It runs on

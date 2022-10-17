@@ -1,4 +1,17 @@
-# ![btop++](img/logo.png)
+---
+tags:
+  - admin
+  - system-admin
+  - monitor
+  - Asciiville
+  - linux
+  - commandline
+  - command-line
+  - cli
+  - productivity
+---
+
+# ![btop++](assets/logo.png)
 
 <a href="https://repology.org/project/btop/versions">
     <img src="https://repology.org/badge/vertical-allrepos/btop.svg" alt="Packaging status" align="right">
@@ -206,27 +219,27 @@ Also needs a UTF8 locale and a font that covers:
 
 #### Main UI showing details for a selected process
 
-![Screenshot 1](img/normal.png)
+![Screenshot 1](assets/normal.png)
 
 #### Main UI in TTY mode
 
-![Screenshot 2](img/tty.png)
+![Screenshot 2](assets/tty.png)
 
 #### Main UI with custom options
 
-![Screenshot 3](img/alt.png)
+![Screenshot 3](assets/alt.png)
 
 #### Main-menu
 
-![Screenshot 3](img/main-menu.png)
+![Screenshot 3](assets/main-menu.png)
 
 #### Options-menu
 
-![Screenshot 4](img/options-menu.png)
+![Screenshot 4](assets/options-menu.png)
 
 #### Help-menu
 
-![Screenshot 5](img/help-menu.png)
+![Screenshot 5](assets/help-menu.png)
 
 ## Installation
 

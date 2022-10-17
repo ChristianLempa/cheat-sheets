@@ -4,7 +4,7 @@ See the [Obsidian Help](https://help.obsidian.md/Obsidian/Index) website for ful
 
 Word Formatting & Coding Blocks            |  Links, Quotes & Tables
 :-------------------------:|:-------------------------:
-![](img/obs1.png)  |  ![](img/obs2.png)
+![](assets/obs1.png)  |  ![](assets/obs2.png)
 
 ---
 # Markdown Cheat Sheet 💻

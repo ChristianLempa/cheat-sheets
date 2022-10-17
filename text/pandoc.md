@@ -10,6 +10,14 @@ Website: http://pandoc.org/
 
 Documentation: http://pandoc.org/MANUAL.html
 
+## Pandoc Cheat Sheet
+
+A PDF format Pandoc cheat sheet by Jason Van Gumster is freely available:
+
+![[assets/pandoc.pdf|Pandoc Cheat Sheet]]
+
+A text format conversion of this cheat sheet follows.
+
 ## BASIC CONVERSIONS
 
 ### reStructuredText to Markdown
