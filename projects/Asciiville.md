@@ -132,8 +132,8 @@ of interactive menus that can be used to control its behavior.
 Integration is provided for:
 
 * [aewan](https://github.com/doctorfree/asciiville-aewan#readme), Ascii Art creation tool
-* [btop](btop/README.md), character based system monitor
-* [cbftp](cbftp/README), character based FTP client
+* [btop](admin/btop), character based system monitor
+* [cbftp](tools/cbftp), character based FTP client
 * [ddgr](https://github.com/jarun/ddgr#readme), command line web search using DuckDuckGo
 * [googler](https://github.com/jarun/googler#readme), command line web search using Google
 * [jrnl](https://jrnl.sh/en/stable/), a simple command line journal application
@@ -1044,10 +1044,10 @@ bring up the interactive menu interface.
 - [aewan](https://github.com/doctorfree/asciiville-aewan#readme), Introduction to the Aewan ascii art creation tool
 
 ### Btop++ README
-- [**btop/README.md**](btop/README.md) - Introduction to the btop system monitor
+- [**btop/README.md**](admin/btop) - Introduction to the btop system monitor
 
 ### Cbftp README
-- [**cbftp/README**](cbftp/README) - Introduction to the cbftp FTP client
+- [**cbftp/README**](tools/cbftp) - Introduction to the cbftp FTP client
 - [**Video on Cbftp**](https://youtu.be/dOIwg9nMF10) - Video introduction to the cbftp FTP client
 
 ### Ddgr README
@@ -1058,21 +1058,21 @@ bring up the interactive menu interface.
 
 ### Man Pages
 
-- [**asciiville**](markdown/asciiville.1.md) : Primary Asciiville user interface
-- [**asciiart**](markdown/asciiart.1.md) : asciimatics animation of art images
-- [**asciijulia**](markdown/asciijulia.1.md) : asciimatics animation of a Julia Set
-- [**asciimpplus**](markdown/asciimpplus.1.md) : asciimatics animation of Asciiville intro
-- [**asciiplasma**](markdown/asciiplasma.1.md) : asciimatics animation with Plasma effect
-- [**asciisplash-tmux**](markdown/asciisplash-tmux.1.md) : Asciiville asciimatics animations in a tmux session
-- [**asciisplash**](markdown/asciisplash.1.md) : Asciiville asciimatics animations
-- [**ascinit**](markdown/ascinit.1.md) : Asciiville initialization
-- [**btop**](markdown/btop.1.md) : Asciiville system monitor
-- [**cbftp**](markdown/cbftp.1.md) : Asciiville FTP client
-- [**show_ascii_art**](markdown/show_ascii_art.1.md) : Display ascii art, convert images to ascii art
-- [**show_moon**](markdown/show_moon.1.md) : Display the phase of the Moon
-- [**show_pokemon**](markdown/show_pokemon.1.md) : Display a Pokemon pocket monster
-- [**show_weather**](markdown/show_weather.1.md) : Display a weather report
-- [**termprofset**](markdown/termprofset.1.md) : Manipulate default terminal profile or font settings
+- [**asciiville**](projects/man/asciiville.1) : Primary Asciiville user interface
+- [**asciiart**](projects/man/asciiart.1) : asciimatics animation of art images
+- [**asciijulia**](projects/man/asciijulia.1) : asciimatics animation of a Julia Set
+- [**asciimpplus**](projects/man/asciimpplus.1) : asciimatics animation of Asciiville intro
+- [**asciiplasma**](projects/man/asciiplasma.1) : asciimatics animation with Plasma effect
+- [**asciisplash-tmux**](projects/man/asciisplash-tmux.1) : Asciiville asciimatics animations in a tmux session
+- [**asciisplash**](projects/man/asciisplash.1) : Asciiville asciimatics animations
+- [**ascinit**](projects/man/ascinit.1) : Asciiville initialization
+- [**btop**](projects/man/btop.1) : Asciiville system monitor
+- [**cbftp**](projects/man/cbftp.1) : Asciiville FTP client
+- [**show_ascii_art**](projects/man/show_ascii_art.1) : Display ascii art, convert images to ascii art
+- [**show_moon**](projects/man/show_moon.1) : Display the phase of the Moon
+- [**show_pokemon**](projects/man/show_pokemon.1) : Display a Pokemon pocket monster
+- [**show_weather**](projects/man/show_weather.1) : Display a weather report
+- [**termprofset**](projects/man/termprofset.1) : Manipulate default terminal profile or font settings
 
 ### Usage
 

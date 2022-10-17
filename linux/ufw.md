@@ -1,5 +1,5 @@
 # UFW (uncomplicated firewall)
-UFW (uncomplicated firewall) is a firewall configuration tool for **Linux ([[linux]])** that runs on top of IPTables ([[iptables]]), included by default within Ubuntu distributions. It provides a streamlined interface for configuring common firewall use cases via the command line.
+UFW (uncomplicated firewall) is a firewall configuration tool for **[[linux|Linux]]** that runs on top of [[iptables|IPTables]], included by default within Ubuntu distributions. It provides a streamlined interface for configuring common firewall use cases via the command line.
 
 ## Enable UFW
 

@@ -346,7 +346,7 @@ services - it simply does not enable access to those services you do not use.
 #### Configure mirror script
 
 Edit the main MagicMirror management script,
-[**/usr/local/MirrorCommand/bin/mirror**](mirror.sh), setting:
+**/usr/local/MirrorCommand/bin/mirror**, setting:
 
 - Location of your MagicMirror installation
 - IP address of your MagicMirror
@@ -473,7 +473,7 @@ symbolic links created in `/usr/local/bin`. Ensure that `/usr/local/bin`
 is in your execution PATH.
 
 Many sample MagicMirror configuration files are provided in the
-[**/usr/local/MirrorCommand/config**](config) directory. The installation
+**/usr/local/MirrorCommand/config** directory. The installation
 package script attempts to link these into your MagicMirror config folder.
 The sample config files use the naming convention `config-<name>.js`.
 
@@ -482,43 +482,43 @@ Copy and modify as needed.
 
 Some of the more useful supporting scripts include:
 
-- [**audiotest**](scripts/audiotest.sh)
+- **audiotest**
   Test the ALSA audio configuration by playing test sounds to each speaker
-- [**camsnap**](scripts/camsnap.sh)
+- **camsnap**
   Snap a photo with your MagicMirror webcam
-- [**chkconfig**](scripts/chkconfig.sh)
+- **chkconfig**
   Check your MagicMirror configuration files
-- [**chkinst**](chkinst)
+- **chkinst**
   Check your Mirror Command Line installation
-- [**chktemp**](scripts/chktemp.sh)
+- **chktemp**
   Check your MagicMirror Raspberry Pi temperature
-- [**get_temps**](scripts/get_temps.sh)
+- **get_temps**
   Get your MagicMirror Raspberry Pi temperature
-- [**gethue**](scripts/gethue.sh)
+- **gethue**
   Get your Hue Hub properties
-- [**getquote**](scripts/getquote.sh)
+- **getquote**
   Get a stock symbol quote
-- [**mmapiactions**](scripts/mmapiactions.sh)
+- **mmapiactions**
   Get the MMM-Remote-Control API actions
-- [**mmgetb**](scripts/mmgetb.sh)
+- **mmgetb**
   Get the MagicMirror screen brightness level
-- [**mmsetb**](scripts/mmsetb.sh)
+- **mmsetb**
   Set the MagicMirror screen brightness level
-- [**myreboot**](scripts/myreboot.sh)
+- **myreboot**
   Perform additional actions before reboot, executed as a normal user using sudo
-- [**myshutdown**](scripts/myshutdown.sh)
+- **myshutdown**
   Perform additional actions before shutdown, executed as a normal user using sudo
-- [**rand_back**](scripts/rand_back.sh)
+- **rand_back**
   Select a random desktop wallpaper
-- [**set_asound_conf**](bin/set_asound_conf)
+- **set_asound_conf**
   Set the ALSA sound configuration in `/etc/asound.conf`
-- [**vncview**](scripts/vncview.sh)
+- **vncview**
   Remote script to start a VNC server on your MagicMirror and a VNC viewer on your desktop
-- [**vol**](scripts/vol.sh)
+- **vol**
   Script to control volume level of MagicMirror audio output
-- [**wireless_conf**](scripts/wireless_conf.sh)
+- **wireless_conf**
   Configure wireless using WPA Supplicant
-- [**wireless_dot_sample**](wireless_dot_sample)
+- **wireless_dot_sample**
   Sample $HOME/.wireless to assist in wireless configuration
 
 ## Remote access
@@ -529,7 +529,7 @@ of this document. There are a number of guides on configuring SSH access on
 a variety of systems. To get started with SSH configuration on a Raspberry Pi,
 see https://www.raspberrypi.org/documentation/computers/remote-access.html
 
-Once SSH access is configured, the [**mm**](remote/mm) script can be installed on
+Once SSH access is configured, the **mm** script can be installed on
 remote systems and used to remotely execute the mirror script on the system
 hosting MagicMirror. All arguments provided to <code>mm</code> are simply
 passed along to the <code>mirror</code> script.
@@ -558,13 +558,13 @@ described in the following sections.
 #### Remote execution of mirror commands
 
 If you wish to execute mirror commands remotely then install the convenience
-script [**mm**](remote/mm) on a system with SSH access to your MagicMirror. This
+script **mm** on a system with SSH access to your MagicMirror. This
 script can be used to remotely execute the main mirror script.
 
 #### Remote view of MagicMirror display
 
 If you wish to view the MagicMirror display remotely then install the convenience
-script [**vncview**](remote/vncview) on a system with SSH access to your MagicMirror. This
+script **vncview** on a system with SSH access to your MagicMirror. This
 script can be used to remotely execute a VNC server and locally execute a VNC client.
 
 ### MMM-Remote-Control integration
@@ -607,7 +607,7 @@ to install the module and setup a Telegram Bot, the config section of the
 MMM-TelegramBot module entry in `config.js` must be modified to add
 `customCommands`. Samples of how to do this are in the config files in
 this repository. For example, see the `customCommands` entry in
-[**config/config-default.js**](config/config-default.js).
+**config/config-default.js**.
 
 Here is the section of the `customCommands` array definition in the config
 section of the MMM-TelegramBot module entry in `config.js` that defines the
@@ -715,13 +715,13 @@ control of your MagicMirror utilizing the
 [MMM-GoogleAssistant](http://wiki.bugsounet.fr/en/MMM-GoogleAssistant)
 module. Most of the MagicMirror config files in the config subdirectory
 come preconfigured with voice command support. See
-[**config/config-default.js**](config/config-default.js) for a sample config
+**config/config-default.js** for a sample config
 file with voice control enabled.
 
 In addition to preconfigured config files, MirrorCommand provides several
-[custom MMM-GoogleAssistant recipes](modules/MMM-GoogleAssistant/recipes).
+custom MMM-GoogleAssistant recipes.
 These include recipes to:
-- [Enable `mirror` command support via voice](modules/MMM-GoogleAssistant/recipes/MirrorCommand.js)
+- Enable `mirror` command support via voice
     - Voice commands to:
 	    - Restart MagicMirror
 		- Rotate the screen
@@ -735,12 +735,12 @@ These include recipes to:
                 - Say `screen two` or `mirror screen two`
             - Switch the MagicMirror screen
                 - Say `screen switch` or `switch screens` or `mirror screen switch`
-- [Voice management of MMM-Scenes scenes](modules/MMM-GoogleAssistant/recipes/with-MMM-Scenes.js)
+- Voice management of MMM-Scenes scenes
     - Next scene
 	- Previous scene
 	- Scene by number (e.g. `scene 2`) 
-- [Customized reboot/restart/shutdown voice commands](modules/MMM-GoogleAssistant/recipes/myReboot-Restart-Shutdown.js)
-- [Radio station play via voice](modules/MMM-GoogleAssistant/recipes/ExtRadio.js)
+- Customized reboot/restart/shutdown voice commands
+- Radio station play via voice
 
 ### Google Cloud Platform API Keys
 Several MagicMirror modules require a Google Cloud Platform API. The MMM-GoogleAssistant
@@ -757,7 +757,7 @@ description of this process.
 
 **NOTE:** When authorizing the YouTube access token with `npm run tokens` as the final
 step in this process, I found it necessary to modify
-[MMM-GoogleAssistant/install/auth_YouTube.js](modules/MMM-GoogleAssistant/install/auth_YouTube.js)
+MMM-GoogleAssistant/install/auth_YouTube.js
 to add a console log output of the generated URL to allow access. This was necessary
 in my case because I was performing the process over an SSH connection in a terminal.
 This is not necessary if you are accessing the MagicMirror directly or if you have

@@ -927,63 +927,63 @@ of this package will require little to no manual configuration.
 
 ## Contents
 
-[**roon**](bin/roon) - Shell script frontend that provides the primary user
+**roon** - Shell script frontend that provides the primary user
 interface to communicate commands via the Python Roon API. Recommended usage
 is to issue Roon commands and queries via the `roon` frontend rather than
 executing the following commands directly.
 
-[**clone_pyroon**](bin/clone_pyroon) - Shell script to retrieve the pyroon project source code from Github and apply my patches
+**clone_pyroon** - Shell script to retrieve the pyroon project source code from Github and apply my patches
 
-[**get_core_ip**](bin/get_core_ip) - Shell script to retrieve the Roon Core IP address
+**get_core_ip** - Shell script to retrieve the Roon Core IP address
 
-[**play_album**](bin/play_album) - Shell script frontend for playing a specified album in my Roon library
+**play_album** - Shell script frontend for playing a specified album in my Roon library
 
-[**play_artist**](bin/play_artist) - Shell script frontend for playing a specified artist in my Roon library
+**play_artist** - Shell script frontend for playing a specified artist in my Roon library
 
-[**play_genre**](bin/play_genre) - Shell script frontend to play a specified genre
+**play_genre** - Shell script frontend to play a specified genre
 
-[**play_playlist**](bin/play_playlist) - Shell script frontend to play a specified playlist
+**play_playlist** - Shell script frontend to play a specified playlist
 
-[**play_radio**](bin/play_radio) - Shell script frontend for playing Live Radio in a Roon zone
+**play_radio** - Shell script frontend for playing Live Radio in a Roon zone
 
-[**play_tag**](bin/play_tag) - Shell script frontend to play a specified tag
+**play_tag** - Shell script frontend to play a specified tag
 
-[**list_albums**](bin/list_albums) - Search and list the available Albums in your Roon Library
+**list_albums** - Search and list the available Albums in your Roon Library
 
-[**list_artists**](bin/list_artists) - Search and list the available Artists in your Roon Library
+**list_artists** - Search and list the available Artists in your Roon Library
 
-[**list_genres**](bin/list_genres) - Search and list the available Genres in your Roon Library
+**list_genres** - Search and list the available Genres in your Roon Library
 
-[**list_playlists**](bin/list_playlists) - Search and list the available Roon Playlists
+**list_playlists** - Search and list the available Roon Playlists
 
-[**list_radio**](bin/list_radio) - Search and list the available Roon Live Radio Stations
+**list_radio** - Search and list the available Roon Live Radio Stations
 
-[**list_tags**](bin/list_tags) - Search and list the available Roon Library tags
+**list_tags** - Search and list the available Roon Library tags
 
-[**list_zones**](bin/list_zones) - List the available Roon Zones
+**list_zones** - List the available Roon Zones
 
-[**set_volume**](bin/set_volume) - Set the volume level of selected Roon Zone
+**set_volume** - Set the volume level of selected Roon Zone
 
-[**set_zone**](bin/set_zone) - Set the Roon Zone in which subsequent commands will run
+**set_zone** - Set the Roon Zone in which subsequent commands will run
 
-[**set_zone_group**](bin/set_zone_group) - Set one of the Roon Zone groupings specified in roon_api.ini
+**set_zone_group** - Set one of the Roon Zone groupings specified in roon_api.ini
 
-[**zone_command**](bin/zone_command) - Shell script frontend for commands to be issued in the selected Roon Zone (e.g. play, pause, pause_all, mute, mute_all, next track, previous track)
+**zone_command** - Shell script frontend for commands to be issued in the selected Roon Zone (e.g. play, pause, pause_all, mute, mute_all, next track, previous track)
 
-[**LICENSE**](LICENSE) - Apache License version 2.0
+**LICENSE** - Apache License version 2.0
 
-[**NOTICE**](NOTICE) - Copyright notice
+**NOTICE** - Copyright notice
 
-[**Install**](Install) - Installation script for Linux systems, Debian format install
+**Install** - Installation script for Linux systems, Debian format install
 
-[**Uninstall**](Uninstall) - Removal script for Linux systems, Debian format uninstall
+**Uninstall** - Removal script for Linux systems, Debian format uninstall
 
-[**macInstall**](macInstall) - Installation script for Mac OS
+**macInstall** - Installation script for Mac OS
 
-[**macUninstall**](macUninstall) - Removal script for Mac OS
+**macUninstall** - Removal script for Mac OS
 
-[**usage.txt**](usage.txt) - Frontend "roon" script usage documentation
+**usage.txt** - Frontend "roon" script usage documentation
 
-[**api/**](api/README.md) - Python scripts to call the Roon API with appropriate arguments
+**api/** - Python scripts to call the Roon API with appropriate arguments
 
-[**patches/**](patches/README.md) - Patches to the Python Roon API to extend its capabilities
+**patches/** - Patches to the Python Roon API to extend its capabilities

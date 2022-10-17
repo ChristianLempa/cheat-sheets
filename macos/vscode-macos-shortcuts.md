@@ -1,4 +1,4 @@
-# VSCode shortcuts
+# [[macos|MacOS]] VSCode shortcuts
 
 - [MacOS vscode keyboard shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 - [Howto vscode custom shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings)

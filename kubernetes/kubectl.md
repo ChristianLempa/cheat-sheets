@@ -1,5 +1,5 @@
 # Kubectl
-Kubectl is a command line tool for communicating with a Kubernetes ([[kubernetes]]) cluster's control pane, using the Kubernetes API.
+Kubectl is a command line tool for communicating with a [[kubernetes|Kubernetes]] cluster's control pane, using the Kubernetes API.
 
 Documentation: [Kubectl Reference](https://kubernetes.io/docs/reference/kubectl/)
 
@@ -7,14 +7,14 @@ Documentation: [Kubectl Reference](https://kubernetes.io/docs/reference/kubectl/
 ## Installation
 
 ### On Windows (PowerShell)
-Install Kubectl with **Chocolatey** ([[chocolatey]]):
+Install Kubectl with **[[chocolatey|Chocolatey]]**:
 ```
 choco install kubernetes-cli
 ```
 
 ### On Linux
 > [!INFO] Installing on WSL2
-> On WSL2 it's recommended to install Docker Desktop [[docker-desktop]], which automatically comes with kubectl.
+> On WSL2 it's recommended to install [[docker-desktop|Docker Desktop]], which automatically comes with kubectl.
 1. Download the latest release
 ```bash
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"  
@@ -26,7 +26,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 
 ### On mac OS
-Install Kubectl with **Homebrew ([[homebrew]])**:
+Install Kubectl with **[[homebrew|Homebrew]]**:
 ```zsh
 brew install kubernetes-cli
 ```

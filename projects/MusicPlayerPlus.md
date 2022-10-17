@@ -387,7 +387,7 @@ The special query term 'all' indicates the entire music library, i.e.
 with `mpplus -B`.
 
 These common additional setup steps and more are covered in greater
-detail in the [MusicPlayerPlus Beets README](beets/README.md) and the
+detail in the [MusicPlayerPlus Beets README](audio/beets) and the
 [Post Installation Configuration](#post-installation-configuration)
 section below.
 
@@ -768,7 +768,7 @@ Example usage of the `beet play` command:
 * `beet play --args "--debug --shuffle" green eyes`
 
 For instructions on Beets media library setup and use see the
-[MusicPlayerPlus Beets README](beets/README.md).
+[MusicPlayerPlus Beets README](audio/beets).
 
 Learn more about the Beets media library management system at
 https://beets.io/
@@ -870,7 +870,7 @@ updated and will be retired in 2023.
 
 The individual metadata retrieval steps performed automatically by
 `mppinit [-a|-b|-e] metadata` can be performed manually using the instructions in
-the [MusicPlayerPlus Beets README](beets/README.md).
+the [MusicPlayerPlus Beets README](audio/beets).
 
 ### Activating the YAMS scrobbler for Last.fm
 
@@ -1454,41 +1454,41 @@ help/usage messages that can be viewed with the **-u** argument option,
 e.g. `mpplus -u`.
 
 ### README for MusicPlayerPlus configuration
-- [**config/README.md**](config/README.md) - Overview and details of the MusicPlayerPlus configuration
+- [**config/README.md**](https://github.com/doctorfree/MusicPlayerPlus/blob/master/config/README.md) - Overview and details of the MusicPlayerPlus configuration
 
 ### README for mpcplus MPD client
 - [**mpcplus/README.md**](https://github.com/doctorfree/mpcplus/README.md) - Introduction to the mpcplus MPD client
 
 ### README for tmuxp configs
-- [**config/tmuxp/README.md**](config/tmuxp/README.md) - How to invoke the MusicPlayerPlus provided `tmuxp` session configurations
+- [**config/tmuxp/README.md**](https://github.com/doctorfree/MusicPlayerPlus/blob/master/config/tmuxp/README.md) - How to invoke the MusicPlayerPlus provided `tmuxp` session configurations
 
 ### Man Pages
 
-- [**mpplus**](markdown/mpplus.1.md) : Primary MusicPlayerPlus user interface
-- [**mppcava**](markdown/mppcava.1.md) : Audio Spectrum Visualizer
-- [**mppjulia**](markdown/mppjulia.1.md) : asciimatics animation of a Julia Set
-- [**mpprocks**](markdown/mpprocks.1.md) : asciimatics animation of MusicPlayerPlus intro
-- [**mppplasma**](markdown/mppplasma.1.md) : asciimatics animation with Plasma effect
-- [**mppinit**](markdown/mppinit.1.md) : MusicPlayerPlus initialization
-- [**mppcover**](markdown/mppcover.1.md) : Displays album cover art for currently playing song
-- [**mppdl**](markdown/mppdl.1.md) : Downloads audio tracks from Bandcamp, Soundcloud, or a URL
-- [**mpcplus-tmux**](markdown/mpcplus-tmux.1.md) : MusicPlayerPlus in a tmux session
-- [**mpcplus**](markdown/mpcplus.1.md) : MusicPlayerPlus MPD client
-- [**mpcpluskeys**](markdown/mpcpluskeys.1.md) : Cheat sheet for `mpcplus` MPD client navigation
-- [**mppsplash-tmux**](markdown/mppsplash-tmux.1.md) : MusicPlayerPlus asciimatics animations in a tmux session
-- [**mppsplash**](markdown/mppsplash.1.md) : MusicPlayerPlus asciimatics animations
-- [**mpd-configure**](markdown/mpd-configure.1.md) : MPD configuration generator
-- [**mpd-monitor**](markdown/mpd-monitor.1.md) : Display info on currently playing MPD song
-- [**beet**](markdown/beet.1.md) : Beets media library management command-line interface
-- [**beetsconfig**](markdown/beetsconfig.5.md) : Beets media library management configuration
-- [**bandcamp-dl**](markdown/bandcamp-dl.1.md) : Download Bandcamp collections
-- [**blissify**](markdown/blissify.1.md) : create MPD playlists using song similarity database
-- [**scdl**](markdown/scdl.1.md) : Download Soundcloud favorites
-- [**fzmp**](markdown/fzmp.1.md) : List and search MPD media using fuzzy find
-- [**artist_to_albumartist**](markdown/artist_to_albumartist.1.md) : Copies the Artist tag to the AlbumArtist tag
-- [**listyt**](markdown/listyt.1.md) : List YouTube video titles and urls
-- [**yt-dlp**](markdown/yt-dlp.1.md) : Download YouTube and other sites videos and audio
-- [**create_playlist**](markdown/create_playlist.1.md) : Create playlists using Beets queries
+- [**mpplus**](projects/man/mpplus.1) : Primary MusicPlayerPlus user interface
+- [**mppcava**](projects/man/mppcava.1) : Audio Spectrum Visualizer
+- [**mppjulia**](projects/man/mppjulia.1) : asciimatics animation of a Julia Set
+- [**mpprocks**](projects/man/mpprocks.1) : asciimatics animation of MusicPlayerPlus intro
+- [**mppplasma**](projects/man/mppplasma.1) : asciimatics animation with Plasma effect
+- [**mppinit**](projects/man/mppinit.1) : MusicPlayerPlus initialization
+- [**mppcover**](projects/man/mppcover.1) : Displays album cover art for currently playing song
+- [**mppdl**](projects/man/mppdl.1) : Downloads audio tracks from Bandcamp, Soundcloud, or a URL
+- [**mpcplus-tmux**](projects/man/mpcplus-tmux.1) : MusicPlayerPlus in a tmux session
+- [**mpcplus**](projects/man/mpcplus.1) : MusicPlayerPlus MPD client
+- [**mpcpluskeys**](projects/man/mpcpluskeys.1) : Cheat sheet for `mpcplus` MPD client navigation
+- [**mppsplash-tmux**](projects/man/mppsplash-tmux.1) : MusicPlayerPlus asciimatics animations in a tmux session
+- [**mppsplash**](projects/man/mppsplash.1) : MusicPlayerPlus asciimatics animations
+- [**mpd-configure**](projects/man/mpd-configure.1) : MPD configuration generator
+- [**mpd-monitor**](projects/man/mpd-monitor.1) : Display info on currently playing MPD song
+- [**beet**](projects/man/beet.1) : Beets media library management command-line interface
+- [**beetsconfig**](projects/man/beetsconfig.5) : Beets media library management configuration
+- [**bandcamp-dl**](projects/man/bandcamp-dl.1) : Download Bandcamp collections
+- [**blissify**](projects/man/blissify.1) : create MPD playlists using song similarity database
+- [**scdl**](projects/man/scdl.1) : Download Soundcloud favorites
+- [**fzmp**](projects/man/fzmp.1) : List and search MPD media using fuzzy find
+- [**artist_to_albumartist**](projects/man/artist_to_albumartist.1) : Copies the Artist tag to the AlbumArtist tag
+- [**listyt**](projects/man/listyt.1) : List YouTube video titles and urls
+- [**yt-dlp**](projects/man/yt-dlp.1) : Download YouTube and other sites videos and audio
+- [**create_playlist**](projects/man/create_playlist.1) : Create playlists using Beets queries
 
 ### Usage
 
@@ -1784,7 +1784,7 @@ difficult to display graphical images. However, this limitation can be
 overcome using `tmux` and additional tools. In this way we can add album
 cover art to MusicPlayerPlus when using the character-based `mpcplus` client.
 
-See [Adding album art to MusicPlayerPlus](config/README.md) to get
+See `Adding album art to MusicPlayerPlus` to get
 started integrating album art in MusicPlayerPlus.
 
 An album cover art downloader is included in MusicPlayerPlus. To download
