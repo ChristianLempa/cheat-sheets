@@ -1,6 +1,6 @@
 # TLS
 
-Transport Layer Security (TLS) is a cryptographic protocol designed to provide communications security over a [[network|computer network]]. The protocol is widely used in applications such as email, instant messaging, and voice over IP, but its use in securing HTTPS remains the most publicly visible.
+Transport Layer Security (TLS) is a cryptographic protocol designed to provide communications security over a [computer network](network). The protocol is widely used in applications such as email, instant messaging, and voice over IP, but its use in securing HTTPS remains the most publicly visible.
 
 The TLS protocol aims primarily to provide security, including privacy (confidentiality), integrity, and authenticity through the use of cryptography, such as the use of certificates, between two or more communicating computer applications. It runs in the application layer and is itself composed of two layers: the TLS record and the TLS handshake protocols.
 

@@ -77,8 +77,8 @@ Both nb and Obsidian utilize plain text data storage in Markdown format.
 Both sync across platforms with `git`. They complement one another and work
 well together.
 
-These markdown files are intended to be used with [[nb]] and
-[[obsidian|Obsidian]]. For example, to create an nb notebook
+These markdown files are intended to be used with [NB](text/nb) and
+[Obsidian](text/obsidian). For example, to create an nb notebook
 from an existing Obsidian vault (or any repository with markdown):
 
 ```

@@ -14,7 +14,7 @@ Documentation: http://pandoc.org/MANUAL.html
 
 A PDF format Pandoc cheat sheet by Jason Van Gumster is freely available:
 
-![[assets/pandoc.pdf|Pandoc Cheat Sheet]]
+![Pandoc Cheat Sheet](assets/pandoc.pdf)
 
 A text format conversion of this cheat sheet follows.
 

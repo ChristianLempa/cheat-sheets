@@ -405,10 +405,6 @@ done
 | `[[ STR =~ STR ]]` | Regexp                      |
 
 
-
-
-
-
 ### Example
 
 #### String
@@ -456,10 +452,6 @@ if [[ -e "file.txt" ]]; then
     echo "file exists"
 fi
 ```
-
-
-
-
 
 ### File conditions
 

@@ -12,7 +12,6 @@
         1. [Remove duplicate tracks](#remove-duplicate-tracks)
         1. [Rename tracks that were duplicates](#rename-tracks-that-were-duplicates)
         1. [Retrieve genres from Last.fm](#retrieve-genres-from-lastfm)
-        1. [Download album cover art](#download-album-cover-art)
         1. [Analyze and extract additional metadata with Essentia](#analyze-and-extract-additional-metadata-with-essentia)
     1. [Convert WAV format media files](#convert-wav-format-media-files)
     1. [Import the music library into Beets](#import-the-music-library-into-beets)
@@ -318,15 +317,6 @@ a Beets music library. The MusicPlayerPlus configuration of the lastgenre
 Beets plugin includes a customized local copy of the genre tree and whitelist.
 To retrieve genres using the Beets lastgenre plugin, run the command
 `beet lastgenre`.
-
-#### Download album cover art
-
-To download album cover art for all albums in your music library,
-run the command `mpplus -D`.
-
-For details on album cover art download, manual art download, and
-converting WAV format media files to MP3 format see the
-[[beets|MusicPlayerPlus Beets README]].
 
 #### Analyze and extract additional metadata with Essentia
 
