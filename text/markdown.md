@@ -216,6 +216,10 @@ To check the task replace the space between the bracket with "x".
 [ ] Contact the user
 ```
 
-## Reference
+## See also
 
-Link: [markdown guide](https://www.markdownguide.org/cheat-sheet)
+- [Markdown guide](https://www.markdownguide.org/cheat-sheet)
+- [HTML](html)
+- [JSON](json)
+- [TOML](toml)
+- [YAML](yaml)

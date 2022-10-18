@@ -872,3 +872,7 @@ See: [Geotagging](https://en.wikipedia.org/wiki/Geotagging#HTML_pages)
 ## See also
 
 - [HTML 4.01 Specification](https://www.w3.org/TR/REC-html40/cover.html#minitoc) _(w3.org)_
+- [JSON](json)
+- [TOML](toml)
+- [YAML](yaml)
+- [Markdown](markdown)

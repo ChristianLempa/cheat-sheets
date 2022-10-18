@@ -316,5 +316,9 @@ let myArray = [
 ## See also
 
 - [JSON](https://www.json.org/json-en.html)
+- [HTML](html)
+- [TOML](toml)
+- [YAML](yaml)
+- [Markdown](markdown)
 - [JSON Editor Online](http://jsoneditoronline.org/)
 - [Convert JSON Array to Markdown Table, CSV and more](https://tableconvert.com/json-to-markdown)
