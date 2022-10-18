@@ -6,11 +6,22 @@ This repository contains cheat sheets, project information, documentation, code 
 
 This knowledge base has been developed through the efforts of several individuals. It is licensed under the [MIT open source license](LICENSE) and can be shared freely as long as the individual copyrights are retained. Please feel free to contribute with additional cheat sheets and documentation, corrections, suggestions, enhancements, or simply buy us a cup of coffee.
 
+## Table of Contents
+
+1. [Authors](#authors)
+1. [Usage](#usage)
+    1. [Markdown viewers](#markdown-viewers)
+    1. [Clone and view locally](#clone-and-view-locally)
+    1. [Obsidian plus NB](#obsidian-plus-nb)
+    1. [Obsidian license restriction](#obsidian-license-restriction)
+1. [Resources](#resources)
+1. [Support](#support)
+
 ## Authors
 
-Doctorfree, the online handle used by Ronald Record, is an aging rogue hippie whose open source contributions extend back to the early 80s sharing computational applications of dynamical systems theory on [Usenet](https://en.wikipedia.org/wiki/Usenet). Record created and maintained the popular [Skunkware](https://en.wikipedia.org/wiki/SCO_Skunkware) repository of open source throughout the 90s and 2000s. He was a founding member of [86open](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format#86open) and co-inventor of the [Web desktop](https://en.wikipedia.org/wiki/Web_desktop).
+[Doctorfree](https://github.com/doctorfree), the online handle used by [Ronald Record](https://ronrecord.com), is an aging rogue hippie whose open source contributions extend back to the early 80s sharing computational applications of dynamical systems theory on [Usenet](https://en.wikipedia.org/wiki/Usenet). Record created and maintained the popular [Skunkware](https://en.wikipedia.org/wiki/SCO_Skunkware) repository of open source throughout the 90s and 2000s. He was a founding member of [86open](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format#86open) and co-inventor of the [Web desktop](https://en.wikipedia.org/wiki/Web_desktop).
 
-Christian Lempa is a 35 year-old tech enthusiast from Germany who loves to inspire and educate people in IT.  He created cheat sheets and documentation at [https://github.com/xcad2k/cheat-sheets](https://github.com/xcad2k/cheat-sheets) as free resources to be used in specific use cases. If you're searching for detailed, in-depth tutorials on some tools or technologies, check out his YouTube Channel: [The Digital Life](https://www.youtube.com/channel/UCZNhwA1B5YqiY1nLzmM0ZRg).
+[Christian Lempa](https://github.com/xcad2k) is a 35 year-old tech enthusiast from Germany who loves to inspire and educate people in IT.  He created cheat sheets and documentation at [https://github.com/xcad2k/cheat-sheets](https://github.com/xcad2k/cheat-sheets) as free resources to be used in specific use cases. If you're searching for detailed, in-depth tutorials on some tools or technologies, check out his YouTube Channel: [The Digital Life](https://www.youtube.com/channel/UCZNhwA1B5YqiY1nLzmM0ZRg).
 
 Several of the cheat sheets included here are adapted from the excellent library of cheat sheets created and maintained by Randy at [QuickRef.ME](https://quickref.me) (also released under the MIT license). Randy doesn't even know he contributed to this repository but his use of an open source license enabled effortless collaboration.
 
@@ -18,12 +29,23 @@ Several of the cheat sheets included here are adapted from the excellent library
 
 Any [markdown](https://en.wikipedia.org/wiki/Markdown) viewer can be used to view this knowledge base. You can simply browse the repository and click on the individual markdown files at https://github.com/doctorfree/cheat-sheets.git in any web browser. However, to view the inter-relationships between the many components, categories, and technologies documented here, we recommend using the [Obsidian](https://obsidian.md) knowledge base engine. Obsidian is free for personal non-commercial use but must be purchased in revenue generating operations (see the note on [Obsidian license restrictions](#obsidian-license-restriction) below).
 
+### Markdown viewers
+
+Recommended markdown viewers, available for all platforms and with many features:
+
+- [Obsidian](https://obsidian.md)
+- [nb](https://xwmx.github.io/nb)
+
 If Obsidian does not suit your needs, there are many free an open source markdown editors and viewers available for all platforms. Doctorfree uses the [nb](https://xwmx.github.io/nb/) command line and local web note-taking, bookmarking, archiving, and knowledge base application. Obsidian and nb work well together to provide a rich markdown editing, viewing, and management system. See the [Obsidian plus NB](#obsidian-plus-nb) section below for details.
 
-Several excellent resources exist that provide lists and reviews of popular markdown editors and viewers. Two such lists can be found at:
+Several excellent resources exist that provide lists and reviews of popular markdown editors and viewers:
 
 - https://github.com/rhythmus/markdown-resources
 - https://github.com/mundimark/awesome-markdown-editors
+- http://mac.appstorm.net/tag/markdown
+- http://mashable.com/2013/06/24/markdown-tools
+- http://pastebin.com/j7Pjq1QT
+- http://brettterpstra.com/ios-text-editors
 
 Obsidian is pretty cool though, so try it out.
 
@@ -85,7 +107,7 @@ The `nb` note-taking command line application has no such restriction and is
 completely free and open source software licensed under the GNU Affero General
 Public License v3.0.
 
-## Other Resources
+## Resources
 
 - [Videos](https://github.com/xcad2k/videos) - Documentation and project files for Christian's video tutorials on YouTube
 - [dotfiles-ubuntu](https://github.com/doctorfree/dotfiles-ubuntu) - Doctorfree's personal configuration files for Linux
@@ -100,7 +122,7 @@ Public License v3.0.
   - [MusicPlayerPlus](https://github.com/doctorfree/MusicPlayerPlus) - Services, tools, clients for self hosting and managing a music library
   - [RoonCommandLine](https://github.com/doctorfree/RoonCommandLine) - Command line control of the Roon audio system over a local network
 
-## Support us
+## Support
 
 Support our mission to create free, high-quality content for tech enthusiasts and IT professionals:
 
