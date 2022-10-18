@@ -291,7 +291,7 @@ find / -type f -name *.mp3 -size +10m -exec rm {} \;
 find ./ -type f -exec sed -i 's/find/replace/g' {} \;
 find ./ -type f -readable -writable -exec sed -i "s/old/new/g" {} \;
 ```
-See also: [sed](/sed) command
+See also: [sed](../linux/sed) command
 
 
 ### Find and rename
