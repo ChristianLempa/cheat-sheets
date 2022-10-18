@@ -170,7 +170,7 @@ of interactive menus that can be used to control its behavior.
 Integration is provided for:
 
 * [aewan](https://github.com/doctorfree/asciiville-aewan#readme), Ascii Art creation tool
-* [btop](../admin/btop/btop.md), character based system monitor
+* [btop](../tools/btop/btop.md), character based system monitor
 * [cbftp](../tools/cbftp.md), character based FTP client
 * [ddgr](https://github.com/jarun/ddgr#readme), command line web search using DuckDuckGo
 * [googler](https://github.com/jarun/googler#readme), command line web search using Google
@@ -1082,7 +1082,7 @@ bring up the interactive menu interface.
 - [aewan](https://github.com/doctorfree/asciiville-aewan#readme), Introduction to the Aewan ascii art creation tool
 
 ### Btop++ README
-- [**btop/README**](../admin/btop/btop.md) - Introduction to the btop system monitor
+- [**btop/README**](../tools/btop/btop.md) - Introduction to the btop system monitor
 
 ### Cbftp README
 - [**cbftp/README**](../tools/cbftp.md) - Introduction to the cbftp FTP client
