@@ -541,8 +541,7 @@ The HTML `<form>` element is used to collect and send information to an external
     <input type="text" name="username" id="username" class="border border-slate-400">
 </form>
 
-See: [HTML input Tags](/html#html-input-tags)
-
+See: [HTML input Tags](#html-input-tags)
 
 ### Textarea tags
 ```html
@@ -554,8 +553,6 @@ See: [HTML input Tags](/html#html-input-tags)
 </form>
 
 Textarea is a multiple-line text input control
-
-
 
 ### Radio Buttons
 ```html
@@ -574,8 +571,6 @@ Textarea is a multiple-line text input control
 
 Radio buttons are used to let the user select exactly one
 
-
-
 ### Checkboxes
 ```html
 <input type="checkbox" name="s" id="soc">
@@ -592,8 +587,6 @@ Radio buttons are used to let the user select exactly one
 </form>
 
 Checkboxes allows the user to select one or more
-
-
 
 ### Select tags
 ```html
@@ -617,8 +610,6 @@ Checkboxes allows the user to select one or more
 
 A select box is a dropdown list of options
 
-
-
 ### Fieldset tags
 ```html
 <fieldset>
@@ -639,8 +630,6 @@ A select box is a dropdown list of options
         <label for="sas">Sasquatch</label>
     </fieldset>
 </form>
-
-
 
 
 ### Datalist tags(HTML5)
@@ -672,8 +661,6 @@ A select box is a dropdown list of options
 </form>
 
 
-
-
 ### Submit and Reset Buttons
 ```html
 <form action="register.php" method="post">
@@ -693,12 +680,7 @@ A select box is a dropdown list of options
 
 `Submit` the data to server; `Reset` to default values
 
-
-
-
-
 ## HTML input Tags
-
 
 ### Input Attributes
 The input tag is an empty element, identifying the particular type of field information to obtain from a user.
@@ -735,7 +717,6 @@ The input tag is an empty element, identifying the particular type of field info
 |   | `accept=""`             | Expected file type in [file](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file) upload controls            |
 
 Also see: [Attributes for the \<input> element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes)
-
 
 ### Input types
 
@@ -774,7 +755,7 @@ Also see: [Attributes for the \<input> element](https://developer.mozilla.org/en
 |               |                           |
 |---------------|---------------------------|
 | `input:focus` | When its keyboard focused |
-See: [Input pseudo classes](/css#input-pseudo-classes)
+See: [Input pseudo classes](css#input-pseudo-classes)
 
 
 ## HTML meta Tags
@@ -831,9 +812,6 @@ The meta tag describes meta data within an HTML document. It explains additional
 <meta name="viewport" content="width=1024">
 ```
 
-
-
-
 ### Open Graph
 ```html
 <meta property="og:type" content="website">
@@ -846,7 +824,6 @@ The meta tag describes meta data within an HTML document. It explains additional
 ```
 Used by Facebook, Instagram, Pinterest, LinkedIn, etc.
 
-
 ### Twitter Cards
 ```html
 <meta name="twitter:card" content="summary">
@@ -858,7 +835,6 @@ Used by Facebook, Instagram, Pinterest, LinkedIn, etc.
 ```
 See: [Twitter Card Documentation](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary)
 
-
 ### Geotagging
 ```html
 <meta name="ICBM" content="45.416667,-75.7">
@@ -867,7 +843,6 @@ See: [Twitter Card Documentation](https://developer.twitter.com/en/docs/tweets/o
 <meta name="geo.placename" content="Ottawa">
 ```
 See: [Geotagging](https://en.wikipedia.org/wiki/Geotagging#HTML_pages)
-
 
 ## See also
 
