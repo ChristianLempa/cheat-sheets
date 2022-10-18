@@ -31,5 +31,6 @@ Shortcut | Description
 
 ## See also
 
+- [Screen](screen)
 - [Tmux](tmux)
 - [Kitty](kitty/kitty)

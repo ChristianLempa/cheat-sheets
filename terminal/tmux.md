@@ -614,3 +614,4 @@ set-window-option -g monitor-activity off
 
 - [iTerm2](iterm2)
 - [Kitty](kitty/kitty)
+- [Screen](screen)
