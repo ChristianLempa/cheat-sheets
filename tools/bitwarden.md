@@ -16,7 +16,7 @@ Website: https://bitwarden.com/
 
 A PDF format cheat sheet is freely available:
 
-![[assets/bitwarden-shortcuts.pdf|Bitwarden Cheat Sheet]]
+![Bitwarden Cheat Sheet](assets/bitwarden-shortcuts.pdf)
 
 A text conversion of this cheat sheet follows.
 
