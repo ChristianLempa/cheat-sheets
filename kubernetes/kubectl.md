@@ -1,5 +1,5 @@
 # Kubectl
-Kubectl is a command line tool for communicating with a [Kubernetes](kubernetes) cluster's control pane, using the Kubernetes API.
+Kubectl is a command line tool for communicating with a [Kubernetes](kubernetes.md) cluster's control pane, using the Kubernetes API.
 
 Documentation: [Kubectl Reference](https://kubernetes.io/docs/reference/kubectl/)
 
@@ -7,7 +7,7 @@ Documentation: [Kubectl Reference](https://kubernetes.io/docs/reference/kubectl/
 ## Installation
 
 ### On Windows (PowerShell)
-Install Kubectl with **[Chocolatey](../windows/chocolatey)**:
+Install Kubectl with **[Chocolatey](../windows/chocolatey.md)**:
 ```
 choco install kubernetes-cli
 ```
