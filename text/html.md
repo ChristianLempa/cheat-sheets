@@ -171,7 +171,7 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
 
 ```html
 <script type="text/javascript">
-    let text = "Hello QuickRef.ME";
+    let text = "Hello World!";
     alert(text);
 </script>
 ```
@@ -217,10 +217,10 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
     <nav>...</nav>
   </header>
   <main>
-    <h1>QuickRef.ME</h1>
+    <h1>Cheat-Sheets.org</h1>
   </main>
   <footer>
-    <p>©2023 QuickRef.ME</p>
+    <p>©2023 Cheat-Sheets.org</p>
   </footer>
 </body>
 ```
@@ -347,9 +347,9 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
 
 ### HTML5 mark
 ```html
-<p>I Love <mark>QuickRef.ME</mark></p>
+<p>I Love <mark>cheat sheets</mark></p>
 ```
-<p>I Love <mark>QuickRef.ME</mark></p>
+<p>I Love <mark>cheat sheets</mark></p>
 
 
 ## HTML Tables
@@ -827,7 +827,7 @@ Used by Facebook, Instagram, Pinterest, LinkedIn, etc.
 ### Twitter Cards
 ```html
 <meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@QuickRef_ME">
+<meta name="twitter:site" content="@ronrecord">
 <meta name="twitter:title" content="HTML cheatsheet">
 <meta name="twitter:url" content="https://example.com/html">
 <meta name="twitter:description" content="Description of this page">

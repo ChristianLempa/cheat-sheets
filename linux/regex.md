@@ -658,8 +658,6 @@ $regex = "/microsoft/i";
 echo preg_replace($regex, "QuickRef", $str); 
 ```
 
-
-
 ### preg_match
 ```php 
 $str = "Visit example.com";

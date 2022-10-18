@@ -35,7 +35,7 @@ This is a hopefully useful collection of [Vim](http://www.vim.org/) 8.2 quick re
 │  │  ││ │ ┌── b      e ─┐ │ │  ││    │
 │  │  ││ │ │  ┌h      l┐ │ │ │  ││    │
 ▽  ▽  ▽▽ ▽ ▽  ▽▼      ▼▽ ▽ ▽ ▽  ▽▽    ▽
-   echo "A cheatsheet from quickref.me"
+   echo "A cheatsheet from github.com/doctorfree"
 ```
 #### Up-down motions
 ```bash
