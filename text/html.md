@@ -728,7 +728,7 @@ The input tag is an empty element, identifying the particular type of field info
 |   | `min="…"`               | Minimum numerical value on range & number                                                                                     |
 |   | `max="…"`               | Maximum numerical value on range & number                                                                                     |
 |   | `step="…"`              | How the number will increment in range & number                                                                               |
-|   | `pattern="…"`           | Specifies a [Regular expression](/regex), See [pattern](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern) |
+|   | `pattern="…"`           | Specifies a [Regular expression](../linux/regex), See [pattern](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern) |
 |   | `autofocus`             | Be focused                                                                                                                    |
 |   | `spellcheck`            | Perform spell checking                                                                                                        |
 |   | `multiple`              | Whether to allow [multiple](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/multiple) values                     |

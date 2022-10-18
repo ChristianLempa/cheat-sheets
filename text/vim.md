@@ -380,7 +380,7 @@ See `:help text-objects`
 | `/foo`   | Search forward                      |
 | `/foo\c` | Search forward _(case insensitive)_ |
 | `?foo`   | Search backward                     |
-| `/\v\d+` | Search with [regex](/regex)         |
+| `/\v\d+` | Search with [regex](../linux/regex)         |
 | `n`      | Next matching search pattern        |
 | `N`      | Previous match                      |
 | `*`      | Search for current word forward     |
@@ -397,7 +397,7 @@ See `:help text-objects`
 |-------------------|----------------------------------|
 | `:s/old/new`      | Replace first                    |
 | `:s/old/new/g`    | Replace all                      |
-| `:s/\vold/new/g`  | Replace all with [regex](/regex) |
+| `:s/\vold/new/g`  | Replace all with [regex](../linux/regex) |
 | `:s/old/new/gc`   | replace all _(Confirm)_          |
 | `:s/old/new/i`    | Ignore case replace first        |
 | `:2,6s/old/new/g` | Replace between lines `2`-`6`    |
@@ -415,7 +415,7 @@ See `:help text-objects`
 | `:%s/old/new/g`   | Replace all                      |
 | `:%s/old/new/gc`  | Replace all _(Confirm)_          |
 | `:%s/old/new/gi`  | Replace all _(ignore case)_      |
-| `:%s/\vold/new/g` | Replace all with [regex](/regex) |
+| `:%s/\vold/new/g` | Replace all with [regex](../linux/regex) |
 
 
 
