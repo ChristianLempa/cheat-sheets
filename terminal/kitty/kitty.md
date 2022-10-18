@@ -18,6 +18,7 @@ See https://sw.kovidgoyal.net/kitty/conf/
 1. [Include directives](#include-directives)
 1. [Auto copy selection](#auto-copy-selection)
 1. [Kitty fonts](#kitty-fonts)
+1. [See also](#see-also)
 
 ## Usage
 
@@ -277,3 +278,8 @@ VictorMono Nerd Font Mono
     Victor Mono Thin Nerd Font Complete Mono
     Victor Mono Thin Oblique Nerd Font Complete Mono
 ```
+
+## See also
+
+- [iTerm2](../iterm2)
+- [Tmux](../tmux)

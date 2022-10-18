@@ -32,7 +32,7 @@ VAR="world"
 echo "Hello $VAR!" # => Hello world!
 ```
 Execute the script
-```shell script
+```bash
 $ bash hello.sh
 ```
 
