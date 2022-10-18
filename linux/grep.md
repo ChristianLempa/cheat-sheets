@@ -42,7 +42,7 @@ Wildcards are accepted in filename.
 | `-A`   | grep -A 3 'Exception' error.log       | Display 3 lines after matching string                |
 | `-B`   | grep -B 4 'Exception' error.log       | Display 4 lines before matching string               |
 | `-C`   | grep -C 5 'Exception' error.log       | Display 5 lines around matching string               |
-| `-r`   | grep -r 'quickref.me' /var/log/nginx/ | Recursive search _(within subdirs)_                  |
+| `-r`   | grep -r 'ronrecord' /var/log/nginx/   | Recursive search _(within subdirs)_                  |
 | `-v`   | grep -v 'warning' /var/log/syslog     | Return all lines which don't match the pattern       |
 | `-e`   | grep -e '^al' filename                | Use regex _(lines starting with 'al')_               |
 | `-E`   | grep -E 'ja(s\|cks)on' filename       | Extended regex _(lines containing jason or jackson)_ |
@@ -57,8 +57,8 @@ Wildcards are accepted in filename.
 ### Refer
 
 ```
-[Regex syntax](/regex) _(quickref.me)_
-[Regex examples](/regex#regex-examples) _(quickref.me)_
+[Regex syntax](../linux/regex)
+[Regex examples](../linux/regex#regex-examples)
 ```
 
 Please refer to the full version of the [regex](regex) cheat sheet for more complex requirements.

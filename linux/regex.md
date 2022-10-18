@@ -15,14 +15,14 @@ A quick reference for regular expressions (regex), including symbols, ranges, gr
 
 This is a quick cheat sheet to getting started with regular expressions.
 
-- [Regex in Python](#regex-in-python) _(quickref.me)_
-- [Regex in JavaScript](#regex-in-javascript) _(quickref.me)_
-- [Regex in PHP](#regex-in-php) _(quickref.me)_
-- [Regex in Java](#regex-in-java) _(quickref.me)_
-- [Regex in MySQL](#regex-in-mysql) _(quickref.me)_
-- [Regex in Vim](/vim#search-and-replace) _(quickref.me)_
-- [Regex in Emacs](/emacs#search) _(quickref.me)_
-- [Online regex tester](https://regex101.com/) _(regex101.com)_
+- [Regex in Python](#regex-in-python)
+- [Regex in JavaScript](#regex-in-javascript)
+- [Regex in PHP](#regex-in-php)
+- [Regex in Java](#regex-in-java)
+- [Regex in MySQL](#regex-in-mysql)
+- [Regex in Vim](../text/vim#search-and-replace)
+- [Regex in Emacs](../text/emacs#search)
+- [Online regex tester](https://regex101.com/)
 
 ## Character Classes
 
@@ -656,8 +656,8 @@ echo preg_replace($regex, "QuickRef", $str);
 
 ### preg_match
 ```php 
-$str = "Visit QuickRef";
-$regex = "#quickref#i";
+$str = "Visit example.com";
+$regex = "#example#i";
 
 // Output: 1
 echo preg_match($regex, $str);

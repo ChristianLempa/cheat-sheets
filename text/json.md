@@ -72,8 +72,8 @@ This is a quick reference cheat sheet for understanding and writing JSON format 
 ### Examples
 ```json
 {
-  "url": "https://quickref.me",
-  "msg" : "Hi,\n\"QuickRef.ME\"",
+  "url": "https://example.com",
+  "msg" : "Hi,\n\"Example.COM\"",
   "intro": "Share quick reference and cheat sheet for developers."
 }
 ```
@@ -315,6 +315,6 @@ let myArray = [
 
 ## See also
 
-- [JSON](https://www.json.org/json-en.html) _(json.org)_
-- [JSON Editor Online](http://jsoneditoronline.org/) _(jsoneditoronline.org)_
-- [Convert JSON Array to Markdown Table, CSV and more](https://tableconvert.com/json-to-markdown) _(tableconvert.com)_
+- [JSON](https://www.json.org/json-en.html)
+- [JSON Editor Online](http://jsoneditoronline.org/)
+- [Convert JSON Array to Markdown Table, CSV and more](https://tableconvert.com/json-to-markdown)
