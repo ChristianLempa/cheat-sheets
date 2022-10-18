@@ -105,7 +105,7 @@ The outer pipes (|) are optional, and you don't need to make the raw Markdown li
 
 ### Task list
 
-To create a taksk lsit start line with square brackets with an empty space.
+To create a task list start line with square brackets with an empty space.
 Ex: [ <space> ] and add text for task.
 To check the task replace the space between the bracket with "x".
 
