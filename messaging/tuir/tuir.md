@@ -32,14 +32,14 @@ A text-based interface (TUI) to view and interact with Reddit from your terminal
 
 ## Table of Contents
 
-* [Demo](#demo)  
-* [Installation](#installation)  
-* [Usage](#usage)  
-* [Settings](#settings)
-* [Themes](#themes)
-* [FAQ](#faq)  
-* [Contributing](#contributing)  
-* [License](#license)  
+1. [Demo](#demo)  
+1. [Installation](#installation)  
+1. [Usage](#usage)  
+1. [Settings](#settings)
+1. [Themes](#themes)
+1. [FAQ](#faq)  
+1. [Contributing](#contributing)  
+1. [License](#license)  
 
 ## Demo
 

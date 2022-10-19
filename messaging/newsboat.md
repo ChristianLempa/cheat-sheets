@@ -10,11 +10,11 @@ Documentation: https://newsboat.org/releases/2.29/docs/newsboat.html
 
 ## Contents
 
-- [Feed format](#feed-format)
-- [Example configuration](#example-configuration)
-- [Urls](#urls)
-- [Keys](#keys)
-- [See also](#see-also)
+1. [Feed format](#feed-format)
+1. [Example configuration](#example-configuration)
+1. [Urls](#urls)
+1. [Keys](#keys)
+1. [See also](#see-also)
 
 ## Feed format
 
