@@ -2,7 +2,7 @@
 
 Hi, there! 👋
 
-I’m Christian, a 35 year-old tech enthusiast from Germany, and I love to inspire and educate people in IT.
+I’m Christian, a 35-year-old tech enthusiast from Germany, and I love to inspire and educate people in IT.
 
 This Repository **Cheat-Sheets** is my personal knowledge-base. Here you'll find code-snippets, technical documentation, and command reference for various tools, and technologies.
 
