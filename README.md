@@ -14,6 +14,7 @@ This knowledge base has been developed through the efforts of several individual
     1. [Clone and view locally](#clone-and-view-locally)
     1. [Obsidian plus NB](#obsidian-plus-nb)
     1. [Obsidian license restriction](#obsidian-license-restriction)
+1. [Auto Cheat Sheets](#auto-cheat-sheets)
 1. [Resources](#resources)
 1. [Support](#support)
 
@@ -106,6 +107,18 @@ has two or more people.
 The `nb` note-taking command line application has no such restriction and is
 completely free and open source software licensed under the GNU Affero General
 Public License v3.0.
+
+## Auto Cheat Sheets
+
+Resources exist on the web and as command line clients to auto-generate cheat sheets.
+
+For example, to display the cheat sheet for the `wget` command, visit the URL [https://cheat.sh/wget](https://cheat.sh/wget). Use a similar URL for just about any common Unix/Linux command.
+
+Another way to use this same service from the command line is with `curl`. For example, to retrieve the cheat sheet for the `ls` command from the command line:
+
+```bash
+curl cheat.sh/ls
+```
 
 ## Resources
 
