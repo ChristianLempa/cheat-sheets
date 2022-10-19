@@ -28,6 +28,7 @@
     1. [MusicPlayerPlus acousticbrainz metadata configuration](#musicplayerplus-acousticbrainz-metadata-configuration)
 1. [Configuring the Discogs metadata source](#configuring-the-discogs-metadata-source)
 1. [MusicPlayerPlus Beets plugins](#musicplayerplus-beets-plugins)
+1. [See also](#see-also)
 
 ## Overview
 
@@ -1260,3 +1261,7 @@ configuration for the following Beets plugins:
 
 See the MusicPlayerPlus [Wiki article on Beets plugins](https://github.com/doctorfree/MusicPlayerPlus/wiki/BeetsPlugins)
 for an introduction to the installed and configured MusicPlayerPlus Beets plugins.
+
+## See also
+
+- [MusicPlayerPlus](../projects/MusicPlayerPlus.md)

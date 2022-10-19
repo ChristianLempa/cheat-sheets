@@ -15,6 +15,7 @@ Website: http://w3m.sourceforge.net
 1. [Introduction](#introduction)
 1. [Example configuration](#example-configuration)
 1. [Example mailcap](#example-mailcap)
+1. [See also](#see-also)
 
 ## Introduction
 
@@ -1480,3 +1481,8 @@ application/vnd.ms-excel; xls2csv %s; copiousoutput; description="MS Excel sheet
 application/vnd.ms-powerpoint; catppt %s; copiousoutput; description="MS PowerPoint presentation";
 application/vnd.debian.binary-package; /usr/lib/mime/debian-view %s; needsterminal; description=Debian GNU/Linux Package; nametemplate=%s.deb
 ```
+
+## See also
+
+- [Lynx](lynx.md)
+- [Asciiville](../projects/Asciiville.md)

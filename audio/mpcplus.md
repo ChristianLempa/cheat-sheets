@@ -555,3 +555,10 @@ script in the mpcplus source directory:
 -   <span class="kbd">Ctrl-H Backspace</span> - Jump to parent directory
     (left column, directories view)
 ```
+
+## See also
+
+- [mpcinit.1](mpcinit.1.md)
+- [mpcplus.1](mpcplus.1.md)
+- [mpcpluskeys.1](mpcpluskeys.1.md)
+- [MusicPlayerPlus](../projects/MusicPlayerPlus.md)

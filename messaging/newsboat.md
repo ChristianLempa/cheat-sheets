@@ -14,6 +14,7 @@ Documentation: https://newsboat.org/releases/2.29/docs/newsboat.html
 - [Example configuration](#example-configuration)
 - [Urls](#urls)
 - [Keys](#keys)
+- [See also](#see-also)
 
 ## Feed format
 
@@ -1723,3 +1724,7 @@ unbind-key g
 unbind-key G
 unbind-key C feedlist
 ```
+
+## See also
+
+- [Asciiville](../projects/Asciiville.md)
