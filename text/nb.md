@@ -1,3 +1,20 @@
+---
+tags: 
+    - command-line
+    - notes
+    - knowledge
+    - notebook
+    - nb
+    - markdown
+    - bookmark
+    - organize
+    - sync
+categories:
+    - text
+    - notes
+    - notebook
+---
+
 <p align="center"></p><!-- spacer -->
 
 <div align="center">

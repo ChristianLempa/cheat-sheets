@@ -1,3 +1,19 @@
+---
+tags: 
+    - command-line
+    - notes
+    - knowledge
+    - notebook
+    - obsidian
+    - markdown
+    - organize
+    - sync
+categories:
+    - text
+    - notes
+    - notebook
+---
+
 # Obsidian Cheat Sheet and Shortcut Keys 🔮
 
 See the [Obsidian Help](https://help.obsidian.md/Obsidian/Index) website for full documentation on Obsidian usage.
