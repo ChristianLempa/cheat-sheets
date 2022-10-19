@@ -143,7 +143,7 @@ Press <kbd>/</kbd> to open the navigation prompt, where you can type things like
 - ``/u/multi-mod/m/art``
 - ``/domain/github.com``
 
-See [controls](controls) for the full list of commands.
+See [controls](controls.md) for the full list of commands.
 
 ## Settings
 
@@ -230,7 +230,7 @@ Themes can be used to customize the look and feel of TUIR
 
 You can list all installed themes with the ``--list-themes`` command, and select one with ``--theme``. You can save your choice permanently in your [tuir.cfg](tuir.cfg) file. You can also use the <kbd>F2</kbd> & <kbd>F3</kbd> keys inside of TUIR to cycle through all available themes.
 
-For instructions on writing and installing your own themes, see [themes](themes).
+For instructions on writing and installing your own themes, see [themes](themes.md).
 
 ## FAQ
 

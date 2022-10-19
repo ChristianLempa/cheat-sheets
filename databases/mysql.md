@@ -915,4 +915,4 @@ DROP INDEX idx_name;
 
 ## See also
 
-- [Regex in MySQL](../linux/regex)
+- [Regex in MySQL](../linux/regex.md)

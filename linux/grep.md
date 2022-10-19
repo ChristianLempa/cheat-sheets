@@ -9,7 +9,7 @@ categories:
 ---
 # Grep
 
-Grep is a command-line utility for searching plain-text data sets for lines that match a regular expression. Its name comes from the ed command `g/re/p` (globally search for a regular expression and print matching lines), which has the same effect. Grep was originally developed for the Unix operating system but later available for all Unix-like systems like **[Linux](linux)**, and some others such as OS-9.
+Grep is a command-line utility for searching plain-text data sets for lines that match a regular expression. Its name comes from the ed command `g/re/p` (globally search for a regular expression and print matching lines), which has the same effect. Grep was originally developed for the Unix operating system but later available for all Unix-like systems like **[Linux](linux.md)**, and some others such as OS-9.
 
 ## Usage
 
@@ -57,11 +57,11 @@ Wildcards are accepted in filename.
 ### Refer
 
 ```
-[Regex syntax](../linux/regex)
-[Regex examples](../linux/regex#regex-examples)
+[Regex syntax](regex.md)
+[Regex examples](regex.md#regex-examples)
 ```
 
-Please refer to the full version of the [regex](regex) cheat sheet for more complex requirements.
+Please refer to the full version of the [regex](regex.md) cheat sheet for more complex requirements.
 
 ### Wildcards
 

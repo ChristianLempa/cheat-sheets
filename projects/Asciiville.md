@@ -309,14 +309,14 @@ several commands may also be installed as dependencies. These include:
 * **khard** : contact management for the console
 * **mplayer** : media player
 * **neofetch** : system info
-* **[neomutt](../messaging/neomutt)** : sophisticated text-based EMail and NNTP client
-* **[newsboat](../messaging/newsboat)** : text-based RSS feed reader
-* **[pandoc](../text/pandoc)** : convert and manipulate multiple document formats
+* **[neomutt](../messaging/neomutt.md)** : sophisticated text-based EMail and NNTP client
+* **[newsboat](../messaging/newsboat.md)** : text-based RSS feed reader
+* **[pandoc](../text/pandoc.md)** : convert and manipulate multiple document formats
 * **ranger** : text-based file management
 * **speedtest-cli** : text-based command line network speed test
-* **[tmux](../terminal/tmux)** : embed commands and terminal sessions in a terminal multiplexer
+* **[tmux](../terminal/tmux.md)** : embed commands and terminal sessions in a terminal multiplexer
 * **urlscan** : scan for urls in a message
-* **[w3m](../browsers/w3m)** : text-based web browser
+* **[w3m](../www/w3m.md)** : text-based web browser
 
 The Kitty terminal emulator is installed during `ascinit`. Several other
 terminal emulators art optionally installed during `ascinit` unless
@@ -1096,21 +1096,21 @@ bring up the interactive menu interface.
 
 ### Man Pages
 
-- [**asciiville**](man/asciiville.1) : Primary Asciiville user interface
-- [**asciiart**](man/asciiart.1) : asciimatics animation of art images
-- [**asciijulia**](man/asciijulia.1) : asciimatics animation of a Julia Set
-- [**asciimpplus**](man/asciimpplus.1) : asciimatics animation of Asciiville intro
-- [**asciiplasma**](man/asciiplasma.1) : asciimatics animation with Plasma effect
-- [**asciisplash-tmux**](man/asciisplash-tmux.1) : Asciiville asciimatics animations in a tmux session
-- [**asciisplash**](man/asciisplash.1) : Asciiville asciimatics animations
-- [**ascinit**](man/ascinit.1) : Asciiville initialization
-- [**btop**](man/btop.1) : Asciiville system monitor
-- [**cbftp**](man/cbftp.1) : Asciiville FTP client
-- [**show_ascii_art**](man/show_ascii_art.1) : Display ascii art, convert images to ascii art
-- [**show_moon**](man/show_moon.1) : Display the phase of the Moon
-- [**show_pokemon**](man/show_pokemon.1) : Display a Pokemon pocket monster
-- [**show_weather**](man/show_weather.1) : Display a weather report
-- [**termprofset**](man/termprofset.1) : Manipulate default terminal profile or font settings
+- [**asciiville**](man/asciiville.1.md) : Primary Asciiville user interface
+- [**asciiart**](man/asciiart.1.md) : asciimatics animation of art images
+- [**asciijulia**](man/asciijulia.1.md) : asciimatics animation of a Julia Set
+- [**asciimpplus**](man/asciimpplus.1.md) : asciimatics animation of Asciiville intro
+- [**asciiplasma**](man/asciiplasma.1.md) : asciimatics animation with Plasma effect
+- [**asciisplash-tmux**](man/asciisplash-tmux.1.md) : Asciiville asciimatics animations in a tmux session
+- [**asciisplash**](man/asciisplash.1.md) : Asciiville asciimatics animations
+- [**ascinit**](man/ascinit.1.md) : Asciiville initialization
+- [**btop**](man/btop.1.md) : Asciiville system monitor
+- [**cbftp**](man/cbftp.1.md) : Asciiville FTP client
+- [**show_ascii_art**](man/show_ascii_art.1.md) : Display ascii art, convert images to ascii art
+- [**show_moon**](man/show_moon.1.md) : Display the phase of the Moon
+- [**show_pokemon**](man/show_pokemon.1.md) : Display a Pokemon pocket monster
+- [**show_weather**](man/show_weather.1.md) : Display a weather report
+- [**termprofset**](man/termprofset.1.md) : Manipulate default terminal profile or font settings
 
 ### Usage
 

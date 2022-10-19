@@ -13,7 +13,7 @@ A regular expression (shortened as regex or regexp; sometimes referred to as rat
 
 The concept of regular expressions began in the 1950s, when the American mathematician Stephen Cole Kleene formalized the concept of a regular language. They came into common use with Unix text-processing utilities. Different syntaxes for writing regular expressions have existed since the 1980s, one being the POSIX standard and another, widely used, being the Perl syntax.
 
-Regular expressions are used in search engines, in search and replace dialogs of word processors and text editors, in text processing utilities such as [sed](sed) and [AWK](awk), and in lexical analysis. Most general-purpose programming languages support regex capabilities either natively or via libraries, including [Python](python), C, C++, Java, Rust, OCaml, and JavaScript.
+Regular expressions are used in search engines, in search and replace dialogs of word processors and text editors, in text processing utilities such as [sed](sed.md) and [AWK](awk.md), and in lexical analysis. Most general-purpose programming languages support regex capabilities either natively or via libraries, including [Python](python.md), C, C++, Java, Rust, OCaml, and JavaScript.
 
 A quick reference for regular expressions (regex), including symbols, ranges, grouping, assertions and some sample patterns to get you started.
 
@@ -26,8 +26,8 @@ This is a quick cheat sheet to getting started with regular expressions.
 - [Regex in PHP](#regex-in-php)
 - [Regex in Java](#regex-in-java)
 - [Regex in MySQL](#regex-in-mysql)
-- [Regex in Vim](../text/vim#search-and-replace)
-- [Regex in Emacs](../text/emacs#search)
+- [Regex in Vim](../text/vim.md#search-and-replace)
+- [Regex in Emacs](../text/emacs.md#search)
 - [Online regex tester](https://regex101.com/)
 
 ## Character Classes

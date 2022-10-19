@@ -1471,31 +1471,31 @@ e.g. `mpplus -u`.
 
 ### Man Pages
 
-- [**mpplus**](man/mpplus.1) : Primary MusicPlayerPlus user interface
-- [**mppcava**](man/mppcava.1) : Audio Spectrum Visualizer
-- [**mppjulia**](man/mppjulia.1) : asciimatics animation of a Julia Set
-- [**mpprocks**](man/mpprocks.1) : asciimatics animation of MusicPlayerPlus intro
-- [**mppplasma**](man/mppplasma.1) : asciimatics animation with Plasma effect
-- [**mppinit**](man/mppinit.1) : MusicPlayerPlus initialization
-- [**mppcover**](man/mppcover.1) : Displays album cover art for currently playing song
-- [**mppdl**](man/mppdl.1) : Downloads audio tracks from Bandcamp, Soundcloud, or a URL
-- [**mpcplus-tmux**](man/mpcplus-tmux.1) : MusicPlayerPlus in a tmux session
-- [**mpcplus**](man/mpcplus.1) : MusicPlayerPlus MPD client
-- [**mpcpluskeys**](man/mpcpluskeys.1) : Cheat sheet for `mpcplus` MPD client navigation
-- [**mppsplash-tmux**](man/mppsplash-tmux.1) : MusicPlayerPlus asciimatics animations in a tmux session
-- [**mppsplash**](man/mppsplash.1) : MusicPlayerPlus asciimatics animations
-- [**mpd-configure**](man/mpd-configure.1) : MPD configuration generator
-- [**mpd-monitor**](man/mpd-monitor.1) : Display info on currently playing MPD song
-- [**beet**](man/beet.1) : Beets media library management command-line interface
-- [**beetsconfig**](man/beetsconfig.5) : Beets media library management configuration
-- [**bandcamp-dl**](man/bandcamp-dl.1) : Download Bandcamp collections
-- [**blissify**](man/blissify.1) : create MPD playlists using song similarity database
-- [**scdl**](man/scdl.1) : Download Soundcloud favorites
-- [**fzmp**](man/fzmp.1) : List and search MPD media using fuzzy find
-- [**artist_to_albumartist**](man/artist_to_albumartist.1) : Copies the Artist tag to the AlbumArtist tag
-- [**listyt**](man/listyt.1) : List YouTube video titles and urls
-- [**yt-dlp**](man/yt-dlp.1) : Download YouTube and other sites videos and audio
-- [**create_playlist**](man/create_playlist.1) : Create playlists using Beets queries
+- [**mpplus**](man/mpplus.1.md) : Primary MusicPlayerPlus user interface
+- [**mppcava**](man/mppcava.1.md) : Audio Spectrum Visualizer
+- [**mppjulia**](man/mppjulia.1.md) : asciimatics animation of a Julia Set
+- [**mpprocks**](man/mpprocks.1.md) : asciimatics animation of MusicPlayerPlus intro
+- [**mppplasma**](man/mppplasma.1.md) : asciimatics animation with Plasma effect
+- [**mppinit**](man/mppinit.1.md) : MusicPlayerPlus initialization
+- [**mppcover**](man/mppcover.1.md) : Displays album cover art for currently playing song
+- [**mppdl**](man/mppdl.1.md) : Downloads audio tracks from Bandcamp, Soundcloud, or a URL
+- [**mpcplus-tmux**](man/mpcplus-tmux.1.md) : MusicPlayerPlus in a tmux session
+- [**mpcplus**](man/mpcplus.1.md) : MusicPlayerPlus MPD client
+- [**mpcpluskeys**](man/mpcpluskeys.1.md) : Cheat sheet for `mpcplus` MPD client navigation
+- [**mppsplash-tmux**](man/mppsplash-tmux.1.md) : MusicPlayerPlus asciimatics animations in a tmux session
+- [**mppsplash**](man/mppsplash.1.md) : MusicPlayerPlus asciimatics animations
+- [**mpd-configure**](man/mpd-configure.1.md) : MPD configuration generator
+- [**mpd-monitor**](man/mpd-monitor.1.md) : Display info on currently playing MPD song
+- [**beet**](man/beet.1.md) : Beets media library management command-line interface
+- [**beetsconfig**](man/beetsconfig.5.md) : Beets media library management configuration
+- [**bandcamp-dl**](man/bandcamp-dl.1.md) : Download Bandcamp collections
+- [**blissify**](man/blissify.1.md) : create MPD playlists using song similarity database
+- [**scdl**](man/scdl.1.md) : Download Soundcloud favorites
+- [**fzmp**](man/fzmp.1.md) : List and search MPD media using fuzzy find
+- [**artist_to_albumartist**](man/artist_to_albumartist.1.md) : Copies the Artist tag to the AlbumArtist tag
+- [**listyt**](man/listyt.1.md) : List YouTube video titles and urls
+- [**yt-dlp**](man/yt-dlp.1.md) : Download YouTube and other sites videos and audio
+- [**create_playlist**](man/create_playlist.1.md) : Create playlists using Beets queries
 
 ### Usage
 

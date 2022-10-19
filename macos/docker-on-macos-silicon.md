@@ -1,4 +1,4 @@
-# Docker on [macOS](macos) Silicon
+# Docker on [macOS](macos.md) Silicon
 ## Installation
 Docker Desktop
 

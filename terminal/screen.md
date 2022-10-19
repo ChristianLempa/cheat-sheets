@@ -107,6 +107,6 @@ ssh -t user@host screen -x <name/pid>
 
 ## See also
 
-- [Tmux](tmux)
-- [iTerm2](iterm2)
-- [Kitty](kitty/kitty)
+- [Tmux](tmux.md)
+- [iTerm2](iterm2.md)
+- [Kitty](kitty/kitty.md)

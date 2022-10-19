@@ -10,7 +10,7 @@ categories:
 
 # AWK
 
-AWK (awk) is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. Similar to the **[Sed](sed)** and **[Grep](grep)** commands, it is a filter, and is a standard feature of most Unix-like operating systems, like **[Linux](linux)**. Awk uses [regular expressions](regex) for pattern matching.
+AWK (awk) is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. Similar to the **[Sed](sed.md)** and **[Grep](grep.md)** commands, it is a filter, and is a standard feature of most Unix-like operating systems, like **[Linux](linux.md)**. Awk uses [regular expressions](regex.md) for pattern matching.
 
 The AWK language is a data-driven scripting language consisting of a set of actions to be taken against streams of textual data - either run directly on files or used as part of a pipeline - for purposes of extracting or transforming text, such as producing formatted reports. The language extensively uses the string datatype, associative arrays (that is, arrays indexed by key strings), and regular expressions. While AWK has a limited intended application domain and was especially designed to support one-liner programs, the language is Turing-complete, and even the early Bell Labs users of AWK often wrote well-structured large AWK programs.
 
@@ -37,22 +37,11 @@ awk '/pattern/ {print "$1"}'    # compiled with DJGPP, Cygwin
 awk "/pattern/ {print \"$1\"}"  # GnuWin32, UnxUtils, Mingw
 ```
 
-Note that the DJGPP compilation (for DOS or Windows-32) permits an awk
-script to follow Unix quoting syntax `'/like/ {"this"}'`. HOWEVER, if the
-command interpreter is `CMD.EXE` or `COMMAND.COM`, single quotes will not
-protect the redirection arrows `(<, >)` nor do they protect pipes `(|)`.
-These are special symbols which require "double quotes" to protect them
-from interpretation as operating system directives. If the command
-interpreter is [bash](../shells/bash), [ksh](../shells/ksh), [zsh](../shells/zsh)
-or another Unix shell, then single and double
-quotes will follow the standard Unix usage.
+Note that the DJGPP compilation (for DOS or Windows-32) permits an awk script to follow Unix quoting syntax `'/like/ {"this"}'`. HOWEVER, if the command interpreter is `CMD.EXE` or `COMMAND.COM`, single quotes will not protect the redirection arrows `(<, >)` nor do they protect pipes `(|)`. These are special symbols which require "double quotes" to protect them from interpretation as operating system directives. If the command interpreter is [bash](../shells/bash.md), [ksh](../shells/ksh.md), [zsh](../shells/zsh.md) or another Unix shell, then single and double quotes will follow the standard Unix usage.
 
-Users of MS-DOS or Microsoft Windows must remember that the percent
-sign `(%)` is used to indicate environment variables, so this symbol must
-be doubled `(%%)` to yield a single percent sign visible to awk.
+Users of MS-DOS or Microsoft Windows must remember that the percent sign `(%)` is used to indicate environment variables, so this symbol must be doubled `(%%)` to yield a single percent sign visible to awk.
 
-To conserve space, use `'1'` instead of `'{print}'` to print each line.
-Either one will work.
+To conserve space, use `'1'` instead of `'{print}'` to print each line.  Either one will work.
 
 ## Handy one-line Awk scripts
 
@@ -350,6 +339,6 @@ awk should recognize this abbreviation.
 
 ## See also
 
-- [Grep](grep)
-- [Regex](regex)
-- [Sed](sed)
+- [Grep](grep.md)
+- [Regex](regex.md)
+- [Sed](sed.md)

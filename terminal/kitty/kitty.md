@@ -281,6 +281,6 @@ VictorMono Nerd Font Mono
 
 ## See also
 
-- [iTerm2](../iterm2)
-- [Screen](../screen)
-- [Tmux](../tmux)
+- [iTerm2](../iterm2.md)
+- [Screen](../screen.md)
+- [Tmux](../tmux.md)

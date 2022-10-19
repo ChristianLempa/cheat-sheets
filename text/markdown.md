@@ -219,7 +219,7 @@ To check the task replace the space between the bracket with "x".
 ## See also
 
 - [Markdown guide](https://www.markdownguide.org/cheat-sheet)
-- [HTML](html)
-- [JSON](json)
-- [TOML](toml)
-- [YAML](yaml)
+- [HTML](html.md)
+- [JSON](json.md)
+- [TOML](toml.md)
+- [YAML](yaml.md)

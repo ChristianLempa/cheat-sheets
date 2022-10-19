@@ -231,7 +231,7 @@ animal = { type.name = "pug" }
 
 ## See also
 
-- [HTML](html)
-- [JSON](json)
-- [YAML](yaml)
-- [Markdown](markdown)
+- [HTML](html.md)
+- [JSON](json.md)
+- [YAML](yaml.md)
+- [Markdown](markdown.md)

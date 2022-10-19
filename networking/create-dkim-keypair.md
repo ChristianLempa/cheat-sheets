@@ -1,5 +1,6 @@
 # Generate a DKIM Keypair
-We use the [OpenSSL](../tools/openssl) tool to generate a DKIM private and public keypair.
+
+Use the [OpenSSL](../tools/openssl.md) tool to generate a DKIM private and public keypair.
 
 `openssl genrsa -out dkim_private.pem 2048`
 

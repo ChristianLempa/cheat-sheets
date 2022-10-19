@@ -23,7 +23,7 @@ The Python cheat sheet is a one-page reference sheet for the Python 3 programmin
 
 - [Python](https://www.python.org/)  _(python.org)_
 - [Learn X in Y minutes](https://learnxinyminutes.com/docs/python/) _(learnxinyminutes.com)_
-- [Regex in python](regex#regex-in-python)
+- [Regex in python](regex.md#regex-in-python)
 
 ### Hello World
 

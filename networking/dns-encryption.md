@@ -5,9 +5,9 @@ The UDP source port is 53 which is the standard port number for unencrypted DNS.
 
 Encrypting DNS makes it much harder for snoopers to look into your DNS messages, or to corrupt them in transit.
 
-Two standardized mechanisms exist to secure the DNS transport between you and the resolver, [DNS over TLS](dns-over-tls), and [DNS queries over HTTPS](dns-over-https).
+Two standardized mechanisms exist to secure the DNS transport between you and the resolver, [DNS over TLS](dns-over-tls.md), and [DNS queries over HTTPS](dns-over-https.md).
 
-Both are based on [Transport Layer Security](tls) which is also used to secure communication between you and a website using HTTPS.
+Both are based on [Transport Layer Security](tls.md) which is also used to secure communication between you and a website using HTTPS.
 
 As both DoT and DoH are relatively new, they are not universally deployed yet.
 

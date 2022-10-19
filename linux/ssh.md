@@ -34,7 +34,7 @@ Connect via pem file (0400 permissions)
 ```bash
 ssh -i /path/file.pem root@192.168.1.5
 ```
-See: [SSH Permissions](/chmod#ssh-permissions)
+See: [SSH Permissions](chmod.md#ssh-permissions)
 
 ## Executing
 Executes remote command

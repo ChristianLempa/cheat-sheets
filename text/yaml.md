@@ -8,11 +8,11 @@ categories:
 
 # YAML
 
-YAML is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted. YAML targets many of the same communications applications as Extensible Markup Language (XML) but has a minimal syntax which intentionally differs from SGML. It uses both Python-style indentation to indicate nesting, and a more compact format that uses [...] for lists and {...} for maps thus [JSON](json) files are valid YAML 1.2.
+YAML is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted. YAML targets many of the same communications applications as Extensible Markup Language (XML) but has a minimal syntax which intentionally differs from SGML. It uses both Python-style indentation to indicate nesting, and a more compact format that uses [...] for lists and {...} for maps thus [JSON](json.md) files are valid YAML 1.2.
 
-Custom data types are allowed, but YAML natively encodes scalars (such as strings, integers, and floats), lists, and associative arrays (also known as maps, dictionaries or hashes). These data types are based on the Perl programming language, though all commonly used high-level programming languages share very similar concepts. The colon-centered syntax, used for expressing key-value pairs, is inspired by electronic mail headers as defined in RFC 822, and the document separator --- is borrowed from [MIME](../misc/mime) (RFC 2046). Escape sequences are reused from C, and whitespace wrapping for multi-line strings is inspired by [HTML](html). Lists and hashes can contain nested lists and hashes, forming a tree structure; arbitrary graphs can be represented using YAML aliases (similar to XML in SOAP). YAML is intended to be read and written in streams, a feature inspired by SAX.
+Custom data types are allowed, but YAML natively encodes scalars (such as strings, integers, and floats), lists, and associative arrays (also known as maps, dictionaries or hashes). These data types are based on the Perl programming language, though all commonly used high-level programming languages share very similar concepts. The colon-centered syntax, used for expressing key-value pairs, is inspired by electronic mail headers as defined in RFC 822, and the document separator --- is borrowed from [MIME](../misc/mime.md) (RFC 2046). Escape sequences are reused from C, and whitespace wrapping for multi-line strings is inspired by [HTML](html.md). Lists and hashes can contain nested lists and hashes, forming a tree structure; arbitrary graphs can be represented using YAML aliases (similar to XML in SOAP). YAML is intended to be read and written in streams, a feature inspired by SAX.
 
-Support for reading and writing YAML is available for many programming languages. Some source-code editors such as [Vim](vim), [Emacs](emacs), and various integrated development environments have features that make editing YAML easier, such as folding up nested structures or automatically highlighting syntax errors.
+Support for reading and writing YAML is available for many programming languages. Some source-code editors such as [Vim](vim.md), [Emacs](emacs.md), and various integrated development environments have features that make editing YAML easier, such as folding up nested structures or automatically highlighting syntax errors.
 
 This is a quick reference cheat sheet for understanding and writing YAML format configuration files.
 
@@ -469,10 +469,10 @@ Based on the YAML.org [refcard](https://yaml.org/refcard.html).
 
 ## See also
 
-- [HTML](html)
-- [JSON](json)
-- [TOML](toml)
-- [Markdown](markdown)
+- [HTML](html.md)
+- [JSON](json.md)
+- [TOML](toml.md)
+- [Markdown](markdown.md)
 - [YAML Reference Card](https://yaml.org/refcard.html) _(yaml.org)_
 - [Learn X in Y minutes](https://learnxinyminutes.com/docs/yaml/) _(learnxinyminutes.com)_
 - [YAML lint online](http://www.yamllint.com/) _(yamllint.com)_

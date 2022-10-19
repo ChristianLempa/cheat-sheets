@@ -1,6 +1,6 @@
 # NeoMutt Key Bindings
 
-Primary differences between the [Asciiville](../projects/Asciiville) NeoMutt key bindings and the default:
+Primary differences between the [Asciiville](../projects/Asciiville.md) NeoMutt key bindings and the default:
 
 - Vim keybinds. `k` and `j` to go up and down, and `l` and `h` to move forwards and back pages
 - Open the sidebar with `B`. `Ctrl+j` and `Ctrl+k` to navigate, `Ctrl+o` to open selection

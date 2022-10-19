@@ -1,4 +1,4 @@
-# [MacOS](macos) keyboard shortcuts
+# [MacOS](macos.md) keyboard shortcuts
 
 # Table of contents
 - [MacOS keyboard shortcuts](#macos-keyboard-shortcuts)

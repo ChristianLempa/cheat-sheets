@@ -153,7 +153,7 @@ $ tmux show-options -g
 | `Ctrl+b` `]` | Paste contents of buffer_0 |
 
 
-Mainly works like selecting text in [Vim](/vim#motions)
+Mainly works like selecting text in [Vim](../text/vim.md#motions)
 
 
 ## Tmux shortcuts
@@ -268,7 +268,7 @@ $ tmux info
 
 ## Example tmux session
 
-An example tmux session from the [MusicPlayerPlus](../projects/MusicPlayerPlus) project:
+An example tmux session from the [MusicPlayerPlus](../projects/MusicPlayerPlus.md) project:
 
 ```bash
 #!/bin/bash
@@ -612,6 +612,6 @@ set-window-option -g monitor-activity off
 
 ## See also
 
-- [iTerm2](iterm2)
-- [Kitty](kitty/kitty)
-- [Screen](screen)
+- [iTerm2](iterm2.md)
+- [Kitty](kitty/kitty.md)
+- [Screen](screen.md)
