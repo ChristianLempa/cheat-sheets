@@ -61,6 +61,38 @@ Quite a bit of effort has gone into creating internal links between these cheats
 
 In addition to providing a quick overview of usage, these cheatsheets often include a prefatory explanation of the subject, its history, origin, evolution, and use. Often times this is just the opening paragraph of the corresponding Wikipedia article. Our cheatsheets provide a context in which to view the subject.
 
+### Use of HTML Character Entities
+
+It's somewhat shocking how often HTML and Markdown authors ignore the often necessary use of HTML character entitities in their documents. In many representations some characters can be mistakenly recognized as delimiters or other formatting constructs rather than the intended symbol. For example, in a table the delimiting character between fields is the pipe symbol '|'. When this symbol is used inside a table field it can be mistakenly recognized as representing the end of that field. This will not display as intended:
+
+```
+| Description                 | Command         |
+|-----------------------------|-----------------|
+| Number of files in a folder | `ls -l | wc -l` |
+```
+
+Displays as:
+
+| Description                 | Command         |
+|-----------------------------|-----------------|
+| Number of files in a folder | `ls -l | wc -l` |
+
+In this example, use the HTML character entity for the pipe symbol inside the 'code' tag:
+
+```
+| Description                 | Command                         |
+|-----------------------------|---------------------------------|
+| Number of files in a folder | <code>ls -l &#124; wc -l</code> |
+```
+
+Displays as:
+
+| Description                 | Command                         |
+|-----------------------------|---------------------------------|
+| Number of files in a folder | <code>ls -l &#124; wc -l</code> |
+
+Our cheatsheets have been meticulously groomed to avoid these kinds of errors through the appropriate use of HTML character entities.
+
 ## Usage
 
 Any [markdown](https://en.wikipedia.org/wiki/Markdown) viewer can be used to view this knowledge base. You can simply browse the repository and click on the individual markdown files at https://github.com/doctorfree/cheat-sheets.git in any web browser. However, to view the inter-relationships between the many components, categories, and technologies documented here, we recommend using the [Obsidian](https://obsidian.md) knowledge base engine. Obsidian is free for personal non-commercial use but must be purchased in revenue generating operations (see the note on [Obsidian license restrictions](#obsidian-license-restriction) below).
