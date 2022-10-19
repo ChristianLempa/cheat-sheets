@@ -242,5 +242,6 @@ noglob command
 ## See also
 
 - [Oh My Zsh](ohmyzsh.md).
+- [Powerlevel10k Zsh theme](powerlevel10k.md)
 - [Bash](../bash.md)
 - [Regular expressions](../../linux/regex.md)
