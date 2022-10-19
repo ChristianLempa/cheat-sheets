@@ -281,6 +281,8 @@ VictorMono Nerd Font Mono
 
 ## See also
 
+- [Kitty configuration](kitty.conf.md)
+- [Kitty tab bar](tab_bar.py.md)
 - [iTerm2](../iterm2.md)
 - [Screen](../screen.md)
 - [Tmux](../tmux.md)

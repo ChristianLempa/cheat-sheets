@@ -178,3 +178,7 @@ map shift+cmd+a             open_url https://github.com/doctorfree/Asciiville#re
 #allow_remote_control socket-only
 #listen_on unix:/tmp/kitty
 ```
+## See also
+
+- [Kitty](kitty.md)
+- [Kitty tab bar](tab_bar.py.md)

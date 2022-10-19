@@ -156,3 +156,8 @@ def draw_tab(
 
     return screen.cursor.x
 ```
+
+## See also
+
+- [Kitty configuration](kitty.conf.md)
+- [Kitty](kitty.md)
