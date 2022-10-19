@@ -157,12 +157,18 @@ curl cheat.sh/ls
 
 ## Resources
 
+- [John Gruber's Markdown Project](https://daringfireball.net/projects/markdown) - The co-inventor of the Markdown markup language hosts an excellent resource on Markdown
+- [CommonMark Markdown Spec](https://spec.commonmark.org) - John MacFarlane hosts this specification and interactive dingus for Markdown
+- MIT Licensed Cheat Sheet Repos
+    - [https://github.com/chubin/cheat.sheets](https://github.com/chubin/cheat.sheets) - Repository of the *[cheat.sh](https://cheat.sh/)* 
+    - [https://github.com/kasramp/cheat-sheet-factory](https://github.com/kasramp/cheat-sheet-factory) - Cheat Sheet Factory
+    - [https://github.com/Randy8080/reference](https://github.com/Randy8080/reference) - Quickref.ME cheat sheets
+    - [Christian's Cheat-Sheets](https://github.com/xcad2k/cheat-sheets) - Command Reference for various tools and technologies
 - [Videos](https://github.com/xcad2k/videos) - Documentation and project files for Christian's video tutorials on YouTube
 - [dotfiles-ubuntu](https://github.com/doctorfree/dotfiles-ubuntu) - Doctorfree's personal configuration files for Linux
 - [dotfiles-macos](https://github.com/doctorfree/dotfiles-macos) - Doctorfree's personal configuration files for Mac OS
 - [Dotfiles](https://github.com/xcad2k/dotfiles) - Christian's personal configuration files on Linux and Windows
 - [Boilerplates](https://github.com/xcad2k/boilerplates) - Templates for various projects like Docker, K8S, Ansible, etc
-- [Christian's Cheat-Sheets](https://github.com/xcad2k/cheat-sheets) - Command Reference for various tools and technologies
 - Doctorfree Projects
   - [Asciiville](https://github.com/doctorfree/Asciiville) - Ascii Art, text based utilities, tools, games, fun
   - [DriveCommandLine](https://github.com/doctorfree/DriveCommandLine) - Initialize, configure, monitor, and manage Google Drives from the command line
