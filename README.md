@@ -63,7 +63,9 @@ In addition to providing a quick overview of usage, these cheatsheets often incl
 
 ### Use of HTML Character Entities
 
-It's somewhat shocking how often HTML and Markdown authors ignore the often necessary use of HTML character entitities in their documents. In many representations some characters can be mistakenly recognized as delimiters or other formatting constructs rather than the intended symbol. For example, in a table the delimiting character between fields is the pipe symbol '|'. When this symbol is used inside a table field it can be mistakenly recognized as representing the end of that field. This will not display as intended:
+It's somewhat shocking how often HTML and Markdown authors ignore the often necessary use of HTML character entitities in their documents. In many representations some characters can be mistakenly recognized as delimiters or other formatting constructs rather than the intended symbol. For example, in a table the delimiting character between fields is the pipe symbol '|'. When this symbol is used inside a table field it can be mistakenly recognized as representing the end of that field. This can be particularly important when describing things like the syntax of a [regular expression](linux/regex.md) or a series of pipes in a [shell command](linux/shell-commands.md).
+
+This will not display as intended:
 
 ```
 | Description                 | Command         |
