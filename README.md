@@ -38,7 +38,9 @@ First, some history. For a thorough read, visit the [CommonMark website](https:/
 Quoting from the CommonMark spec's introduction:
 
 > Markdown is a plain text format for writing structured documents, based on conventions for indicating formatting in email and usenet posts.  It was developed by John Gruber (with help from Aaron Swartz) and released in 2004 in the form of a [syntax description](http://daringfireball.net/projects/markdown/syntax) and a Perl script (`Markdown.pl`) for converting Markdown to HTML.  In the next decade, dozens of implementations were developed in many languages.  Some extended the original Markdown syntax with conventions for footnotes, tables, and other document elements.  Some allowed Markdown documents to be rendered in formats other than HTML.  Websites like Reddit, StackOverflow, and GitHub had millions of people using Markdown.  And Markdown started to be used beyond the web, to author books, articles, slide shows, letters, and lecture notes.
+>
 > ... 
+>
 > Because there is no unambiguous spec, implementations have diverged considerably. As a result, users are often surprised to find that a document that renders one way on one system (say, a GitHub wiki) renders differently on another (say, converting to docbook using pandoc). To make matters worse, because nothing in Markdown counts as a "syntax error", the divergence often isn't discovered right away.
 
 Authors of markdown documents often write and test their markdown only to verify that it displays correctly in the system they are using. For example, many authors using Github only verify their markdown on Github using a browser. Github flavored markdown contains many extensions that are not supported in other markdown systems. Markdown written to conform with a particular extension or flavor is not portable and when other viewers or systems attempt to display such markdown it can fail in a variety of ways.
@@ -49,11 +51,11 @@ To overcome this problem, the CommonMark markdown specification was written and 
 
 [Markdown](text/markdown.md) supports the inclusion of tags in a [YAML](text/yaml.md) prelude. Our cheat sheets utilize tags extensively in an attempt to enhance the inter-relationships and qualitative properties of each. Some markdown viewers, like Obsidian, can take advantage of tags to highlight aspects and relationships between elements in a collection.
 
-Tags are an important but often overlooked feature in note-taking and personal knowledge management systems. For example, the Zettelkasten method can be enhanced greatly through the use of tags. Too often knowledge management systems utilize categories rather than tags, ignoring the fact that many elements have cross-category relationships.
+Tags are an important but often overlooked feature in note-taking and personal knowledge management systems. For example, the [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten) method can be enhanced greatly through the use of tags. Too often knowledge management systems utilize categories rather than tags, ignoring the fact that many elements have cross-category relationships.
 
 ### Backlinks
 
-Quite a bit of effort has gone into creating internal links between these cheatsheets. These are referred to as *Backlinks* in some systems. The incorporation of backlinks enables a "What links here" capability that can be exploited by viewers.
+Quite a bit of effort has gone into creating internal links between these cheatsheets. These are referred to as *[Backlinks](https://en.wikipedia.org/wiki/Backlink)* in some systems. The incorporation of backlinks enables a "What links here" capability that can be exploited by viewers.
 
 ### Wikipedia style introductory matter
 
