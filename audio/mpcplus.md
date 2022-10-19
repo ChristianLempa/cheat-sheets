@@ -3,7 +3,7 @@
 [![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
 The `mpcplus` NCurses MPD client is derived from `ncmpcpp` and customized
-for integration with [MusicPlayerPlus](../projects/MusicPlayerPlus).
+for integration with [MusicPlayerPlus](../projects/MusicPlayerPlus.md).
 
 Many enhancements to `mpcplus` are included in the `MusicPlayerPlus` project.
 These include the display of album cover art in a `tmux` session along side
@@ -246,7 +246,7 @@ Options:
 The mpcplus MPD client has a customized set of key bindings that allow
 quick and easy control of MPD, searches, lyrics display, client navigation,
 and much more via the keyboard. View the
-**[mpcpluskeys man page](../projects/man/mpcpluskeys.1)**
+**[mpcpluskeys man page](mpcpluskeys.1.md)**
 with the command `man mpcpluskeys`.
 
 ## Removal

@@ -1,6 +1,7 @@
 .obsidian
 .index
 tmp/*
+todo/*
 
 # vim files
 .*.sw[a-z]
