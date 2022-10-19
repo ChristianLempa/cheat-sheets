@@ -49,6 +49,7 @@ Command-line shells require the user to be familiar with commands and their call
     - [`ssh`](#ssh)
     - [ProxyJump](#proxyjump)
     - [`curl`](#curl)
+    - [`wget`](../www/wget.md)
 - [One liner](#one-liner)
 - [Helpful tools](#helpful-tools)
 - [List of some useful shell commands](#list-of-some-useful-shell-commands)
@@ -786,6 +787,8 @@ ssh -L 80:localhost:8080 -N dest
 
 #### `curl`
 
+- [cURL cheat sheet](../www/curl.md)
+
 - Post JSON data
 
     ```sh
@@ -1050,6 +1053,7 @@ tldr tar
 - [iTerm2](../terminal/iterm2.md)
 - [Awk](../linux/awk.md)
 - [Chmod](../linux/chmod.md)
+- [cURL](../www/curl.md)
 - [Grep](../linux/grep.md)
 - [Linux](../linux/linux.md)
 - [Linux Basics](../linux/linuxbasics.md)
@@ -1057,3 +1061,4 @@ tldr tar
 - [Regular Expressions](../linux/regex.md)
 - [Sed](../linux/sed.md)
 - [SSH](../linux/ssh.md)
+- [Wget](../www/wget.md)
