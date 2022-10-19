@@ -237,6 +237,7 @@ zsh --verbose
 ### Execute a specific command inside `zsh` with disabled glob patterns:
 ```shell
 noglob command
+```
 
 ## See also
 
