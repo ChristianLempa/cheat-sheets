@@ -1,15 +1,11 @@
 ---
 tags:
     - shell
-    - bash
-    - sh
     - linux
-    - plugins
+    - settings
     - zsh
 categories:
     - shells
-    - themes
-    - plugins
 ---
 
 # Settings

@@ -1,15 +1,12 @@
 ---
 tags:
     - shell
-    - bash
-    - sh
     - linux
-    - plugins
+    - themes
     - zsh
 categories:
     - shells
     - themes
-    - plugins
 ---
 
 # External themes

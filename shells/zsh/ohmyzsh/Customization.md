@@ -1,9 +1,9 @@
 ---
 tags:
+    - customization
     - shell
-    - bash
-    - sh
     - linux
+    - themes
     - plugins
     - zsh
 categories:

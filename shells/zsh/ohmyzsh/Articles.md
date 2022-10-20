@@ -1,15 +1,10 @@
 ---
 tags:
+    - articles
     - shell
-    - bash
-    - sh
-    - linux
-    - plugins
     - zsh
 categories:
     - shells
-    - themes
-    - plugins
 ---
 
 # Articles

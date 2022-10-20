@@ -1,15 +1,10 @@
 ---
 tags:
     - shell
-    - bash
-    - sh
     - linux
-    - plugins
     - zsh
 categories:
     - shells
-    - themes
-    - plugins
 ---
 
 # Contribution Technical Practices
