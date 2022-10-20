@@ -298,6 +298,9 @@ There is significant API breakage from PRAW 3 to PRAW 6 (the [PRAW README](https
 Python 2 is also [dead](https://devguide.python.org/devcycle/#end-of-life-branches) as of 2020. PRAW 6 doesn't even support Python 2, so Python 2 support in TUIR is also being dropped. Given that PRAW3 is packaged with TUIR as a result of RTV doing the same, there is little sense in removing Python 2 support from the packaged version when there is already an updated version of PRAW available, so I will work to remove Python 2 support alongside my efforts to update TUIR for PRAW 6.
 
 ## Contributing
+
+View a [list of authors and contributors](authors.md).
+
 All feedback and suggestions are welcome, just post an issue!
 
 Before writing any code, please read the [Contributor Guidelines](contributing.md).
@@ -307,5 +310,13 @@ This project is distributed under the [MIT](license.md) license.
 
 ## See also
 
-- [Python](../../linux/python.md)
 - [Asciiville](../../projects/Asciiville.md)
+- [Python](../../linux/python.md)
+- [Authors](authors.md)
+- [Changelog](changelog.md)
+- [Contributing](contributing.md)
+- [Controls](controls.md)
+- [License](license.md)
+- [Mailcap](mailcap.md)
+- [Themes](themes.md)
+- [Tuir Configuration](tuir.cfg.md)
