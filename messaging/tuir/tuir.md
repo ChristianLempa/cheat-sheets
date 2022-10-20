@@ -171,7 +171,7 @@ A mailcap file allows you to associate different MIME media types, like ``image/
 $ tuir --copy-mailcap
 ```
 
-This template contains examples for common MIME types that work with popular reddit websites like *imgur*, *youtube*, and *gfycat*. Open the mailcap template and follow the [instructions](tuir/templates/mailcap) listed inside.
+This template contains examples for common MIME types that work with popular reddit websites like *imgur*, *youtube*, and *gfycat*. Open the mailcap template and follow the [instructions](mailcap.md) listed inside.
 
 Once you've setup your mailcap file, enable it by launching tuir with the ``tuir --enable-media`` flag (or set it in your **tuir.cfg**)
 
@@ -288,7 +288,7 @@ Python 2 is also [dead](https://devguide.python.org/devcycle/#end-of-life-branch
 ## Contributing
 All feedback and suggestions are welcome, just post an issue!
 
-Before writing any code, please read the [Contributor Guidelines](CONTRIBUTING.rst).
+Before writing any code, please read the [Contributor Guidelines](contributing.md).
 
 ## License
-This project is distributed under the [MIT](LICENSE) license.
+This project is distributed under the [MIT](license.md) license.
