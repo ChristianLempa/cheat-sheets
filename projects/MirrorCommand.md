@@ -1083,6 +1083,8 @@ License: MIT
 
 ## See also
 
+- [MagicMirror](MagicMirror.md)
+- [Raspberry Pi](../linux/raspberry-pi.md)
 - [Asciiville](Asciiville.md)
 - [MusicPlayerPlus](MusicPlayerPlus.md)
 - [DriveCommandLine](DriveCommandLine.md)

@@ -16,7 +16,7 @@ The Z shell (Zsh) is a Unix shell that can be used as an interactive login shell
 
 Zsh is mostly compatible with Bash, so most everything in [Bash's cheatsheet](../bash.md) also applies.
 
-Zsh has a robust and active community providing many useful enhancements and extensions. One very poplular Zsh community has formed around the [Oh My Zsh project](ohmyzsh/Home.md).
+Zsh has a robust and active community providing many useful enhancements and extensions. One very poplular Zsh community has formed around the [Oh My Zsh project](ohmyzsh/OhMyZsh.md).
 
 Repository: https://sf.net/p/zsh/code/
 
@@ -241,7 +241,7 @@ noglob command
 
 ## See also
 
-- [Oh My Zsh](ohmyzsh/Home.md).
+- [Oh My Zsh](ohmyzsh/OhMyZsh.md).
 - [Powerlevel10k Zsh theme](powerlevel10k.md)
 - [Bash](../bash.md)
 - [Regular expressions](../../linux/regex.md)
