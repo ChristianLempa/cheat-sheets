@@ -31,3 +31,5 @@ Github Repository: https://github.com/kubernetes/kubernetes
 - [kubernetes-automation](kubernetes-automation.md)
 - [kubernetes-dns](kubernetes-dns.md)
 - [docker](../docker/docker.md)
+- [datree](datree.md)
+- [helm](helm.md)

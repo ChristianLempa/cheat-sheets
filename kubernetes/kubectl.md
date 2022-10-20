@@ -48,7 +48,7 @@ Kubernetes is a container orchestration service. It has a master node which we c
 
 The master node manages other nodes that run pods. `kubectl` will be run on nodes by the master node. Each node can run multiple pods, and each pod runs a container. 
 
-Deployment and service files can be generated using Helm, handcrafted manually, or using [Kompose](https://github.com/kubernetes/kompose) to convert [docker-compose](../docker/docker-compose.md) files to Kubernetes deployment files.
+Deployment and service files can be generated using [Helm](helm.md), handcrafted manually, or using [Kompose](https://github.com/kubernetes/kompose) to convert [docker-compose](../docker/docker-compose.md) files to Kubernetes deployment files.
 
 A deployment is a blue print of a pod.
 
@@ -548,3 +548,4 @@ More details [here](https://kubernetes.io/docs/tasks/access-application-cluster/
 - [kubernetes-automation](kubernetes-automation.md)
 - [kubernetes-dns](kubernetes-dns.md)
 - [docker](../docker/docker.md)
+- [helm](helm.md)

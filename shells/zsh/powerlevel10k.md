@@ -1,3 +1,11 @@
+---
+tags:
+    - zsh
+    - themes
+categories:
+    - themes
+---
+
 # Powerlevel10k
 
 Powerlevel10k is a theme for Zsh. It emphasizes [speed](#uncompromising-performance),
@@ -2004,3 +2012,5 @@ typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='${P9K_CONTENT}'  # not bold
 
 - [Zsh](zsh.md)
 - [Oh My Zsh](ohmyzsh/Home.md)
+- [Helm](../../kubernetes/helm.md)
+- [Kubectl](../../kubernetes/kubectl.md)

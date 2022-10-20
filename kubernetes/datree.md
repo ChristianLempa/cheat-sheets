@@ -1,5 +1,13 @@
+---
+tags:
+    - helm
+    - kubernetes
+categories:
+    - kubernetes
+---
+
 # Datree
-Datree can be used on the command line to run policies against Kubernetes manifests YAML files or Helm charts. It prevents Kubernetes misconfigurations from reaching production.
+Datree can be used on the command line to run policies against [Kubernetes](kubernetes.md) manifests YAML files or [Helm](helm.md) charts. It prevents Kubernetes misconfigurations from reaching production.
 
 As your organization's infrastructure owner, the product’s stability is your primary concern. Toolchain engineering and architecture gets pushed to the wayside because you must constantly put out fires configured in the development stage.
 
@@ -43,7 +51,7 @@ A Helm plugin to validate charts against the Datree policy.
 **Installation Linux** (Bash)
 ```bash
 helm plugin install https://github.com/datreeio/helm-datree
-
+```
 
 ### Usage
 Trigger datree policy check via the helm CLI
@@ -98,3 +106,9 @@ To uninstall the helm release, copy the following command and run it in your ter
 helm uninstall datree-webhook -n datree
 kubectl delete ns datree
 ```
+
+## See also
+
+- [helm](helm.md)
+- [kubernetes](kubernetes.md)
+- [docker](../docker/docker.md)
