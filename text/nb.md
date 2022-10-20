@@ -9422,3 +9422,8 @@ tests with globbing, e.g., `bats test/browse*` and `bats test/folders*`.
   <a href="#top">&nbsp;↑&nbsp;</a>
   </span>
 </div>
+
+## See also
+
+- [Obsidian](obsidian.md)
+- [Pandoc](pandoc.md)

@@ -1058,6 +1058,7 @@ tldr tar
 - [Linux](../linux/linux.md)
 - [Linux Basics](../linux/linuxbasics.md)
 - [Mount](../linux/mount.md)
+- [Nmap](../networking/nmap.md)
 - [Regular Expressions](../linux/regex.md)
 - [Sed](../linux/sed.md)
 - [SSH](../linux/ssh.md)
