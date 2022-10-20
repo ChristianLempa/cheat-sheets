@@ -46,6 +46,7 @@ COMMAND | DESCRIPTION
 `docker run --name CONTAINER IMAGE` | Start a new container and set a name
 `docker run -p HOSTPORT:CONTAINERPORT IMAGE` | Start a new container with mapped ports
 `docker run -P IMAGE` | Start a new container and map all ports
+`docker run -it ubuntu sh` | Run a container in interactive mode
 
 **Container Management:**
 
@@ -78,6 +79,7 @@ COMMAND | DESCRIPTION
 `docker start $(docker ps -a -q)` | To start all the stopped and running containers
 `docker rm -vf $(docker ps -a -q)` | To delete all containers including its volumes use
 `docker rmi -f $(docker images -a -q)` | To delete all the images
+`docker rmi --force [image-name]` | Remove a docker container
 `docker system prune` | To delete all dangling and unused images, containers, cache and volumes
 `docker system prune -a` | To delete all used and unused images
 `docker system prune --volumes` | To delete all docker volumes
@@ -104,6 +106,7 @@ COMMAND | DESCRIPTION
 `docker export CONTAINER` | Export the content of the container (tar archive)
 `docker exec CONTAINER` | Run a command inside a container
 `docker exec -it CONTAINER /bin/bash` | Open an interactive shell inside a container (there is no bash in some images, use /bin/sh)
+`docker exec -it ubuntu sh` | SSH to a running container
 `docker wait CONTAINER` | Wait until the container terminates and return the exit code
 
 **Images:**
@@ -143,9 +146,17 @@ Backup docker data from inside container volumes and package it in a tarball arc
 ### Restore container from backup
 Restore the volume with a tarball archive.
 `docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox sh -c "cd CONTAINERPATH && tar xvf /backup/backup.tar --strip 1"`
+
 ## Networks
 
 ## Troubleshooting
 ### Networking
 `docker run --name netshoot --rm -it nicolaka/netshoot /bin/bash`
 
+## See also
+
+- [docker-compose](docker-compose.md)
+- [docker-file](docker-file.md)
+- [docker-networking](docker-networking.md)
+- [kubectl](../kubernetes/kubectl.md)
+- [kubernetes](../kubernetes/kubernetes.md)
