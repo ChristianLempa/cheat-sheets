@@ -279,5 +279,4 @@ Plugins or other files that need to locate where they're running from should use
 ## See also
 
 - [Oh My Zsh Github](https://github.com/ohmyzsh/ohmyzsh)
-- [Powerlevel10k Zsh theme](../powerlevel10k.md)
 - [Zsh](../zsh.md)

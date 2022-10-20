@@ -129,5 +129,4 @@ You can now go to GitHub and create the PR.
 ## See also
 
 - [Oh My Zsh Github](https://github.com/ohmyzsh/ohmyzsh)
-- [Powerlevel10k Zsh theme](../powerlevel10k.md)
 - [Zsh](../zsh.md)

@@ -36,5 +36,4 @@ If you know of any that are missing, feel free to contribute! :-)
 ## See also
 
 - [Oh My Zsh Github](https://github.com/ohmyzsh/ohmyzsh)
-- [Powerlevel10k Zsh theme](../powerlevel10k.md)
 - [Zsh](../zsh.md)

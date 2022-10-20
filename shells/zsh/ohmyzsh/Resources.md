@@ -70,5 +70,4 @@ We're an open source project and always in need of funding, so you can show your
 ## See also
 
 - [Oh My Zsh Github](https://github.com/ohmyzsh/ohmyzsh)
-- [Powerlevel10k Zsh theme](../powerlevel10k.md)
 - [Zsh](../zsh.md)

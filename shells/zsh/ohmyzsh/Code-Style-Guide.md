@@ -497,5 +497,4 @@ Eval is evil! Eval munges the input when used for assignment to variables and ca
 ## See also
 
 - [Oh My Zsh Github](https://github.com/ohmyzsh/ohmyzsh)
-- [Powerlevel10k Zsh theme](../powerlevel10k.md)
 - [Zsh](../zsh.md)

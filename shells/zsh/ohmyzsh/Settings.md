@@ -408,5 +408,4 @@ If this is set and you want to know which theme was chosen, you can `echo $RANDO
 ## See also
 
 - [Oh My Zsh Github](https://github.com/ohmyzsh/ohmyzsh)
-- [Powerlevel10k Zsh theme](../powerlevel10k.md)
 - [Zsh](../zsh.md)

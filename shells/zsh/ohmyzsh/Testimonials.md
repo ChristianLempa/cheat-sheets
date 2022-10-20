@@ -143,5 +143,4 @@ Please share your thoughts on Oh My Zsh... they might help influence others to u
 ## See also
 
 - [Oh My Zsh Github](https://github.com/ohmyzsh/ohmyzsh)
-- [Powerlevel10k Zsh theme](../powerlevel10k.md)
 - [Zsh](../zsh.md)
