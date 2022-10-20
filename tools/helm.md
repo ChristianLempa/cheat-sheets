@@ -1,4 +1,53 @@
+---
+tags:
+    - kubernetes
+categories:
+    - kubernetes
+---
+
 # Helm Cheat-Sheet
+
+***Helm*** is a package manager for [Kubernetes](kubernetes.md).
+
+The ***tiller*** component runs on your Kubernetes cluster, listens for commands from helm, and handles the configuration and deployment of software releases on the cluster.
+
+## Installation
+
+* [macOS](../macos/macos.md): `brew install helm`
+* Windows: `choco install kubernetes-helm`
+* [Ubuntu](../linux/linux.md):
+    * `sudo snap install helm --classic`
+    * `curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -`
+    * `sudo apt-get install apt-transport-https --yes`
+    * `echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list`
+    * `sudo apt-get update`
+    * `sudo apt-get install helm`
+* [RedHat/CentOs/Amazon Linux](../linux/linux.md)
+    * `curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 > get_helm.sh`
+    * `chmod 700 get_helm.sh`
+    * `./get_helm.sh`
+    * ***helm*** installed in `/usr/local/bin/helm`
+
+
+## Example commands
+
+* <code>helm (command)</code>
+* <code>helm --help</code>
+* <code>helm search --help</code>
+* <code>helm install</code>
+* <code>helm status</code>
+* <code>helm create mychart</code>
+* <code>helm list</code>
+* <code>helm repo list</code>
+* <code>helm repo add eks https://aws.github.io/eks-charts</code>
+* <code>helm repo add stable https://kubernetes-charts.storage.googleapis.com/</code>
+* <code>helm repo update</code>
+* <code>helm search repo stable</code>
+* <code>helm get manifest</code>
+* <code>helm upgrade</code>
+
+Software available: Artifactory, datadog, Elastic, fluentd, GitLab, graylog, MySQL
+
 ## Repository Management
 COMMAND | DESCRIPTION
 ---|---
@@ -53,3 +102,7 @@ wordpress/
   templates/NOTES.txt # OPTIONAL: A plain text file containing short usage notes
 ```
 
+## See also
+
+- [kubernetes](kubernetes.md)
+- [docker](../docker/docker.md)
