@@ -2003,4 +2003,4 @@ typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='${P9K_CONTENT}'  # not bold
 ## See also
 
 - [Zsh](zsh.md)
-- [Oh My Zsh](ohmyzsh.md)
+- [Oh My Zsh](ohmyzsh/Home.md)
