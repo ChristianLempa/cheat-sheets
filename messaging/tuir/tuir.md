@@ -1,3 +1,15 @@
+---
+tags:
+    - python
+    - reddit
+    - commandline
+    - command-line
+    - terminal
+categories:
+    - tui
+    - python
+---
+
 <h1 align="center">Terminal UI for Reddit (TUIR)</h1>
 
 <p align="center">
@@ -292,3 +304,8 @@ Before writing any code, please read the [Contributor Guidelines](contributing.m
 
 ## License
 This project is distributed under the [MIT](license.md) license.
+
+## See also
+
+- [Python](../../linux/python.md)
+- [Asciiville](../../projects/Asciiville.md)
