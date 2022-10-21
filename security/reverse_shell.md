@@ -1,5 +1,11 @@
 # Reverse shell
 
+***Shell shoveling***, in network security, refers to the act of redirecting the input and output of a shell to a service so that it can be remotely accessed, a ***reverse shell***.
+
+In computing, the most basic method of interfacing with the operating system is the shell. On Microsoft Windows based systems, this is a program called cmd.exe or COMMAND.COM. On Unix or Unix-like systems, it may be any of a variety of programs such as [bash](../shells/bash.md), [zsh](../shells/zsh/zsh.md), etc. This program accepts commands typed from a prompt and executes them, usually in real time, displaying the results to what is referred to as standard output, usually a monitor or screen.
+
+In the shell shoveling process, one of these programs is set to run (perhaps silently or without notifying someone observing the computer) accepting input from a remote system and redirecting output to the same remote system; therefore the operator of the shoveled shell is able to operate the computer as if they were present at the console.
+
 ## bash
 
 ```shell
