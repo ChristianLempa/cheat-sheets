@@ -1,0 +1,196 @@
+version: '3.7'
+
+services:
+  traefik:
+    image: traefik:1.7.14
+    container_name: traefik
+    restart: unless-stopped
+    ports:
+      - 80:80
+    command: >
+      --api
+      --docker
+      --docker.domain=localdns.xyz
+      --docker.watch
+      --defaultentrypoints=http
+      --entrypoints='Name:http Address::80'
+      --logLevel=INFO
+      --accessLog
+      --accessLog.format='json'
+      --metrics
+      --metrics.prometheus
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - public
+    logging:
+      driver: fluentd
+      options:
+        fluentd-async-connect: "true"
+        fluentd-address: 192.168.0.4:24224
+        
+  fluent-bit:
+    image: grafana/fluent-bit-plugin-loki:latest
+    container_name: fluent-bit
+    restart: unless-stopped
+    environment:
+      - LOKI_URL=http://loki:3100/loki/api/v1/push
+    volumes:
+      - ./docker-example/configs/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+    networks:
+      - public
+    depends_on:
+      - loki
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+      
+  alertmanager:
+    image: prom/alertmanager
+    container_name: alertmanager
+    restart: unless-stopped
+    command:
+      - '--config.file=/etc/alertmanager/config.yml'
+      - '--storage.path=/alertmanager'
+      - '--web.external-url=http://alertmanager.localdns.xyz'
+    volumes:
+      - ./docker-example/configs/alertmanager.yml:/etc/alertmanager/config.yml
+      - ./data/alertmanager:/alertmanager
+    networks:
+      - public
+    depends_on:
+      - loki
+      - traefik
+    labels:
+      - traefik.frontend.rule=Host:alertmanager.homedns.xyz
+      - traefik.enable=true
+      - traefik.port=9093
+      - traefik.tags=public
+      - traefik.docker.network=public
+      - traefik.redirectorservice.frontend.entryPoints=http
+    logging:
+      driver: fluentd
+      options:
+        fluentd-async-connect: "true"
+        fluentd-address: 192.168.0.4:24224
+
+  prometheus:
+    image: prom/prometheus
+    container_name: 'prometheus'
+    user: root
+    restart: unless-stopped
+    volumes:
+      - ./docker-example/configs/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./docker-example/configs/host_alert_rules.yml:/etc/prometheus/rules/host_alert_rules.yml
+      - ./data/prometheus:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention=30d'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.external-url=http://prometheus.localdns.xyz'
+    networks:
+      - public
+    depends_on:
+      - traefik
+    labels:
+      - traefik.frontend.rule=Host:prometheus.localdns.xyz
+      - traefik.enable=true
+      - traefik.port=9090
+      - traefik.tags=public
+      - traefik.docker.network=public
+      - traefik.redirectorservice.frontend.entryPoints=http
+    logging:
+      driver: fluentd
+      options:
+        fluentd-async-connect: "true"
+        fluentd-address: localhost:24224
+
+  grafana:
+    image: grafana/grafana:7.4.2
+    container_name: grafana
+    restart: unless-stopped
+    user: root
+    volumes:
+      - ./data/grafana:/var/lib/grafana
+      - ./docker-example/configs/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
+    environment:
+      - GF_SERVER_ROOT_URL=http://grafana.localdns.xyz
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-worldmap-panel,camptocamp-prometheus-alertmanager-datasource
+      - PROMETHEUS_ENDPOINT=http://prometheus:9090
+    networks:
+      - public
+    ports:
+      - 3000:3000
+    depends_on:
+      - loki
+      - traefik
+      - prometheus
+    labels:
+      - traefik.frontend.rule=Host:grafana.localdns.xyz
+      - traefik.enable=true
+      - traefik.port=3000
+      - traefik.tags=public
+      - traefik.docker.network=public
+      - traefik.redirectorservice.frontend.entryPoints=http
+    logging:
+      driver: fluentd
+      options:
+        fluentd-async-connect: "true"
+        fluentd-address: 192.168.0.4:24224
+
+  promtail:
+    image: grafana/promtail
+    container_name: promtail
+    command: -config.file=/etc/promtail/config.yml
+    volumes:
+      #- /var/log:/var/log
+      - ./docker-example/configs/promtail_config.yml:/etc/promtail/config.yml
+    ports:
+      - 9080:9080
+      - 1514:1514
+      - 1514:1514/udp
+    networks:
+      - public
+    depends_on:
+      - loki
+
+  loki:
+    image: grafana/loki:2.1.0
+    container_name: loki
+    command: -config.file=/mnt/loki-local-config.yaml
+    user: root
+    restart: unless-stopped
+    volumes:
+      - ./data/loki:/tmp/loki
+      - ./docker-example/configs/loki.yml:/mnt/loki-local-config.yaml
+      - ./docker-example/configs/loki-rules.yml:/etc/loki/rules/fake/loki-rule.yaml
+    ports:
+      - 3100:3100
+    labels:
+      - traefik.frontend.rule=Host:loki.localdns.xyz
+      - traefik.enable=true
+      - traefik.port=3100
+      - traefik.tags=public
+      - traefik.docker.network=public
+      - traefik.redirectorservice.frontend.entryPoints=http
+    networks:
+      - public
+    depends_on:
+      - traefik
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+
+networks:
+  public:
+    name: public

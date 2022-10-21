@@ -1,0 +1,50 @@
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+positions:
+  filename: /var/lib/promtail/positions.yaml
+clients:
+  - url: https://<LOKI_USERNAME>:<LOKI_PASSWORD>@<LOKI_FQDN>/loki/api/v1/push
+
+scrape_configs:
+  - job_name: nginx-info
+    static_configs:
+    - targets:
+        - localhost
+      labels:
+        job: prod/nginx
+        environment: production
+        host: demo-app-prod
+        level: info
+        service_name: demo-app-prod
+        __path__: /var/log/nginx/access.log
+
+    pipeline_stages:
+    # https://grafana.com/docs/loki/latest/clients/promtail/stages/drop/
+    - drop:
+        expression: "(.*/health-check.*)|(.*/health.*)"
+    - drop:
+        older_than: 24h
+        drop_counter_reason: "line_too_old"
+    - drop:
+        longer_than: 8kb
+        drop_counter_reason: "line_too_long"
+    # https://grafana.com/docs/loki/latest/clients/promtail/stages/match/
+    - match:
+        selector: '{app="promtail"} |~ ".*noisy error.*"'
+        action: drop
+        drop_counter_reason: promtail_noisy_error
+    - match:
+        selector: '{app="loki", component="gateway"}'
+        action: drop
+        drop_counter_reason: loki_gateway_logs
+    - match:
+        selector: '{app="loki", component="querier"} |= "level=info"'
+        action: drop
+        drop_counter_reason: loki_querier_info_logs
+    # https://github.com/cyriltovena/loki/blob/master/docs/clients/promtail/stages/match.md#example
+    # drop healthcheck logs
+    - match:
+        pipeline_name: 'drop_elb_healthchecks'
+        selector: '{job="prod/nginx"} |= "ELB-HealthChecker"'
+        action: drop

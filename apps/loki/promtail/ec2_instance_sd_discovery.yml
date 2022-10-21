@@ -1,0 +1,69 @@
+# https://grafana.com/docs/loki/latest/clients/promtail/scraping/
+# https://grafana.com/blog/2020/07/13/loki-tutorial-how-to-set-up-promtail-on-aws-ec2-to-find-and-analyze-your-logs/
+server:
+  http_listen_port: 3100
+  grpc_listen_port: 0
+
+clients:
+  - url: https://user:pass@loki.domain.com/loki/api/v1/push
+
+positions:
+  filename: /opt/promtail/positions.yaml
+
+scrape_configs:
+  - job_name: prod/ec2-logs
+    ec2_sd_configs:
+      - region: eu-west-1
+        #access_key: REDACTED
+        #secret_key: REDACTED
+        #role_arn: arn:aws:iam::000000000000:role/PrometheusEC2DynamicScrapeRole
+    relabel_configs:
+      - source_labels: [__meta_ec2_architecture]
+        regex: "(.*)"
+        replacement: "prod/server-logs"
+        target_label: job
+      - source_labels: [__meta_ec2_tag_Name]
+        target_label: name
+        action: replace
+      - source_labels: [__meta_ec2_instance_id]
+        target_label: instance
+        action: replace
+      - source_labels: [__meta_ec2_availability_zone]
+        target_label: zone
+        action: replace
+      - action: replace
+        replacement: /var/log/**.log
+        target_label: __path__
+      - source_labels: [__meta_ec2_private_dns_name]
+        regex: "(.*)\\.(.*)\\.compute\\.internal"
+        replacement: '${1}'
+        target_label: __host__
+
+  - job_name: prod/journal
+    journal:
+      json: false
+      max_age: 12h
+      path: /var/log/journal
+      labels:
+        job: prod/systemd-journal
+        name: my-ec2-instance
+    relabel_configs:
+      - source_labels: ['__journal__systemd_unit']
+        target_label: 'unit'
+      - source_labels: ['__journal__hostname']
+        target_label: __host__
+      - source_labels: ['__journal_syslog_identifier']
+        target_label: syslog_identifier
+
+# prod/ec2-logs produces:
+#  job="prod/server-logs"
+#  instance="i-00000000000"
+#  name="my-ec2-instance"
+#  zone="eu-west-1a"
+#  filename="/var/log/auth.log"
+
+# prod/journal produces:
+#  job="prod/systemd-journal"
+#  name="my-ec2-instance"
+#  syslog_identifier="promtail"
+#  unit="promtail.service"

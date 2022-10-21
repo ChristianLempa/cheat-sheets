@@ -1,0 +1,40 @@
+# examples:
+# https://rtfm.co.ua/en/prometheus-alertmanagers-alerts-receivers-and-routing-based-on-severity-level-and-tags/
+# https://awesome-prometheus-alerts.grep.to/rules.html
+groups:
+- name: host_alert_rules.yml
+  rules:
+
+  # Alert for any node that is unreachable for > 2 minutes.
+  - alert: node_down
+    expr: up{job="node-exporter"} == 0
+    for: 1m
+    labels:
+      severity: warning
+      environment: prod
+      alert_target: "{{ $labels.host }}"
+    annotations:
+      summary: "Job {{ $labels.job }} is down on {{ $labels.instance }}"
+      description: "Failed to scrape {{ $labels.job }} on {{ $labels.instance }} for more than 1 minute. Node might be down."
+      impact: "Any metrics from {{ $labels.job }} on {{ $labels.instance }} will be missing"
+      action: "Check on {{ $labels.instance }} if {{ $labels.job }} is running"
+      dashboard: http://grafana.localdns.xyz/d/pjhLJOzmk/infrastructure-hosts-stats
+      runbook: http://wiki.localdns.xyz
+      priority: P2
+
+  # test alert on debug instance
+  - alert: debug_instance_hard_disk_low
+    expr: (node_filesystem_avail_bytes{mountpoint="/"}  * 100) / node_filesystem_size_bytes{mountpoint="/"} < 20
+    for: 1m
+    labels:
+      severity: warning
+      alert_channel: notifications
+      environment: prod
+      team: devops
+      aws_region: eu-west-1
+    annotations:
+      title: "[TEST] Disk Usage is Low in {{ $labels.instance }}"
+      description: "Instance {{ $labels.instance }} has less than {{ humanize $value}}% available on mount {{ $labels.mountpoint }} "
+      summary: "Low Disk Space Available"
+      dashboard: http://grafana.localdns.xyz/d/pjhLJOzmk/infrastructure-hosts-stats
+      runbook: http://wiki.localdns.xyz

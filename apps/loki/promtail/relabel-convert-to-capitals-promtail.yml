@@ -1,0 +1,32 @@
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+positions:
+  filename: /var/lib/promtail/positions.yaml
+clients:
+  - url: https://<LOKI_USERNAME>:<LOKI_PASSWORD>@<LOKI_FQDN>/loki/api/v1/push
+
+scrape_configs:
+  - job_name: nginx-info
+    static_configs:
+    - targets:
+        - localhost
+      labels:
+        job: prod/nginx
+        environment: production
+        host: demo-app-prod
+        level: info
+        service_name: demo-app-prod
+        __path__: /var/log/nginx/access.log
+
+    pipeline_stages:
+    # convert capital log levels to lower case
+    - regex:
+        expression: "(?P<level>(INFO|WARNING|ERROR))(.*)"
+    # set captured values to lowercase
+    - template:
+        source: level
+        template: '{{ ToLower .Value }}'
+    # set the renamed values to level label
+    - labels:
+        level:

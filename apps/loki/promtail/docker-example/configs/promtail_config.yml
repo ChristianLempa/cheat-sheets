@@ -1,0 +1,45 @@
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+positions:
+  filename: /tmp/positions.yaml
+
+clients:
+  - url: http://loki:3100/loki/api/v1/push
+
+scrape_configs:
+  - job_name: syslog
+    syslog:
+      listen_address: 0.0.0.0:1514
+      labels:
+        job: "syslog"
+    relabel_configs:
+      - source_labels: ['__syslog_connection_ip_address']
+        target_label: 'instance'
+      - source_labels: ['__syslog_message_app_name']
+        target_label: 'app'
+      - source_labels: ['__syslog_message_severity']
+        target_label: 'severity'
+
+    pipeline_stages:
+      - match:
+          selector: '{app="dockerd"}'
+          stages:
+            - regex:
+                expression: "Health check for container (?P\\w+) (?P\\S+:).*"
+                #expression: "\\[shard (?P\\d+)\\] (?P\\S+).*"
+            - labels:
+                containerid:
+                msglevel:
+      - match:
+          selector: '{severity="warning"}'
+          stages:
+            - metrics:
+                warning_total:
+                  type: Counter
+                  description: "total count of warnings"
+                  prefix: homepc_logs_
+                  config:
+                    match_all: true
+                    action: inc

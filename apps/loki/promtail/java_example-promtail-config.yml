@@ -1,0 +1,53 @@
+# Example: promtail to collect syslog and java logs from linux os
+# Application called myapp running in production
+#
+# job: prod/myapp
+# environment: production
+# host: myapp-prod.domain (or hostname)
+# service_name: myapp-prod
+
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+positions:
+  filename: /var/lib/promtail/positions.yaml
+clients:
+  - url: https://<LOKI_USERNAME>:<LOKI_PASSWORD>@<LOKI_FQDN>/loki/api/v1/push
+
+scrape_configs:
+  - job_name: syslog
+    pipeline_stages:
+    static_configs:
+    - targets:
+        - localhost
+      labels:
+        job: prod/syslog
+        host: myapp-prod.domain
+        environment: production
+        __path__: /var/log/syslog
+
+  - job_name: myapp
+    static_configs:
+    - targets:
+        - localhost
+      labels:
+        job: prod/myapp
+        environment: production
+        host: myapp-prod.domain
+        service_name: myapp-prod
+        __path__: /var/log/myapp/myapp-logs_*.log
+
+    # remaps INFO to info for specified selector
+    pipeline_stages:
+    # https://github.com/cyriltovena/loki/blob/master/docs/clients/promtail/stages/match.md#example
+    - match:
+        selector: '{service_name="myapp-prod",environment="production"}'
+        # selector: '{service_name="myapp-prod",environment="production"} |~ "GET|POST"' <- if you only want specific logs to be matched by the pipeline stage
+        stages:
+        - regex:
+            expression: "(?P<level>(INFO|WARNING|ERROR))(.*)"
+        - template:
+            source: level
+            template: '{{ ToLower .Value }}'
+        - labels:
+            level:

@@ -1,0 +1,63 @@
+# Example: promtail to collect journal, syslog and nginx logs
+# Application called demo-app running in production
+#
+# job: prod/nginx
+# environment: production
+# host: demo-app-prod (or hostname)
+# service_name: demo-app-prod
+
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+positions:
+  filename: /var/lib/promtail/positions.yaml
+clients:
+  - url: https://<LOKI_USERNAME>:<LOKI_PASSWORD>@<LOKI_FQDN>/loki/api/v1/push
+
+scrape_configs:
+  - job_name: journal
+    journal:
+      max_age: 1h
+      path: /var/log/journal
+      labels:
+        job: prod/journal
+        environment: production
+        host: demo-app-prod
+    relabel_configs:
+      - source_labels: ['__journal__systemd_unit']
+        target_label: 'unit'
+
+  - job_name: syslog
+    pipeline_stages:
+    static_configs:
+    - targets:
+        - localhost
+      labels:
+        job: prod/syslog
+        host: demo-app-prod
+        environment: production
+        __path__: /var/log/syslog
+
+  - job_name: nginx-info
+    static_configs:
+    - targets:
+        - localhost
+      labels:
+        job: prod/nginx
+        environment: production
+        host: demo-app-prod
+        level: info
+        service_name: demo-app-prod
+        __path__: /var/log/nginx/access.log
+
+  - job_name: nginx-error
+    static_configs:
+    - targets:
+        - localhost
+      labels:
+        job: prod/nginx
+        environment: production
+        host: demo-app-prod
+        level: error
+        service_name: demo-app-prod
+        __path__: /var/log/nginx/error.log

@@ -1,0 +1,26 @@
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+  external_labels:
+    cluster: 'cheatsheets-promtail'
+
+rule_files:
+  - '/etc/prometheus/rules/host_alert_rules.yml'
+  - '/etc/prometheus/rules/healtcheck_alert_rules.yml'
+
+alerting:
+  alertmanagers:
+  - scheme: http
+    static_configs:
+    - targets: ['alertmanager:9093']
+
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['localhost:9090']
+
+  - job_name: 'traefik'
+    scrape_interval: 15s
+    static_configs:
+    - targets: ['traefik:8080']

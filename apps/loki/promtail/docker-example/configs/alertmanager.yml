@@ -1,0 +1,63 @@
+# https://prometheus.io/docs/alerting/latest/notification_examples/
+# https://rtfm.co.ua/en/prometheus-alertmanagers-alerts-receivers-and-routing-based-on-severity-level-and-tags/
+global:
+  resolve_timeout: 5m
+  slack_api_url: 'https://hooks.slack.com/services/x/x/x'
+
+route:
+  # https://www.robustperception.io/whats-the-difference-between-group_interval-group_wait-and-repeat_interval
+  group_by: ['alertname', 'cluster', 'job', 'environment', 'severity']
+  repeat_interval: 24h
+  group_interval: 5m
+  receiver: 'warning'
+  routes:
+    - match:
+        severity: warning
+      receiver: warning
+      routes:
+      - match_re:
+          environment: .*(-prod).*
+        receiver: critical
+
+receivers:
+  - name: 'warning'
+    slack_configs:
+      - send_resolved: true
+        channel: "#notifications"
+        title_link: 'http://alertmanager.localdns.xyz/prometheus/alerts'
+        title: '{{ if eq .Status "firing" }}:flushed:{{ else }}:sunglasses:{{ end }} [{{ .Status | toUpper }}] {{ .CommonAnnotations.summary }} (warning)'
+        text: "{{ range .Alerts }}*Priority*: `{{ .Labels.severity | toUpper }}`\nTarget: {{ .Labels.instance }}\n{{ .Annotations.description }}\n{{ end }}"
+
+  - name: 'critical'
+    slack_configs:
+      - send_resolved: true
+        channel: "#notifications"
+        title_link: 'http://alertmanager.localdns.xyz/prometheus/alerts'
+        title: '{{ if eq .Status "firing" }}:scream:{{ else }}:sunglasses:{{ end }} [{{ .Status | toUpper }}] {{ .CommonAnnotations.summary }} (critical)'
+        text: "{{ range .Alerts }}*Priority*: `{{ .Labels.severity | toUpper }}`\n*Description*: {{ .Annotations.description }}\n{{ end }}"
+    pushover_configs:
+      - token: example-token
+        user_key: example-key
+        title: '{{ if eq .Status "firing" }}ALARM{{ else }}OK{{ end }} [{{ .Status | toUpper }}] {{ .CommonAnnotations.summary }}'
+        message: '{{ template "pushover.default.message" . }}'
+        url: '{{ template "pushover.default.url" . }}'
+        priority: '{{ if eq .Status "firing" }}2{{ else }}0{{ end }}'
+
+  - name: 'detailed-slack'
+    slack_configs:
+      - send_resolved: true
+        title_link: 'http://alertmanager.localdns.xyz/#/alerts'
+        title: '{{ if eq .Status "firing" }}:sadparrot:{{ else }}:fastparrot:{{ end }} [{{ .Status | toUpper }}] {{ .CommonAnnotations.title }} (instances)'
+        channel: '#notifications'
+        text: >-
+          {{ range .Alerts }}
+            *Alert:* {{ .Annotations.summary }} - `{{ .Labels.severity }}`
+            *Description:* {{ .Annotations.description }}
+            *Graph:* <{{ .GeneratorURL }}|:chart_with_upwards_trend:>
+            *Runbook:* <{{ .Annotations.runbook }}|:spiral_note_pad:>
+            *Details:*
+            {{ range .Labels.SortedPairs }} • *{{ .Name }}:* `{{ .Value }}`
+            {{ end }}
+          {{ end }}
+        username: 'AlertManager'
+        icon_emoji: ':prometheus:'

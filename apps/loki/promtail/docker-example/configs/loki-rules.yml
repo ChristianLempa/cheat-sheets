@@ -1,0 +1,10 @@
+groups:
+  - name: example
+    rules:
+    - alert: HighThroughputLogStreams
+      expr: sum by (container_name) (count_over_time({container_name=~".*"} |regexp`(?P.*)` [1h])>0)
+      for: 20s
+      labels:
+        severity: "2"
+      annotations:
+        description: '{{ $labels.instance }} {{ $labels.msg }} memory.'

@@ -1,0 +1,74 @@
+auth_enabled: false
+
+server:
+  http_listen_port: 3100
+  http_listen_address: 127.0.0.1
+  http_server_read_timeout: 1000s
+  http_server_write_timeout: 1000s
+  http_server_idle_timeout: 1000s
+  log_level: "info"
+
+ingester:
+  lifecycler:
+    address: 127.0.0.1
+    ring:
+      kvstore:
+        store: inmemory
+      replication_factor: 1
+    final_sleep: 0s
+  chunk_encoding: snappy
+  chunk_idle_period: 5m
+  chunk_retain_period: 30s
+  max_transfer_retries: 0
+
+# https://grafana.com/docs/loki/latest/configuration/#schema_config
+schema_config:
+  configs:
+    - from: 2020-05-15
+      store: aws
+      object_store: s3
+      schema: v11
+      index:
+        prefix: loki-logging-index
+        #period: 168h
+
+storage_config:
+  aws:
+    http_config:
+      idle_conn_timeout: 90s
+      response_header_timeout: 0s
+    s3: s3://x:x@eu-west-1/loki-logs-datastore
+
+    dynamodb:
+      dynamodb_url: dynamodb://x:x@eu-west-1
+
+limits_config:
+  enforce_metric_name: false
+  reject_old_samples: true
+  reject_old_samples_max_age: 168h
+  ingestion_rate_mb: 30
+  ingestion_burst_size_mb: 60
+
+# https://grafana.com/docs/loki/latest/operations/storage/retention/
+# To avoid querying of data beyond the retention period, max_look_back_period config in chunk_store_config
+# must be set to a value less than or equal to what is set in table_manager.retention_period
+chunk_store_config:
+  #max_look_back_period: 0s
+  max_look_back_period: 720h
+
+# https://grafana.com/docs/loki/latest/operations/storage/retention/
+table_manager:
+  #retention_deletes_enabled: false
+  retention_deletes_enabled: true
+  #retention_period: 0s
+  retention_period: 720h
+  chunk_tables_provisioning:
+    inactive_read_throughput: 10
+    inactive_write_throughput: 10
+    provisioned_read_throughput: 50
+    provisioned_write_throughput: 20
+  index_tables_provisioning:
+    inactive_read_throughput: 10
+    inactive_write_throughput: 10
+    provisioned_read_throughput: 50
+    provisioned_write_throughput: 20

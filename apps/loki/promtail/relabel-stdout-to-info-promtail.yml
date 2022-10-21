@@ -1,0 +1,33 @@
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+positions:
+  filename: /var/lib/promtail/positions.yaml
+clients:
+  - url: https://<LOKI_USERNAME>:<LOKI_PASSWORD>@<LOKI_FQDN>/loki/api/v1/push
+
+scrape_configs:
+  - job_name: nginx-info
+    static_configs:
+    - targets:
+        - localhost
+      labels:
+        job: prod/nginx
+        environment: production
+        host: demo-app-prod
+        level: info
+        service_name: demo-app-prod
+        __path__: /var/log/nginx/access.log
+
+    pipeline_stages:
+    # capture stdout|stderr to level
+    - regex:
+        expression: '(?P<level>(stdout|stderr))'
+    # rename stdout to info, stderr to error
+    - template:
+        source: level
+        template: '{{ if eq .Value "stdout" }}{{ Replace .Value "stdout" "info" -1 }}{{ else if eq .Value "stderr" }}{{ Replace .Value "stderr" "error" -1 }}{{ else if eq .Value "errorstderr" }}{{ Replace .Value "errorstderr" "error" -1 }}{{ .Value }}{{ end }}'
+    # set the renamed values to level label
+    - labels:
+        level:    
+    
