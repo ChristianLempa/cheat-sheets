@@ -23,7 +23,7 @@ This knowledge base has been developed through the efforts of several individual
 
 [Doctorfree](https://github.com/doctorfree), the online handle used by [Ronald Record](https://ronrecord.com), is an aging rogue hippie whose open source contributions extend back to the early 80s sharing computational applications of dynamical systems theory on [Usenet](https://en.wikipedia.org/wiki/Usenet). Record created and maintained the popular [Skunkware](https://en.wikipedia.org/wiki/SCO_Skunkware) repository of open source throughout the 90s and 2000s. He was a founding member of [86open](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format#86open) and co-inventor of the [Web desktop](https://en.wikipedia.org/wiki/Web_desktop).
 
-[Christian Lempa](https://github.com/xcad2k) is a 35 year-old tech enthusiast from Germany who loves to inspire and educate people in IT.  He created cheat sheets and documentation at [https://github.com/xcad2k/cheat-sheets](https://github.com/xcad2k/cheat-sheets) as free resources to be used in specific use cases. If you're searching for detailed, in-depth tutorials on some tools or technologies, check out his YouTube Channel: [The Digital Life](https://www.youtube.com/channel/UCZNhwA1B5YqiY1nLzmM0ZRg).
+[Christian Lempa](https://github.com/ChristianLempa) is a 35 year-old tech enthusiast from Germany who loves to inspire and educate people in IT.  He created cheat sheets and documentation at [https://github.com/ChristianLempa/cheat-sheets](https://github.com/ChristianLempa/cheat-sheets) as free resources to be used in specific use cases. If you're searching for detailed, in-depth tutorials on some tools or technologies, check out his YouTube Channel: [The Digital Life](https://www.youtube.com/@christianlempa).
 
 Several of the cheat sheets included here are adapted from the excellent library of cheat sheets created and maintained by Randy at [QuickRef.ME](https://quickref.me) (also released under the MIT license). Randy doesn't even know he contributed to this repository but his use of an open source license enabled effortless collaboration.
 
@@ -197,12 +197,12 @@ curl cheat.sh/ls
     - [https://github.com/chubin/cheat.sheets](https://github.com/chubin/cheat.sheets) - Repository of the *[cheat.sh](https://cheat.sh/)* 
     - [https://github.com/kasramp/cheat-sheet-factory](https://github.com/kasramp/cheat-sheet-factory) - Cheat Sheet Factory
     - [https://github.com/Randy8080/reference](https://github.com/Randy8080/reference) - Quickref.ME cheat sheets
-    - [Christian's Cheat-Sheets](https://github.com/xcad2k/cheat-sheets) - Command Reference for various tools and technologies
-- [Videos](https://github.com/xcad2k/videos) - Documentation and project files for Christian's video tutorials on YouTube
+    - [Christian's Cheat-Sheets](https://github.com/christianlempa/cheat-sheets) - Command Reference for various tools and technologies
+- [Videos](https://github.com/christianlempa/videos) - Documentation and project files for Christian's video tutorials on YouTube
 - [dotfiles-ubuntu](https://github.com/doctorfree/dotfiles-ubuntu) - Doctorfree's personal configuration files for Linux
 - [dotfiles-macos](https://github.com/doctorfree/dotfiles-macos) - Doctorfree's personal configuration files for Mac OS
-- [Dotfiles](https://github.com/xcad2k/dotfiles) - Christian's personal configuration files on Linux and Windows
-- [Boilerplates](https://github.com/xcad2k/boilerplates) - Templates for various projects like Docker, K8S, Ansible, etc
+- [Dotfiles](https://github.com/christianlempa/dotfiles) - Christian's personal configuration files on Linux and Windows
+- [Boilerplates](https://github.com/christianlempa/boilerplates) - Templates for various projects like Docker, K8S, Ansible, etc
 - Doctorfree Projects
   - [Asciiville](https://github.com/doctorfree/Asciiville) - Ascii Art, text based utilities, tools, games, fun
   - [DriveCommandLine](https://github.com/doctorfree/DriveCommandLine) - Initialize, configure, monitor, and manage Google Drives from the command line
