@@ -79,6 +79,7 @@ MusicPlayerPlus is a character-based console and terminal window music player
     1. [Testing and Issue Reporting](#testing-and-Issue-Reporting)
     1. [Sponsor MusicPlayerPlus](#sponsor-musicplayerplus)
     1. [Contribute to Development](#contribute-to-development)
+1. [See also](#see-also)
 
 ## Overview
 
@@ -2385,3 +2386,11 @@ If you are just modifying the shell scripts or configuration files then
 you don't need to worry about the extensive list of dependencies listed above.
 
 Feel free to email me at github@ronrecord.com with questions or comments.
+
+## See also
+
+- [Asciiville](Asciiville.md)
+- [DriveCommandLine](DriveCommandLine.md)
+- [MagicMirror](MagicMirror.md)
+- [MirrorCommand](MirrorCommand.md)
+- [RoonCommandLine](RoonCommandLine.md)

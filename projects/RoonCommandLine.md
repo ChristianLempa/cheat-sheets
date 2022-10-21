@@ -51,6 +51,7 @@ tags:
     1. [Applications](#applications)
     1. [History](#history)
 1. [Contents](#contents)
+1. [See also](#see-also)
 
 ## Overview
 
@@ -994,3 +995,11 @@ executing the following commands directly.
 **api/** - Python scripts to call the Roon API with appropriate arguments
 
 **patches/** - Patches to the Python Roon API to extend its capabilities
+
+## See also
+
+- [Asciiville](Asciiville.md)
+- [DriveCommandLine](DriveCommandLine.md)
+- [MagicMirror](MagicMirror.md)
+- [MirrorCommand](MirrorCommand.md)
+- [MusicPlayerPlus](MusicPlayerPlus.md)

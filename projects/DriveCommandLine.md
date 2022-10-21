@@ -74,6 +74,7 @@ documentation.
 1. [Compile from source](#compile-from-source)
     1. [Cool feature used by this repository](#cool-feature-used-by-this-repository)
 1. [Removal](#removal)
+1. [See also](#see-also)
 
 ## Overview
 The DriveCommandLine package includes gdrive, a command line utility for
@@ -1023,3 +1024,11 @@ DOCS="DriveCommandLine"
 echo "DriveCommandLine installation files and folders removed"
 exit 0
 ```
+
+## See also
+
+- [Asciiville](Asciiville.md)
+- [MagicMirror](MagicMirror.md)
+- [MirrorCommand](MirrorCommand.md)
+- [MusicPlayerPlus](MusicPlayerPlus.md)
+- [RoonCommandLine](RoonCommandLine.md)

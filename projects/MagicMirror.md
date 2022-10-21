@@ -59,3 +59,8 @@ To donate, please follow [this](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xcl
 
 - [MirrorCommand](MirrorCommand.md)
 - [Raspberry Pi](../linux/raspberry-pi.md)
+- [Asciiville](Asciiville.md)
+- [DriveCommandLine](DriveCommandLine.md)
+- [MirrorCommand](MirrorCommand.md)
+- [MusicPlayerPlus](MusicPlayerPlus.md)
+- [RoonCommandLine](RoonCommandLine.md)

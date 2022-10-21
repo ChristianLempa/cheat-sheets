@@ -70,6 +70,7 @@ configure, monitor, and manage a MagicMirror.
 1. [Known Limitations](#known-limitations)
 1. [Screenshots](#screenshots)
 1. [License](#license)
+1. [See also](#see-also)
 
 ## Overview
 
