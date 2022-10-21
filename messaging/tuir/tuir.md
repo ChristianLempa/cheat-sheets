@@ -320,3 +320,6 @@ This project is distributed under the [MIT](license.md) license.
 - [Mailcap](mailcap.md)
 - [Themes](themes.md)
 - [Tuir Configuration](tuir.cfg.md)
+- [Irssi](../irssi.md)
+- [Neomutt](../neomutt.md)
+- [Newsboat](../newsboat.md)

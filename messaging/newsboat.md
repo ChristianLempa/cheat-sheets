@@ -1728,3 +1728,6 @@ unbind-key C feedlist
 ## See also
 
 - [Asciiville](../projects/Asciiville.md)
+- [Tuir](tuir/tuir.md)
+- [Irssi](irssi.md)
+- [Neomutt](neomutt.md)

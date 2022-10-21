@@ -218,3 +218,6 @@ Primary differences between the [Asciiville](../projects/Asciiville.md) NeoMutt 
 ## See also
 
 - [Asciiville](../projects/Asciiville.md)
+- [Tuir](tuir/tuir.md)
+- [Irssi](irssi.md)
+- [Newsboat](newsboat.md)
