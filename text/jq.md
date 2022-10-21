@@ -1,5 +1,21 @@
 # JQ Cheatsheet
 
+***jq*** commandline JSON processor
+
+***jq*** is like [sed](../linux/sed.md) for JSON
+
+jq is a tool for processing JSON inputs, applying the given filter to
+its JSON text inputs and producing the filter's results as JSON on
+standard output.
+
+## Usage
+
+```shell
+jq [options] <jq filter> [file...]
+	jq [options] --args <jq filter> [strings...]
+	jq [options] --jsonargs <jq filter> [JSON_TEXTS...]
+```
+
 ## Data
 
 ```json
