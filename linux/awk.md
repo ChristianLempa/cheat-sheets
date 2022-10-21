@@ -37,7 +37,7 @@ awk '/pattern/ {print "$1"}'    # compiled with DJGPP, Cygwin
 awk "/pattern/ {print \"$1\"}"  # GnuWin32, UnxUtils, Mingw
 ```
 
-Note that the DJGPP compilation (for DOS or Windows-32) permits an awk script to follow Unix quoting syntax `'/like/ {"this"}'`. HOWEVER, if the command interpreter is `CMD.EXE` or `COMMAND.COM`, single quotes will not protect the redirection arrows `(<, >)` nor do they protect pipes `(|)`. These are special symbols which require "double quotes" to protect them from interpretation as operating system directives. If the command interpreter is [bash](../shells/bash.md), [ksh](../shells/ksh.md), [zsh](../shells/zsh/zsh.md) or another Unix shell, then single and double quotes will follow the standard Unix usage.
+Note that the DJGPP compilation (for DOS or Windows-32) permits an awk script to follow Unix quoting syntax `'/like/ {"this"}'`. HOWEVER, if the command interpreter is `CMD.EXE` or `COMMAND.COM`, single quotes will not protect the redirection arrows `(<, >)` nor do they protect pipes `(|)`. These are special symbols which require "double quotes" to protect them from interpretation as operating system directives. If the command interpreter is [bash](../shells/bash.md), ksh, [zsh](../shells/zsh/zsh.md) or another Unix shell, then single and double quotes will follow the standard Unix usage.
 
 Users of MS-DOS or Microsoft Windows must remember that the percent sign `(%)` is used to indicate environment variables, so this symbol must be doubled `(%%)` to yield a single percent sign visible to awk.
 

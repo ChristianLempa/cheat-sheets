@@ -725,7 +725,7 @@ hello world
 
 - Port Forwarding (tunneling)
 
-    ![ssh tunnel](images/ssh_tunnel.png)
+    ![ssh tunnel](assets/ssh_tunnel.png)
 
     Port forwarding, any connection to local port 123 is forwarded to `localhost:456` on `remotehost`
 
@@ -740,7 +740,7 @@ hello world
 
 - Reverse tunneling
 
-    ![ssh reverse tunneling](images/ssh_reverse-tunnel.png)
+    ![ssh reverse tunneling](assets/ssh_reverse-tunnel.png)
 
     Any connection to remotehost's port 123 is forwarded to `localhost:456` on your host
 

@@ -48,7 +48,7 @@ Word Formatting & Coding Blocks            |  Links, Quotes & Tables
 
 ```Coding Blocks```
 
-[[Links]](Sources)
+[Links](Sources)
 
 > Quotes/ Blockquotes
 
@@ -122,9 +122,9 @@ Table Cell A  |  Table Cell B
 
 ---
 
-**[[Links]]**
+**[Links]**
 
-``` [[link]](sources)  ```
+``` [link](sources)  ```
 
 ---
 

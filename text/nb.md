@@ -46,7 +46,7 @@ with:
 - [filtering](#listing--filtering), [pinning](#-pinning), [#tagging](#-tagging), and [search](#-search),
 - [Git](https://git-scm.com/)-backed [versioning](#-revision-history) and [syncing](#-git-sync),
 - [Pandoc](https://pandoc.org/)-backed [conversion](#%EF%B8%8F-import--export),
-- <a href="#-linking">[[wiki-style linking]]</a>,
+- <a href="#-linking">wiki-style linking</a>,
 - terminal and GUI web [browsing](#-browsing),
 - inline [images](#-images),
 - [todos](#-todos) with [tasks](#%EF%B8%8F-tasks),
@@ -1992,7 +1992,7 @@ and bookmarked URLs.
 
 Use [`nb browse`](#browse) (shortcut: [`nb b`](#browse))
 to [browse](#-browsing) bookmarks with cached content,
-<a href="#-linking">[[wiki-style links]]</a>,
+<a href="#-linking">wiki-style links</a>,
 linked [#tags](#-tagging), and external links:
 
 ```bash
@@ -2721,7 +2721,7 @@ nb q \#tag1 --or -t tag2 --or "#tag3"
 
 Linked tags can be [browsed](#-browsing) with [`nb browse`](#browse),
 providing another dimension of browsability in terminal and GUI web browsers,
-complimenting <a href="#-linking">[[wiki-style linking]]</a>.
+complimenting <a href="#-linking">wiki-style linking</a>.
 
 Tags in notes,
 bookmarks,
@@ -2792,7 +2792,7 @@ files in text-based formats,
 Word `.docx` documents,
 and [Open Document](https://en.wikipedia.org/wiki/OpenDocument) `.odt` files
 can reference other items using
-<a href="#-linking">[[wiki-style links]]</a>,
+<a href="#-linking">wiki-style links</a>,
 making ***nb*** a powerful terminal-first platform for
 [Zettelkasten](#-zettelkasten),
 wiki-style knowledge mapping,
@@ -2837,7 +2837,7 @@ The text for a link can be specified after a pipe `|` character:
 [[example:123|Example Link Text]]
 ```
 
-<a href="#-linking">[[wiki-style links]]</a> cooperate well with
+<a href="#-linking">wiki-style links</a> cooperate well with
 [Org links](https://orgmode.org/guide/Hyperlinks.html),
 which have a similar syntax,
 providing a convenient option for linking collections of Org files.
@@ -2867,7 +2867,7 @@ and other items using terminal and GUI web browsers.
 
 [`nb browse`](#browse) includes an embedded, terminal-first web application
 that renders
-<a href="#-linking">[[wiki-style links]]</a>
+<a href="#-linking">wiki-style links</a>
 and
 [#hashtags](#-tagging)
 as internal links, enabling you to browse your notes and notebooks in web
@@ -3227,7 +3227,7 @@ and enable the Ace editor in
 the `ncat` or `nmap` package in most package managers, and
 [`pandoc`](https://pandoc.org/).
 When only `pandoc` is available, the current note is rendered and
-<a href="#-linking">[[wiki-style links]]</a>
+<a href="#-linking">wiki-style links</a>
 go to unrendered, original files.
 If only `ncat` is available,
 files in plain text formats are rendered with the original markup unconverted.
@@ -3441,7 +3441,7 @@ organized in normal system directories in normal git repositories,
 | slip boxes        | [notebooks](#-notebooks)                        |
 | tags              | [#tags](#-tagging)                              |
 | metadata          | [front matter](#front-matter)                   |
-| cross-references  |  <a href="#-linking">[[wiki-style links]]</a>   |
+| cross-references  |  <a href="#-linking">wiki-style links</a>   |
 | fast note-taking  | [`nb add`](#adding)/[`nb <url>`](#-bookmarks)   |
 
 For more information about Zettelkasten, see
@@ -5781,7 +5781,7 @@ __          _
 [nb] Command line and local web note-taking, bookmarking, and archiving with
 plain text data storage, encryption, filtering and search, pinning, #tagging,
 Git-backed versioning and syncing, Pandoc-backed conversion, global and local
-notebooks, customizable color themes, [[wiki-style linking]], plugins, and more
+notebooks, customizable color themes, wiki-style linking, plugins, and more
 in a single portable, user-friendly script.
 
 Help:
@@ -6458,7 +6458,7 @@ Description:
   other items using terminal and GUI web browsers.
 
   'browse' includes an embedded web application designed for terminal
-  and GUI web browsers that renders [[wiki-style links]] and #tags as
+  and GUI web browsers that renders wiki-style links and #tags as
   internal links, providing the ability to browse notes and notebooks,
   as well as seamlessly browse to and from the offsite links in
   bookmarks and notes.
@@ -8662,7 +8662,7 @@ Usage:
   nb backlink [--force]
 
 Description:
-  Add backlinks to notes. Crawl notes in a notebook for [[wiki-style links]]
+  Add backlinks to notes. Crawl notes in a notebook for wiki-style links
   and append a "Backlinks" section to each linked file that lists passages
   referencing the note.
 
@@ -9059,7 +9059,7 @@ A text element containing a comment written by the user.
 
 A Markdown list of
 angle bracketed (`<`, `>`) URLs and
-[[[wiki-style links]]](#-linking)
+[wiki-style links](#-linking)
 that are related to the bookmarked resource.
 
 <p>
@@ -9236,7 +9236,7 @@ A markdown tasklist containing sub-tasks for the todo.
 
 A Markdown list of
 angle bracketed (`<`, `>`) URLs and
-[[[wiki-style links]]](#-linking)
+[wiki-style links](#-linking)
 that are related to the todo.
 
 <p>
