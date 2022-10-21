@@ -10,37 +10,13 @@ categories:
     - python
 ---
 
-<h1 align="center">Terminal UI for Reddit (TUIR)</h1>
+# Terminal UI for Reddit (TUIR)
 
-<p align="center">
-A text-based interface (TUI) to view and interact with Reddit from your terminal.<br>
-</p>
+A text-based interface (TUI) to view and interact with Reddit from your terminal.
 
-<p align="center">
-  <strong>TUIR is a fork of rtv, which was maintained by Michael Lazar in <a href="https://github.com/michael-lazar/rtv">this repository</a> until Jun 3, 2019.</strong><br>
-</p>
+TUIR is a fork of rtv, which was maintained by Michael Lazar in [this repository](https://github.com/michael-lazar/rtv) until Jun 3, 2019.
 
-<p align="center">
-<img alt="title image" src="resources/title_image.png"/>
-</p>
-
-<p align="center">
-  <a href="https://pypi.python.org/pypi/tuir/">
-    <img alt="pypi" src="https://img.shields.io/pypi/v/tuir.svg?label=version"/>
-  </a>
-  <a href="https://gitlab.com/ajak/tuir/pipelines?ref=master">
-    <img alt="gitlab-ci" src="https://gitlab.com/ajak/tuir/badges/master/build.svg"/>
-  </a> 
-  <img alt="coverage" src="https://gitlab.com/ajak/tuir/badges/master/coverage.svg"/>
-  <a href="https://repology.org/project/tuir/versions">
-    <img src="https://repology.org/badge/tiny-repos/tuir.svg" alt="Packaging status">
-  </a>
-</p>
-<!--
-  <a href="https://saythanks.io/to/michael-lazar">
-    <img alt="say-thanks" src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg"/>
-  </a>
-</p> -->
+![title](https://raw.githubusercontent.com/proycon/tuir/master/resources/title_image.png)
 
 ## Table of Contents
 
@@ -55,16 +31,7 @@ A text-based interface (TUI) to view and interact with Reddit from your terminal
 
 ## Demo
 
-<p align="center">
-<img alt="title image" src="resources/demo.gif"/>
-</p>
-
-<!-- You can use *telnet* or *ssh* to try out a lite version of RTV directly in your terminal, without needing to install it:
-
-- ``$ telnet redditbox.us``
-- ``$ ssh redditbox.us``
-
-*[redditbox.us](https://redditbox.us/) is an independent project by Alex Jarmoszuk* -->
+![demo image](https://raw.githubusercontent.com/proycon/tuir/master/resources/demo.gif)
 
 ## Installation
 
@@ -73,7 +40,7 @@ A text-based interface (TUI) to view and interact with Reddit from your terminal
 TUIR is available on [PyPI](https://pypi.python.org/pypi/tuir/) and can be installed with pip:
 
 ```bash
-$ pip install tuir
+pip install tuir
 ```
 
 #### Migration from RTV
@@ -81,14 +48,14 @@ $ pip install tuir
 If you are migrating from RTV to TUIR, you can simply rename your old config directory/config file:
 
 ```bash
-$ mv ~/.config/rtv ~/.config/tuir
-$ mv ~/.config/tuir/rtv.cfg ~/.config/tuir/tuir.cfg
+mv ~/.config/rtv ~/.config/tuir
+mv ~/.config/tuir/rtv.cfg ~/.config/tuir/tuir.cfg
 ```
 
 Please take care to use the new API keys for Imgur and Reddit. To replace with sed:
 
 ```bash
-$ sed -i 's/E2oEtRQfdfAfNQ/zjyhNI7tK8ivzQ/; s/93396265f59dec9/b33d69ac8931734/' ~/.config/tuir/tuir.cfg
+sed -i 's/E2oEtRQfdfAfNQ/zjyhNI7tK8ivzQ/; s/93396265f59dec9/b33d69ac8931734/' ~/.config/tuir/tuir.cfg
 ```
 
 ### Distro packages
@@ -99,29 +66,12 @@ See [Repology](https://repology.org/metapackage/tuir/packages) for an up-to-date
 
 TUIR is available from the AUR with the package name `TUIR`.
 
-<!-- ```bash
-# macOS
-$ brew install rtv
-
-# Arch
-$ pacman -S rtv
-
-# Nix
-$ nix-env -i rtv
-
-# Debian
-$ apt install rtv
-
-# FreeBSD
-$ pkg install rtv
-```-->
-
 ### From source
 
 ```bash
-$ git clone https://gitlab.com/ajak/tuir.git
-$ cd tuir
-$ python setup.py install
+git clone https://gitlab.com/ajak/tuir.git
+cd tuir
+python setup.py install
 ```
 
 ### Windows
@@ -133,7 +83,7 @@ TUIR is not supported on Windows, due to a lack of resources and interest. Sorry
 To run the program, type:
 
 ```bash
-$ tuir --help
+tuir --help
 ```
 
 ### Controls
@@ -166,21 +116,19 @@ Configuration files are stored in the ``{HOME}/.config/tuir/`` directory.
 Check out [tuir.cfg](tuir.cfg) for the full list of configurable options. You can clone this file into your home directory by running:
 
 ```bash
-$ tuir --copy-config
+tuir --copy-config
 ```
 
 ### Viewing Media Links
 
 You can use [mailcap](https://en.wikipedia.org/wiki/Media_type#Mailcap) to configure how TUIR will open different types of links.
 
-<p align="center">
-<img alt="title image" src="resources/mailcap.gif"/>
-</p>
+![mailcap](https://raw.githubusercontent.com/proycon/tuir/master/resources/mailcap.gif)
 
 A mailcap file allows you to associate different MIME media types, like ``image/jpeg`` or ``video/mp4``, with shell commands. This feature is disabled by default because it takes a few extra steps to configure. To get started, copy the default mailcap template to your home directory.
 
 ```bash
-$ tuir --copy-mailcap
+tuir --copy-mailcap
 ```
 
 This template contains examples for common MIME types that work with popular reddit websites like *imgur*, *youtube*, and *gfycat*. Open the mailcap template and follow the [instructions](mailcap.md) listed inside.
@@ -191,23 +139,11 @@ Once you've setup your mailcap file, enable it by launching tuir with the ``tuir
 
 The default programs that TUIR interacts with can be configured through environment variables:
 
-<table>
-  <tr>
-  <td><strong>$TUIR_EDITOR</strong></td>
-  <td>A program used to compose text submissions and comments, e.g. <strong>vim</strong>, <strong>emacs</strong>, <strong>gedit</strong>
-  <br/> <em>If not specified, will fallback to $VISUAL and $EDITOR in that order.</em></td>
-  </tr>
-  <tr>
-  <td><strong>$TUIR_BROWSER</strong></td>
-  <td>A program used to open links to external websites, e.g. <strong>firefox</strong>, <strong>google-chrome</strong>, <strong>w3m</strong>, <strong>lynx</strong>
-  <br/> <em>If not specified, will fallback to $BROWSER, or your system's default browser.</em></td>
-  </tr>
-  <tr>
-  <td><strong>$TUIR_URLVIEWER</strong></td>
-  <td>A tool used to extract hyperlinks from blocks of text, e.g. <a href=https://github.com/sigpipe/urlview>urlview</a>, <a href=https://github.com/firecat53/urlscan>urlscan</a>
-  <br/> <em>If not specified, will fallback to urlview if it is installed.</em></td>
-  </tr>
-</table>
+| Variable | Description |
+|----------|-------------|
+| TUIR_EDITOR | A program used to compose text submissions and comments, e.g. **vim**, **emacs**, **gedit**.  *If not specified, will fallback to $VISUAL and $EDITOR in that order.* |
+| TUIR_BROWSER | A program used to open links to external websites, e.g. **firefox**, **google-chrome**, **w3m**, **lynx**. *If not specified, will fallback to $BROWSER, or your system's default browser.* |
+| TUIR_URLVIEWER | A tool used to extract hyperlinks from blocks of text, e.g. [urlview](https://github.com/sigpipe/urlview), [urlscan](https://github.com/firecat53/urlscan). *If not specified, will fallback to urlview if it is installed.* |
 
 ### Clipboard
 
@@ -217,28 +153,13 @@ TUIR supports copying submission links to the OS clipboard.  Data being copied i
 
 Themes can be used to customize the look and feel of TUIR
 
-<table>
-  <tr>
-    <td align="center">
-      <p><strong>Solarized Dark</strong></p>
-      <img src="resources/theme_solarized_dark.png"></img>
-    </td>
-    <td align="center">
-      <p><strong>Solarized Light</strong></p>
-      <img src="resources/theme_solarized_light.png"></img>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <p><strong>Papercolor</strong></p>
-      <img src="resources/theme_papercolor.png"></img>
-    </td>
-    <td align="center">
-      <p><strong>Molokai</strong></p>
-      <img src="resources/theme_molokai.png"></img>
-    </td>
-  </tr>
-</table>
+| Solarized Dark | Solarized Light |
+|----------------|-----------------|
+| ![theme](https://raw.githubusercontent.com/proycon/tuir/master/resources/theme_solarized_dark.png) | ![theme](https://raw.githubusercontent.com/proycon/tuir/master/resources/theme_solarized_light.png) |
+
+| Papercolor | Molokai |
+|------------|---------|
+| ![theme](https://raw.githubusercontent.com/proycon/tuir/master/resources/theme_papercolor.png) | ![theme](https://raw.githubusercontent.com/proycon/tuir/master/resources/theme_molokai.png) |
 
 You can list all installed themes with the ``--list-themes`` command, and select one with ``--theme``. You can save your choice permanently in your [tuir.cfg](tuir.cfg) file. You can also use the <kbd>F2</kbd> & <kbd>F3</kbd> keys inside of TUIR to cycle through all available themes.
 

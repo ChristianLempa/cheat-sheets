@@ -5,9 +5,9 @@
 You can install custom themes by copying them into your **~/.config/tuir/themes/**
 directory. The name of the theme will match the name of the file.
 
-```
-$ cp my-custom-theme.cfg ~/.config/tuir/themes/
-$ tuir --theme my-custom-theme
+```bash
+cp my-custom-theme.cfg ~/.config/tuir/themes/
+tuir --theme my-custom-theme
 ```
 
 If you've created a cool theme and would like to share it with the community,
@@ -23,10 +23,9 @@ Color support on modern terminals can be split into 4 categories:
 3. 16 system colors - Everything above + bright variations
 4. 256 extended colors - Everything above + 6x6x6 color palette + 24 greyscale colors
 
-<p align="center">
-<img alt="terminal colors" src="resources/terminal_colors.png"/>
-<br><i>The 256 terminal color codes, image from <a href=https://github.com/eikenb/terminal_colors>https://github.com/eikenb/terminal_colors</a></i>
-</p>
+![terminal colors](https://raw.githubusercontent.com/proycon/tuir/master/resources/terminal_colors.png)
+
+*The 256 terminal color codes, image from [https://github.com/eikenb/terminal_colors](https://github.com/eikenb/terminal_colors)*
 
 The 16 system colors, along with the default foreground and background,
 can usually be customized through your terminal's profile settings. The
@@ -35,32 +34,31 @@ all terminals. TUIR's default theme only uses the 8 primary system colors,
 which is why it matches the "look and feel" of the terminal that you're
 running it in.
 
-<p align="center">
-<img alt="iTerm preferences" src="resources/iterm_preferences.png"/>
-<br><i>Setting the 16 system colors in iTerm preferences</i>
-</p>
+[iTerm preferences](https://raw.githubusercontent.com/proycon/tuir/master/resources/iterm_preferences.png)
+
+*Setting the 16 system colors in iTerm preferences*
 
 The curses library determines your terminal's color support by reading your
 environment's ``$TERM`` variable, and looking up your terminal's
 capabilities in the [terminfo](https://linux.die.net/man/5/terminfo)
 database. You can emulate this behavior by using the ``tput`` command:
 
-```
-bash$ export TERM=xterm
-bash$ tput colors
+```bash
+export TERM=xterm
+tput colors
 8
-bash$ export TERM=xterm-256color
-bash$ tput colors
+export TERM=xterm-256color
+tput colors
 256
-bash$ export TERM=vt220
-bash$ tput colors
+export TERM=vt220
+tput colors
 -1
 ```
 
-In general you should not be setting your ``$TERM`` variable manually,
+In general you should not be setting your `$TERM` variable manually,
 it will be set automatically by you terminal. Often, problems with
 terminal colors can be traced back to somebody hardcoding
-``TERM=xterm-256color`` in their .bashrc file.
+`TERM=xterm-256color` in their .bashrc file.
 
 ## Understanding TUIR Themes
 
@@ -122,15 +120,15 @@ UserFlair             = yellow        -             bold
 Every piece of text drawn on the screen is assigned to an ``<element>``,
 which has three properties:
 
-- ``<foreground>``: The text color
-- ``<background>``: The background color
-- ``<attributes>``: Additional text attributes, like bold or underlined
+- `<foreground>`: The text color
+- `<background>`: The background color
+- `<attributes>`: Additional text attributes, like bold or underlined
 
 ### Colors
 
-The ``<foreground>`` and ``<background>`` properties can be set to any the following values:
+The `<foreground>` and `<background>` properties can be set to any the following values:
 
-- ``default``, which means use the terminal's default foreground or background color.
+- `default`, which means use the terminal's default foreground or background color.
 - The 16 system colors:
   <p>
   <table>
@@ -144,35 +142,35 @@ The ``<foreground>`` and ``<background>`` properties can be set to any the follo
     <tr><td>light_gray</td></td><td>white</td></tr>
   </table>
   </p>
-- ``ansi_{n}``, where n is between 0 and 255. These will map to their
+- `ansi_{n}`, where n is between 0 and 255. These will map to their
   corresponding ANSI colors (see the figure above).
-- Hex RGB codes, like ``#0F0F0F``, which will be converted to their nearest
+- Hex RGB codes, like `#0F0F0F`, which will be converted to their nearest
   ANSI color. This is generally not recommended because the conversion process
   downscales the color resolution and the resulting colors will look "off".
 
 ### Attributes
 
-The ``<attributes>`` property can be set to any of the following values:
+The `<attributes>` property can be set to any of the following values:
 
-- ``normal``, ``bold``, ``underline``, or ``standout``.
-- ``reverse`` will swap the foreground and background colors.
+- `normal`, `bold`, `underline`, or `standout`.
+- `reverse` will swap the foreground and background colors.
 
 Attributes can be mixed together using the + symbol. For example,
-  ``bold+underline`` will make the text bold and underlined.
+  `bold+underline` will make the text bold and underlined.
 
 ### Modifiers
 
 TUIR themes use special "modifer" elements to define the default
 application style. This allows you to do things like set the default
-background color without needing to set ``<background>`` on every
+background color without needing to set `<background>` on every
 single element. The three modifier elements are:
 
-- ``Normal`` - The default modifier that applies to all text elements.
-- ``Selected`` - Applies to text elements that are highlighted on the page.
-- ``SelectedCursor`` - Like ``Selected``, but only applies to ``CursorBlock``
-  and ``CursorBar{n}`` elements.
+- `Normal` - The default modifier that applies to all text elements.
+- `Selected` - Applies to text elements that are highlighted on the page.
+- `SelectedCursor` - Like `Selected`, but only applies to `CursorBlock`
+  and `CursorBar{n}` elements.
 
-When an element is marked with a ``-`` token, it means inherit the
+When an element is marked with a `-` token, it means inherit the
 attribute value from the relevant modifier. This is best explained
 through an example:
 
@@ -185,17 +183,16 @@ Selected              = ansi_241      ansi_254      normal
 Link                  = ansi_33       -             underline
 ```
 
-<p align="center">
-<img src="resources/theme_modifiers.png"/>
-<br><i>The default solarized-light theme</i>
-</p>
+![](https://raw.githubusercontent.com/proycon/tuir/master/resources/theme_modifiers.png)
 
-In the snippet above, the ``Link`` element has its background color set
-to the ``-`` token. This means that it will inherit it's background
-from either the ``Normal`` (light yellow, ansi_230) or the ``Selected`` (light grey, ansi_254)
+*The default solarized-light theme*
+
+In the snippet above, the `Link` element has its background color set
+to the `-` token. This means that it will inherit it's background
+from either the `Normal` (light yellow, ansi_230) or the `Selected` (light grey, ansi_254)
 element, depending on if it's selected or not.
 
-Compare this with what happens when the ``Link`` background is hard-coded to ``ansi_230``:
+Compare this with what happens when the `Link` background is hard-coded to `ansi_230`:
 
 ```
 [theme]
@@ -206,10 +203,9 @@ Selected              = ansi_241      ansi_254      normal
 Link                  = ansi_33       ansi_230      underline
 ```
 
-<p align="center">
-<img src="resources/theme_modifiers_2.png"/>
-<br><i>The Link element hard-coded to ansi_230</i>
-</p>
+![](https://raw.githubusercontent.com/proycon/tuir/master/resources/theme_modifiers_2.png)
 
-In this case, the ``Link`` background stays yellow (ansi_230) even when the link is
+*The Link element hard-coded to ansi_230*
+
+In this case, the `Link` background stays yellow (ansi_230) even when the link is
 selected by the cursor.
