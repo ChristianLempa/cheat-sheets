@@ -145,3 +145,10 @@ spec:
         server: '{{server}}'
         namespace: default
 ```
+
+## Further information
+
+More examples and tutorials regarding ArgoCD can be found in the link list below:
+
+- Basic tutorial for installation and configuration: [Let loose the squid - Deploy ArgoCD the declarative way](https://thedatabaseme.de/2022/06/05/let-loose-the-squid-deploy-argocd-the-declarative-way/)
+- Writing ArgoCD Plugins: [ArgoCD Custom Plugins](https://dev.to/tylerauerbeck/argocd-custom-plugins-creating-a-custom-plugin-to-process-openshift-templates-4p5m)
