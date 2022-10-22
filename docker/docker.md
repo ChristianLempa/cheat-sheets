@@ -134,6 +134,10 @@ An automated backup can be done also by this [Ansible playbook](https://github.c
 The output is also a (compressed) tar. The playbook can also manage the backup retention.
 So older backups will get deleted automatically.
 
+To also create and backup the container configuration itself, you can use `docker-replay`for that. If you lose
+the entire container, you can recreate it with the export from `docker-replay`.
+A more detailed tutorial on how to use docker-replay can be found [here](https://thedatabaseme.de/2022/03/18/shorty-generate-docker-run-commands-using-docker-replay/).
+
 ### Restore container from backup
 Restore the volume with a tarball archive.
 `docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox sh -c "cd CONTAINERPATH && tar xvf /backup/backup.tar --strip 1"`
