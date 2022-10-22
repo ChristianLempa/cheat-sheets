@@ -29,7 +29,7 @@ git config --global user.email "developer@mydomain.com"
 The following commands can be helpful for working with `git`.
 
 | git command                        | Comment                                                                                                                                        |
-|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | `git init`                         | Initialize a directory as git managed repository                                                                                               |
 | `git clone <repo_url>`             | Clone a remote repository to your local client                                                                                                 |
 | `git status`                       | Shows uncommited changes, new files etc.                                                                                                       |
@@ -55,7 +55,7 @@ As an example, here is the comparison between the regular `git` commands and the
 `git-flow` command for creating a release.
 
 | git-flow command                                    | git command                                           |
-|-----------------------------------------------------|-------------------------------------------------------|
+| --------------------------------------------------- | ----------------------------------------------------- |
 | `git-flow feature start <feature_name>`             | `git checkout -b feature/<feature_name> develop`      |
 | `git-flow feature finish <feature_name> [--squash]` | `git checkout develop`                                |
 |                                                     | `git merge [--squash] --no-ff feature/<feature_name>` |
