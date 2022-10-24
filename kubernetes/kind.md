@@ -1,11 +1,6 @@
 # Kind
 
-Using the Kind project, you are able to easily deploy a Kubernetes cluster on top of Docker
-as Docker containers. Kind will spawn separate containers which be shown as the Kubernetes
-nodes. In this documentation, you can find some examples, as well as a link to a Ansible
-playbook which can do the cluster creation / deletion for you. This document only describes
-the basics of Kind. To find more detailed information, you can check the official Kind documentation
-[here](https://kind.sigs.k8s.io/docs/user/quick-start/).
+Using the Kind project, you are able to easily deploy a Kubernetes cluster on top of Docker as Docker containers. Kind will spawn separate containers which be shown as the Kubernetes nodes. In this documentation, you can find some examples, as well as a link to a Ansible playbook which can do the cluster creation / deletion for you. This document only describes the basics of Kind. To find more detailed information, you can check the [official Kind documentation](https://kind.sigs.k8s.io/docs/user/quick-start/).
 
 Kind is ideal to use in a local development environment or even during a build pipeline run.
 
