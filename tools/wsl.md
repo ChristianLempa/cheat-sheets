@@ -65,3 +65,8 @@ netsh advfirewall firewall delete rule name=$port
 ```powershell
 netsh interface portproxy show v4tov4
 ```
+
+## Linux desktop in WSL2
+
+With WSL2 it's possible to install and run a Linux desktop environment (XFCE). A tutorial on how
+to implement that, can be found [here](https://thedatabaseme.de/2022/05/15/shorty-running-xfce-linux-desktop-on-wsl2/).

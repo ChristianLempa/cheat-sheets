@@ -34,3 +34,8 @@ COMMAND | DESCRIPTION
 `vagrant box outdated` | Check for updates vagrant box update
 `vagrant box remove <BOXNAME>` | Deletes a box from the machine
 `vagrant package` | Packages a running virtualbox env in a reusable box
+
+## Vagrant with WSL2
+
+Vagrant is able to run inside your Windows Subsystem for Linux environment. A tutorial on how to install
+and use it with your Windows installed Virtualbox can be found [here](https://thedatabaseme.de/2022/02/20/vagrant-up-running-vagrant-under-wsl2/).
