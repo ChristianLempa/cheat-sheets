@@ -20,8 +20,7 @@ sudo mv ./kind /usr/local/bin/kind
 
 ### Cluster creation
 
-You have to provide a configuration file which tells Kind how you want your Kubernetes
-cluster to be deployed. Find an example configuration file below:
+You have to provide a configuration file which tells Kind how you want your Kubernetes cluster to be deployed. Find an example configuration file below:
 
 ```yaml
 kind: Cluster
@@ -69,8 +68,7 @@ e1ae2d701394 kindest/node:v1.25.2 "/usr/local/bin/entr..." 2 minutes ago Up Abou
 
 ### Interacting with your cluster
 
-You may have multiple Kind clusters deployed at the same time. To get a list of running clusters,
-you can use the following command:
+You may have multiple Kind clusters deployed at the same time. To get a list of running clusters, you can use the following command:
 
 ```bash
 kind get clusters
@@ -78,15 +76,11 @@ kind
 kind-2
 ```
 
-After cluster creation, the Kubernetes context is set automatically to the newly created
-cluster. In order to set the currently used kubeconfig, you may use some tooling like
-[kubectx](https://github.com/ahmetb/kubectx). You may also set the current context used by
-`kubectl` with the `--context` option, which refers to the Kind cluster name.
+After cluster creation, the Kubernetes context is set automatically to the newly created cluster. In order to set the currently used kubeconfig, you may use some tooling like [kubectx](https://github.com/ahmetb/kubectx). You may also set the current context used by `kubectl` with the `--context` option, which refers to the Kind cluster name.
 
 ### Cluster deletion
 
-To delete a Kind cluster, you can use the following command. Kind will also delete the
-kubeconfig of the deleted cluster. So you don't need to do this on your own.
+To delete a Kind cluster, you can use the following command. Kind will also delete the kubeconfig of the deleted cluster. So you don't need to do this on your own.
 
 ```bash
 kind delete cluster -n testcluster
