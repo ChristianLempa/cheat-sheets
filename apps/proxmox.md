@@ -20,3 +20,10 @@ qemu-img resize -f raw vm-100.raw 10G
 ```
 qemu-img convert -p -O qcow2 vm-100.raw vm-100.qcow2
 ```
+
+## Further information
+
+More examples and tutorials regarding Proxmox can be found in the link list below:
+
+- Ansible playbook that automates Linux VM updates running on Proxmox (including snapshots): [TheDatabaseMe - update_proxmox_vm](https://github.com/thedatabaseme/update_proxmox_vm)
+- Manage Proxmox VM templates with Packer: [Use Packer to build Proxmox images](https://thedatabaseme.de/2022/10/16/what-a-golden-boy-use-packer-to-build-proxmox-images/)
