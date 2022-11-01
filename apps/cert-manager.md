@@ -55,3 +55,13 @@ spec:
     secretName: ssl-issuer-secret
 ```
 
+## Troubleshooting
+
+### Common Errors
+
+**DNS Record not yet propagated**
+The error, `Waiting for DNS-01 challenge propagation: DNS record for "your-dns-record" not yet propagated.`, might occur in the `challenge` object, when the DNS Hostname can't be resolved. Cert-Manager always checks, whether the record is existing, before issuing the certificate.
+
+**No solver found**
+The error, `Failed to determine a valid solver configuration for the set of domains on the Order: no configured challenge solvers can be used for this challenge` might occur in the `order` object, when no solver can't be found for the DNS Hostname. Make sure your solvers have a corrent `dnsZones` configured that matches the DNS Hostnames Zone.
+
