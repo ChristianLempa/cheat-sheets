@@ -1,5 +1,25 @@
 # WSL Cheat-Sheet
 ## Backup and Restore WSL
+
+### Listing Running Distros
+```powershell
+wsl --list --verbose
+```
+### Starting/Restarting a Distro
+```powershell
+wsl --distribution DISTRO-NAME
+```
+
+### Terminate a Running Distro
+```powershell
+wsl --t DISTRO-NAME
+```
+
+### Terminate All Running Distros and WSL process
+```powershell
+wsl --shutdown
+```
+
 ### Backup a WSL Distro
 ```powershell
 wsl --export (distribution) (filename.tar)
