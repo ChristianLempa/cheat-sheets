@@ -7,7 +7,7 @@ SSL, or Secure Sockets Layer, was the original encryption protocol developed for
 
 ```
 ┌───────────┐                ┌───────────┐
-│  Client  │                │ 力 Server  │
+│  Client  │                │  Server  │
 └─────┬─────┘                └─────┬─────┘
       │                            │
       │                            │ 
