@@ -43,7 +43,43 @@ $env:KUBECONFIG = "$HOME/.kube/prod-k8s-clcreative-kubeconfig.yaml;$HOME/.kube/i
 
 **On Linux**
 ```bash
-export KUBECONFIG=~/.kube/kube-config-1.yml:~/.kube/ube-config-2.yml
+export KUBECONFIG=~/.kube/kube-config-1.yml:~/.kube/kube-config-2.yml
+```
+
+Managing multiple config files manually can become extensive. Below you can find a handy
+script, which you can implement in your shell rc file (e.g. .bashrc or .zshrc). The script
+will automatically add all found kubeconfigs to the `KUBECONFIG` environment variable.
+
+Script was copied from [here](https://medium.com/@alexgued3s/multiple-kubeconfigs-no-problem-f6be646fc07d)
+
+```bash
+# If there's already a kubeconfig file in ~/.kube/config it will import that too and all the contexts
+DEFAULT_KUBECONFIG_FILE="$HOME/.kube/config"
+if test -f "${DEFAULT_KUBECONFIG_FILE}"
+then
+  export KUBECONFIG="$DEFAULT_KUBECONFIG_FILE"
+fi# Your additional kubeconfig files should be inside ~/.kube/config-files
+ADD_KUBECONFIG_FILES="$HOME/.kube/config-files"
+mkdir -p "${ADD_KUBECONFIG_FILES}"OIFS="$IFS"
+IFS=$'\n'
+for kubeconfigFile in `find "${ADD_KUBECONFIG_FILES}" -type f -name "*.yml" -o -name "*.yaml"`
+do
+    export KUBECONFIG="$kubeconfigFile:$KUBECONFIG"
+done
+IFS="$OIFS"
+```
+
+Another helpful tool that makes you changing and selecting the cluster context easier is
+`kubectx`. You can download `kubectx` [here](https://github.com/ahmetb/kubectx).
+
+:warning: The above script conflicts with kubectx, cause kubectx can only work with one
+kubeconfig file listed in the `KUBECONFIG` env var. If you want to use both, add the following
+lines to your rc file.
+
+```bash
+# now we merge all configs to one
+kubectl config view --merge --flatten > $HOME/.kube/merged-config
+export KUBECONFIG="$HOME/.kube/merged-config"
 ```
 
 ---
