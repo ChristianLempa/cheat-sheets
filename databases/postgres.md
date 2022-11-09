@@ -119,3 +119,11 @@ To change the owner of an existing database later, you can use the following com
 postgres=# alter database dbname owner to myuser;
 ALTER DATABASE
 ```
+
+## Backup and Restore
+
+### pg_dump
+
+### pg_basebackup
+
+### pg_restore
