@@ -61,6 +61,20 @@ WIP
 - "traefik.http.middlewares.nginx-test.stripprefix.prefixes=/nginx-test"
 ```
 
+Add `/api` prefix to any requets to `myapidomain.com`
+Example: 
+  - Request -> `myapidomain.com`
+  - Traefik translates this to `myapidomain.com/api` without requestee seeing it
+```yml
+- "traefik.enable=true"
+- "traefik.http.routers.myapp-secure-api.tls=true"
+- "traefik.http.routers.myapp-secure-api.rule=Host(`myapidomain.com`)"
+- "traefik.http.routers.myapp-secure-api.middlewares=add-api"
+
+# Middleware
+- "traefik.http.middlewares.add-api.addPrefix.prefix=/api"
+```
+
 ---
 ## CertificatesResolvers
 WIP
