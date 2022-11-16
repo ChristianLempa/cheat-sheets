@@ -119,3 +119,63 @@ To change the owner of an existing database later, you can use the following com
 postgres=# alter database dbname owner to myuser;
 ALTER DATABASE
 ```
+
+## Backup and Restore
+There are near to endless combinations in tools and parameters to backup postgres databases. Below you can find some examples using the Postgres built-in tools `pgdump`, `pg_basebackup` and `pg_restore`.
+### pg_dump / pg_dumpall
+
+Using `pg_dump` or `pg_dumpall` enables you to extract / export a PostgreSQL database(s) into a (SQL) script file or a custom archive file.
+
+#### pg_dump
+
+The following command creates a custom archive file from a database specified with `-d`. 
+Using the `--create` option will include the SQL commands in the dump script that will create the database before importing it later. The `-Z 9` option in this example compresses the SQL script created with the highest available compression rate (`0-9`).
+
+```bash
+pg_dump -h vmdocker -U awx -d awx --create -f -Z 9 /tmp/awx_dump.sql.gz
+```
+
+The following command creates a custom archive file from a database specified with `-d`. To export data in custom format, you have to specify so with the `-F c` option. Custom file dumps have the benefit, that they are compressed by default.
+
+```bash
+pg_dump -h <pg_host> -U <username> -d <database> -F c -f /pg_dump/dumpfile.dmp
+```
+
+Custom format files can only be restored by `pg_restore` (see below). A SQL dump can be restored by using `psql`.
+
+```bash
+psql -d newdb -f db.sql
+```
+
+A complete guide of `pg_dump` from the official documentation can be found [here](https://www.postgresql.org/docs/current/app-pgdump.html).
+
+#### pg_dumpall
+
+A full dump of all databases of a Postgres instance can be done by `pg_dumpall`. It will include also user creation information.
+A difference to `pg_dump`, you cannot choose for different output formats. `pg_dumpall` will always create a SQL script as output. Therefore,
+you don't need `pg_restore` for restoring a "full" dump. Only `psql` is needed (see below).
+
+```bash
+pg_dumpall -h <pg_host> -U postgres > database.out
+```
+
+If you use password authentication it will ask for a password each time. It is convenient to have a `~/.pgpass` file or `PGPASSWORD` environment variable set.
+
+So importing a full dump is really easy by the following `psql` command:
+
+```bash
+psql -h <pg_host> -f databaseb.out -U postgres
+```
+
+A complete guide of `pg_dumpall` from the official documentation can be found [here](https://www.postgresql.org/docs/current/app-pg-dumpall.html).
+
+### pg_restore
+
+`pg_restore` can be used to restore custom file dumps created by `pg_dump`.
+
+The following command will create the datbase (which has been dumped before).
+```bash
+pg_restore -h <pg_host> -U <pg_user> -d postgres --create -F c /tmp/db.dmp -v
+```
+
+A complete guide of `pg_restore` from the official documentation can be found [here](https://www.postgresql.org/docs/current/app-pgrestore.html).
