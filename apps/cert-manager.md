@@ -6,6 +6,8 @@ Documentation & Project Homepage: [Cert-Manager Docs](https://cert-manager.io/do
 ---
 ## Self-Signed Certificates
 
+### Upload existing CA.key and CA.crt files (Option 1)
+
 1. Create a self-signed CA ([[ssl-certs]]) creating a ca.key (private-key) and ca.crt (certificate)
 
 (ca.key)
@@ -55,6 +57,20 @@ spec:
     secretName: ssl-issuer-secret
 ```
 
+### Create CA through Cert-manager (Option 2)
+
+Create a new ClusterIssuer or Issuer object by using the selfSigned Attribute.
+
+```yaml
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: root-issuer
+spec:
+  selfSigned: {}
+```
+
+--- 
 ## Troubleshooting
 
 ### Common Errors
