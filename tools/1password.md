@@ -1,18 +1,22 @@
 # 1Password
-WIP
+
+1Password is a password manager that provides ability to store various passwords, important documents, secure notes and more.
+It supports user-friendly Web interface, as well as macOS, Windows, Linux, iOS, and Android applications.
+But also it has *command line interface*, so it can be in use for any application and system to store secure information.
+
+**Note:** 1Password is not free to use, but it provides various pricing plans for personal, family, and business usage.
 
 ## Installation
-WIP
 
+To install 1Password on your device, please follow the [installation link](https://1password.com/downloads/).
 
----
 ## 1Password-CLI
 
 With 1Password CLI, you can automate administrative tasks and load secrets straight from your command line and in your scripts.
 
-### Installation
+### CLI Installation
 
-Install 1Password-CLI on Mac OS, Windows or Linux, by following the [official 1password-cli installation docs](https://developer.1password.com/docs/cli/get-started#install).
+Install 1Password-CLI on macOS, Windows or Linux, by following the [official 1password-cli installation docs](https://developer.1password.com/docs/cli/get-started#install).
 
 **Example on Mac OS**:
 ```zsh
@@ -38,9 +42,20 @@ eval $(op signin)
 ```
 
 ### Basic Usage
-WIP
+
+Most useful commands:
+
+| op command                         | Comment                                      |
+| ---------------------------------- | -------------------------------------------- |
+| `op --help`                        | Get list of all possible commands and flags  |
+| `op account get`                   | Get details about your account               |
+| `op user list`                     | Get list of users                            |
+| `op vault list`                    | Get details for all vaults                   |
+| `op item get <itemName>`           | Get details about an item                    |
+
 
 ### Environment Variables
-WIP
 
----
+It is possible to load secrets from 1Password directly to environment variables.
+It can be done by using 1Password CLI, which provides options to load secret values either to environment variable directly, or to `.env` file.
+For detailed instruction on how to set up process to load secrets from 1passwords, use to [the official documentation]([1Password-CLI](https://developer.1password.com/docs/cli/secrets-environment-variables/#step-1-create-secret-references)).
