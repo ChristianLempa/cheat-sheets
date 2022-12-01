@@ -1,6 +1,6 @@
 # Bind9
 
-Bind9 is an open-source fully-featured DNS system. 
+Bind9 is an open-source fully-featured DNS ([[dns]]) system. 
 
 Project Homepage: https://www.isc.org/bind/
 
