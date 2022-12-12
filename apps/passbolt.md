@@ -1,5 +1,5 @@
 
-Passbolt is a free and open-source password manager ...
+Passbolt is a free and open-source password manager
 
 Project Homepage: https://passbolt.com/
 
