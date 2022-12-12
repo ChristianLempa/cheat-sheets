@@ -1,3 +1,9 @@
+
+Passbolt is a free and open-source password manager ...
+
+Project Homepage: https://passbolt.com/
+
+
 ### Create admin user
 
 docker-compose exec passbolt su -m -c "/usr/share/php/passbolt/bin/cake \
