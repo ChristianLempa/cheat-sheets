@@ -30,3 +30,57 @@ docker run -d --name bind9-container -e TZ=UTC -p 30053:53 ubuntu/bind9:9.18-22.
 
 ---
 ## Configuration
+
+BIND 9 uses a single configuration file called `named.conf`, which is typically located in either `/etc/bind`, `/etc/namedb` or `/usr/local/etc/namedb`.
+
+The `named.conf` consists of `logging`, and `options` blocks, and `category`, `channel`, `directory`, `file` and `severity` statements.
+
+**`named.conf`**
+```conf
+options {
+	...
+};
+
+zone "domain.tld" {
+	type primary;
+	file "domain.tld";
+};
+```
+
+Depending on the functionality of the system, one or more `zone` files is required.
+
+**`domain.tld`**
+```conf
+; base zone file for domain.tld
+$TTL 2d    ; default TTL for zone
+
+$ORIGIN domain.tld. ; base domain-name
+
+; Start of Authority RR defining the key characteristics of the zone (domain)
+@         IN      SOA   ns1.domain.tld. hostmaster.domain.tld. (
+                                2022121200 ; serial number
+                                12h        ; refresh
+                                15m        ; update retry
+                                3w         ; expiry
+                                2h         ; minimum
+                                )
+
+; name server RR for the domain
+           IN      NS      ns1.domain.tld.
+
+; mail server RRs for the zone (domain)
+        3w IN      MX  10  mail.domain.tld.
+
+; domain hosts includes NS and MX records defined above
+; plus any others required
+; for instance a user query for the A RR of joe.domain.tld will
+; return the IPv4 address 192.168.254.6 from this zone file
+ns1        IN      A       192.168.254.2
+mail       IN      A       192.168.254.4
+joe        IN      A       192.168.254.6
+www        IN      A       192.168.254.7
+
+```
+
+
+### 
