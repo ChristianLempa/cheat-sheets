@@ -35,7 +35,8 @@ BIND 9 uses a single configuration file called `named.conf`, which is typically
 
 The `named.conf` consists of `logging`, and `options` blocks, and `category`, `channel`, `directory`, `file` and `severity` statements.
 
-**`named.conf`**
+### Named Config
+
 ```conf
 options {
 	...
@@ -47,9 +48,10 @@ zone "domain.tld" {
 };
 ```
 
+### Zone File
+
 Depending on the functionality of the system, one or more `zone` files is required.
 
-**`domain.tld`**
 ```conf
 ; base zone file for domain.tld
 $TTL 2d    ; default TTL for zone
@@ -82,5 +84,17 @@ www        IN      A       192.168.254.7
 
 ```
 
+#### SOA (Start of Authority)
 
-### 
+A start of authority record ([[soa-record]]) is a type of resource record in the Domain Name System (DNS) containing administrative information about the zone, especially regarding zone transfers. The SOA record format is specified in RFC 1035.
+
+```conf
+@         IN      SOA   ns1.domain.tld. hostmaster.domain.tld. (
+                                2022121200 ; serial number
+                                12h        ; refresh
+                                15m        ; update retry
+                                3w         ; expiry
+                                2h         ; minimum
+                                )
+```
+
