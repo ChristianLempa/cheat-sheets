@@ -10,7 +10,7 @@ Ensure your server is safe, no matter where it’s running: public cloud, privat
 ### I do everthing in the cli
 
 
-Lets install the cloudflare tunnel service.
+install the cloudflare tunnel service.
 in my case i will do the install on een ubuntu machine.
 
 ```
@@ -23,26 +23,25 @@ cloudflared tunnel login
 ```
 
 when cloudflare is connected you get a cert.pem.
-make a note of the location ;)
+make a note of the location.
 
-Lets make the tunnel
+create the tunnel
 by name fill the name that you want for the tunnel.
 
 ```
 cloudflared tunnel create <NAME>
 ```
 
-Now we will create a configuration file in the `.cloudflared` directory (the same one that our **cert.pem** file was written to)
-
+create a configuration file in the `.cloudflared` directory
 ```
 nano /home/$USER/.cloudflared/config.yaml
 ```
 
-there is an emty file.
-Add the following lines.
+
+set the following lines.
 ```
-tunnel:  # tunnel id
-credentials-file: /home/$USER/.cloudflared/1d4537b6-67b9-4c75-a022-ce805acd5c0a.json # the location of your credentials file from the previous step
+tunnel: Your-Tunnel-Id
+credentials-file: /home/$USER/.cloudflared/1d4537b6-67b9-4c75-a022-ce805acd5c0a.json
 ```
 
 add your first site example.com
@@ -51,8 +50,8 @@ add your first site example.com
 cloudflared tunnel route dns <name of the tunnel> <example.com>
 ```
 
-Now lets create the ingress.
-past it in your config.yml file
+create the ingress.
+create config.yml file in you .cloudflared directory
 
 ```
 ingress:
@@ -63,7 +62,7 @@ ingress:
   - service: http_status:404 # this is required as a 'catch-all'
 ```
 
-Lets start the tunnel
+start the tunnel
 
 ```
 cloudflared tunnel run <name of your tunnel>
@@ -80,5 +79,3 @@ start en enable the service
 ```
 systemctl enable --now cloudflared
 ```
-
-## Setup complete!
