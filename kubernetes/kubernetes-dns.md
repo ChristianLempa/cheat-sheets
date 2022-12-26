@@ -1,5 +1,20 @@
 # Kubernetes DNS
 
+## DNS for Services and Pods
+
+Kubernetes creates DNS records for Services and Pods. You can contact Services with consistent DNS names instead of IP addresses.
+
+```
+your-service.your-namespace.svc.cluster.local
+```
+
+Any Pods exposed by a Service have the following DNS resolution available:
+
+```
+your-prod.your-service.your-namespace.svc.cluster.local
+```
+
+---
 ## Custom DNS Settings
 
 ### Edit coredns config map
