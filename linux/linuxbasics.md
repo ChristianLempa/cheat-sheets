@@ -1,4 +1,5 @@
 # Linux Basics
+[[linux]]
 
 ## Change Hostname
 

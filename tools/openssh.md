@@ -24,3 +24,4 @@ Host *
 ```
 
 Connect to a host (like *dev* , eg.) with `ssh dev`.
+[[linux]]
