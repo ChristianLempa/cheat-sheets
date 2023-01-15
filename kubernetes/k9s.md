@@ -1,5 +1,6 @@
 # K9s
-K9s is a command line interface to easy up managing Kubernetes([[kubernetes]]) clusters.
+
+K9s is a command line interface to easy up managing [Kubernetes Clusters](kubernetes/kubernetes.md).
 
 Core features of k9s are for instance:
 - Editing of resource manifests
@@ -8,18 +9,12 @@ Core features of k9s are for instance:
 
 More information and current releases of k9s, can be found on their [Github repository](https://github.com/derailed/k9s).
 
-**Screenshots:**
-
-<img src="https://github.com/derailed/k9s/blob/master/assets/screen_po.png?raw=true"/>
-<img src="https://github.com/derailed/k9s/blob/master/assets/screen_logs.png?raw=true"/>
-<img src="https://github.com/derailed/k9s/blob/master/assets/screen_dp.png?raw=true"/>
-
 ---
 ## Installation
 
 ### On Linux
 
-1. Find and download the latest release
+#### Find and download the latest release
 
 Check the release page [here](https://github.com/derailed/k9s/releases) and search for the
 fitting package type (e.g. Linux_x86_64). Copy the link to the archive of your choice.
@@ -30,7 +25,8 @@ wget https://github.com/derailed/k9s/releases/download/v0.26.6/k9s_Linux_x86_64.
 tar -xvf k9s_Linux_x86.tar.gz
 ```
 
-2. Install k9s
+#### Install k9s
+
 ```bash
 sudo install -o root -g root -m 0755 k9s /usr/local/bin/k9s
 ```

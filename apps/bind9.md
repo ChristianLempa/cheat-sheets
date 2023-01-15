@@ -1,13 +1,13 @@
 # Bind9
 
-Bind9 is an open-source fully-featured DNS ([[dns]]) system. 
+Bind9 is an open-source fully-featured [DNS](networking/dns) system. 
 
 Project Homepage: https://www.isc.org/bind/
 
 ---
 ## Installation
 
-ISC provides executables for Windows and packages for Ubuntu ([[ubuntu]]) and CentOS ([[centos]]) and Fedora ([[fedora]]) and Debian ([[debian]]) - BIND 9 ESV, Debian - BIND 9 Stable, Debian - BIND 9 Development version. Most operating systems also offer BIND 9 packages for their users. These may be built with a different set of defaults than the standard BIND 9 distribution, and some of them add a version number of their own that does not map exactly to the BIND 9 version.
+ISC provides executables for Windows and packages for [Ubuntu](linux/distros/ubuntu.md), [CentOS](linux/distros/centos.md), [Fedora](linux/distros/fedora.md)  and [Debian](linux/distros/debian.md) - BIND 9 ESV, Debian - BIND 9 Stable, Debian - BIND 9 Development version. Most operating systems also offer BIND 9 packages for their users. These may be built with a different set of defaults than the standard BIND 9 distribution, and some of them add a version number of their own that does not map exactly to the BIND 9 version.
 
 
 ### Ubuntu Linux
@@ -21,7 +21,7 @@ sudo apt install bind9
 
 ### Ubuntu Docker
 
-As part of the [Long Term Supported OCI Images](https://ubuntu.com/security/docker-images), Canonical offers Bind9 as a hardened and maintained Docker Docker ([[docker]]).
+As part of the [Long Term Supported OCI Images](https://ubuntu.com/security/docker-images), Canonical offers Bind9 as a hardened and maintained [Docker](docker/docker.md).
 
 ```sh
 docker run -d --name bind9-container -e TZ=UTC -p 30053:53 ubuntu/bind9:9.18-22.04_beta
@@ -86,7 +86,7 @@ www        IN      A       192.168.254.7
 
 #### SOA (Start of Authority)
 
-A start of authority record ([[soa-record]]) is a type of resource record in the Domain Name System (DNS) containing administrative information about the zone, especially regarding zone transfers. The SOA record format is specified in RFC 1035.
+A start of authority record is a type of resource record in the Domain Name System ([DNS](networking/dns.md)) containing administrative information about the zone, especially regarding zone transfers. The SOA record format is specified in RFC 1035.
 
 ```conf
 @         IN      SOA   ns1.domain.tld. hostmaster.domain.tld. (

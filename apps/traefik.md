@@ -1,5 +1,5 @@
 # Traefik
-Traefik is an open-source Edge Router for **Docker ([[docker]])**, and **Kubernetes ([[kubernetes]])** that makes publishing your services a fun and easy experience. It receives requests on behalf of your system and finds out which components are responsible for handling them.
+Traefik is an open-source Edge Router for [Docker](docker/docker.md), and [Kubernetes](kubernetes/kubernetes.md) that makes publishing your services a fun and easy experience. It receives requests on behalf of your system and finds out which components are responsible for handling them.
 
 ---
 ## Dashboard and API

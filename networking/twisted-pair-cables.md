@@ -20,39 +20,42 @@ A cable that is classified as S/FTP or Shielded Foil Twisted Pair is a combinati
 ## Wiring
 
 ### TIA/EIA 568A Wiring
-PIN | COLOR | COLOR-TEXT
----|---|---
-1 | <span style="color:green">█</span>█<span style="color:green">█</span>█<span style="color:green">█</span>█ | White and Green
-2 | <span style="color:green">██████</span> | Green
-3 | <span style="color:orange">█</span>█<span style="color:orange">█</span>█<span style="color:orange">█</span>█ | White and Orange
-4 | <span style="color:blue">██████</span> | Blue
-5 | <span style="color:blue">█</span>█<span style="color:blue">█</span>█<span style="color:blue">█</span>█ | White and Blue
-6 | <span style="color:orange">██████</span> | Orange
-7 | <span style="color:brown">█</span>█<span style="color:brown">█</span>█<span style="color:brown">█</span>█ | White and Brown
-8 | <span style="color:brown">██████</span> | Brown
+
+| PIN | COLOR | COLOR-TEXT|
+| ---|---|---|
+| 1 | <span style="color:green">█</span>█<span style="color:green">█</span>█<span style="color:green">█</span>█ | White and Green|
+| 2 | <span style="color:green">██████</span> | Green|
+| 3 | <span style="color:orange">█</span>█<span style="color:orange">█</span>█<span style="color:orange">█</span>█ | White and Orange|
+| 4 | <span style="color:blue">██████</span> | Blue|
+| 5 | <span style="color:blue">█</span>█<span style="color:blue">█</span>█<span style="color:blue">█</span>█ | White and Blue|
+| 6 | <span style="color:orange">██████</span> | Orange|
+| 7 | <span style="color:brown">█</span>█<span style="color:brown">█</span>█<span style="color:brown">█</span>█ | White and Brown|
+| 8 | <span style="color:brown">██████</span> | Brown|
+
 ### TIA/EIA 568B Wiring
-PIN | COLOR | COLOR-TEXT
----|---|---
-1 | <span style="color:orange">█</span>█<span style="color:orange">█</span>█<span style="color:orange">█</span>█ | White and Orange
-2 | <span style="color:orange">██████</span> | Orange
-3 | <span style="color:green">█</span>█<span style="color:green">█</span>█<span style="color:green">█</span>█ | White and Green
-4 | <span style="color:blue">██████</span> | Blue
-5 | <span style="color:blue">█</span>█<span style="color:blue">█</span>█<span style="color:blue">█</span>█ | White and Blue
-6 | <span style="color:green">██████</span> | Green
-7 | <span style="color:brown">█</span>█<span style="color:brown">█</span>█<span style="color:brown">█</span>█ | White and Brown
-8 | <span style="color:brown">██████</span> | Brown
+
+| PIN | COLOR                                                                                                        | COLOR-TEXT       |
+| --- | ------------------------------------------------------------------------------------------------------------ | ---------------- |
+| 1   | <span style="color:orange">█</span>█<span style="color:orange">█</span>█<span style="color:orange">█</span>█ | White and Orange |
+| 2   | <span style="color:orange">██████</span>                                                                     | Orange           |
+| 3   | <span style="color:green">█</span>█<span style="color:green">█</span>█<span style="color:green">█</span>█    | White and Green  |
+| 4   | <span style="color:blue">██████</span>                                                                       | Blue             |
+| 5   | <span style="color:blue">█</span>█<span style="color:blue">█</span>█<span style="color:blue">█</span>█       | White and Blue   |
+| 6   | <span style="color:green">██████</span>                                                                      | Green            |
+| 7   | <span style="color:brown">█</span>█<span style="color:brown">█</span>█<span style="color:brown">█</span>█    | White and Brown  |
+| 8   | <span style="color:brown">██████</span>                                                                      | Brown            |
 
 ## Categories
 
-CATEGORY | MHz | Speed
----|---|---
-CAT 3 UTP | 16MHz | 10Mps up to 100m
-CAT 4 UTP | 20MHz | 16Mps up to 100m
-CAT 5 UTP | 100MHz | 100Mbps up to 100m
-CAT 5e UTP | 100MHz | 1000Mbps up to 100m
-CAT 5e STP | 100MHz | 1000Mbps up to 100m
-CAT 6 UTP | 250MHz | 10Gbps over to 33-55m
-CAT 6a STP | 500MHz | 10Gbps over 100m
-CAT 7 STP | 600MHz | 10Gbps over 100m
-CAT 7a STP | 1000MHz | 10Gbps over 100m
-CAT 8 STP | 2000MHz | 25/40Gps up to 30m
+| CATEGORY   | MHz     | Speed                 |
+| ---------- | ------- | --------------------- |
+| CAT 3 UTP  | 16MHz   | 10Mps up to 100m      |
+| CAT 4 UTP  | 20MHz   | 16Mps up to 100m      |
+| CAT 5 UTP  | 100MHz  | 100Mbps up to 100m    |
+| CAT 5e UTP | 100MHz  | 1000Mbps up to 100m   |
+| CAT 5e STP | 100MHz  | 1000Mbps up to 100m   |
+| CAT 6 UTP  | 250MHz  | 10Gbps over to 33-55m |
+| CAT 6a STP | 500MHz  | 10Gbps over 100m      |
+| CAT 7 STP  | 600MHz  | 10Gbps over 100m      |
+| CAT 7a STP | 1000MHz | 10Gbps over 100m      |
+| CAT 8 STP  | 2000MHz | 25/40Gps up to 30m    |
