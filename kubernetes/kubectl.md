@@ -159,15 +159,12 @@ Short Name | Long Name
 ## Resources stuck in Terminating state
 ...
 
-### Namespaces
-1. Save the namespace in a `YOUR-NAMESPACE.json` file.
-```
-kubectl get ns YOUR-NAMESPACE -o json > YOUR-NAMESPACE.json
+```sh
+(
+NAMESPACE=longhorn-demo-1
+kubectl proxy &
+kubectl get namespace $NAMESPACE -o json |jq '.spec = {"finalizers":[]}' >temp.json
+curl -k -H "Content-Type: application/json" -X PUT --data-binary @temp.json 127.0.0.1:8001/api/v1/namespaces/$NAMESPACE/finalize
+)
 ```
 
-2. Edit the `YOUR-NAMESPACE.json` and remove the section in `Finalizers`.
-
-3. Update the NAMESPACE.
-```
-kubectl replace --raw "/api/v1/namespaces/YOUR-NAMESPACE/finalize" -f .\YOUR-NAMESACE.json
-```
