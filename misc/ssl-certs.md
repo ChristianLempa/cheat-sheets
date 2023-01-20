@@ -17,6 +17,7 @@ openssl req -new -x509 -sha256 -days 365 -key ca-key.pem -out ca.pem
 ### Optional Stage: View Certificate's Content
 ```bash
 openssl x509 -in ca.pem -text
+openssl x509 -in ca.pem -purpose -noout -text
 ```
 
 ### Generate Certificate
