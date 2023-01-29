@@ -1,4 +1,5 @@
-# Helm Cheat-Sheet
+# Helm
+
 ## Repository Management
 COMMAND | DESCRIPTION
 ---|---

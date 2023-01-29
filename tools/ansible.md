@@ -1,4 +1,4 @@
-# Ansible Cheat-Sheet
+# Ansible
 ## Install Ansible on Ubuntu
 1. Install PIP
 ```bash

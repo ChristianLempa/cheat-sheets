@@ -1,4 +1,5 @@
 # Datree
+
 Datree can be used on the command line to run policies against Kubernetes manifests YAML files or Helm charts. It prevents Kubernetes misconfigurations from reaching production.
 
 As your organization's infrastructure owner, the product’s stability is your primary concern. Toolchain engineering and architecture gets pushed to the wayside because you must constantly put out fires configured in the development stage.

@@ -1,5 +1,6 @@
 # SMTP
 
+SMTP is a networking protocol for mail transfer.
 
 ## Troubleshooting
 
