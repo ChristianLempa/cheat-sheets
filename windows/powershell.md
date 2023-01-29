@@ -6,7 +6,7 @@ PowerShell was made open-source and cross-platform with PowerShell Core, and can
 
 ### Windows
 1. Download MSI Package from the [Official PowerShell Docs](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2)
-2. Set up PowerShell Profile in Windows Terminal ([[windows-terminal]]).
+2. Set up PowerShell Profile in [Windows Terminal](windows/windows-terminal.md).
 ```json
 "commandline": "pwsh.exe -nologo",
 "name": "Powershell",
