@@ -2,7 +2,7 @@
 
 SQLite is a relational database contained in a C library. In contrast to many other databases, SQLite is not a client-server database engine. Rather, it's embedded into an end program.
 
-SQLite generally follows the PostgreSQL ([[postgres]]) syntax but does not enforce type checking.
+SQLite generally follows the [PostgreSQL](databases/postgres.md) syntax but does not enforce type checking.
 
 You can open a SQLite Database with `sqlite3 <filename>` directly.
 

@@ -1,5 +1,6 @@
 # Kubectl
-Kubectl is a command line tool for communicating with a Kubernetes ([[kubernetes]]) cluster's control pane, using the Kubernetes API.
+
+Kubectl is a command line tool for communicating with a [Kubernetes Cluster](kubernetes/kubernetes.md)'s control pane, using the Kubernetes API.
 
 Documentation: [Kubectl Reference](https://kubernetes.io/docs/reference/kubectl/)
 
@@ -7,26 +8,34 @@ Documentation: [Kubectl Reference](https://kubernetes.io/docs/reference/kubectl/
 ## Installation
 
 ### On Windows (PowerShell)
-Install Kubectl with **Chocolatey** ([[chocolatey]]):
+
+Install Kubectl with [chocolatey](tools/chocolatey.md):
+
 ```
 choco install kubernetes-cli
 ```
 
 ### On Linux
+
 > [!INFO] Installing on WSL2
 > On WSL2 it's recommended to install Docker Desktop [[docker-desktop]], which automatically comes with kubectl.
-1. Download the latest release
+
+#### Download the latest release
+
 ```bash
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"  
 ```
 
-2. Install Kubectl
+#### Install kubectl
+
 ```bash
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 
 ### On mac OS
-Install Kubectl with **Homebrew ([[homebrew]])**:
+
+Install Kubectl with [homebrew](tools/homebrew.md):
+
 ```zsh
 brew install kubernetes-cli
 ```
@@ -36,19 +45,19 @@ brew install kubernetes-cli
 
 ### Multiple Config Files
 
-**On Windows (PowerShell**
+### On Windows (PowerShell)
+
 ```powershell
 $env:KUBECONFIG = "$HOME/.kube/prod-k8s-clcreative-kubeconfig.yaml;$HOME/.kube/infra-home-kube-prod-1.yml;$HOME/.kube/infra-home-kube-demo-1.yml;$HOME/.kube/infra-cloud-kube-prod-1.yml"
 ```
 
-**On Linux**
+### On Linux
+
 ```bash
 export KUBECONFIG=~/.kube/kube-config-1.yml:~/.kube/kube-config-2.yml
 ```
 
-Managing multiple config files manually can become extensive. Below you can find a handy
-script, which you can implement in your shell rc file (e.g. .bashrc or .zshrc). The script
-will automatically add all found kubeconfigs to the `KUBECONFIG` environment variable.
+Managing multiple config files manually can become extensive. Below you can find a handy script, which you can implement in your shell rc file (e.g. .bashrc or .zshrc). The script will automatically add all found kubeconfigs to the `KUBECONFIG` environment variable.
 
 Script was copied from [here](https://medium.com/@alexgued3s/multiple-kubeconfigs-no-problem-f6be646fc07d)
 
