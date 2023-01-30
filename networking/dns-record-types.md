@@ -1,5 +1,7 @@
 # DNS Record Types
+
 ## Most common types of DNS Records
+
 Type | Description
 ---|---
 A|The record that holds the IP address of a domain.
@@ -13,6 +15,7 @@ SRV|Specifies a port for specific services.
 PTR|Provides a domain name in reverse-lookups.
 
 ## Less commonly used DNS Records
+
 Type | Description
 ---|---
 AFSDB|This record is used for clients of the Andrew File System (AFS) developed by Carnegie Melon. The AFSDB record functions to find other AFS cells.
