@@ -44,7 +44,7 @@ DNS over HTTPS, or DoH, is an alternative to DoT. With DoH, DNS queries and resp
 
 Like DoT, DoH ensures that attackers can't forge or alter DNS traffic. DoH traffic looks like other HTTPS traffic – e.g. normal user-driven interactions with websites and web apps – from a network administrator's perspective.
 
-```
+<pre>
   ┌─────────────────┐ ──┐
   │ 爵 HTTP Protocol │   │  encrypted
   ├─────────────────┤   ├── traffic
@@ -55,7 +55,8 @@ Like DoT, DoH ensures that attackers can't forge or alter DNS traffic. DoH traff
   ├─────────────────┤
   │   IP Protocol   │
   └─────────────────┘
-
+</pre>
+```
   GET/POST
   url/dns-request?dns-...
 ```
@@ -64,7 +65,7 @@ Like DoT, DoH ensures that attackers can't forge or alter DNS traffic. DoH traff
 
 DNS over TLS, or DoT, is a standard for encrypting DNS queries to keep them secure and private. DoT uses the same security protocol, TLS, that HTTPS websites use to encrypt and authenticate communications. (TLS is also known as "SSL.") DoT adds TLS encryption on top of the user datagram protocol (UDP), which is used for DNS queries.
 
-```
+<pre>
   ┌─────────────────┐ ──┐
   │   DNS Protocol  │   │  encrypted
   ├─────────────────┤   ├── traffic
@@ -75,4 +76,4 @@ DNS over TLS, or DoT, is a standard for encrypting DNS queries to keep them secu
   ├─────────────────┤
   │   IP Protocol   │
   └─────────────────┘
-```
+</pre>
