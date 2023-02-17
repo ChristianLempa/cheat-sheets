@@ -30,6 +30,8 @@ by name fill the name that you want for the tunnel.
 
 ```
 cloudflared tunnel create <NAME>
+
+# Take a note where your tunnel credentials are saved.
 ```
 
 create a configuration file in the `.cloudflared` directory
@@ -41,7 +43,9 @@ nano /home/$USER/.cloudflared/config.yaml
 set the following lines.
 ```
 tunnel: Your-Tunnel-Id
-credentials-file: /home/$USER/.cloudflared/1d4537b6-67b9-4c75-a022-ce805acd5c0a.json
+credentials-file: /home/$USER/.cloudflared/1d4537b6-67b9-4c75-a022-ce805acd5c0a.json  
+
+1d4537b6-67b9-4c75-a022-ce805acd5c0a.json # Get the json file from previous step.
 ```
 
 add your first site example.com
