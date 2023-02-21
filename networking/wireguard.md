@@ -1,15 +1,19 @@
 # WireGuard
 
-WireGuard is an extremely simple yet fast and modern [VPN Protocol](networking/vpn.md) that utilizes state-of-the-art. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances.
+WireGuard is an open source communication protocol that implements encrypted [virtual private networks (VPNs)](vpn.md), and was designed with the goals of ease of use, high speed performance, and low attack surface. It aims for better performance and more power than IPsec and OpenVPN, two common tunneling protocols. The WireGuard protocol passes traffic over [UDP](udp.md).
+
+WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances.
 
 ---
-#### Create Wireguard keys (private & publickey)
+## Example usage
+
+### Create Wireguard keys (private & publickey)
 
 ```
 wg genkey | tee privatekey | wg pubkey > publickey
 ```
 
-#### Example of server config
+### Example of server config
 
 for example:
 ```
@@ -42,7 +46,7 @@ AllowedIPs = 192.168.8.2/32 # change ip in your range
 PersistentKeepalive = 25
 ```
 
-#### Example of the client config
+### Example of the client config
 
 ```
 [Interface]
