@@ -98,3 +98,21 @@ A start of authority record is a type of resource record in the Domain Name Syst
                                 )
 ```
 
+
+---
+## Forwarders
+
+DNS forwarders are servers that resolve DNS queries on behalf of another DNS server.
+
+To configure bind9 as a forwarding DNS server, you need to add a `forwarders` clause inside the `options` block. The `forwarders` clause specifies a list of IP addresses of other DNS servers that bind9 will forward queries to.
+
+```conf
+options {
+    // ... other options ...
+    forwarders {
+        8.8.8.8; // Google Public DNS
+        1.1.1.1; // Cloudflare DNS
+    };
+};
+```
+
