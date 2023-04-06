@@ -173,7 +173,7 @@ A complete guide of `pg_dumpall` from the official documentation can be found [h
 
 `pg_restore` can be used to restore custom file dumps created by `pg_dump`.
 
-The following command will create the datbase (which has been dumped before).
+The following command will create the database (which has been dumped before).
 ```bash
 pg_restore -h <pg_host> -U <pg_user> -d postgres --create -F c /tmp/db.dmp -v
 ```
