@@ -5,5 +5,5 @@ GitHub is an Internet hosting service for software development and version contr
 ---
 ## GitHub Actions
 
-Automate, customize, and execute your software development workflows right in your repository with GitHub Actions ([[github-actions]]). You can discover, create, and share actions to perform any job you'd like, including CI/CD, and combine actions in a completely customized workflow.
+Automate, customize, and execute your software development workflows right in your repository with GitHub Actions ([[repos/cheat-sheets/misc/github-actions]]). You can discover, create, and share actions to perform any job you'd like, including CI/CD, and combine actions in a completely customized workflow.
 
