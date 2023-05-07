@@ -116,3 +116,33 @@ options {
 };
 ```
 
+---
+## Access Control
+
+To configure permissions in BIND9, you can use the “acl” statement to define access control lists, and then use the “allow-query” and “allow-transfer” statements to specify which hosts or networks are allowed to query or transfer zones.
+
+```conf
+acl "trusted" {
+    192.168.1.0/24;
+    localhost;
+};
+
+options {
+    // ...
+    allow-query { any; };
+    allow-transfer { "trusted"; };
+    // ...
+};
+
+zone "example.com" {
+    // ...
+    allow-query { "trusted"; };
+    // ...
+};
+```
+
+In this example, we define an ACL called “trusted” that includes the 192.168.1.0/24 network and the local host. We then specify that hosts in this ACL are allowed to transfer zones, and that any host is allowed to query.
+
+For the “example.com” zone, we specify that only hosts in the “trusted” ACL are allowed to query.
+
+You can also use other ACL features, such as “allow-recursion” and “allow-update”, to further control access to your DNS server.
