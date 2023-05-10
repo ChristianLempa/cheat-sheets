@@ -1,9 +1,25 @@
 # DNS
 
-TODO: WIP
+DNS (Domain Name System) is a hierarchical distributed naming system used to translate human-readable domain names, such as `www.example.com`, into [[IP]] (Internet Protocol) addresses, such as 192.0.2.1, that computers use to identify each other on the Internet. DNS allows users to access websites and other Internet resources using easy-to-remember domain names instead of having to remember the numerical IP addresses that correspond to them.
 
----
-## DNS Encryption
+
+## How DNS works
+
+DNS operates using a client-server architecture. When a user types a domain name into their web browser, the browser sends a DNS query to a DNS resolver, which is typically provided by the user’s Internet Service Provider (ISP). The resolver then sends a series of recursive queries to other DNS servers, working its way up the DNS hierarchy until it receives a response containing the IP address associated with the requested domain name.
+
+DNS is organized into a hierarchical structure of domains, with the root domain at the top of the hierarchy. Each domain is divided into subdomains, with each level of the hierarchy separated by a dot (e.g., example.com is a subdomain of the com top-level domain). Each domain is managed by a domain name registrar, which is responsible for assigning domain names and IP addresses to organizations and individuals. DNS also supports advanced features such as [[DNSSEC]] (DNS Security Extensions), which provides authentication and integrity checking for DNS queries and responses. 
+
+
+## DNS Record Types
+
+DNS records are an essential part of the DNS system, as they contain the information needed to translate domain names into IP addresses and vice versa. Each DNS record contains a specific type of information about a domain name, such as its IP address, mail exchange server, or authoritative name servers.
+
+There are many different types of DNS records, each with a specific format and purpose. Some of the most commonly used DNS record types include A, AAAA, CNAME, MX, NS, PTR, SOA, SRV, and TXT records. Each record type has a specific format and purpose, and is used to provide different types of information about a domain name.
+
+Here's a [[dns-record-types|List of all DNS Record Types]].
+
+
+## Encryption
 
 Ever since DNS was created in 1987, it has been largely unencrypted. Everyone between your device and the resolver is able to snoop on or even modify your DNS queries and responses.
 

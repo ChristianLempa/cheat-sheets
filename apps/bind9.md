@@ -1,6 +1,6 @@
-# Bind9
+# BIND9
 
-Bind9 is an open-source fully-featured [DNS](networking/dns) system. 
+BIND9 (Berkeley Internet Name Domain version 9) is an open-source [[DNS]] (Domain Name System) software system. It is the most widely used DNS server software on the Internet and is maintained by the Internet Systems Consortium (ISC). BIND9 provides a robust and scalable platform for resolving domain names into IP addresses and vice versa, as well as supporting advanced DNS features such as [[DNSSEC]] (DNS Security Extensions), dynamic updates, and incremental zone transfers. BIND9 runs on a variety of operating systems, including [[Linux]], [[Unix]], and [[Windows]], and is highly configurable and extensible through the use of plugins and modules.
 
 Project Homepage: https://www.isc.org/bind/
 
