@@ -146,3 +146,30 @@ In this example, we define an ACL called “trusted” that includes the 192.168
 For the “example.com” zone, we specify that only hosts in the “trusted” ACL are allowed to query.
 
 You can also use other ACL features, such as “allow-recursion” and “allow-update”, to further control access to your DNS server.
+
+---
+## Dynamic Updates
+
+Dynamic updates in BIND allow for the modification of DNS records in real-time without having to manually edit zone files. 
+
+### Secure DNS updates with TSIG Key
+
+A TSIG (Transaction SIGnature) key is a shared secret key used to authenticate dynamic DNS updates between a DNS client and server. It provides a way to securely sign and verify DNS messages exchanged during dynamic updates.
+
+To create a TSIG key for use with dynamic updates, the `tsig-keygen` command can be used.
+
+```
+tsig-keygen -a hmac-sha256
+```
+
+To add the TSIG key to the zone configuration, the "key" statement must be added to the "allow-update" statement in the named.conf file. For example:
+
+```
+zone "example.com" {
+    type master;
+    file "example.com.zone";
+    allow-update { key "tsig-key"; };
+};
+```
+
+In this example, the "allow-update" statement now uses the TSIG key, to allow updates to the "example.com" zone.
