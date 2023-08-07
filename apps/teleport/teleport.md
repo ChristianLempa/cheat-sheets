@@ -9,18 +9,19 @@ Documentation: [Teleport Docs](https://goteleport.com/docs/)
 
 [Teleport Installation Guidelines](teleport-installation)
 
-
 ## Configuration
 
-### Users and Roles
+[Teleport General Configuration Guidelines](teleport-configuration)
 
-[Teleport Role Templates | Teleport Docs (goteleport.com)](https://goteleport.com/docs/access-controls/guides/role-templates/)
+## Features
 
+- [SSH Service](teleport-ssh)
+- [Kubernetes Service](teleport-kubernetes)
+- [Databases Service](teleport-databases)
+- [Remote Desktop Service](teleport-remotedesktop)
+- [Application Service](teleport-appservice)
+- [Passwordless Auth](teleport-passwordless)
+- [AI Assistant](teleport-aiassistant)
 
-
-## TCTL
-
-### Adding nodes
-Add another node with roles `tctl nodes add --roles=<node,app,kube,proxy,...> --ttl=1h`
 
 
