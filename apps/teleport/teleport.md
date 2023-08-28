@@ -1,6 +1,6 @@
 # Teleport
 
-A single-day dual-track user conference to discuss industry challenges around Access, DevSecOps, and deploying secure systems at scale.
+DevOps teams use **'Teleport'** to access [SSH](../../networking/ssh.md) and Windows servers, [Kubernetes](../../kubernetes/kubernetes.md), databases, AWS Console, and web applications. **'Teleport'** prevents phishing by moving away from static credentials towards ephemeral certificates backed by biometrics and hardware identity, and stops attacker pivots with the [Zero Trust design](../../misc/zerotrust.md).
 
 Project homepage: [Teleport](https://goteleport.com/)
 Documentation: [Teleport Docs](https://goteleport.com/docs/)
@@ -21,7 +21,4 @@ Documentation: [Teleport Docs](https://goteleport.com/docs/)
 - [Remote Desktop Service](teleport-remotedesktop)
 - [Application Service](teleport-appservice)
 - [Passwordless Auth](teleport-passwordless)
-- [AI Assistant](teleport-aiassistant)
-
-
-
+- [AI Assist](teleport-aiassist)
