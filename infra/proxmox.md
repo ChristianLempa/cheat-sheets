@@ -4,9 +4,8 @@ Proxmox Virtual Environment (Proxmox VE or PVE) is a hyper-converged infrastruct
 
 Proxmox VE is licensed under the GNU Affero General Public License, version 3.
 
-Repository: https://git.proxmox.com
-
-Website: https://pve.proxmox.com
+Repository: [https://git.proxmox.com](https://git.proxmox.com)
+Website: [https://pve.proxmox.com](https://pve.proxmox.com)
 
 ## VM Management
 
