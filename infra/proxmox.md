@@ -14,75 +14,75 @@ Website: [https://pve.proxmox.com](https://pve.proxmox.com)
 qm list
 
 # Create or restore a virtual machine.
-qm create <vmid>
+qm create your-vm-id
 
 # start a VM
-qm start <vmid>
+qm start your-vm-id
 
 # Suspend virtual machine.
-qm suspend <vmid>
+qm suspend your-vm-id
 
 # shutdown a VM
-qm shutdown <vmid>
+qm shutdown your-vm-id
 
 # reboot a VM
-qm reboot <vmid>
+qm reboot your-vm-id
 
 # reset a VM
-qm reset <vmid>
+qm reset your-vm-id
 
 # stop a VM
-qm stop <vmid>
+qm stop your-vm-id
 
 # Destroy the VM and all used/owned volumes.
 # Removes any VM specific permissions and firewall rules
-qm destroy <vmid>
+qm destroy your-vm-id
 
 # Enter Qemu Monitor interface.
-qm monitor <vmid>
+qm monitor your-vm-id
 
 # Get the virtual machine configuration with both current and pending values.
-qm pending <vmid>
+qm pending your-vm-id
 
 # Send key event to virtual machine.
-qm sendkey <vmid> <key> [OPTIONS]
+qm sendkey your-vm-id your-key-event [OPTIONS]
 
 # Show command line which is used to start the VM (debug info).
-qm showcmd <vmid> [OPTIONS]
+qm showcmd your-vm-id [OPTIONS]
 
 # Unlock the VM.
-qm unlock <vmid>
+qm unlock your-vm-id
 
 # Clone a VM
-qm clone <vmid> <newid>
+qm clone your-vm-id new-vm-id
 
 # Migrate a VM
-qm migrate <vmid> <target-node>
+qm migrate your-vm-id target-node
 
 # Show VM status
-qm status <vmid>
+qm status your-vm-id
 
 # Clean up resources for a VM
-qm cleanup <vmid> <clean-shutdown> <guest-requested>
+qm cleanup your-vm-id your-clean-shutdown your-guest-requested
 
 # Create a Template.
-qm template <vmid> [OPTIONS]
+qm template your-vm-id [OPTIONS]
 
 # Set virtual machine options (synchrounous API)
-qm set <vmid> [OPTIONS]
+qm set your-vm-id [OPTIONS]
 ```
 
 ### Cloudinit
 
 ```shell
 # Get automatically generated cloudinit config.
-qm cloudinit dump <vmid> <type>
+qm cloudinit dump your-vm-id your-vm-type
 
 # Get the cloudinit configuration with both current and pending values.
-qm cloudinit pending <vmid>
+qm cloudinit pending your-vm-id
 
 # Regenerate and change cloudinit config drive.
-qm cloudinit update <vmid>
+qm cloudinit update your-vm-id
 ```
 
 ### Disk
@@ -90,19 +90,19 @@ qm cloudinit update <vmid>
 ```shell
 # Import an external disk image as an unused disk in a VM.
 # The image format has to be supported by qemu-img(1).
-qm disk import <vmid> <source> <storage>
+qm disk import your-vm-id your-target-source your-target-storage
 
 # Move volume to different storage or to a different VM.
-qm disk move <vmid> <disk> [<storage>] [OPTIONS]
+qm disk move your-vm-id your-vm-disk [<storage>] [OPTIONS]
 
 # Rescan all storages and update disk sizes and unused disk images.
 qm disk rescan [OPTIONS]
 
 # Extend volume size.
-qm disk resize <vmid> <disk> <size> [OPTIONS]
+qm disk resize your-vm-id your-vm-disk <size> [OPTIONS]
 
 # Unlink/delete disk images.
-qm disk unlink <vmid> --idlist <string> [OPTIONS]
+qm disk unlink your-vm-id --idlist <string> [OPTIONS]
 
 # rescan volumes
 qm rescan
@@ -112,39 +112,39 @@ qm rescan
 
 ```shell
 # List all snapshots.
-qm listsnapshot <vmid>
+qm listsnapshot your-vm-id
 
 # Snapshot a VM
-qm snapshot <vmid> <snapname>
+qm snapshot your-vm-id <snapname>
 
 # Delete a snapshot.
-qm delsnapshot <vmid> <snapname>
+qm delsnapshot your-vm-id <snapname>
 
 # Rollback a snapshot
-qm rollback <vmid> <snapname>
+qm rollback your-vm-id <snapname>
 
 # Open a terminal using a serial device
 # (The VM need to have a serial device configured, for example serial0: socket)
-qm terminal <vmid> [OPTIONS]
+qm terminal your-vm-id [OPTIONS]
 
 # Proxy VM VNC traffic to stdin/stdout
-qm vncproxy <vmid>
+qm vncproxy your-vm-id
 ```
 
 ### Misc
 
 ```shell
 # Execute Qemu Guest Agent commands.
-qm guest cmd <vmid> <command>
+qm guest cmd your-vm-id <command>
 
 # Executes the given command via the guest agent
-qm guest exec <vmid> [<extra-args>] [OPTIONS]
+qm guest exec your-vm-id [<extra-args>] [OPTIONS]
 
 # Gets the status of the given pid started by the guest-agent
-qm guest exec-status <vmid> <pid>
+qm guest exec-status your-vm-id <pid>
 
 # Sets the password for the given user to the given password
-qm guest passwd <vmid> <username> [OPTIONS]
+qm guest passwd your-vm-id <username> [OPTIONS]
 ```
 
 ### PV, VG, LV Management
@@ -185,7 +185,7 @@ lvs
 pvesm add <type> <storage> [OPTIONS]
 
 # Allocate disk images.
-pvesm alloc <storage> <vmid> <filename> <size> [OPTIONS]
+pvesm alloc <storage> your-vm-id <filename> <size> [OPTIONS]
 
 # Delete volume
 pvesm free <volume> [OPTIONS]
@@ -242,124 +242,124 @@ See the [Proxmox Certificate Management](proxmox-certificate-management.md) chea
 pct list
 
 # Create or restore a container.
-pct create <vmid> <ostemplate> [OPTIONS]
+pct create your-vm-id <ostemplate> [OPTIONS]
 
 # Start the container.
-pct start <vmid> [OPTIONS]
+pct start your-vm-id [OPTIONS]
 
 # Create a container clone/copy
-pct clone <vmid> <newid> [OPTIONS]
+pct clone your-vm-id new-vm-id [OPTIONS]
 
 # Suspend the container. This is experimental.
-pct suspend <vmid>
+pct suspend your-vm-id
 
 # Resume the container.
-pct resume <vmid>
+pct resume your-vm-id
 
 # Stop the container.
 # This will abruptly stop all processes running in the container.
-pct stop <vmid> [OPTIONS]
+pct stop your-vm-id [OPTIONS]
 
 # Shutdown the container.
 # This will trigger a clean shutdown of the container, see lxc-stop(1) for details.
-pct shutdown <vmid> [OPTIONS]
+pct shutdown your-vm-id [OPTIONS]
 
 # Destroy the container (also delete all uses files).
-pct destroy <vmid> [OPTIONS]
+pct destroy your-vm-id [OPTIONS]
 
 # Show CT status.
-pct status <vmid> [OPTIONS]
+pct status your-vm-id [OPTIONS]
 
 # Migrate the container to another node. Creates a new migration task.
-pct migrate <vmid> <target> [OPTIONS]
+pct migrate your-vm-id <target> [OPTIONS]
 
 # Get container configuration.
-pct config <vmid> [OPTIONS]
+pct config your-vm-id [OPTIONS]
 
 # Print the list of assigned CPU sets.
 pct cpusets
 
 # Get container configuration, including pending changes.
-pct pending <vmid>
+pct pending your-vm-id
 
 # Reboot the container by shutting it down, and starting it again. Applies pending changes.
-pct reboot <vmid> [OPTIONS]
+pct reboot your-vm-id [OPTIONS]
 
 # Create or restore a container.
-pct restore <vmid> <ostemplate> [OPTIONS]
+pct restore your-vm-id <ostemplate> [OPTIONS]
 
 # Set container options.
-pct set <vmid> [OPTIONS]
+pct set your-vm-id [OPTIONS]
 
 # Create a Template.
-pct template <vmid>
+pct template your-vm-id
 
 # Unlock the VM.
-pct unlock <vmid>
+pct unlock your-vm-id
 ```
 
 ### Container Disks
 
 ```shell
 # Get the container?s current disk usage.
-pct df <vmid>
+pct df your-vm-id
 
 # Run a filesystem check (fsck) on a container volume.
-pct fsck <vmid> [OPTIONS]
+pct fsck your-vm-id [OPTIONS]
 
 # Run fstrim on a chosen CT and its mountpoints.
-pct fstrim <vmid> [OPTIONS]
+pct fstrim your-vm-id [OPTIONS]
 
 # Mount the container?s filesystem on the host.
 # This will hold a lock on the container and is meant for emergency maintenance only
 # as it will prevent further operations on the container other than start and stop.
-pct mount <vmid>
+pct mount your-vm-id
 
 # Move a rootfs-/mp-volume to a different storage or to a different container.
-pct move-volume <vmid> <volume> [<storage>] [<target-vmid>] [<target-volume>] [OPTIONS]
+pct move-volume your-vm-id <volume> [<storage>] [<target-vmid>] [<target-volume>] [OPTIONS]
 
 # Unmount the container?s filesystem.
-pct unmount <vmid>
+pct unmount your-vm-id
 
 # Resize a container mount point.
-pct resize <vmid> <disk> <size> [OPTIONS]
+pct resize your-vm-id your-vm-disk <size> [OPTIONS]
 
 # Rescan all storages and update disk sizes and unused disk images.
 pct rescan [OPTIONS]
 
 # Connect to container
-pct enter <vmid>
+pct enter your-vm-id
 
 # Launch a console for the specified container.
-pct console <vmid> [OPTIONS]
+pct console your-vm-id [OPTIONS]
 
 # Launch a shell for the specified container.
-pct enter <vmid>
+pct enter your-vm-id
 
 # Launch a command inside the specified container.
-pct exec <vmid> [<extra-args>]
+pct exec your-vm-id [<extra-args>]
 
 # Copy a file from the container to the local system.
-pct pull <vmid> <path> <destination> [OPTIONS]
+pct pull your-vm-id <path> <destination> [OPTIONS]
 
 # Copy a local file to the container.
-pct push <vmid> <file> <destination> [OPTIONS]
+pct push your-vm-id <file> <destination> [OPTIONS]
 ```
 
 ### Container Snapshot
 
 ```shell
 # Snapshot a container.
-pct snapshot <vmid> <snapname> [OPTIONS]
+pct snapshot your-vm-id <snapname> [OPTIONS]
 
 # List all snapshots.
-pct listsnapshot <vmid>
+pct listsnapshot your-vm-id
 
 # Rollback LXC state to specified snapshot.
-pct rollback <vmid> <snapname> [OPTIONS]
+pct rollback your-vm-id <snapname> [OPTIONS]
 
 # Delete a LXC snapshot.
-pct delsnapshot <vmid> <snapname> [OPTIONS]
+pct delsnapshot your-vm-id <snapname> [OPTIONS]
 ```
 
 ## Web GUI
