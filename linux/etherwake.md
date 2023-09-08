@@ -13,4 +13,3 @@ In this example, `sudo` is used to run the command with administrative privilege
 The command sends a Wake-on-LAN magic packet to the broadcast address of the `eth0` network interface, which should wake up the device with the specified MAC address if Wake-on-LAN is enabled on the device.
 
 Note that the exact syntax and options for `etherwake` may vary depending on your operating system and version of the utility. You can usually find more information and examples in the `etherwake` manual page (`man etherwake`).
-
