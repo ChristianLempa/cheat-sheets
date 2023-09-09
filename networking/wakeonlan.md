@@ -49,3 +49,7 @@ This is an example packet.
 ```sh
 16:19:27.965101 enp3s0 Out IP 10.50.0.19.43610 > 10.50.0.5.9: UDP, length 102
 ```
+
+### Logging Wake on LAN (WoL) packets
+
+Starting with Windows Vista, the operating system logs all wake sources in the `system` event log. The Event Viewer and the `powercfg.exe /lastwake` command can retrieve them.
