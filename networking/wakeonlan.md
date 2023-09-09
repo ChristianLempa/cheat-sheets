@@ -1,16 +1,18 @@
 # Wake On LAN (WOL)
 
-**Wake on LAN (WoL)** is a network protocol that allows a device to be powered on remotely over a network connection. It works by sending a special network message, called a **magic packet**, to the device's MAC address, which triggers the device to power on from a low-power state. **Wake on LAN (WoL)** is commonly used to remotely wake up computers for maintenance or to access files, among other purposes.
+**Wake on LAN (WoL)** is a network protocol that allows a device to be powered on remotely over a network connection. It works by sending a special frame, called a **magic packet**, to the device's MAC address, which triggers the device to power on from a low-power state.
 
 ## Magic Packet
 
-The **magic packet** contains the device's MAC address and a special sequence of bytes that the device recognizes as a **magic packet**. It consists of a 6-byte header followed by the repetition of the target device's MAC address 16 times, resulting in a total packet size of 102 bytes.
+The **magic packet** contains the device's MAC address and a special sequence of bytes that the device recognizes as a **magic packet**. It consists of a 6-byte header (FF FF FF FF FF FF) followed by the repetition of the target device's MAC address 16 times, resulting in a total packet size of 102 bytes.
 
-The **magic packet** is sent to the device's MAC address using the [UDP](../networking/udp.md) protocol on port 9. It is usually sent as a broadcast packet to the network's broadcast address, allowing it to reach all devices on the local network segment. However, it's worth noting that **Wake on LAN (WoL)** can also be sent as a unicast packet. In a unicast configuration, the **magic packet** is sent directly to the specific IP address of the target device instead of being broadcasted to all devices on the network. This requires knowing the IP address of the device in advance.
+It is typically sent as a broadcast using the [UDP](../networking/udp.md) protocol on port 0, 7, or 9 or directly over Ethernet as EtherType 0x0842. However, it's worth noting that **Wake on LAN (WoL)** can also be sent as a unicast packet. In a unicast configuration, the **magic packet** is sent directly to the specific IP address of the target device instead of being broadcasted to all devices on the network. This requires knowing the IP address of the device in advance.
 
 ## Enabling Wake on LAN (WoL)
 
-It's important to note that for **Wake on LAN (WoL)** to work, the target device must be properly configured to listen for and respond to the **magic packet** on the specified UDP port. Additionally, some networking equipment or firewalls might block or restrict UDP broadcasts, which could affect the successful transmission of the **magic packet**.
+The target device must be properly configured to listen for and respond to the **magic packet**, in order for **Wake on LAN (WoL)** to work. This usually involves enabling **Wake on LAN (WoL)** in the BIOS or UEFI settings of the device, and enabling **Wake on LAN (WoL)** for the network interface in the operating system.
+
+Additionally, some networking equipment or firewalls might block or restrict UDP broadcasts, which could affect the successful transmission of the **magic packet**.
 
 ### Enable Wake on LAN (WoL) in BIOS or UEFI
 
