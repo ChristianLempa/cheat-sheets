@@ -1,0 +1,3 @@
+# Teleport Installation Guidelines
+
+WIP

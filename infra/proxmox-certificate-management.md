@@ -172,7 +172,7 @@ if the certificate has expired already, or will expire in the next 30 days.
 
 *Example*: Sample `pvenode` invocation for using Let's Encrypt certificates
 
-```
+```sh
 root@proxmox:~# pvenode acme account register default mail@example.invalid
 Directory endpoints:
 0) Let's Encrypt V2 (https://acme-v02.api.letsencrypt.org/directory)
@@ -207,7 +207,7 @@ API documentation
 
 First you need to get all information so you and Proxmox VE can access the API.
 
-```
+```sh
 root@proxmox:~# cat /path/to/api-token
 OVH_AK=XXXXXXXXXXXXXXXX
 OVH_AS=YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
@@ -232,10 +232,10 @@ root@proxmox:~# echo "OVH_CK=ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ" &gt;&gt; /path/to
 
 Now you can setup the ACME plugin:
 
-```
+```sh
 root@proxmox:~# pvenode acme plugin add dns example_plugin --api ovh --data /path/to/api_token
 root@proxmox:~# pvenode acme plugin config example_plugin
-```
+```sh
 <pre>
 ┌────────┬──────────────────────────────────────────┐
 │ key    │ value                                    │
@@ -257,7 +257,7 @@ root@proxmox:~# pvenode acme plugin config example_plugin
 At last you can configure the domain you want to get certificates for and
 place the certificate order for it:
 
-```
+```sh
 root@proxmox:~# pvenode config set -acmedomain0 example.proxmox.com,plugin=example_plugin
 root@proxmox:~# pvenode acme cert order
 Loading ACME account details
@@ -298,7 +298,7 @@ staging account and recreate it.
 
 *Example*: Changing the default ACME account from staging to directory using `pvenode`
 
-```
+```sh
 root@proxmox:~# pvenode acme account deactivate default
 Renaming account file from '/etc/pve/priv/acme/default' to '/etc/pve/priv/acme/_deactivated_default_4'
 Task OK
