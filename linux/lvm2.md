@@ -1,32 +1,18 @@
-# LVM Cheat Sheet
+# LVM2 (Logical Volume Manager 2)
 
-## LVM (Logical Volume Management)
-
-LVM is a storage management technology that allows you to manage disk space efficiently by abstracting physical storage devices into logical volumes. It provides features like volume resizing, snapshotting, and striping, making it flexible and scalable for various storage needs.
-
----
-
-### Layers
-
-```
-1. Physical Volume
-2. Volume Group
-3. Logical Volume
-4. File System
-```
+**LVM2 (Logical Volume Manager 2)** is a utility for managing disk storage in [Linux](linux.md). It allows you to manage disk space efficiently by abstracting physical storage devices into logical volumes. It provides features like volume resizing, snapshotting, and striping, making it flexible and scalable for various storage needs.
 
 1. Physical Volume: Represents the physical storage devices (e.g., hard drives, SSDs) that are part of the storage pool managed by LVM.
-    
+
 2. Volume Group: Combines multiple physical volumes into a unified storage pool, enabling easy management and allocation of logical volumes.
-    
+
 3. Logical Volume: Serves as a virtual disk that can be used for various purposes, such as creating partitions, mounting file systems, or even setting up RAID configurations.
-    
+
 4. File System: Represents the data organization and access methods used to store and retrieve data on a logical volume. Common file systems include EXT4, XFS, and Btrfs.
 
----
 ## Physical Volume (PV)
 
-A Physical Volume (PV) in LVM is a physical storage device or partition used by LVM. It is a building block for creating Volume Groups and Logical Volumes, allowing you to manage storage efficiently. This command creates the PV on the devices, you can do multiple at a time. 
+A Physical Volume (PV) in LVM is a physical storage device or partition used by LVM. It is a building block for creating Volume Groups and Logical Volumes, allowing you to manage storage efficiently. This command creates the PV on the devices, you can do multiple at a time.
 
 ```bash
 sudo pvcreate /dev/Device /dev/Device2
@@ -49,7 +35,7 @@ Moves the allocated physical extents from one physical volume to another. Useful
 ```bash
 sudo pvmove /dev/source_device /dev/target_device
 ```
----
+
 ## Volume Group (VG)
 
 A Volume Group (VG) in LVM is a collection of one or more Physical Volumes (PVs) combined into a single storage pool. It allows flexible and efficient management of disk space, enabling easy allocation to Logical Volumes (LVs) as needed.
@@ -71,7 +57,7 @@ The `vgs` command provides volume group information in a configurable form, disp
 ```bash
 sudo vgs
 ```
----
+
 ## Logical Volume (LV)
 
 A logical volume in LVM is a flexible virtual partition that separates storage management from physical disks. This creates a logical volume out of the Volume Group with the specified name and size (5GB).
@@ -87,6 +73,7 @@ sudo lvextend -L +100%FREE Group/Volume
 ```
 
 Same as above but in the other direction.
+
 ```bash
 sudo lvreduce -L -5g Group/Volume
 ```
@@ -114,7 +101,7 @@ The `lvdisplay` command displays logical volume properties (such as size, layout
 ```bash
 sudo lvdisplay
 ```
----
+
 ### File System
 
 After extending a logical volume, use this command to expand the file system to use the new space.
@@ -122,7 +109,7 @@ After extending a logical volume, use this command to expand the file system to 
 ```bash
 sudo resize2fs /dev/Group/Volume
 ```
----
+
 ## Snapshots
 
 Snapshots in LVM are copies of a logical volume at a specific time, useful for backups and data recovery. This creates a snapshot named "snap" with 5GB. Snapshots store only the changes made since their creation and are independent of the original volume. 
@@ -136,7 +123,7 @@ Merges the snapshot with the original volume. Useful after a faulty update; requ
 ```bash
 sudo lvconvert --merge Group/snap
 ```
----
+
 ## Cache
 
 This creates a cache logical volume with the "writethrough" cache mode using 100% of the free space. Caching improves disk read/write performance. Writethrough ensures that any data written will be stored both in the cache and on the origin LV. The loss of a device associated with the cache in this case would not mean the loss of any data. A second cache mode is "writeback". Writeback delays writing data blocks from the cache back to the origin LV.
@@ -150,10 +137,10 @@ This removes the cache from the specified logical volume.
 ```bash
 sudo lvconvert --uncache MyVolGroup/rootvol
 ```
----
+
 ## RAID
 
-##### LVM Is Using md Under the Hood
+> LVM Is Using md Under the Hood
 
 This configuring below will still use "md" behind the scenes. It just saves you the trouble of using "mdadm".
 
@@ -167,7 +154,7 @@ sudo lvcreate -i Stripes -I 2G -l 100%FREE -n Volume Group
 
 #### RAID 1
 
-RAID 1 is a data storage configuration that mirrors data across multiple drives for data redundancy, providing fault tolerance in case of drive failure but without the performance improvement of RAID 0. This creates a RAID 1 logical volume with a specified name using 100% of the free space in the volume group. The `--nosync` option skips initial sync. 
+RAID 1 is a data storage configuration that mirrors data across multiple drives for data redundancy, providing fault tolerance in case of drive failure but without the performance improvement of RAID 0. This creates a RAID 1 logical volume with a specified name using 100% of the free space in the volume group. The `--nosync` option skips initial sync.
 
 ```bash
 sudo lvcreate --mirrors 1 --type raid1 -l 100%FREE --nosync -n Volume VGName
