@@ -22,6 +22,49 @@ Most modern computers have a setting in the BIOS or UEFI settings that allows yo
 
 Some operating systems have settings that can enable or disable **Wake on LAN (WoL)** for network interfaces. For example, on [Linux](../linux/linux.md), you can use the [ethtool](../linux/ethtool.md) command to enable **Wake on LAN (WoL)** for a network interface.
 
+#### Enable Wake on LAN (WoL) on Linux
+
+Use the following command to check if your network interface supports Wake On LAN (WoL):
+
+```sh
+sudo ethtool interface_name | grep "Wake-on"
+```
+
+This is an example output:
+
+```txt
+Supports Wake-on: pumbg
+Wake-on: d
+```
+
+If the output shows "Wake-on: d", it means that Wake On LAN (WoL) is disabled.
+
+The following table shows the different values that can be displayed for the "Wake-on" setting:
+
+| Value | Description |
+| --- | --- |
+| `d` | Wake On LAN (WoL) is disabled |
+| `p` | Wake On LAN (WoL) is enabled for unicast packets |
+| `u` | Wake On LAN (WoL) is enabled for unicast and broadcast packets |
+| `m` | Wake On LAN (WoL) is enabled for multicast packets |
+| `b` | Wake On LAN (WoL) is enabled for broadcast packets |
+| `a` | Wake On LAN (WoL) is enabled for ARP packets |
+| `g` | Wake On LAN (WoL) is enabled for Magic packets |
+
+To enable Wake On LAN (WoL), use the following command:
+
+```sh
+sudo ethtool -s interface_name wol g
+```
+
+### Make the Wake On LAN (WoL) setting persistent across reboots
+
+To make the Wake On LAN (WoL) setting persistent across reboots, add the following line to the `/eth/network/interfaces` file:
+
+```sh
+post-up /usr/sbin/ethtool -s interface_name wol g
+```
+
 ## Sending Magic Packets
 
 Once **Wake on LAN (WoL)** is enabled, you can use a utility like [etherwake](../linux/etherwake.md) or `wakeonlan` to send **magic packets** to wake up the device remotely.
