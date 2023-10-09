@@ -2,7 +2,7 @@
 
 Etherwake is a command-line utility for sending [Wake-on-LAN (WoL)](../networking/wakeonlan.md) magic packets to wake up a device over a network connection. It allows you to wake up a device by specifying its MAC address as an argument, and it sends the magic packet to the broadcast address of the network interface that is specified.
 
-Here's an example of how to use ﻿Etherwake to wake up a device with a specific MAC address:
+Here's an example of how to use Etherwake to wake up a device with a specific MAC address:
 
 ```sh
 sudo etherwake -i eth0 00:11:22:33:44:55
