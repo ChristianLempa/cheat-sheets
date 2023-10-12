@@ -53,7 +53,7 @@ sudo ethtool -s interface_name wol g
 
 ### Make the Wake On LAN (WoL) setting persistent across reboots
 
-To make the Wake On LAN (WoL) setting persistent across reboots, add the following line to the `/eth/network/interfaces` file:
+To make the Wake On LAN (WoL) setting persistent across reboots, add the following line to the `/etc/network/interfaces` file:
 
 ```sh
 post-up /usr/sbin/ethtool -s interface_name wol g
