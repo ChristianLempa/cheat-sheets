@@ -1,6 +1,6 @@
 # Mail
 
-**Mail** or **EMail** is a igital method of exchanging messages between people using devices like computers, tablets, and mobile phones. Today's email systems are based on a store-and-forward model, allowing users to send and receive messages without needing to be online simultaneously.
+**Mail** or **Email** is a digital method of exchanging messages between people using devices like computers, tablets, and mobile phones. Today's email systems are based on a store-and-forward model, allowing users to send and receive messages without needing to be online simultaneously.
 
 ## Mail Protocols
 
