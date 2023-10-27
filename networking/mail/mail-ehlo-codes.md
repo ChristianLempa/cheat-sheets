@@ -1,5 +1,9 @@
 # EHLO Response Codes
 
+**EHLO Response Codes** are used by an **SMTP server** in response to an **EHLO command** issued by an **SMTP client**.
+
+> Please note that the presence and specific **EHLO response codes** will depend on the **SMTP server software**, its version, and its configuration. The above table includes some commonly encountered **EHLO response codes**, but it may not cover every possible code or extension.
+
 | EHLO Response Code | Description |
 | --- | --- |
 | 250 | Requested mail action okay, completed |
@@ -20,5 +24,3 @@
 | 250-VRFY | Server supports the VRFY command |
 | 250-X-EXPS \<extension> | Server supports an additional extension |
 | 250 X-LINK2STATE | Server provides link-related state information |
-
-Please note that the presence and specific EHLO response codes will depend on the SMTP server software, its version, and its configuration. The above table includes some commonly encountered EHLO response codes, but it may not cover every possible code or extension.

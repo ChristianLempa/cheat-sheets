@@ -1,5 +1,7 @@
 # SMTP Response Codes
 
+**SMTP Response Codes**, also known as **SMTP Status Codes**, are used to indicate the success or failure of an **SMTP command**. They are typically sent by an **SMTP server** in response to an **SMTP command** issued by an **SMTP client**.
+
 | Status Code | Description |
 | --- | --- |
 | 211 | System status or system help response |
@@ -10,7 +12,7 @@
 | 250 | Requested mail action completed |
 | 251 | User not local; will forward |
 | 252 | Cannot verify the user; will attempt delivery |
-| 354 | Start mail input; end with <CRLF>.<CRLF> |
+| 354 | Start mail input; end with `<CRLF>.<CRLF>` |
 | 421 | Service not available, closing transmission channel |
 | 450 | Requested action not taken - mailbox unavailable |
 | 451 | Requested action aborted: local error in processing |
@@ -21,9 +23,7 @@
 | 503 | Bad sequence of commands |
 | 504 | Command parameter not implemented |
 | 550 | Requested action not taken - mailbox unavailable |
-| 551 | User not local; please try <forward-path> |
+| 551 | User not local; please try `<forward-path>` |
 | 552 | Requested mail action aborted - exceeded storage allocation |
 | 553 | Requested action not taken - mailbox name not allowed |
 | 554 | Transaction failed |
-
-Feel free to use this cheat-sheet as a quick reference for understanding SMTP status codes and their meanings during email communication.
