@@ -9,7 +9,7 @@ In Traefik, there are two types of configurations: dynamic configuration and sta
 
 Static configuration refers to the initial configuration that is defined and loaded when Traefik starts. It includes global settings, entry points, routers, middlewares, and other configurations that provide an initial setup for routing and processing incoming requests.
 
-> :information_source: Once Traefik is running, the static configuration remains in effect until the service is restarted or reloaded.
+> ℹ Once Traefik is running, the static configuration remains in effect until the service is restarted or reloaded.
 
 Static configuration settings are typically defined in a configuration file (e.g., `traefik.yaml/traefik.yml` or `traefik.toml`) located in `/etc/traefik/` or provided as command-line arguments during startup.
 
@@ -24,8 +24,6 @@ Traefik supports different types of **providers** to adapt to various infrastruc
 - File Provider
 - Docker Provider
 - Kubernetes Provider
-- Consul Provider
-- Etcd Provider
 
 ### File
 

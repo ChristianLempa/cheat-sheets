@@ -1,51 +1,99 @@
 # Traefik Routers
 
-### Configuring Routers
+Traefik routers are responsible for connecting incoming requests to the services that should handle them. They determine how requests are routed to these services based on rules defined in the configuration.
 
-In Traefik, routers are a fundamental component responsible for routing incoming requests to the appropriate services based on specific conditions. Routers work together with entry points and middlewares to define how traffic is received and processed.
+## Router Configuration
 
-A router in Traefik is defined by various criteria such as the entry point, host, path, headers, and more. It acts as a rule-based engine, evaluating the incoming requests against those defined criteria and forwarding them to the appropriate backend services or middleware chains.
+### Option 1
 
-**traefik.http.routers.router.entrypoints**
-Specifies the Entrypoint for the Router. Setting this to `traefik.http.routers.router.entrypoints: websecure` will expose the Container on the `websecure` entrypoint.
-*When using websecure, you should enable `traefik.http.routers.router.tls` as well.
+Routers can be defined as part of Traefik's dynamic configuration.
 
-**traefik.http.routers.router.rule**
-Specify the Rules for the Router.
-*This is an example for an FQDN: Host(`subdomain.your-domain`)*
-
-**traefik.http.routers.router.tls**	
-Will enable TLS protocol on the router.
-
-**traefik.http.routers.router.tls.certresolver**
-Specifies the Certificate Resolver on the Router.
-
-#### PathPrefix and StripPrefix
-
-WIP
-
-```yml
-- "traefik.enable=true"
-- "traefik.http.routers.nginx-test.entrypoints=websecure"
-- "traefik.http.routers.nginx-test.tls=true"
-- "traefik.http.routers.nginx-test.rule=PathPrefix(`/nginx-test/`)"
-- "traefik.http.routers.nginx-test.middlewares=nginx-test"
-- "traefik.http.middlewares.nginx-test.stripprefix.
-prefixes=/nginx-test"
+```yaml
+http:
+  routers:
+    my-router:
+      rule: "Host(`example.com`) && Path(`/mypath`)"
+      service: my-service
+      # Additional configurations can be added here
 ```
 
-Add `/api` prefix to any requets to `myapidomain.com`
-Example:
+> ℹ For more information on configuring Traefik, refer to the [Traefik General Configuration Guidelines](traefik-configuration.md).
 
-- Request -> `myapidomain.com`
-- Traefik translates this to `myapidomain.com/api` without requestee seeing it
+### Option 2
 
-```yml
+Or you can configure the `routers` label in the container definition.
+
+```yaml
 - "traefik.enable=true"
-- "traefik.http.routers.myapp-secure-api.tls=true"
-- "traefik.http.routers.myapp-secure-api.rule=Host(`myapidomain.com`)"
-- "traefik.http.routers.myapp-secure-api.middlewares=add-api"
-
-# Middleware
-- "traefik.http.middlewares.add-api.addPrefix.prefix=/api"
+- "traefik.http.routers.my-router.rule=Host(`example.com`) && Path(`/mypath`)"
+- "traefik.http.routers.my-router.service=my-service"
 ```
+
+## Router Options
+
+### Specifying Entry Points
+
+Define which entry points (like HTTP or HTTPS) the router should listen to:
+
+```yaml
+services:
+  my-service:
+    labels:
+      - "traefik.http.routers.my-router.entrypoints=websecure"
+```
+
+### HTTPS and TLS Configuration
+
+To enable TLS for the router:
+
+```yaml
+services:
+  my-service:
+    labels:
+      - "traefik.http.routers.my-secure-router.rule=Host(`example.com`)"
+      - "traefik.http.routers.my-secure-router.service=my-service"
+      - "traefik.http.routers.my-secure-router.tls=true"
+```
+
+To enable TLS with a custom certificate resolver:
+
+```yaml
+services:
+  my-service:
+    labels:
+      - "traefik.http.routers.my-secure-router.rule=Host(`example.com`)"
+      - "traefik.http.routers.my-secure-router.service=my-service"
+      - "traefik.http.routers.my-secure-router.tls=true"
+      - "traefik.http.routers.my-secure-router.tls.certresolver=myresolver"
+```
+
+> ℹ For more information on configuring TLS, refer to the [Traefik TLS Configuration Guidelines](traefik-tls.md).
+
+### Middlewares
+
+To attach a middleware to a router:
+
+```yaml
+services:
+  my-service:
+    labels:
+      - "traefik.http.routers.my-router.middlewares=my-middleware"
+```
+
+> ℹ For more information on configuring middlewares, refer to the [Traefik Middlewares Guidelines](traefik-middlewares.md).
+
+### Load Balancing
+
+Load balancers allow you to configure the applications internal service ports and load balancing strategy.
+
+```yaml
+services:
+  my-service:
+    labels:
+      - "traefik.http.routers.my-router.rule=Host(`example.com`)"
+      - "traefik.http.routers.my-router.service=my-service"
+      - "traefik.http.services.my-service.loadbalancer.server.port=80"
+      - "traefik.http.services.my-service.loadbalancer.sticky=true"
+```
+
+Other load balancing strategies include sticky sessions, round-robin, and more.

@@ -18,7 +18,7 @@ entryPoints:
 
 HTTP redirection is a feature of entry points that allows you to automatically redirect traffic from one entry point to another. It is commonly used to redirect HTTP traffic to HTTPS for secure communication.
 
-> :information_source: HTTP redirection from HTTP to HTTPS is recommended to enhance security, protect data integrity, ensure compliance, build trust with users, and potentially improve search engine rankings.
+> ℹ HTTP redirection from HTTP to HTTPS is recommended to enhance security, protect data integrity, ensure compliance, build trust with users, and potentially improve search engine rankings.
 
 To enable HTTP redirection, add the following section to your Traefik configuration file.
 
@@ -33,7 +33,7 @@ entryPoints:
           scheme: https
 ```
 
-> :warning: It's important to note that to enable HTTPS (SSL/TLS) support, you'll need to configure TLS certificates for the appropriate entry point as well.
+> ⚠ It's important to note that to enable HTTPS (SSL/TLS) support, you'll need to configure TLS certificates for the appropriate entry point as well.
 
 ## Custom EntryPoints
 
