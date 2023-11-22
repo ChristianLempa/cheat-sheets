@@ -58,4 +58,3 @@ command:
 - **502 Bad Gateway or 503 Service Unavailable:** Indicates that Traefik is unable to reach the backend service.
 - **504 Gateway Timeout:** Indicates that the backend service is not responding within the configured timeout period.
 - **520 Unknown Error:** Indicates that the backend service returned an unexpected response.
-
