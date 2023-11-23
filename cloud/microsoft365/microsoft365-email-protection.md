@@ -48,7 +48,7 @@ When you're finished, click Rotate DKIM keys.
 `Set-DkimSigningConfig -Identity your-domain -Enabled $true`
 your-domain is the name of the custom domain that you want to enable DKIM signing for.
 This example enables DKIM signing for the domain contoso.com:
-`Set-DkimSigningConfig -Identity contoso.com -Enabled $true`
+`Set-DkimSigningConfig -Identity contoso.com -Enabled
 
 ### To Confirm DKIM signing is configured properly for Microsoft 365
 
