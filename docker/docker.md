@@ -38,15 +38,6 @@ For more information, see [Install Docker Engine](https://docs.docker.com/engine
 | --- | --- |
 | `docker run <image>` | Start a new container from an image |
 | `docker run -it <image>` | Start a new container in interactive mode |
-| `docker run -p <host-port>:<container-port> <image>` | Start a new container with mapped ports |
-| `docker run -d <image>` | Start a new container in background |
-| `docker run -v <host-path>:<container-path> <image>` | Start a new container with a mounted volume |
-| `docker run --name <image>` | Start a new container and set a name |
-
-### Container Management
-
-| COMMAND | DESCRIPTION |
-| --- | --- |
 | `docker create <image>` | Create a new container |
 | `docker start <container>` | Start a container |
 | `docker stop <container>` | Graceful stop a container |
