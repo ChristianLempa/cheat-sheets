@@ -1,0 +1,33 @@
+# Microsoft Azure CLI
+
+## Install Azure CLI
+
+### Install on Windows
+
+Download and install the [Azure CLI](https://aka.ms/installazurecliwindows) for Windows.
+
+### Install on macOS
+
+Run the following commands to install the Azure CLI via Homebrew.
+
+```bash
+brew update && brew install azure-cli
+```
+
+### Install on Linux
+
+Run the following commands to install the Azure CLI via the package manager for your Linux distribution.
+
+```bash
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+```
+
+## Login to Azure
+
+Run the following command to login to Azure.
+
+```bash
+az login
+```
+
+The command will open a browser window and prompt you to login to Azure. Once you have logged in, you can close the browser window and return to the command line.
