@@ -58,4 +58,3 @@ COMMAND | DESCRIPTION
 `terraform logout` | Logout from Terraform Cloud
 
 ## Import existing resources
-
