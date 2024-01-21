@@ -1,18 +1,39 @@
 # PostgreSQL Cheat-Sheet
 
-PostgreSQL or also known as Postgres, is a free and open-source relational database management system. PostgreSQL features transactions with Atomicity, Consistency, Isolation, Durability (ACID) properties automatically updatable views, materialized views, triggers, foreign keys, and stored procedures. It is designed to handle a range of workloads, from single machines to data warehouses or web services with many concurrent users.
+[PostgreSQL](https://www.postgresql.org/) or also known as Postgres, is a free and open-source relational database management system. PostgreSQL features transactions with Atomicity, Consistency, Isolation, Durability (ACID) properties automatically updatable views, materialized views, triggers, foreign keys, and stored procedures. It is designed to handle a range of workloads, from single machines to data warehouses or web services with many concurrent users.
 
+---
 ## Installation
 
-### Install PostgreSQL 12 on Ubuntu 20.04 LTS
+### Install PostgreSQL on Debian/Ubuntu/Mint/Zorin/forks
 
 ```bash
 sudo apt update
 sudo apt install -y postgresql postgresql-contrib postgresql-client
 sudo systemctl status postgresql.service
+sudo mysql_secure_installation
 ```
 
-### Install / deploy Postgres on Kubernetes with Zalando Postgres Operator
+### Install PostgreSQL on RHEL/Fedora/CentOS/Alma/Rocky
+
+```bash
+sudo dnf update
+sudo dnf install -y postgresql-server
+sudo mysql_secure_installation
+```
+
+### Install PostgreSQL on Arch/Manjaro/Arco/forks
+
+```bash
+sudo pacman -Syyu
+sudo pacman -S postgresql --noconfirm
+sudo mysql_secure_installation
+```
+
+### Deploy PostgreSQL in Docker
+- [https://hub.docker.com/_/postgres/](https://hub.docker.com/_/postgres/)
+- [https://github.com/postgres/postgres](https://github.com/postgres/postgres)
+### Deploy PostgreSQL on Kubernetes with Zalando Postgres Operator
 
 Postgres is probably the database which is most common on Cloud platforms and also, running on Kubernetes environments. There are several so called "Kubernetes Operators" which handle the deployment of Postgres clusters for you. One of it is the [Postgres Operator by Zalando](https://github.com/zalando/postgres-operator).
 
@@ -22,6 +43,7 @@ You can find some tutorials regarding deployment of the operator and how to work
 - [Configure Zalando Postgres Operator Backup with WAL-G](https://thedatabaseme.de/2022/03/26/backup-to-s3-configure-zalando-postgres-operator-backup-with-wal-g/)
 - [Configure Zalando Postgres Operator Restore with WAL-G](https://thedatabaseme.de/2022/05/03/restore-and-clone-from-s3-configure-zalando-postgres-operator-restore-with-wal-g/)
 
+---
 ## Connecting to Postgres
 
 ### Connect to local Postgres instance
@@ -39,6 +61,7 @@ Note, that you first have to install the `postgresql-client` package, (`postgres
 ```sh
 psql -h {pg_host} -U {username} -d {database} -p {port}
 ```
+
 
 ## Set password for postgres database user
 
@@ -73,6 +96,7 @@ Now a connection from outside the database host is possible e.g.
 ```sh
 psql -U postgres -d postgres -h databasehostname
 ```
+
 
 ## Creation of additional database users
 
