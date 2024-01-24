@@ -2,14 +2,14 @@
 
 There are many options for implementing secure DNS including but not limited to:
  - Software level (i.e. internet browser)
- - Workstation/Host level (OS dependant - Windows, Apple, Linux)
+ - Workstation/Host level (OS dependent - Windows, Apple, Linux)
  - Network level (LAN)
 
 Enabling at the workstation/host level ensures that, when connecting to the internet while away from a trusted network, your queries will still be encrypted properly.  Secure DNS can also be implemented at the network level by means of an additional hardware \[or software\] name server within the LAN, or software & configuration at the network gateway. 
 
 ## Organic OS configuration
 
-Secure DNS can be utilized organically with Apple operating systems (as of [iOS 14](https://rodneylab.com/how-to-enable-encrypted-dns-on-iphone-ios-14/) and [macOS 11](https://support.apple.com/guide/mac-help/change-dns-settings-on-mac-mh14127/mac)) and [Windows 10/11](https://www.howtogeek.com/765940/how-to-enable-dns-over-https-on-windows-11/).  Neither are enabled by default and OS-internal secure DNS requires differing levels of complexity and user intervention.  Linux OS's can be configured to use Secure DNS with one of many software DNS options.
+Secure DNS can be utilized organically with Apple operating systems (as of [iOS 14](https://rodneylab.com/how-to-enable-encrypted-dns-on-iphone-ios-14/), [macOS 11](https://support.apple.com/guide/mac-help/change-dns-settings-on-mac-mh14127/mac)) and [Windows 10/11](https://www.howtogeek.com/765940/how-to-enable-dns-over-https-on-windows-11/).  None are enabled by default and OS-internal secure DNS requires differing levels of complexity and user intervention.  Linux OS's can be configured to use Secure DNS with one of many software DNS options.
 
 > _Editor's Note:_ In this writer's opinion it should be preferred to implement third-party software DNS provider (especially in Windows) due to the "per-connection" nature of secure DNS configurations and the length some of these organic configurations require...  Also, who really thinks Apple & Windows have an invested interest in **enhancing** your internet privacy??
 

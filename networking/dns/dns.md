@@ -7,7 +7,7 @@
 DNS operates using a client-server architecture. When a user types a domain name into their web browser, the browser sends a DNS query to a DNS resolver, which is typically provided by the user’s Internet Service Provider (ISP). The resolver then sends a series of recursive queries to other DNS servers, working its way up the DNS hierarchy until it receives a response containing the IP address associated with the requested domain name.
 
 >[!info]
->Hey: what's the deal with all the big tech talk of "AdHoles", ad filters, content filters, and security blacklists all about?  Surprise: It's all about DNS!  Read on to see how...
+>What's the deal with all the big tech talk of "AdHoles", ad filters, content filters, and security blacklists all about?  Surprise: It's all about DNS!  Read on to see how...
 
 ## DNS Structure
 
