@@ -31,7 +31,7 @@ BuildKit supports loading frontends dynamically from container images. To use an
 # syntax=docker/dockerfile:1
 ```
 
-# New feature in 1.3 HereDocs
+# New feature in 1.4 Here-Documents
 
 ```GO
 RUN <<EOF
@@ -39,6 +39,18 @@ apt-get update
 apt-get upgrade -y
 apt-get install -y ...
 EOF
+```
+
+## Example running a multi-line script (Python)
+
+```GO
+# syntax=docker/dockerfile:1
+FROM debian
+RUN <<EOT bash
+  set -ex
+  apt-get update
+  apt-get install -y vim
+EOT
 ```
 
 ## Multi-Stage Dockerfile Example (SpringBoot)
