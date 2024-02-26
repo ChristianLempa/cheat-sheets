@@ -1,5 +1,9 @@
 # iTerm2
 
+iTerm2 is a terminal emulator for [macOS](../macos/macos.md), licensed under GPL-2.0-or-later. It was derived from and has mostly supplanted the earlier "iTerm" application.
+
+iTerm2 supports operating system features such as window transparency, full-screen mode, split panes, Expos&#xe9; Tabs, Growl notifications, and standard keyboard shortcuts. Other features include customizable profiles and Instant Replay of past terminal input/output.
+
 ## Tabs and Windows
 Shortcut | Description
 ---|---
@@ -25,3 +29,13 @@ Shortcut | Description
 `[˄ Control] + [A]` | Move to the start of line
 `[˄ Control] + [E]` | Move to the end of line
 
+## See also
+
+- [Escape Codes](escape_codes.md)
+- [Screen](screen.md)
+- [Shortcuts](../keyboard/shortcuts.md)
+- [xmodmap](../keyboard/xmodmap.md)
+- [xvkbd](../keyboard/xvkbd.md)
+- [xbindkeys](../keyboard/xbindkeys.md)
+- [Tmux](tmux.md)
+- [Kitty](kitty/kitty.md)
