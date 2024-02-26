@@ -1,5 +1,6 @@
 # Dockerfile
 
+
 ## What is a Dockerfile?
 
 Docker builds images automatically by reading the instructions from a Dockerfile which is a text file that contains all commands, in order, needed to build a given image. A Dockerfile adheres to a specific format and set of instructions which you can find at [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
@@ -87,4 +88,3 @@ EXPOSE 8080
 #execute the application
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/usr/local/lib/demo.jar"]
 ```
-
