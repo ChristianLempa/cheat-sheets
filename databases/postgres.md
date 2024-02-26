@@ -11,7 +11,6 @@
 sudo apt update
 sudo apt install -y postgresql postgresql-contrib postgresql-client
 sudo systemctl status postgresql.service
-sudo mysql_secure_installation
 ```
 
 ### Install PostgreSQL on RHEL/Fedora/CentOS/Alma/Rocky
@@ -19,7 +18,6 @@ sudo mysql_secure_installation
 ```bash
 sudo dnf update
 sudo dnf install -y postgresql-server
-sudo mysql_secure_installation
 ```
 
 ### Install PostgreSQL on Arch/Manjaro/Arco/forks
@@ -27,7 +25,6 @@ sudo mysql_secure_installation
 ```bash
 sudo pacman -Syyu
 sudo pacman -S postgresql --noconfirm
-sudo mysql_secure_installation
 ```
 
 ### Deploy PostgreSQL in Docker
