@@ -9,227 +9,106 @@ Website: [https://pve.proxmox.com](https://pve.proxmox.com)
 
 ## VM Management
 
-```shell
-# list VMs
-qm list
-
-# Create or restore a virtual machine.
-qm create your-vm-id
-
-# start a VM
-qm start your-vm-id
-
-# Suspend virtual machine.
-qm suspend your-vm-id
-
-# shutdown a VM
-qm shutdown your-vm-id
-
-# reboot a VM
-qm reboot your-vm-id
-
-# reset a VM
-qm reset your-vm-id
-
-# stop a VM
-qm stop your-vm-id
-
-# Destroy the VM and all used/owned volumes.
-# Removes any VM specific permissions and firewall rules
-qm destroy your-vm-id
-
-# Enter Qemu Monitor interface.
-qm monitor your-vm-id
-
-# Get the virtual machine configuration with both current and pending values.
-qm pending your-vm-id
-
-# Send key event to virtual machine.
-qm sendkey your-vm-id your-key-event [OPTIONS]
-
-# Show command line which is used to start the VM (debug info).
-qm showcmd your-vm-id [OPTIONS]
-
-# Unlock the VM.
-qm unlock your-vm-id
-
-# Clone a VM
-qm clone your-vm-id new-vm-id
-
-# Migrate a VM
-qm migrate your-vm-id target-node
-
-# Show VM status
-qm status your-vm-id
-
-# Clean up resources for a VM
-qm cleanup your-vm-id your-clean-shutdown your-guest-requested
-
-# Create a Template.
-qm template your-vm-id [OPTIONS]
-
-# Set virtual machine options (synchrounous API)
-qm set your-vm-id [OPTIONS]
-```
+| Command | Command Description |
+|---|---|
+| `qm list` | list VMs |
+| `qm create VM_ID` | Create or restore a virtual machine. |
+| `qm start VM_ID` | Start a VM |
+| `qm suspend VM_ID` | Suspend virtual machine. |
+| `qm shutdown VM_ID` | Shutdown a VM |
+| `qm reboot VM_ID` | Reboot a VM |
+| `qm reset VM_ID` | Reset a VM |
+| `qm stop VM_ID` | Stop a VM |
+| `qm destroy VM_ID` | Destroy the VM and all used/owned volumes. |
+| `qm monitor VM_ID` | Enter Qemu Monitor interface. |
+| `qm pending VM_ID` | Get the virtual machine configuration with both current and pending values. |
+| `qm sendkey VM_ID YOUR_KEY_EVENT [OPTIONS]` | Send key event to virtual machine. |
+| `qm showcmd VM_ID [OPTIONS]` | Show command line used to start the VM (debug info). |
+| `qm unlock VM_ID` | Unlock the VM |
+| `qm clone VM_ID NEW_VM_ID` | Clone a VM |
+| `qm migrate VM_ID TARGET_NODE` | Migrate a VM |
+| `qm status VM_ID` | Show VM status |
+| `qm cleanup VM_ID CLEAN_SHUTDOWN GUEST_REQUESTED` | Clean up resources for a VM |
+| `qm template VM_ID [OPTIONS]` | Create a Template |
+| `qm set VM_ID [OPTIONS]` | Set virtual machine options (synchronous API) |
 
 ### Cloudinit
 
-```shell
-# Get automatically generated cloudinit config.
-qm cloudinit dump your-vm-id your-vm-type
-
-# Get the cloudinit configuration with both current and pending values.
-qm cloudinit pending your-vm-id
-
-# Regenerate and change cloudinit config drive.
-qm cloudinit update your-vm-id
-```
+| Command | Command Description |
+|---|---|
+| `qm cloudinit dump VM_ID VM_TYPE` | Get automatically generated cloudinit config. |
+| `qm cloudinit pending VM_ID` | Get the cloudinit configuration with both current and pending values. |
+| `qm cloudinit update VM_ID` | Regenerate and change cloudinit config drive. |
 
 ### Disk
 
-```shell
-# Import an external disk image as an unused disk in a VM.
-# The image format has to be supported by qemu-img(1).
-qm disk import your-vm-id your-target-source your-target-storage
-
-# Move volume to different storage or to a different VM.
-qm disk move your-vm-id your-vm-disk [<storage>] [OPTIONS]
-
-# Rescan all storages and update disk sizes and unused disk images.
-qm disk rescan [OPTIONS]
-
-# Extend volume size.
-qm disk resize your-vm-id your-vm-disk <size> [OPTIONS]
-
-# Unlink/delete disk images.
-qm disk unlink your-vm-id --idlist <string> [OPTIONS]
-
-# rescan volumes
-qm rescan
-```
+| Command | Command Description |
+|---|---|
+| `qm disk import VM_ID TARGET_SOURCE TARGET_STORAGE` | Import an external disk image as an unused disk in a VM. |
+| `qm disk move VM_ID VM_DISK [STORAGE] [OPTIONS]` | Move volume to different storage or to a different VM. |
+| `qm disk rescan [OPTIONS]` | Rescan all storages and update disk sizes and unused disk images. |
+| `qm disk resize VM_ID VM_DISK SIZE [OPTIONS]` | Extend volume size. |
+| `qm disk unlink VM_ID --IDLIST STRING [OPTIONS]` | Unlink/delete disk images. |
+| `qm rescan` | Rescan volumes. |
 
 ### Snapshot
 
-```shell
-# List all snapshots.
-qm listsnapshot your-vm-id
-
-# Snapshot a VM
-qm snapshot your-vm-id <snapname>
-
-# Delete a snapshot.
-qm delsnapshot your-vm-id <snapname>
-
-# Rollback a snapshot
-qm rollback your-vm-id <snapname>
-
-# Open a terminal using a serial device
-# (The VM need to have a serial device configured, for example serial0: socket)
-qm terminal your-vm-id [OPTIONS]
-
-# Proxy VM VNC traffic to stdin/stdout
-qm vncproxy your-vm-id
-```
+| Command | Command Description |
+|---|---|
+| `qm listsnapshot VM_ID` | List all snapshots. |
+| `qm snapshot VM_ID SNAPNAME` | Snapshot a VM. |
+| `qm delsnapshot VM_ID SNAPNAME` | Delete a snapshot. |
+| `qm rollback VM_ID SNAPNAME` | Rollback a snapshot. |
+| `qm terminal VM_ID [OPTIONS]` | Open a terminal using a serial device. |
+| `qm vncproxy VM_ID` | Proxy VM VNC traffic to stdin/stdout. |
 
 ### Misc
 
-```shell
-# Execute Qemu Guest Agent commands.
-qm guest cmd your-vm-id <command>
-
-# Executes the given command via the guest agent
-qm guest exec your-vm-id [<extra-args>] [OPTIONS]
-
-# Gets the status of the given pid started by the guest-agent
-qm guest exec-status your-vm-id <pid>
-
-# Sets the password for the given user to the given password
-qm guest passwd your-vm-id <username> [OPTIONS]
-```
+| Command | Command Description |
+|---|---|
+| `qm guest cmd VM_ID COMMAND` | Execute Qemu Guest Agent commands. |
+| `qm guest exec VM_ID [EXTRA-ARGS] [OPTIONS]` | Executes the given command via the guest agent. |
+| `qm guest exec-status VM_ID PID` | Gets the status of the given pid started by the guest-agent. |
+| `qm guest passwd VM_ID USERNAME [OPTIONS]` | Sets the password for the given user to the given password. |
 
 ### PV, VG, LV Management
 
-```shell
-# Create a PV
-pvcreate <disk-device-name>
-
-# Remove a PV
-pvremove <disk-device-name>
-
-# List all PVs
-pvs
-
-# Create a VG
-vgcreate <vg-name> <disk-device-name>
-
-# Remove a VG
-vgremove <vg-name>
-
-# List all VGs
-vgs
-
-# Create a LV
-lvcreate -L <lv-size> -n <lv-name> <vg-name>
-
-# Remove a LV
-lvremove <vg-name>/<lv-name>
-
-# List all LVs
-lvs
-```
+| Command | Command Description |
+|---|---|
+| `pvcreate DISK-DEVICE-NAME` | Create a PV |
+| `pvremove DISK-DEVICE-NAME` | Remove a PV |
+| `pvs` | List all PVs |
+| `vgcreate VG-NAME DISK-DEVICE-NAME` | Create a VG |
+| `vgremove VG-NAME` | Remove a VG |
+| `vgs` | List all VGs |
+| `lvcreate -L LV-SIZE -n LV-NAME VG-NAME` | Create a LV |
+| `lvremove VG-NAME/LV-NAME` | Remove a LV |
+| `lvs` | List all LVs |
 
 ### Storage Management
 
-```shell
-# Create a new storage.
-pvesm add <type> <storage> [OPTIONS]
-
-# Allocate disk images.
-pvesm alloc <storage> your-vm-id <filename> <size> [OPTIONS]
-
-# Delete volume
-pvesm free <volume> [OPTIONS]
-
-# Delete storage configuration.
-pvesm remove <storage>
-
-# List storage content.
-pvesm list <storage> [OPTIONS]
-
-# An alias for pvesm scan lvm.
-pvesm lvmscan
-
-# An alias for pvesm scan lvmthin.
-pvesm lvmthinscan
-
-# List local LVM volume groups.
-pvesm scan lvm
-
-# List local LVM Thin Pools.
-pvesm scan lvmthin <vg>
-
-# Get status for all datastores.
-pvesm status [OPTIONS]
-```
+| Command | Command Description |
+|---|---|
+| `pvesm add TYPE STORAGE [OPTIONS]` | Create a new storage |
+| `pvesm alloc STORAGE your-vm-id FILENAME SIZE [OPTIONS]` | Allocate disk images |
+| `pvesm free VOLUME [OPTIONS]` | Delete volume |
+| `pvesm remove STORAGE` | Delete storage configuration |
+| `pvesm list STORAGE [OPTIONS]` | List storage content |
+| `pvesm lvmscan` | An alias for pvesm scan lvm |
+| `pvesm lvmthinscan` | An alias for pvesm scan lvmthin |
+| `pvesm scan lvm` | List local LVM volume groups |
+| `pvesm scan lvmthin VG` | List local LVM Thin Pools |
+| `pvesm status [OPTIONS]` | Get status for all datastores |
 
 ### Template Management
 
-```shell
-# list all templates
-pveam available
-
-# list all templates
-pveam list <storage>
-
-# Download appliance templates
-pveam download <storage> <template>
-
-# Remove a template.
-pveam remove <template-path>
-
-# Update Container Template Database.
-pveam update
-```
+| Command | Command Description |
+|---|---|
+| `pveam available` | List all templates |
+| `pveam list STORAGE` | List all templates |
+| `pveam download STORAGE TEMPLATE` | Download appliance templates |
+| `pveam remove TEMPLATE-PATH` | Remove a template |
+| `pveam update` | Update Container Template Database |
 
 ## Certificate Management
 
@@ -237,130 +116,45 @@ See the [Proxmox Certificate Management](proxmox-certificate-management.md) chea
 
 ## Container Management
 
-```shell
-# List containers
-pct list
-
-# Create or restore a container.
-pct create your-vm-id <ostemplate> [OPTIONS]
-
-# Start the container.
-pct start your-vm-id [OPTIONS]
-
-# Create a container clone/copy
-pct clone your-vm-id new-vm-id [OPTIONS]
-
-# Suspend the container. This is experimental.
-pct suspend your-vm-id
-
-# Resume the container.
-pct resume your-vm-id
-
-# Stop the container.
-# This will abruptly stop all processes running in the container.
-pct stop your-vm-id [OPTIONS]
-
-# Shutdown the container.
-# This will trigger a clean shutdown of the container, see lxc-stop(1) for details.
-pct shutdown your-vm-id [OPTIONS]
-
-# Destroy the container (also delete all uses files).
-pct destroy your-vm-id [OPTIONS]
-
-# Show CT status.
-pct status your-vm-id [OPTIONS]
-
-# Migrate the container to another node. Creates a new migration task.
-pct migrate your-vm-id <target> [OPTIONS]
-
-# Get container configuration.
-pct config your-vm-id [OPTIONS]
-
-# Print the list of assigned CPU sets.
-pct cpusets
-
-# Get container configuration, including pending changes.
-pct pending your-vm-id
-
-# Reboot the container by shutting it down, and starting it again. Applies pending changes.
-pct reboot your-vm-id [OPTIONS]
-
-# Create or restore a container.
-pct restore your-vm-id <ostemplate> [OPTIONS]
-
-# Set container options.
-pct set your-vm-id [OPTIONS]
-
-# Create a Template.
-pct template your-vm-id
-
-# Unlock the VM.
-pct unlock your-vm-id
-```
+| Command | Command Description |
+|---|---|
+| `pct list` | List containers |
+| `pct create YOUR-VM-ID OSTEMPLATE [OPTIONS]` | Create or restore a container |
+| `pct start YOUR-VM-ID [OPTIONS]` | Start the container |
+| `pct clone YOUR-VM-ID NEW-VM-ID [OPTIONS]` | Create a container clone/copy |
+| `pct suspend YOUR-VM-ID` | Suspend the container. This is experimental. |
+| `pct resume YOUR-VM-ID` | Resume the container |
+| `pct stop YOUR-VM-ID [OPTIONS]` | Stop the container. This will abruptly stop all processes running in the container. |
+| `pct shutdown YOUR-VM-ID [OPTIONS]` | Shutdown the container. This will trigger a clean shutdown of the container. |
+| `pct destroy YOUR-VM-ID [OPTIONS]` | Destroy the container (also delete all uses files) |
+| `pct status YOUR-VM-ID [OPTIONS]` | Show CT status |
+| `pct migrate YOUR-VM-ID TARGET [OPTIONS]` | Migrate the container to another node. Creates a new migration task. |
+| `pct config YOUR-VM-ID [OPTIONS]` | Get container configuration |
+| `pct cpusets` | Print the list of assigned CPU sets |
+| `pct pending YOUR-VM-ID` | Get container configuration, including pending changes |
+| `pct reboot YOUR-VM-ID [OPTIONS]` | Reboot the container by shutting it down and starting it again. Applies pending changes. |
+| `pct restore YOUR-VM-ID OSTEMPLATE [OPTIONS]` | Create or restore a container |
+| `pct set YOUR-VM-ID [OPTIONS]` | Set container options |
+| `pct template YOUR-VM-ID` | Create a Template |
+| `pct unlock YOUR-VM-ID` | Unlock the VM |
 
 ### Container Disks
 
-```shell
-# Get the container?s current disk usage.
-pct df your-vm-id
-
-# Run a filesystem check (fsck) on a container volume.
-pct fsck your-vm-id [OPTIONS]
-
-# Run fstrim on a chosen CT and its mountpoints.
-pct fstrim your-vm-id [OPTIONS]
-
-# Mount the container?s filesystem on the host.
-# This will hold a lock on the container and is meant for emergency maintenance only
-# as it will prevent further operations on the container other than start and stop.
-pct mount your-vm-id
-
-# Move a rootfs-/mp-volume to a different storage or to a different container.
-pct move-volume your-vm-id <volume> [<storage>] [<target-vmid>] [<target-volume>] [OPTIONS]
-
-# Unmount the container?s filesystem.
-pct unmount your-vm-id
-
-# Resize a container mount point.
-pct resize your-vm-id your-vm-disk <size> [OPTIONS]
-
-# Rescan all storages and update disk sizes and unused disk images.
-pct rescan [OPTIONS]
-
-# Connect to container
-pct enter your-vm-id
-
-# Launch a console for the specified container.
-pct console your-vm-id [OPTIONS]
-
-# Launch a shell for the specified container.
-pct enter your-vm-id
-
-# Launch a command inside the specified container.
-pct exec your-vm-id [<extra-args>]
-
-# Copy a file from the container to the local system.
-pct pull your-vm-id <path> <destination> [OPTIONS]
-
-# Copy a local file to the container.
-pct push your-vm-id <file> <destination> [OPTIONS]
-```
-
-### Container Snapshot
-
-```shell
-# Snapshot a container.
-pct snapshot your-vm-id <snapname> [OPTIONS]
-
-# List all snapshots.
-pct listsnapshot your-vm-id
-
-# Rollback LXC state to specified snapshot.
-pct rollback your-vm-id <snapname> [OPTIONS]
-
-# Delete a LXC snapshot.
-pct delsnapshot your-vm-id <snapname> [OPTIONS]
-```
+| Command | Command Description |
+|---|---|
+| `pct df YOUR-VM-ID` | Get the container’s current disk usage |
+| `pct fsck YOUR-VM-ID [OPTIONS]` | Run a filesystem check (fsck) on a container volume |
+| `pct fstrim YOUR-VM-ID [OPTIONS]` | Run fstrim on a chosen CT and its mountpoints |
+| `pct mount YOUR-VM-ID` | Mount the container’s filesystem on the host |
+| `pct move-volume YOUR-VM-ID VOLUME [STORAGE] [TARGET-VMID] [TARGET-VOLUME] [OPTIONS]` | Move a rootfs-/mp-volume to a different storage or to a different container |
+| `pct unmount YOUR-VM-ID` | Unmount the container’s filesystem |
+| `pct resize YOUR-VM-ID YOUR-VM-DISK SIZE [OPTIONS]` | Resize a container mount point |
+| `pct rescan [OPTIONS]` | Rescan all storages and update disk sizes and unused disk images |
+| `pct enter YOUR-VM-ID` | Connect to container |
+| `pct console YOUR-VM-ID [OPTIONS]` | Launch a console for the specified container |
+| `pct exec YOUR-VM-ID [EXTRA-ARGS]` | Launch a command inside the specified container |
+| `pct pull YOUR-VM-ID PATH DESTINATION [OPTIONS]` | Copy a file from the container to the local system |
+| `pct push YOUR-VM-ID FILE DESTINATION [OPTIONS]` | Copy a local file to the container |
 
 ## Web GUI
 
@@ -381,7 +175,7 @@ qm resize 100 virtio0 +5G
 
 ### Decrease disk size
 
-> Before decreasing disk sizes in Proxmox, you should take a backup!
+ Before decreasing disk sizes in Proxmox, you should take a backup!
 
 1. Convert qcow2 to raw: `qemu-img convert vm-100.qcow2 vm-100.raw`
 2. Shrink the disk `qemu-img resize -f raw vm-100.raw 10G`
