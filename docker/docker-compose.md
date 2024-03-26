@@ -1,11 +1,16 @@
 # Docker-Compose
+
 ...
 
 ## Networking
+
 By default Docker-Compose will create a new network for the given compose file. You can change the behavior by defining custom networks in your compose file.
+
 ### Create and assign custom network
+
 ...
 *Example:*
+
 ```yaml
 networks:
   custom-network:
@@ -15,9 +20,12 @@ services:
     networks:
       - custom-network
 ```
+
 ### Use existing networks
+
 If you want to use an existing Docker network for your compose files, you can add the `external: true` parameter in your compose file
 *Example:*
+
 ```yaml
 networks:
   existing-network:
@@ -25,8 +33,11 @@ networks:
 ```
 
 ## Volumes
-Volumes are data storage objects that Docker containers can use for persistent storage. 
+
+Volumes are data storage objects that Docker containers can use for persistent storage.
+
 ### Create and map static volume(s)
+
 ```yaml
 volumes:
   my-volume:
@@ -36,8 +47,11 @@ services:
     volumes:
       - my-volume:/path-in-container
 ```
+
 These volumes are stored in `/var/lib/docker/volumes`.
+
 ### Create volume that is a CIFS mount to external share
+
 ```yaml
 # Variables that will need to be changed:  
 # <PUID> - User id for folder/file permissions  
@@ -72,3 +86,28 @@ volumes:
       device: //<REMOTE_IP>/<PATH_TO_LIBRARY>  
       o: "username=<USERNAME>,password=<PASSWORD>,vers=3.0,uid=<PUID>,gid=<PGID>"
 ```
+
+## Environment Variables
+
+Environment variables can be defined in the `environment` section of a service in a Docker Compose file.
+
+### Define environment variables
+
+```yaml
+services:
+  app:
+    environment:
+      - ENV_VAR=value
+```
+
+### Interpolate environment variables
+
+| Variable | Description |
+| --- | --- |
+| `${ENV_VAR}` | Value of `ENV_VAR` |
+| `${ENV_VAR:-default}` | Value of `ENV_VAR` if set and non-empty, otherwise `default`|
+| `${ENV_VAR-default}` | Value of `ENV_VAR` if set, otherwise `default`|
+| `${ENV_VAR:?error}` | Value of `ENV_VAR` if set and non-empty, otherwise exit with `error` |
+| `${ENV_VAR?error}` | Value of `ENV_VAR` if set, otherwise exit with `error` |
+| `${ENV_VAR:+replacement}` | `replacement` if `ENV_VAR` is set and non-empty, otherwise empty |
+| `${ENV_VAR+replacement}` | `replacement` if `ENV_VAR` is set, otherwise empty |
