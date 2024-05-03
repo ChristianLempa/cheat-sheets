@@ -1,4 +1,4 @@
-# Terraform
+# Terraform Cheat-Sheet
 
 ## Format and Validate
 
