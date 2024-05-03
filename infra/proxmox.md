@@ -1,12 +1,5 @@
 # Proxmox Cheat-Sheet
 
-Proxmox Virtual Environment (Proxmox VE or PVE) is a hyper-converged infrastructure open-source software. It is a hosted hypervisor that can run operating systems including Linux and Windows on x64 hardware. It is a Debian-based Linux distribution with a modified Ubuntu LTS kernel and allows deployment and management of virtual machines and containers. Proxmox VE includes a web console and command-line tools, and provides a REST API for third-party tools. Two types of virtualization are supported: container-based with LXC (starting from version 4.0 replacing OpenVZ used in version up to 3.4, included), and full virtualization with KVM. It includes a web-based management interface.
-
-Proxmox VE is licensed under the GNU Affero General Public License, version 3.
-
-Repository: [https://git.proxmox.com](https://git.proxmox.com)
-Website: [https://pve.proxmox.com](https://pve.proxmox.com)
-
 ## VM Management
 
 | Command | Command Description |
@@ -50,6 +43,8 @@ Website: [https://pve.proxmox.com](https://pve.proxmox.com)
 | `qm disk resize VM_ID VM_DISK SIZE [OPTIONS]` | Extend volume size. |
 | `qm disk unlink VM_ID --IDLIST STRING [OPTIONS]` | Unlink/delete disk images. |
 | `qm rescan` | Rescan volumes. |
+| `qemu-img convert VM_ID.qcow2 VM_ID.raw` | Convert qcow2 to raw |
+| `qemu-img convert -p -O qcow2 VM_ID.raw VM_ID.qcow2` | Convert back to qcow2 |
 
 ### Snapshot
 
@@ -110,10 +105,6 @@ Website: [https://pve.proxmox.com](https://pve.proxmox.com)
 | `pveam remove TEMPLATE-PATH` | Remove a template |
 | `pveam update` | Update Container Template Database |
 
-## Certificate Management
-
-See the [Proxmox Certificate Management](proxmox-certificate-management.md) cheat sheet.
-
 ## Container Management
 
 | Command | Command Description |
@@ -158,32 +149,6 @@ See the [Proxmox Certificate Management](proxmox-certificate-management.md) chea
 
 ## Web GUI
 
-```shell
-# Restart web GUI
-service pveproxy restart
-```
-
-## Resize Disk
-
-### Increase disk size
-
-Increase disk size in the GUI or with the following command
-
-```shell
-qm resize 100 virtio0 +5G
-```
-
-### Decrease disk size
-
- Before decreasing disk sizes in Proxmox, you should take a backup!
-
-1. Convert qcow2 to raw: `qemu-img convert vm-100.qcow2 vm-100.raw`
-2. Shrink the disk `qemu-img resize -f raw vm-100.raw 10G`
-3. Convert back to qcow2 `qemu-img convert -p -O qcow2 vm-100.raw vm-100.qcow2`
-
-## Further information
-
-More examples and tutorials regarding Proxmox can be found in the link list below:
-
-- Ansible playbook that automates Linux VM updates running on Proxmox (including snapshots): [TheDatabaseMe - update_proxmox_vm](https://github.com/thedatabaseme/update_proxmox_vm)
-- Manage Proxmox VM templates with Packer: [Use Packer to build Proxmox images](https://thedatabaseme.de/2022/10/16/what-a-golden-boy-use-packer-to-build-proxmox-images/)
+| Command | Command Description |
+|---|---|
+| `service pveproxy restart` | Restart the Proxmox web GUI |
