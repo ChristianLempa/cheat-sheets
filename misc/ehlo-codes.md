@@ -1,6 +1,4 @@
-# EHLO Response Codes
-
-**EHLO Response Codes** are used by an **SMTP server** in response to an **EHLO command** issued by an **SMTP client**.
+# EHLO Response Codes Cheat-Sheet
 
 > Please note that the presence and specific **EHLO response codes** will depend on the **SMTP server software**, its version, and its configuration. The above table includes some commonly encountered **EHLO response codes**, but it may not cover every possible code or extension.
 

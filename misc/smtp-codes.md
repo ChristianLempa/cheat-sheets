@@ -1,6 +1,4 @@
-# SMTP Response Codes
-
-**SMTP Response Codes**, also known as **SMTP Status Codes**, are used to indicate the success or failure of an **SMTP command**. They are typically sent by an **SMTP server** in response to an **SMTP command** issued by an **SMTP client**.
+# SMTP Response Codes Cheat-Sheet
 
 | Status Code | Description |
 | --- | --- |
