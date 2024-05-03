@@ -3,7 +3,7 @@
 ## VM Management
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `qm list` | list VMs |
 | `qm create VM_ID` | Create or restore a virtual machine. |
 | `qm start VM_ID` | Start a VM |
@@ -28,7 +28,7 @@
 ### Cloudinit
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `qm cloudinit dump VM_ID VM_TYPE` | Get automatically generated cloudinit config. |
 | `qm cloudinit pending VM_ID` | Get the cloudinit configuration with both current and pending values. |
 | `qm cloudinit update VM_ID` | Regenerate and change cloudinit config drive. |
@@ -36,7 +36,7 @@
 ### Disk
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `qm disk import VM_ID TARGET_SOURCE TARGET_STORAGE` | Import an external disk image as an unused disk in a VM. |
 | `qm disk move VM_ID VM_DISK [STORAGE] [OPTIONS]` | Move volume to different storage or to a different VM. |
 | `qm disk rescan [OPTIONS]` | Rescan all storages and update disk sizes and unused disk images. |
@@ -49,7 +49,7 @@
 ### Snapshot
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `qm listsnapshot VM_ID` | List all snapshots. |
 | `qm snapshot VM_ID SNAPNAME` | Snapshot a VM. |
 | `qm delsnapshot VM_ID SNAPNAME` | Delete a snapshot. |
@@ -60,7 +60,7 @@
 ### Misc
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `qm guest cmd VM_ID COMMAND` | Execute Qemu Guest Agent commands. |
 | `qm guest exec VM_ID [EXTRA-ARGS] [OPTIONS]` | Executes the given command via the guest agent. |
 | `qm guest exec-status VM_ID PID` | Gets the status of the given pid started by the guest-agent. |
@@ -69,7 +69,7 @@
 ### PV, VG, LV Management
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `pvcreate DISK-DEVICE-NAME` | Create a PV |
 | `pvremove DISK-DEVICE-NAME` | Remove a PV |
 | `pvs` | List all PVs |
@@ -83,7 +83,7 @@
 ### Storage Management
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `pvesm add TYPE STORAGE [OPTIONS]` | Create a new storage |
 | `pvesm alloc STORAGE your-vm-id FILENAME SIZE [OPTIONS]` | Allocate disk images |
 | `pvesm free VOLUME [OPTIONS]` | Delete volume |
@@ -98,7 +98,7 @@
 ### Template Management
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `pveam available` | List all templates |
 | `pveam list STORAGE` | List all templates |
 | `pveam download STORAGE TEMPLATE` | Download appliance templates |
@@ -108,7 +108,7 @@
 ## Container Management
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `pct list` | List containers |
 | `pct create YOUR-VM-ID OSTEMPLATE [OPTIONS]` | Create or restore a container |
 | `pct start YOUR-VM-ID [OPTIONS]` | Start the container |
@@ -132,7 +132,7 @@
 ### Container Disks
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `pct df YOUR-VM-ID` | Get the container’s current disk usage |
 | `pct fsck YOUR-VM-ID [OPTIONS]` | Run a filesystem check (fsck) on a container volume |
 | `pct fstrim YOUR-VM-ID [OPTIONS]` | Run fstrim on a chosen CT and its mountpoints |
@@ -150,5 +150,5 @@
 ## Web GUI
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `service pveproxy restart` | Restart the Proxmox web GUI |

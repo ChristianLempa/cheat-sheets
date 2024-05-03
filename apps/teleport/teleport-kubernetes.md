@@ -1,3 +1,0 @@
-# Teleport Kubernetes Service
-
-WIP

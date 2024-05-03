@@ -1,3 +1,0 @@
-# Teleport Passwordless Auth
-
-WIP

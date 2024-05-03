@@ -1,1 +1,0 @@
-# Sophos XG
