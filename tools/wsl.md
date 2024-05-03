@@ -1,92 +1,29 @@
 # WSL Cheat-Sheet
+
 ## Backup and Restore WSL
 
-### Listing Running Distros
-```powershell
-wsl --list --verbose
-```
-### Starting/Restarting a Distro
-```powershell
-wsl --distribution DISTRO-NAME
-```
-
-### Terminate a Running Distro
-```powershell
-wsl --t DISTRO-NAME
-```
-
-### Terminate All Running Distros and WSL process
-```powershell
-wsl --shutdown
-```
-
-### Backup a WSL Distro
-```powershell
-wsl --export (distribution) (filename.tar)
-```
-### Restore a WSL Distro from Backup
-```powershell
-wsl --import (distribution) (install location) (file location and filename)
-```
+| Command | Description |
+| --- | --- |
+| `wsl --list --verbose` | List Running Distros |
+| `wsl --distribution DISTRO-NAME` | Start/Restart a Distro |
+| `wsl --t DISTRO-NAME` | Terminate a Running Distro |
+| `wsl --shutdown` | Terminate All Running Distros and WSL process |
+| `wsl --export (distribution) (filename.tar)` | Backup a WSL Distro |
+| `wsl --import (distribution) (install location) (file location and filename)` | Restore a WSL Distro from Backup |
 
 ## Symbolic Links
-### Link .ssh folder
-```bash
-sudo ln -s /mnt/c/Users/lempa/.ssh ~/.ssh
-```
 
-### Link .kube folder
-```bash
-sudo ln -s /mnt/c/Users/lempa/.ssh ~/.ssh
-```
-
-## File Permissions
-Advanced settings configuration in WSL: [WSL Config Parameters](https://docs.microsoft.com/en-us/windows/wsl/wsl-config)
-
-**Example wsl.conf**
-```
-[automount]
-enabled = true
-options = "metadata,uid=1000,gid=1000,umask=077,fmask=11,case=off"
-mountFsTab = true
-
-[interop]
-enabled = false
-appendWindowsPath = false
-```
+| Command | Description |
+| --- | --- |
+| `sudo ln -s /mnt/c/Users/lempa/.ssh ~/.ssh` | Link .ssh folder |
+| `sudo ln -s /mnt/c/Users/lempa/.kube ~/.kube` | Link .kube folder |
 
 ## Networking
-### Port Forwarding
-**Find IP Address**
-```powershell
-bash.exe -c "ifconfig eth0 | grep 'inet '"
-```
 
-**Add PortForwarding**
-```powershell
-$port = 8080
-$remoteaddr = 0.0.0.0
-
-netsh interface portproxy add v4tov4 listenport=$port connectport=$port connectaddress=$remoteaddr
-
-netsh advfirewall firewall add rule name=$port dir=in action=allow protocol=TCP localport=$port
-```
-
-**Delete PortForwarding**
-```PowerShell
-$port = 8080
-
-netsh interface portproxy delete v4tov4 listenport=$port
-netsh advfirewall firewall delete rule name=$port
-
-```
-
-**Show PortForwardings**
-```powershell
-netsh interface portproxy show v4tov4
-```
-
-## Linux desktop in WSL2
-
-With WSL2 it's possible to install and run a Linux desktop environment (XFCE). A tutorial on how
-to implement that, can be found [here](https://thedatabaseme.de/2022/05/15/shorty-running-xfce-linux-desktop-on-wsl2/).
+| Command | Description |
+| --- | --- |
+| `netsh interface portproxy add v4tov4 listenport=$port connectport=$port connectaddress=$remoteaddr` | Add Port Forwarding |
+| `netsh advfirewall firewall add rule name=$port dir=in action=allow protocol=TCP localport=$port` | Add Firewall Rule |
+| `netsh interface portproxy delete v4tov4 listenport=$port` | Delete PortForwarding |
+| `netsh advfirewall firewall delete rule name=$port` | Delete Firewall Rule |
+| `netsh interface portproxy show v4tov4` | Show PortForwardings |

@@ -1,3 +1,0 @@
-# Bitwarden
-
-TODO: WIP
