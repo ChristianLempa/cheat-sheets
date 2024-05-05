@@ -92,6 +92,15 @@ update-ca-trust
 ```
 wiki page  [here](https://wiki.archlinux.org/title/User:Grawity/Adding_a_trusted_CA_certificate)
 
+### On macOS
+
+Assuming the path to your generated CA certificate is `~/ca.pem`, run (as root):
+```bash
+security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ~/ca.pem
+```
+
+A dialog box will appear asking for an administrator's username and password. Enter it, and it will be stored in the system keychain. This can be verified by opening the `Keychain Access` application (`/Applications/Utilities/Keychain Access.app`). On the sidebar under `System Keychains` select `System`, and the new certificate should be listed.
+
 ### On Windows
 
 Assuming the path to your generated CA certificate as `C:\ca.pem`, run:
