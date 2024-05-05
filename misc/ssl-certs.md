@@ -128,3 +128,15 @@ The exact steps vary device-to-device, but here is a generalised guide:
 5. Locate the certificate file `ca.pem` on your SD Card/Internal Storage using the file manager.
 6. Select to load it.
 7. Done!
+
+## On iOS
+
+Apple makes this far more difficult than it should be:
+1. Send `ca.pem` to the iOS device through iCloud, AirDrop, or a direct download from your server.
+2. After downloading a dialog will appear on screen telling you that the profile has been downloaded.
+3. Open the Settings app, and a `Profile Downloaded` item will be at the top. If it is not there you may find it in `General → VPN & Device Management`.
+4. Click `Install`.
+5. The device will ask for your passcode. Enter it.
+6. The device will then warn you about the certificate. Click `Install` again.
+7. And, as if clicking `Install` twice wasn't enough a confirmation button will appear at the bottom of the screen. Click `Install` one last time.
+7. Done!
