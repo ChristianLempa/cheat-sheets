@@ -1,3 +1,0 @@
-# Remote Desktop Service
-
-WIP

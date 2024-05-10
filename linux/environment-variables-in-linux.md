@@ -1,1 +1,0 @@
-# Environment Variables in Linux

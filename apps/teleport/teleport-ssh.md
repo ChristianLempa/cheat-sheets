@@ -1,3 +1,0 @@
-# Teleport SSH Service
-
-WIP

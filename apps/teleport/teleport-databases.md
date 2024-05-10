@@ -1,3 +1,0 @@
-# Teleport Databases Service
-
-WIP

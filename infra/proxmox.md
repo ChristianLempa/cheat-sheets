@@ -1,16 +1,9 @@
 # Proxmox Cheat-Sheet
 
-Proxmox Virtual Environment (Proxmox VE or PVE) is a hyper-converged infrastructure open-source software. It is a hosted hypervisor that can run operating systems including Linux and Windows on x64 hardware. It is a Debian-based Linux distribution with a modified Ubuntu LTS kernel and allows deployment and management of virtual machines and containers. Proxmox VE includes a web console and command-line tools, and provides a REST API for third-party tools. Two types of virtualization are supported: container-based with LXC (starting from version 4.0 replacing OpenVZ used in version up to 3.4, included), and full virtualization with KVM. It includes a web-based management interface.
-
-Proxmox VE is licensed under the GNU Affero General Public License, version 3.
-
-Repository: [https://git.proxmox.com](https://git.proxmox.com)
-Website: [https://pve.proxmox.com](https://pve.proxmox.com)
-
 ## VM Management
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `qm list` | list VMs |
 | `qm create VM_ID` | Create or restore a virtual machine. |
 | `qm start VM_ID` | Start a VM |
@@ -35,7 +28,7 @@ Website: [https://pve.proxmox.com](https://pve.proxmox.com)
 ### Cloudinit
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `qm cloudinit dump VM_ID VM_TYPE` | Get automatically generated cloudinit config. |
 | `qm cloudinit pending VM_ID` | Get the cloudinit configuration with both current and pending values. |
 | `qm cloudinit update VM_ID` | Regenerate and change cloudinit config drive. |
@@ -43,18 +36,20 @@ Website: [https://pve.proxmox.com](https://pve.proxmox.com)
 ### Disk
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `qm disk import VM_ID TARGET_SOURCE TARGET_STORAGE` | Import an external disk image as an unused disk in a VM. |
 | `qm disk move VM_ID VM_DISK [STORAGE] [OPTIONS]` | Move volume to different storage or to a different VM. |
 | `qm disk rescan [OPTIONS]` | Rescan all storages and update disk sizes and unused disk images. |
 | `qm disk resize VM_ID VM_DISK SIZE [OPTIONS]` | Extend volume size. |
 | `qm disk unlink VM_ID --IDLIST STRING [OPTIONS]` | Unlink/delete disk images. |
 | `qm rescan` | Rescan volumes. |
+| `qemu-img convert VM_ID.qcow2 VM_ID.raw` | Convert qcow2 to raw |
+| `qemu-img convert -p -O qcow2 VM_ID.raw VM_ID.qcow2` | Convert back to qcow2 |
 
 ### Snapshot
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `qm listsnapshot VM_ID` | List all snapshots. |
 | `qm snapshot VM_ID SNAPNAME` | Snapshot a VM. |
 | `qm delsnapshot VM_ID SNAPNAME` | Delete a snapshot. |
@@ -65,7 +60,7 @@ Website: [https://pve.proxmox.com](https://pve.proxmox.com)
 ### Misc
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `qm guest cmd VM_ID COMMAND` | Execute Qemu Guest Agent commands. |
 | `qm guest exec VM_ID [EXTRA-ARGS] [OPTIONS]` | Executes the given command via the guest agent. |
 | `qm guest exec-status VM_ID PID` | Gets the status of the given pid started by the guest-agent. |
@@ -74,7 +69,7 @@ Website: [https://pve.proxmox.com](https://pve.proxmox.com)
 ### PV, VG, LV Management
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `pvcreate DISK-DEVICE-NAME` | Create a PV |
 | `pvremove DISK-DEVICE-NAME` | Remove a PV |
 | `pvs` | List all PVs |
@@ -88,7 +83,7 @@ Website: [https://pve.proxmox.com](https://pve.proxmox.com)
 ### Storage Management
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `pvesm add TYPE STORAGE [OPTIONS]` | Create a new storage |
 | `pvesm alloc STORAGE your-vm-id FILENAME SIZE [OPTIONS]` | Allocate disk images |
 | `pvesm free VOLUME [OPTIONS]` | Delete volume |
@@ -103,21 +98,17 @@ Website: [https://pve.proxmox.com](https://pve.proxmox.com)
 ### Template Management
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `pveam available` | List all templates |
 | `pveam list STORAGE` | List all templates |
 | `pveam download STORAGE TEMPLATE` | Download appliance templates |
 | `pveam remove TEMPLATE-PATH` | Remove a template |
 | `pveam update` | Update Container Template Database |
 
-## Certificate Management
-
-See the [Proxmox Certificate Management](proxmox-certificate-management.md) cheat sheet.
-
 ## Container Management
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `pct list` | List containers |
 | `pct create YOUR-VM-ID OSTEMPLATE [OPTIONS]` | Create or restore a container |
 | `pct start YOUR-VM-ID [OPTIONS]` | Start the container |
@@ -141,7 +132,7 @@ See the [Proxmox Certificate Management](proxmox-certificate-management.md) chea
 ### Container Disks
 
 | Command | Command Description |
-|---|---|
+| --- | --- |
 | `pct df YOUR-VM-ID` | Get the container’s current disk usage |
 | `pct fsck YOUR-VM-ID [OPTIONS]` | Run a filesystem check (fsck) on a container volume |
 | `pct fstrim YOUR-VM-ID [OPTIONS]` | Run fstrim on a chosen CT and its mountpoints |
@@ -158,32 +149,6 @@ See the [Proxmox Certificate Management](proxmox-certificate-management.md) chea
 
 ## Web GUI
 
-```shell
-# Restart web GUI
-service pveproxy restart
-```
-
-## Resize Disk
-
-### Increase disk size
-
-Increase disk size in the GUI or with the following command
-
-```shell
-qm resize 100 virtio0 +5G
-```
-
-### Decrease disk size
-
- Before decreasing disk sizes in Proxmox, you should take a backup!
-
-1. Convert qcow2 to raw: `qemu-img convert vm-100.qcow2 vm-100.raw`
-2. Shrink the disk `qemu-img resize -f raw vm-100.raw 10G`
-3. Convert back to qcow2 `qemu-img convert -p -O qcow2 vm-100.raw vm-100.qcow2`
-
-## Further information
-
-More examples and tutorials regarding Proxmox can be found in the link list below:
-
-- Ansible playbook that automates Linux VM updates running on Proxmox (including snapshots): [TheDatabaseMe - update_proxmox_vm](https://github.com/thedatabaseme/update_proxmox_vm)
-- Manage Proxmox VM templates with Packer: [Use Packer to build Proxmox images](https://thedatabaseme.de/2022/10/16/what-a-golden-boy-use-packer-to-build-proxmox-images/)
+| Command | Command Description |
+| --- | --- |
+| `service pveproxy restart` | Restart the Proxmox web GUI |
