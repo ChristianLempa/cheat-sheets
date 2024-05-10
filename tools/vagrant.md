@@ -27,7 +27,7 @@
 | Command | Description |
 | --- | --- |
 | `vagrant provision` |  Forces reprovisioning of the vagrant machine |
-| `vagrant provision --debug ` | Use the debug flag to increase the verbosity of the output |
+| `vagrant provision --debug` | Use the debug flag to increase the verbosity of the output |
 | `vagrant up --provision \| tee provision.log` | Runs `vagrant up`, forces provisioning and logs all output to a file |
 
 ## Manage Boxes

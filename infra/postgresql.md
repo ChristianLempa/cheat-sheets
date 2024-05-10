@@ -4,9 +4,9 @@
 
 | Command | Description |
 | --- | --- |
-| `psql -U postgres` | Connect to PostgreSQL as the `postgres` user
-| `psql -U USER -d DBNAME` | Connect to PostgreSQL as a specific user and database
-| `psql -U USER -d DBNAME -h HOST` | Connect to PostgreSQL on a specific host
+| `psql -U postgres` | Connect to PostgreSQL as the `postgres` user |
+| `psql -U USER -d DBNAME` | Connect to PostgreSQL as a specific user and database |
+| `psql -U USER -d DBNAME -h HOST` | Connect to PostgreSQL on a specific host |
 
 ## PostreSQL CLI Commands
 

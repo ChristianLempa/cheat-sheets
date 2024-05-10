@@ -23,6 +23,8 @@
 
 ## Setting Parameters
 
+| Command | Description |
+| --- | --- |
 | `ethtool -G INTERFACE` | Set ring buffer settings |
 | `ethtool -L INTERFACE` | Set large receive offload settings |
 | `ethtool -A INTERFACE` | Set pause parameters |

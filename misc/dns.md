@@ -23,7 +23,7 @@
 | **APL** | The ‘address prefix list’ is an experiment record that specifies lists of address ranges. |
 | **AFSDB** | This record is used for clients of the Andrew File System (AFS) developed by Carnegie Melon. The AFSDB record functions to find other AFS cells. |
 | **CAA** | This is the ‘certification authority authorization’ record, it allows domain owners state which certificate authorities can issue certificates for that domain. If no CAA record exists, then anyone can issue a certificate for the domain. These records are also inherited by subdomains. |
-| **DNSKEY** | The ‘DNS Key Record’ contains a public key used to verify Domain Name System Security Extension (DNSSEC) signatures
+| **DNSKEY** | The ‘DNS Key Record’ contains a public key used to verify Domain Name System Security Extension (DNSSEC) signatures |
 | **CDNSKEY** | This is a child copy of the DNSKEY record, meant to be transferred to a parent. |
 | **CERT** | The ‘certificate record’ stores public key certificates. |
 | **DCHID** | The ‘DHCP Identifier’ stores info for the Dynamic Host Configuration Protocol (DHCP), a standardized network protocol used on IP networks. |
