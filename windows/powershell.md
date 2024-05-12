@@ -5,13 +5,13 @@
 | Command | Description |
 | --- | --- |
 | `Get-ChildItem` | List files and directories |
-| `Get-Content FILE` | Get the content of a file |
-| `Set-Content FILE CONTENT` | Set the content of a file |
-| `New-Item FILE` | Create a new file |
-| `New-Item DIR -ItemType Directory` | Create a new directory |
-| `Remove-Item FILE` | Remove a file |
-| `Remove-Item DIR -Recurse` | Remove a directory |
-| `Rename-Item OLDNAME NEWNAME` | Rename a file or directory |
+| `Get-Content <file>` | Get the content of a file |
+| `Set-Content <file> <content>` | Set the content of a file |
+| `New-Item <file>` | Create a new file |
+| `New-Item <directory> -ItemType Directory` | Create a new directory |
+| `Remove-Item <file>` | Remove a file |
+| `Remove-Item <directory> -Recurse` | Remove a directory |
+| `Rename-Item <file> <new_file>` | Rename a file or directory |
 | `Copy-Item SOURCE DEST` | Copy a file |
 | `Copy-Item SOURCE DEST -Recurse` | Copy a directory |
 | `Move-Item SOURCE DEST` | Move a file or directory |
@@ -21,32 +21,32 @@
 | Command | Description |
 | --- | --- |
 | `Get-Process` | List running processes |
-| `Stop-Process -Name PROCESS` | Stop a process |
-| `Start-Process PROGRAM` | Start a new process |
-| `Wait-Process -Name PROCESS` | Wait for a process to finish |
+| `Stop-Process -Name <process>` | Stop a process |
+| `Start-Process <process>` | Start a new process |
+| `Wait-Process -Name <process>` | Wait for a process to finish |
 
 ## Service Management
 
 | Command | Description |
 | --- | --- |
 | `Get-Service` | List services |
-| `Start-Service SERVICE` | Start a service |
-| `Stop-Service SERVICE` | Stop a service |
-| `Restart-Service SERVICE` | Restart a service |
-| `Set-Service SERVICE -StartupType Automatic` | Set a service to start automatically |
-| `Set-Service SERVICE -StartupType Manual` | Set a service to start manually |
-| `Set-Service SERVICE -StartupType Disabled` | Disable a service |
+| `Start-Service <service>` | Start a service |
+| `Stop-Service <service>` | Stop a service |
+| `Restart-Service <service>` | Restart a service |
+| `Set-Service <service> -StartupType Automatic` | Set a service to start automatically |
+| `Set-Service <service> -StartupType Manual` | Set a service to start manually |
+| `Set-Service <service> -StartupType Disabled` | Disable a service |
 
 ## User Management
 
 | Command | Description |
 | --- | --- |
 | `Get-LocalUser` | List local users |
-| `New-LocalUser USERNAME` | Create a new local user |
-| `Remove-LocalUser USERNAME` | Remove a local user |
-| `Set-LocalUser USERNAME -Password PASSWORD` | Set the password for a local user |
-| `Add-LocalGroupMember -Group Administrators -Member USERNAME` | Add a user to the Administrators group |
-| `Remove-LocalGroupMember -Group Administrators -Member USERNAME` | Remove a user from the Administrators group |
+| `New-LocalUser <user>` | Create a new local user |
+| `Remove-LocalUser <user>` | Remove a local user |
+| `Set-LocalUser <user> -Password <password>` | Set the password for a local user |
+| `Add-LocalGroupMember -Group Administrators -Member <user>` | Add a user to the Administrators group |
+| `Remove-LocalGroupMember -Group Administrators -Member <user>` | Remove a user from the Administrators group |
 
 ## Network Management
 
@@ -68,14 +68,14 @@
 | Command | Description |
 | --- | --- |
 | `Get-WindowsFeature` | List Windows features |
-| `Install-WindowsFeature FEATURE` | Install a Windows feature |
-| `Uninstall-WindowsFeature FEATURE` | Uninstall a Windows feature |
+| `Install-WindowsFeature <feature>` | Install a Windows feature |
+| `Uninstall-WindowsFeature <feature>` | Uninstall a Windows feature |
 
 ## Connect to a remote computer
 
 | Command | Description |
 | --- | --- |
-| `Enter-PSSession -ComputerName SERVER -Credential USERNAME` | Open a new remote session |
+| `Enter-PSSession -ComputerName <name> -Credential <user>` | Open a new remote session |
 | `Exit-PSSession` | Close the current remote session |
-| `Invoke-Command -ComputerName SERVER -ScriptBlock { COMMAND }` | Run a command on a remote computer |
-| `Invoke-Command -ComputerName SERVER -FilePath SCRIPT.ps1` | Run a script on a remote computer |
+| `Invoke-Command -ComputerName <name> -ScriptBlock { <command> }` | Run a command on a remote computer |
+| `Invoke-Command -ComputerName <name> -FilePath <script>` | Run a script on a remote computer |

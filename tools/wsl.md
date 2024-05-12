@@ -5,8 +5,8 @@
 | Command | Description |
 | --- | --- |
 | `wsl --list --verbose` | List Running Distros |
-| `wsl --distribution DISTRO-NAME` | Start/Restart a Distro |
-| `wsl --t DISTRO-NAME` | Terminate a Running Distro |
+| `wsl --distribution <distro>` | Start/Restart a Distro |
+| `wsl --t <distro>` | Terminate a Running Distro |
 | `wsl --shutdown` | Terminate All Running Distros and WSL process |
 | `wsl --export (distribution) (filename.tar)` | Backup a WSL Distro |
 | `wsl --import (distribution) (install location) (file location and filename)` | Restore a WSL Distro from Backup |
@@ -15,8 +15,8 @@
 
 | Command | Description |
 | --- | --- |
-| `sudo ln -s /mnt/c/Users/lempa/.ssh ~/.ssh` | Link .ssh folder |
-| `sudo ln -s /mnt/c/Users/lempa/.kube ~/.kube` | Link .kube folder |
+| `sudo ln -s /mnt/c/Users/<user>/.ssh ~/.ssh` | Link .ssh folder |
+| `sudo ln -s /mnt/c/Users/<user>/.kube ~/.kube` | Link .kube folder |
 
 ## Networking
 

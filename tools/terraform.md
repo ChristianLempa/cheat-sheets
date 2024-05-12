@@ -34,7 +34,7 @@
 
 | Command | Description |
 | --- | --- |
-| `terraform workspace new myworkspace` | Create a new workspace |
+| `terraform workspace new <workspace>` | Create a new workspace |
 | `terraform workspace select default` | Change to a workspace |
 | `terraform workspace list` | List all workspaces |
 
@@ -53,7 +53,7 @@
 
 | Command | Description |
 | --- | --- |
-| `terraform import resourcetype.myresource <id>` | Import a Resource |
+| `terraform import <resource_type>.<resource> <id>` | Import a Resource |
 | `terraform output` | List all outputs |
 | `terraform output <output>` | List a specific output |
 | `terraform output -json` | List all outputs in JSON format |

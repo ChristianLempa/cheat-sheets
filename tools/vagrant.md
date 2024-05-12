@@ -18,7 +18,7 @@
 | `vagrant suspend` | Suspends a virtual machine (remembers state) |
 | `vagrant resume` | Resume a suspended machine (vagrant up works just fine for this as well) |
 | `vagrant ssh` | Sonnects to machine via SSH |
-| `vagrant ssh BOXNAME` | If you give your box a name in your Vagrantfile, you can ssh into it with boxname. Works from any directory. |
+| `vagrant ssh <box>` | If you give your box a name in your Vagrantfile, you can ssh into it with boxname. Works from any directory. |
 | `vagrant destroy` | Stops and deletes all traces of the vagrant machine |
 | `vagrant destroy -f` | Same as above, without confirmation |
 
@@ -35,7 +35,7 @@
 | Command | Description |
 | --- | --- |
 | `vagrant box list` | See a list of all installed boxes on your computer |
-| `vagrant box add BOXNAME BOXURL` | Download a box image to your computer |
+| `vagrant box add <box> <url>` | Download a box image to your computer |
 | `vagrant box outdated` | Check for updates vagrant box update |
-| `vagrant box remove BOXNAME` | Deletes a box from the machine |
+| `vagrant box remove <box>` | Deletes a box from the machine |
 | `vagrant package` | Packages a running virtualbox env in a reusable box |

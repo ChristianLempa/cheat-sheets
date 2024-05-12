@@ -5,13 +5,13 @@
 | Command | Description |
 | --- | --- |
 | `civo instance ls` | List instances |
-| `civo instance show ID` | Show instance details |
-| `civo instance create HOSTNAME [flags]` | Create a new instance |
-| `civo instance firewall HOSTNAME FIREWALL` | Set firewall for instance |
-| `civo instance password [flags]` | Show instance's default password |
-| `civo instance public-ip [flags]` | Enable/disable controls if instance should have a public IP |
-| `civo instance reboot HOSTNAME` | Hard reboot an instance |
-| `civo instance remove HOSTNAME` | Remove/delete instance |
+| `civo instance show <instance>` | Show instance details |
+| `civo instance create <hostname>` | Create a new instance |
+| `civo instance firewall <hostname> <firewall>` | Set firewall for instance |
+| `civo instance password` | Show instance's default password |
+| `civo instance public-ip` | Enable/disable controls if instance should have a public IP |
+| `civo instance reboot <hostname>` | Hard reboot an instance |
+| `civo instance remove <hostname>` | Remove/delete instance |
 | `civo instance size` | List instances size |
 | `civo instance soft-reboot` | Soft reboot an instance |
 | `civo instance start` | Start an instance |
@@ -37,5 +37,5 @@
 | Command | Description |
 | --- | --- |
 | `civo diskimage ls` | List disk images |
-| `civo diskimage find STRING` | Find disk images by name |
+| `civo diskimage find <string>` | Find disk images by name |
 | `civo size ls` | List sizes |

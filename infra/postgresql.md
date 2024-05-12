@@ -5,15 +5,15 @@
 | Command | Description |
 | --- | --- |
 | `psql -U postgres` | Connect to PostgreSQL as the `postgres` user |
-| `psql -U USER -d DBNAME` | Connect to PostgreSQL as a specific user and database |
-| `psql -U USER -d DBNAME -h HOST` | Connect to PostgreSQL on a specific host |
+| `psql -U <user> -d <database>` | Connect to PostgreSQL as a specific user and database |
+| `psql -U <user> -d <database> -h <host>` | Connect to PostgreSQL on a specific host |
 
 ## PostreSQL CLI Commands
 
 | Command | Description |
 | --- | --- |
-| `\c DBNAME` | Connect to a specific database |
-| `\password USERNAME` | Change password for a specific user |
+| `\c <database>` | Connect to a specific database |
+| `\password <user>` | Change password for a specific user |
 | `\l` | List all databases |
 | `\d+` | Show detailed information about various database objects |
 | `\dt` | List all tables in the current database |
@@ -32,5 +32,5 @@
 
 | Command | Description |
 | --- | --- |
-| `pg_dump DBNAME > backup.sql` | Backup a database to a file |
-| `psql DBNAME < backup.sql` | Restore a database from a file |
+| `pg_dump <database> > backup.sql` | Backup a database to a file |
+| `psql <database> < backup.sql` | Restore a database from a file |
