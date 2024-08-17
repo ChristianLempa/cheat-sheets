@@ -91,5 +91,5 @@
 | `docker volume rm <volume>` | Destroy a volume |
 | `docker volume ls --filter="dangling=true"` | List all dangling volumes (not referenced by any container) |
 | `docker volume prune` | Delete all volumes (not referenced by any container) |
-| `docker run --rm --volumes-from <container> -v $(pwd):/backup busybox tar cvfz /backup/backup.tar <container-path>` | Backup a container |
-| `docker run --rm --volumes-from <container> -v $(pwd):/backup busybox sh -c "cd <container-path> && tar xvf /backup/backup.tar --strip 1"` | Restore a container from backup |
+| `docker run --rm --volumes-from <container> -v $(pwd):/backup busybox tar cvfz /backup/backup.tar.gz <container-path>` | Backup a container |
+| `docker run --rm --volumes-from <container> -v $(pwd):/backup busybox sh -c "cd <container-path> && tar xvfz /backup/backup.tar.gz --strip 1"` | Restore a container from backup |
