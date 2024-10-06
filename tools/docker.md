@@ -46,6 +46,7 @@
 | `docker ps --all` | List all containers, including stopped |
 | `docker logs <container>` | Show a container output |
 | `docker logs -f <container>` | Follow a container output |
+| `docker logs -f <container> 2>&1 \| grep string-to-search` | Follow container logs and search for specific string occurrence |
 | `docker top <container>` | List the processes running in a container |
 | `docker diff` | Show the differences with the image (modified files) |
 | `docker inspect` | Show information of a container (json formatted) |
