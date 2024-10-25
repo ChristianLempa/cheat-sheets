@@ -71,7 +71,8 @@
 | `Install-WindowsFeature <feature>` | Install a Windows feature |
 | `Uninstall-WindowsFeature <feature>` | Uninstall a Windows feature |
 
-## DISM - Deployment Image Service Window
+## DISM - Deployment Image Service Windows
+
 | Command | Description |
 | --- | --- |
 | `DISM /Online /Get-FeatureInfo /Feature:<name>` | List Windows Feature Information|
