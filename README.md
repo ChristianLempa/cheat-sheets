@@ -20,7 +20,6 @@ If you’d like to contribute to this project, reach out to me on social media o
 
 - [Dotfiles](https://github.com/christianlempa/dotfiles) - My personal configuration files on macOS
 - [Boilerplates](https://github.com/christianlempa/boilerplates) - Templates for various projects like Docker, K8S, Ansible, etc
-- [Homelab](https://github.com/christianlempa/homelab) - This is my entire Homelab documentation, and configurations for infrastructure, applications, networking, and more.
 
 ## Support me
 
