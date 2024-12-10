@@ -71,6 +71,14 @@
 | `Install-WindowsFeature <feature>` | Install a Windows feature |
 | `Uninstall-WindowsFeature <feature>` | Uninstall a Windows feature |
 
+## DISM - Deployment Image Service Windows
+
+| Command | Description |
+| --- | --- |
+| `DISM /Online /Get-FeatureInfo /Feature:<name>` | List Windows Feature Information|
+| `DISM /Online /Enable-Feature /Feature:<name>` | Enable Windows Feature|
+| `DISM /Online /Disable-Feature /Feature:<name>` | Disable Windows Feature|
+
 ## Connect to a remote computer
 
 | Command | Description |
