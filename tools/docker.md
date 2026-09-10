@@ -74,6 +74,7 @@
 | `docker commit <container> <image>` | Create an image (from a container) |
 | `docker import <url>` | Create an image (from a tarball) |
 | `docker rmi <image>` | Delete images |
+| `docker rmi $(docker images --filter "dangling=true" -q --no-trunc)`| To delete images marked as "\<none\>" [more info](https://stackoverflow.com/questions/32723111/how-to-remove-old-and-unused-docker-images/32723127#32723127) |
 | `docker pull <user>/<repository>:<tag>` | Pull an image from a registry |
 | `docker push <user>/<repository>:<tag>` | Push and image to a registry |
 | `docker search <test>` | Search an image on the official registry |
@@ -86,7 +87,7 @@
 
 | COMMAND | DESCRIPTION |
 | --- | --- |
-| `docker volume ls` | List all vol1umes |
+| `docker volume ls` | List all volumes |
 | `docker volume create <volume>` | Create a volume |
 | `docker volume inspect <volume>` | Show information (json formatted) |
 | `docker volume rm <volume>` | Destroy a volume |
